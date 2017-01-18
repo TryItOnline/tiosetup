@@ -235,8 +235,6 @@ Generating and resoving permalinks should be fully working now.
 
 ## Setting up arena.tryitonline.net
 
-We will use Fedora 24 for the arena server.
-
 On your backend.tryitonline.net server (above) generate ssh key for access to arena:
 
 ```Shell
