@@ -215,10 +215,10 @@ systemctl list-timers -all
 ```
 
 Change hours and minutes above to what suits you most. Letsencrypt advises not to use round minutes value such as 00 or 30, to spread there service load, after all you are not paying them.
-You also might want to run the following to set your time zone if you have not already:
+You also might want to run the following to set your time zone if you have not already (change the below to your timezome):
 
 ```Shell
-dpkg-reconfigure tzdata
+timedatectl set-timezone Pacific/Auckland
 ```
 
 Of course you do not have to use letsecrypt and if you wish you can install your SSL certificates the usual way.
