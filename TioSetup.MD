@@ -48,7 +48,7 @@ git clone https://github.com/TryItOnline/tio.run.git
 git clone https://github.com/TryItOnline/backend.tryitonline.net.git
 ```
 
-You might want to delete .git, README.md, etc if you want, or put specific permissions 
+You might want to delete .git, README.md, etc if you want, or put specific permissions
 so they do not get served by httpd.
 
 To substitute the domain names in the code base, edit the following script to include your domain
