@@ -267,7 +267,7 @@ for the runner user. Exit the runner user context. Revoke write access for runne
 
 ```Shell
 exit
-chmod ug-w /home/runner
+chattr +i  ~runner
 ```
 
 Label the arena executables:
