@@ -150,8 +150,7 @@ sed -i 's/#ServerName www.example.com:80/ServerName 127.0.0.1:80/g' /etc/httpd/c
 
 ```
 
-Create a store for the user code snippets. Again, you might want to apply better permissions on this 
-dierctory, so that only apache process has rw access to it
+Create a store for the user code snippets.
 
 ```Shell
 mkdir /srv/store
