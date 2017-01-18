@@ -235,7 +235,7 @@ Generating and resoving permalinks should be fully working now.
 
 ## Setting up arena.tryitonline.net
 
-On your backend.tryitonline.net server (above) generate ssh key for access to arena:
+On your web server (above) generate ssh key for access to arena:
 
 ```Shell
 mkdir -p $(getent passwd apache | cut -d: -f6)/.ssh
@@ -258,7 +258,7 @@ adduser runner
 sudo -u runner -i
 mkdir -p ~/.ssh
 touch ~/.ssh/authorized_keys
-chmod 640 ~/.ssh/authorized_keys
+chmod 640 ~/.ssh/<authorized_keys></authorized_keys>
 chmod 700 ~/.ssh
 ```
 
