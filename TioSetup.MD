@@ -243,7 +243,7 @@ chown apache:apache $(getent passwd apache | cut -d: -f6)/.ssh
 sudo -u apache ssh-keygen -t rsa -f $(getent passwd apache | cut -d: -f6)/.ssh/id_rsa -N ""
 ```
 
-On your  arena.tryitonline.net server install required packages and enable selinux:
+On your arena.tryitonline.net server install required packages and enable selinux:
 
 ```Shell
 dnf install git psmisc selinux-policy-sandbox policycoreutils-sandbox vim-common setroubleshoot -y
