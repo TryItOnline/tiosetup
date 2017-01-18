@@ -157,7 +157,7 @@ mkdir /srv/store
 setfacl -m user:apache:rwx /srv/store
 ```
 
-Enable required apache mods, our 3 sites and recycle apache:
+Enable http and https on the firewall and recycle apache:
 
 ```Shell
 firewall-cmd --permanent --add-port=80/tcp
