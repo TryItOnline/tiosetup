@@ -273,7 +273,7 @@ chmod ug-w /home/runner
 Label the arena executables:
 
 ```Shell
-semanage fcontext -a -t bin_t  '/srv/bin(/.*)?'
+semanage fcontext -a -t bin_t '/srv/bin(/.*)?'
 semanage fcontext -a -t bin_t '/srv/wrappers(/.*)?'
 ````
 
