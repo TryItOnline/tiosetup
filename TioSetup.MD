@@ -262,6 +262,12 @@ chmod 640 ~/.ssh/<authorized_keys></authorized_keys>
 chmod 700 ~/.ssh
 ```
 
+Revoke write access for runner from home directory:
+
+```Shell
+chmod ug-w /home/runner
+```
+
 Now append the ssh key that you generateed on the backend server (the whole id_rsa.pub file) to the \~/.ssh/authorized_keys
 for the runner user. Exit the runner user context. Label the arena executables:
 
