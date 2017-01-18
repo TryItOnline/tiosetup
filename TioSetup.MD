@@ -2,6 +2,8 @@
 
 ## Overview
 
+*** !!! Work in progress - do not use !!! ***
+
 These instructions are written to help setting up a new instance of <http://tryitonline.net>
 Since TryItOnline can run on a variaty of linux systems, it is not possible to test
 these on all of them. These instructions were tested on Ubuntu 16.10 (web) / Fedora 24 (arena)
@@ -238,28 +240,29 @@ sudo -u www-data ssh-keygen -t rsa -f $(getent passwd www-data | cut -d: -f6)/.s
 On your  arena.tryitonline.net server install required packages and enable selinux:
 
 ```Shell
-yum install git psmisc selinux-policy-sandbox policycoreutils-sandbox vim-common setroubleshoot
-sed -i 's/SELINUX=disabled/SELINUX=permissive/g' /etc/selinux/config
+dnf install git psmisc selinux-policy-sandbox policycoreutils-sandbox vim-common setroubleshoot -y
+sed -i 's/SELINUX=disabled/SELINUX=enforcing/g' /etc/selinux/config
 reboot
 ```
-
 When system is labeled by selinux and is back online, configure the runner user:
-
 ```Shell
 adduser runner
-setfacl -m user:runner:rwx /srv
-setfacl -m user:runner:rwx /opt
 sudo -u runner -i
 mkdir -p ~/.ssh
 touch ~/.ssh/authorized_keys
 chmod 640 ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
+```
+Now append the ssh key that you generateed on the backend server (the whole id_rsa.pub file) to the \~/.ssh/authorized_keys
+for the runner user. Exit the runner user context. Label the arena executables:
+```Shell
+semanage fcontext -a -t bin_t  '/srv/bin(/.*)?'
+semanage fcontext -a -t bin_t '/srv/wrappers(/.*)?'
+````
+Clone arena repository:
+```Shell
 git clone https://github.com/TryItOnline/arena.tryitonline.net.git /srv
 ```
-
-Now append the ssh key that you generateed on the backend server (the whole id_rsa.pub file) to the \~/.ssh/authorized_keys
-for the runner user.
-
 Update the languages. 
 
 (TODO: instructions/scripts for the rest of languages are to be provided) 
