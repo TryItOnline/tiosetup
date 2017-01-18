@@ -178,13 +178,14 @@ dnf install python-certbot-apache -y
 certbot --apache
 ```
 
-And then follow the propmts. Choose "Secure" option when asked if to enforce HTTPS. Certbot will advise you to backup your keys and certifcates, it would be advisable to do so. For systems other than apache2 on Ubunut 10.16 refer to:
+And then follow the propmts. Choose "Secure" option when asked if to enforce HTTPS. Certbot will advise you to backup your keys and certifcates, it would be advisable to do so. 
+For systems other than apache on Fedora 23+ refer to:
 
 - <https://letsencrypt.org>
 - <https://certbot.eff.org>
 
 Certbot checks that the domain name you are getting the cert for resolve to the address of your server, so if you have not sorted this out yet in needs to be done first.
-Letsecrypt certificates are good for three months. Here is how you can set up automatic renewal on Ubuntu 16.10:
+Letsecrypt certificates are good for three months. Here is how you can set up automatic renewal on Fedora 24:
 
 ```Shell
 cat <<EOT >> /etc/systemd/system/renewssl.service
