@@ -184,7 +184,7 @@ For systems other than apache on Fedora 23+ refer to:
 - <https://letsencrypt.org>
 - <https://certbot.eff.org>
 
-Certbot checks that the domain name you are getting the cert for resolve to the address of your server, so if you have not sorted this out yet in needs to be done first.
+Certbot checks that the domain name you are getting the cert for resolve to the address of your server, so if you have not sorted this out yet it needs to be done first.
 Letsecrypt certificates are good for three months. Here is how you can set up automatic renewal on Fedora 24:
 
 ```Shell
