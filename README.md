@@ -1,6 +1,10 @@
 # Setting up Try it Online
 
-## Overview
+## What is Try It Online? 
+
+https://tritonline.net is a community-maintained web site for hosting solutions to [code golf](https://en.wikipedia.org/wiki/Code_golf) puzzles presented on http://codegolf.stackexchange.com/. It can be used by anyone for free to quickly trying out and sharing code snippents in a big number of practical and recreational programming languages.
+
+## Setup Overview
 
 These instructions are written to help setting up a new instance of <http://tryitonline.net>
 Since TryItOnline can run on a variaty of linux systems, it is not possible to test
