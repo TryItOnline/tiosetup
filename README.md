@@ -10,10 +10,10 @@ path, etc, might need changing on other linux systems, use your judgement.
 
 The setup consists of the 4 domains:
 
-- tryitonline.net (Old url, front page, provides some assets for the rest of the site)
-- tio.run (Tio Nexus and Tio v2 front end)
-- backend.tryitonline.net (serves web api calls from tio.run)
-- arena.tryitonline.net (that's where the actual code is executed, accessed by the backend via SSH)
+- [tryitonline.net](https://github.com/TryItOnline/tryitonline.net) (Old url, front page, provides some assets for the rest of the site)
+- [tio.run](https://github.com/TryItOnline/tio.run) (Tio Nexus and Tio v2 front end)
+- [backend.tryitonline.net](https://github.com/TryItOnline/backend.tryitonline.net) (serves web api calls from tio.run)
+- [arena.tryitonline.net](https://github.com/TryItOnline/arena.tryitonline.net) (that's where the actual code is executed, accessed by the backend via SSH)
 
 Sources for each of these are located in the corresponding github repositiry named after respective domain.
 
