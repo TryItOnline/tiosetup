@@ -10,7 +10,7 @@ These instructions are written to help setting up a new instance of <http://tryi
 Since TryItOnline can run on a variaty of linux systems, it is not possible to test
 these on all of them. These instructions were tested on Fedora 24
 and are aimed to simplify most labourious parts of the setup process, however some commands,
-path, etc, might need changing on other linux systems, use your judgement. The setup makes use of (selinux)[https://en.wikipedia.org/wiki/Security-Enhanced_Linux] support of which waries between different distributions of Linux.
+path, etc, might need changing on other linux systems, use your judgement. The setup makes use of [selinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) support of which waries between different distributions of Linux.
 
 The setup consists of the 4 domains:
 
