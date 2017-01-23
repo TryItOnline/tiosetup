@@ -142,7 +142,8 @@ Create .htaccess so that /nexus is rewritten to /nexus.html
 cat <<EOT >> /var/www/tio.run/.htaccess
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^.]+?)/?$ /$1.html [L,R=302]
+RewriteRule ^nexus/?(.*)$ nexus.html [L,NE]
+RewriteRule ^index/?(.*)$ index.html [L,NE]
 EOT
 ```
 
