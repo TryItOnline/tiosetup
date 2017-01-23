@@ -6,16 +6,18 @@ These instructions are written to help setting up a new instance of <http://tryi
 Since TryItOnline can run on a variaty of linux systems, it is not possible to test
 these on all of them. These instructions were tested on Fedora 24
 and are aimed to simplify most labourious parts of the setup process, however some commands,
-path, etc, might need changing on other linux systems, use your judgement.
+path, etc, might need changing on other linux systems, use your judgement. The setup makes use of (selinux)[https://en.wikipedia.org/wiki/Security-Enhanced_Linux] support of which waries between different distributions of Linux.
 
 The setup consists of the 4 domains:
 
-- [tryitonline.net](https://github.com/TryItOnline/tryitonline.net) (Old url, front page, provides some assets for the rest of the site)
-- [tio.run](https://github.com/TryItOnline/tio.run) (Tio Nexus and Tio v2 front end)
-- [backend.tryitonline.net](https://github.com/TryItOnline/backend.tryitonline.net) (serves web api calls from tio.run)
-- [arena.tryitonline.net](https://github.com/TryItOnline/arena.tryitonline.net) (that's where the actual code is executed, accessed by the backend via SSH)
+- [tryitonline.net](https://github.com/TryItOnline/tryitonline.net) (Serves the front page, provides some assets for the rest of the sites)
+- [tio.run](https://github.com/TryItOnline/tio.run) (Tio Nexus and Tio v2 front end, short url for permalinks)
+- [backend.tryitonline.net](https://github.com/TryItOnline/backend.tryitonline.net) (Serves web api calls from tio.run)
+- [arena.tryitonline.net](https://github.com/TryItOnline/arena.tryitonline.net) (Sandbox where the actual code is executed, running on selinux and accessed by the backend.tryitonline.net via SSH)
 
-Sources for each of these are located in the corresponding github repositiry named after respective domain.
+Sources for each of these are located in the corresponding github repositiry named after the respective domain.
+
+[talk.tryitonline.net](http://talk.tryitonline.net) domain is setup to redirect to Stack Exchange chat about the tryitonline service. Setting this domain up is not covered by this guide.
 
 The domain names in the list above are hardcoded in the source code. Before you start, you need
 to decide what domain names are you going to be using for each of the four of them. When this guide
@@ -31,7 +33,7 @@ All commands below unless specified, are run as root
 
 Run the following commands.
 
-Make sure you have apache and git:
+Make sure you have apache with ssl and git:
 
 ```Shell
 dnf install httpd mod_ssl git -y
@@ -79,7 +81,7 @@ sed -i 's/tryitonline.net/tryitonline.your.domain/g' run-legacy
 cd ..
 ```
 
-Note that commands above modify feedback and donation emails so that they do not lead to your domain. You might want to do more text editing for your copy of the site.
+Note that commands above modify *feedback* and *donation* emails so that they do not lead to your domain. You might want to do more text editing for your copy of the site.
 
 Create apache Virtual Host for each of the three sites:
 
@@ -130,7 +132,7 @@ cat <<EOT >> /etc/httpd/conf.d/backend.tryitonline.net.conf
 EOT
 ```
 
-Create htaccess so that /nexus is rewritten to /nexus.html
+Create .htaccess so that /nexus is rewritten to /nexus.html
 
 ```Shell
 cat <<EOT >> /var/www/tio.run/.htaccess
@@ -212,7 +214,7 @@ systemctl enable renewssl.timer
 systemctl list-timers -all
 ```
 
-Change hours and minutes above to what suits you most. Letsencrypt advises not to use round minutes value such as 00 or 30, to spread there service load, after all you are not paying them.
+Change hours and minutes above to what suits you best. Letsencrypt advises not to use round minutes value such as 00 or 30, to spread there service load, after all you are not paying them.
 You also might want to run the following to set your time zone if you have not already (change the below to your timezome):
 
 ```Shell
