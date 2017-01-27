@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Delimit
+git clone https://github.com/MistahFiggins/Delimit.git

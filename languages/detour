@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf detour
+git clone https://github.com/cyoce/detour.git

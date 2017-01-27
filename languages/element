@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Element
+git clone https://github.com/PhiNotPi/Element.git
