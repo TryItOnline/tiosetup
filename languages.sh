@@ -1,6 +1,6 @@
 #!/bin/bash 
 
 ./langdeps.sh
-cd /opt
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd /opt
 run-parts $DIR/languages
