@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rm -rf beam-js
 git clone https://github.com/ETHproductions/beam-js.git
-

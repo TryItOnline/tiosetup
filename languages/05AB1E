@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rm -rf 05AB1E
 git clone https://github.com/Adriandmen/05AB1E.git
-

@@ -1,8 +1,7 @@
 #!/bin/bash
 
-dnf install texi2html texinfo -y
+rm -rf tinycc
 git clone git://repo.or.cz/tinycc.git
 cd tinycc
 ./configure --prefix=/opt/tinycc && make && make install
 cd ..
-

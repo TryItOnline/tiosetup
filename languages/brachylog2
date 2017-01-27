@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rm -rf Brachylog
 git clone https://github.com/JCumin/Brachylog.git
-

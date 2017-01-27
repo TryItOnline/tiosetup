@@ -1,8 +1,7 @@
 #!/bin/bash
 
-dnf install npm -y
+rm -rf apl
 git clone https://github.com/ngn/apl.git
 cd apl
 ./build
 cd ..
-

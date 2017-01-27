@@ -1,6 +1,4 @@
 #!/bin/bash
 
-dnf install redhat-rpm-config python3-devel pcre-devel -y
-python3 -m pip install python-pcre
+rm -rf cinnamon-gum
 git clone https://github.com/quartata/cinnamon-gum.git
-

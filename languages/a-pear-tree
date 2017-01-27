@@ -1,9 +1,7 @@
 #!/bin/bash
 
-dnf install perl-CPAN -y
-PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Digest::CRC'
+rm -rf apeartree
 mkdir -p apeartree
 cd apeartree
 wget http://nethack4.org/esolangs/apeartree-v2.pl
 cd ..
-

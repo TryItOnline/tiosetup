@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rm -rf Beatnik
 git clone https://github.com/catseye/Beatnik.git
-

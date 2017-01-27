@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rm -rf Actually
 git clone https://github.com/Mego/Seriously.git Actually
-

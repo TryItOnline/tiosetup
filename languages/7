@@ -1,7 +1,7 @@
 #!/bin/bash
 
+rm -rf 7
 mkdir -p 7
 cd 7
 wget http://nethack4.org/esolangs/7/7.pl
 cd ..
-

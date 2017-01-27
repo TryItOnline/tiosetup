@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rm -rf 99
 git clone https://github.com/TryItOnline-Collateral/99.git
-

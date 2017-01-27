@@ -1,4 +1,0 @@
-#!/bin/bash
-
-dnf install dash -y
-

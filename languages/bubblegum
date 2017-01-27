@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rm -rf bubblegum
 git clone https://github.com/TryItOnline-Collateral/bubblegum.git
-

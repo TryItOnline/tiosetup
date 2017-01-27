@@ -1,9 +1,8 @@
 #!/bin/bash
 
+rm -rf blc
 mkdir -p blc
 cd blc
 wget https://tromp.github.io/cl/uni.c
-dnf install glibc-devel.i686 libgcc.i686 -y
 cc -DM=999999 -m32 -std=c99 uni.c -o uni
 cd ..
-

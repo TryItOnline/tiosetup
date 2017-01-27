@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git clone https://gist.github.com/914087eb06580608d34ca1b83a214baf.git cardinal 
-
+rm -rf cardinal
+git clone https://gist.github.com/914087eb06580608d34ca1b83a214baf.git cardinal

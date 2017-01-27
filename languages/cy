@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rm -rf Cy
 git clone https://github.com/cyoce/Cy.git
-

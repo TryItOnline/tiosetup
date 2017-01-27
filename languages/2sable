@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rm -rf 2sable
 git clone https://github.com/Adriandmen/2sable.git
-
