@@ -1,0 +1,7 @@
+#!/bin/bash
+
+dnf install pl -y
+wget https://github.com/JCumin/Brachylog/archive/v1.0-ascii.tar.gz
+tar zxvf v1.0-ascii.tar.gz
+rm -f v1.0-ascii.tar.gz
+

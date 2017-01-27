@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dnf install java-1.?.0-openjdk -y
+mkdir -p arnoldc
+cd arnoldc
+wget http://lhartikk.github.io/ArnoldC.jar
+cd ..
+

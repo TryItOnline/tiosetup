@@ -1,0 +1,7 @@
+#!/bin/bash
+
+git clone https://github.com/catseye/FBBI.git
+cd FBBI/src
+make
+cd ../..
+

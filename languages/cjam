@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dnf install mercurial ant -y
+hg clone http://hg.code.sf.net/p/cjam/code cjam-code
+cd cjam-code
+ant
+cd ..
+

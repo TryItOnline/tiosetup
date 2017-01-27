@@ -1,0 +1,4 @@
+#!/bin/bash
+
+dnf install mono-devel -y
+

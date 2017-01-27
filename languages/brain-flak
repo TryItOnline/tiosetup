@@ -1,0 +1,5 @@
+#!/bin/bash
+
+dnf install ruby -y
+git clone https://github.com/DJMcMayhem/Brain-Flak.git
+
