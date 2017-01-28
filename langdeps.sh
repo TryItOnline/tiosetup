@@ -12,9 +12,7 @@ dnf install allegro5-devel ant bison bison-devel clang clisp clojure cmake dash 
 npm install -g cheddar-lang coffee-script babel-cli
 python3 -m pip install --upgrade pip
 python3 -m pip install exrex python-pcre hbcht sympy
-free && sync && echo 3 > /proc/sys/vm/drop_caches && free  
 python3 -m pip install numpy 
-free && sync && echo 3 > /proc/sys/vm/drop_caches && free  
 gem install treetop
 wget http://downloads.dlang.org/releases/2.x/2.073.0/dmd-2.073.0-0.fedora.x86_64.rpm
 dnf install dmd-2.073.0-0.fedora.x86_64.rpm -y
