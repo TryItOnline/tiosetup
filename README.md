@@ -252,7 +252,7 @@ sudo -u apache ssh-keygen -t rsa -f $(getent passwd apache | cut -d: -f6)/.ssh/i
 On your arena.tryitonline.net server install required packages and enable selinux:
 
 ```Shell
-dnf install git psmisc selinux-policy-sandbox policycoreutils-sandbox vim-common setroubleshoot -y
+dnf install git psmisc selinux-policy-sandbox policycoreutils-sandbox vim-common setroubleshoot selinux-policy-devel -y
 sed -i 's/SELINUX=disabled/SELINUX=enforcing/g' /etc/selinux/config
 reboot
 ```
@@ -274,6 +274,26 @@ for the runner user. Exit the runner user context. Revoke write access for runne
 ```Shell
 exit
 chattr +i  ~runner
+```
+
+Configure selinux to allow access of sandboxed process to proc_t required by J language:
+
+```Shell
+cat <<EOT >> sandbox_extra.te 
+module sandbox_extra 1.0;
+
+require {
+        type sandbox_t;
+        type proc_t;
+        class dir read;
+        class file { open read };
+}
+
+allow sandbox_t proc_t:dir read;
+allow sandbox_t proc_t:file { open read };
+EOT
+make -f /usr/share/selinux/devel/Makefile sandbox_extra.pp
+semodule -i sandbox_extra.pp
 ```
 
 Label the arena executables:
