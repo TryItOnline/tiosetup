@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf grime
+git clone https://github.com/iatorm/grime.git
+cd grime
+./rungrime
+cd ..

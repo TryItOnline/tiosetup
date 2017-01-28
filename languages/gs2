@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf gs2
+git clone https://github.com/nooodl/gs2.git
