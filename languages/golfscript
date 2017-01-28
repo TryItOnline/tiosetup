@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rm -rf golfscript
+mkdir -p golfscript
 cd golfscript
 wget http://www.golfscript.com/golfscript/golfscript.rb
 chmod +x golfscript.rb
