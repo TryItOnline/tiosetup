@@ -1,14 +1,10 @@
 #!/bin/bash
 
 rm -rf emojicode
-mkdir -p emojicode/bin
-wget https://github.com/emojicode/emojicode/releases/download/v0.3/Emojicode-0.3-x86_64-linux-gnu.tar.gz -O emojicode.tar.gz
-tar -xzf emojicode.tar.gz 
-rm -f emojicode.tar.gz
-cd Emojicode-0.3-x86_64-linux-gnu
-sed -i 's:/usr/local/bin:/opt/emojicode/bin:g' ./install.sh
-sed -i 's:/usr/local/EmojicodePackages:/opt/emojicode/EmojicodePackages:g' ./install.sh
-sed -i 's/^read.*/REPLY="Y"/' ./install.sh
-./install.sh 
-cd .. 
-rm -r Emojicode-0.3-x86_64-linux-gnu
+git clone https://github.com/emojicode/emojicode.git
+cd emojicode
+make HEAP_SIZE=128000000 DEFAULT_PACKAGES_DIRECTORY=/opt/emojicode/packages
+cd builds/*
+ln -s $(pwd) ../../bin
+ln -s $(pwd)/packages ../../packages
+cd ../../..
