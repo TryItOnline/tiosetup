@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rm -rf emojicode
-mkdir -p emojicode
+mkdir -p emojicode/bin
 wget https://github.com/emojicode/emojicode/releases/download/v0.3/Emojicode-0.3-x86_64-linux-gnu.tar.gz -O emojicode.tar.gz
 tar -xzf emojicode.tar.gz 
 rm -f emojicode.tar.gz
