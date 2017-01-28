@@ -9,7 +9,7 @@ dnf install allegro5-devel ant bison bison-devel clang clisp clojure cmake dash 
   nasm ncurses-compat-libs npm pcre-devel perl-CPAN pl python3-devel python-devel redhat-rpm-config ruby zsh -y
 npm install -g cheddar-lang coffee-script babel-cli
 python3 -m pip install -upgrade pip
-python3 -m pip install exrex python-pcre hbcht numpy sympy glances
+python3 -m pip install exrex python-pcre hbcht sympy glances
 free && sync && echo 3 > /proc/sys/vm/drop_caches && free  
 python3 -m pip install numpy 
 free && sync && echo 3 > /proc/sys/vm/drop_caches && free  
