@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -rf lily
+git clone https://github.com/FascinatedBox/lily.git
+cd lily
+cmake .
+make
+cd ..

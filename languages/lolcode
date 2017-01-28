@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm -rf lci
+git clone https://github.com/justinmeza/lci.git
+cd lci
+mkdir -p bin
+cd bin
+cmake ..
+make
+cd ../..
