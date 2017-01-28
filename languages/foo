@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm -rf foo
+mkdir -p foo
+cd foo
+wget http://feky.bizhat.com/apps/foo.tar.gz
+tar zxvf foo.tar.gz
+rm foo.tar.gz
+gcc foo.c -o foo
+cd ..
+

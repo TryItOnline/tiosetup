@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Fourier
+git clone https://github.com/beta-decay/Fourier.git

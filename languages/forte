@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf forter
+git clone https://github.com/judofyr/forter.git

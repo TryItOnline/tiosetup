@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm -rf fission
+git clone https://github.com/TryItOnline-Collateral/Fission.git fission
+cd fission
+git checkout v1
+clang *.cpp -std=gnu++11 -lstdc++ -o fission
+git checkout master
+clang *.cpp -std=gnu++11 -lstdc++ -o fission2
+cd ..

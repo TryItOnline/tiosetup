@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf fish
+git clone https://gist.github.com/6392418.git fish

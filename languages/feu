@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf feu
+git clone https://github.com/tuxcrafting/feu.git

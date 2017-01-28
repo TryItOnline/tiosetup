@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf fernando
+git clone https://github.com/TryItOnline-Collateral/fernando.git
