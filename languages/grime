@@ -3,5 +3,5 @@
 rm -rf grime
 git clone https://github.com/iatorm/grime.git
 cd grime
-./rungrime
+./rungrime >> /var/log/updategrime
 cd ..
