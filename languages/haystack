@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf haystack
+git clone https://github.com/kade-robertson/haystack.git

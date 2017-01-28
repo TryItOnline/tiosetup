@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf hexagony
+git clone https://github.com/m-ender/hexagony.git

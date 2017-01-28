@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf joy
+wget http://www.latrobe.edu.au/__data/assets/file/0007/240298/Joy-Programming.zip
+unzip Joy-Programming.zip
+rm -f joy.html  Joy-Programming.zip
+chmod +x joy/joy

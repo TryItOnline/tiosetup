@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm cjam-code
+rm -rf cjam-code
 hg clone http://hg.code.sf.net/p/cjam/code cjam-code
 cd cjam-code
 ant

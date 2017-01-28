@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf node-v7.2.0-linux-x64
+wget https://nodejs.org/download/release/v7.2.0/node-v7.2.0-linux-x64.tar.gz
+tar zxvf node-v7.2.0-linux-x64.tar.gz
+rm -f node-v7.2.0-linux-x64.tar.gz
+

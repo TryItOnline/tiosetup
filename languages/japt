@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf japt
+git clone https://github.com/ETHproductions/japt.git
