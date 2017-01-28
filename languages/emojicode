@@ -7,6 +7,7 @@ rm emojicode.tar.gz
 cd Emojicode-0.3-x86_64-linux-gnu
 sed -i 's:/usr/local/bin:/opt/emojicode/bin:g' ./install.sh
 sed -i 's:/usr/local/EmojicodePackages:/opt/emojicode/EmojicodePackages:g' ./install.sh
-./install.sh
+sed -i '/read/d' ./install.sh
+./install.sh 
 cd .. 
 rm -r Emojicode-0.3-x86_64-linux-gnu
