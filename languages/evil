@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf evil
+git clone https://github.com/TryItOnline-Collateral/evil.git
+cd evil
+javac *.java
+cd ..

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf emoji.py
+git clone https://github.com/vpzomtrrfrt/emoji.py.git

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dnf install perl-CPAN npm java-1.?.0-openjdk nasm gcc-c++ clang julia glibc-devel.i686 libgcc.i686 pl ruby texi2html texinfo redhat-rpm-config python3-devel pcre-devel mercurial ant clisp clojure mono-devel haskell-platform dash -y
+dnf install perl-CPAN npm java-1.?.0-openjdk nasm gcc-c++ clang julia glibc-devel.i686 libgcc.i686 pl ruby texi2html texinfo redhat-rpm-config python3-devel pcre-devel mercurial ant clisp clojure mono-devel haskell-platform dash erlang -y
 npm install -g cheddar-lang coffee-script
 python3 -m pip install exrex python-pcre
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Digest::CRC'

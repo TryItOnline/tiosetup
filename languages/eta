@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf eta
+mkdir -p eta
+wget http://www.miketaylor.org.uk/tech/eta/eric/eta.cpp
+g++ -Wall -O3 -o eta eta.cpp
+cd .. 
