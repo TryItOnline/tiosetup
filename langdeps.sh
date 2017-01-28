@@ -25,5 +25,3 @@ rm -f haskell-platform-8.0.2-unknown-posix--full-x86_64.tar.gz
 ./install-haskell-platform.sh
 cd ..
 rm -rf tmp
-#cabal update
-#cabal install parsec
