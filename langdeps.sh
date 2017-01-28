@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dnf install perl-CPAN -y
-PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Digest::CRC' >>/var/log/installdigestcrc 2>&1
+PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Digest::CRC'
 rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
 dnf config-manager --add-repo http://download.mono-project.com/repo/centos/
 dnf config-manager --add-repo http://download.opensuse.org/repositories/shells:fish:release:2/Fedora_24/shells:fish:release:2.repo
@@ -27,5 +27,5 @@ rm -f haskell-platform-8.0.2-unknown-posix--full-x86_64.tar.gz
 ./install-haskell-platform.sh
 cd ..
 rm -rf tmp
-cabal update
-cabal install parsec
+#cabal update
+#cabal install parsec
