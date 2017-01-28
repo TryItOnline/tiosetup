@@ -19,5 +19,13 @@ gem install treetop
 wget http://downloads.dlang.org/releases/2.x/2.073.0/dmd-2.073.0-0.fedora.x86_64.rpm
 dnf install dmd-2.073.0-0.fedora.x86_64.rpm -y
 rm -f dmd-2.073.0-0.fedora.x86_64.rpm
+mkdir -p tmp
+cd tmp
+wget https://haskell.org/platform/download/8.0.2/haskell-platform-8.0.2-unknown-posix--full-x86_64.tar.gz
+tar zxvf haskell-platform-8.0.2-unknown-posix--full-x86_64.tar.gz
+rm -f haskell-platform-8.0.2-unknown-posix--full-x86_64.tar.gz
+./install-haskell-platform.sh
+cd ..
+rm -rf tmp
 cabal update
 cabal install parsec
