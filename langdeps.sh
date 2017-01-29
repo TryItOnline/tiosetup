@@ -15,8 +15,8 @@ python3 -m pip install --upgrade pip
 python3 -m pip install exrex python-pcre hbcht sympy
 python3 -m pip install numpy 
 python -m pip install sympy 
-octave --eval "pkg install -forge symbolic" >> /var/log/installoctave 2>&1
-octave --eval "pkg rebuild -auto symbolic" >> /var/log/installoctave 2>&1
+octave --eval "pkg install -forge symbolic"
+octave --eval "pkg rebuild -auto symbolic"
 gem install treetop
 wget http://downloads.dlang.org/releases/2.x/2.073.0/dmd-2.073.0-0.fedora.x86_64.rpm
 dnf install dmd-2.073.0-0.fedora.x86_64.rpm -y
