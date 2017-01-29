@@ -9,7 +9,7 @@ dnf copr enable avsej/nim -y
 dnf update -y
 dnf install allegro5-devel ant bison bison-devel clang clisp clojure cmake dash erlang fish flex flex-devel fsharp gcc-c++ gforth \
   glibc-devel.i686 golang groovy haskell-platform java-1.?.0-openjdk julia ksh libgcc.i686 maxima mercurial mono-complete \
-  nasm ncurses-compat-libs nim npm ocaml octave octave-devel pcre-devel perl-CPAN pl python3-devel ruby zsh -y
+  nasm ncurses-compat-libs nim npm ocaml octave octave-devel pcre-devel perl-CPAN php-cli pl python3-devel rakudo ruby zsh -y
 npm install -g cheddar-lang coffee-script babel-cli
 python3 -m pip install --upgrade pip
 python3 -m pip install exrex python-pcre hbcht sympy

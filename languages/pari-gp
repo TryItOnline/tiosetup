@@ -1,0 +1,12 @@
+#!/bin/bash
+
+rm -rf pari-2.9.1
+wget http://pari.math.u-bordeaux.fr/pub/pari/unix/pari-2.9.1.tar.gz
+tar xf pari-2.9.1.tar.gz
+rm -f pari-2.9.1.tar.gz
+cd pari-2.9.1
+./Configure
+make gp
+mkdir bin
+ln Olinux-x86_64/gp-dyn bin/gp-2.9
+cd ..

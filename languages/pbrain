@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf pbrain
+git clone https://github.com/TryItOnline-Collateral/pbrain.git
+cd pbrain
+g++ pbrain.cpp -o pbrain
+cd ..
