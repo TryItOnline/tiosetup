@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf MATL
+git clone https://github.com/lmendo/MATL.git
