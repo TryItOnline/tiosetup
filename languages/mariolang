@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rm -rf mariolang
-git clone https://github.com/TryItOnline-Collateral/MarioLANG.git mariolang
+git clone https://github.com/tomsmeding/MarioLANG.git mariolang
 cd mariolang
 clang mariolang.cpp -std=gnu++11 -lstdc++ -lm -o mariolang
 cd ..
