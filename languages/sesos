@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf sesos
+git clone https://github.com/DennisMitchell/sesos.git

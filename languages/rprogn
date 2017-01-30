@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Reverse-Programmer-Notation
+git clone https://github.com/TehFlaminTaco/Reverse-Programmer-Notation.git

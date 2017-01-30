@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Pylons-lang
+git clone https://github.com/morganthrapp/Pylons-lang.git

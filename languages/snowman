@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf snowman-lang
+git clone https://github.com/KeyboardFire/snowman-lang.git
+cd snowman-lang/lib
+make
+cd ../..

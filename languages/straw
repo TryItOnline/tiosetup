@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf straw
+git clone https://github.com/tuxcrafting/straw.git

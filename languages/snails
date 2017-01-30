@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -rf PMA
+git clone https://github.com/feresum/PMA.git
+cd PMA/snails
+cmake ..
+make
+cd ../..

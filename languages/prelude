@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf prelude
+git clone https://github.com/TryItOnline-Collateral/prelude.git

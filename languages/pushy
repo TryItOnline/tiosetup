@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Pushy
+git clone https://github.com/FTcode/Pushy.git

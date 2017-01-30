@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf reticular
+git clone https://github.com/ConorOBrien-Foxx/reticular.git

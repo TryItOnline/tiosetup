@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf purple
+git clone https://github.com/TryItOnline-Collateral/purple.git

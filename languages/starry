@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf esolang-book-sources
+git clone https://github.com/yhara/esolang-book-sources.git

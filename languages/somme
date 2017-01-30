@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Somme
+git clone https://github.com/ConorOBrien-Foxx/Somme.git

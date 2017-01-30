@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf pyth
+git clone https://github.com/isaacg1/pyth.git

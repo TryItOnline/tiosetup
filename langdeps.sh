@@ -2,20 +2,22 @@
 
 dnf install perl-CPAN -y
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Digest::CRC'
+PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install List::MoreUtils'
+PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Text::Soundex'
 rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
 dnf config-manager --add-repo http://download.mono-project.com/repo/centos/
 dnf config-manager --add-repo http://download.opensuse.org/repositories/shells:fish:release:2/Fedora_24/shells:fish:release:2.repo
 dnf copr enable avsej/nim -y
 dnf update -y
-dnf install allegro5-devel ant bison bison-devel clang clisp clojure cmake dash erlang fish flex flex-devel fsharp gcc-c++ gforth \
-  glibc-devel.i686 golang groovy haskell-platform icu java-1.?.0-openjdk julia ksh libgcc.i686 lldb lldb-devel lttng-tools lttng-ust \
-  maxima mercurial mono-complete nasm ncurses-compat-libs nim npm ocaml octave octave-devel pcre-devel perl-CPAN php-cli pl \
-  python3-devel rakudo ruby zsh -y
+dnf install allegro5-devel ant bison bison-devel chicken clang clisp clojure cmake dash erlang fish flex flex-devel fsharp gcc-c++ \
+  gforth glibc-devel.i686 golang groovy haskell-platform icu java-1.?.0-openjdk julia ksh libgcc.i686 lldb lldb-devel lttng-tools \
+  lttng-ust maxima mercurial mono-complete nasm ncurses-compat-libs nim npm ocaml octave octave-devel pcre-devel perl-CPAN php-cli \
+  pl python3-devel R-littler rakudo ruby rust zsh -y
 npm install -g cheddar-lang coffee-script babel-cli
 python3 -m pip install --upgrade pip
 python3 -m pip install exrex python-pcre hbcht sympy
 python3 -m pip install numpy 
-python -m pip install sympy 
+python -m pip install sympy pyshoco
 octave --eval "pkg install -forge symbolic"
 octave --eval "pkg rebuild -auto symbolic"
 gem install treetop

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf shapescript
+git clone https://github.com/DennisMitchell/shapescript.git

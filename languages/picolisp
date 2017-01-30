@@ -1,0 +1,9 @@
+#!/bin/bash
+
+rm -rf picoLisp
+wget http://software-lab.de/picoLisp.tgz
+tar xf picoLisp.tgz
+rm -f picoLisp.tgz
+cd picoLisp/src64
+make
+cd ../..
