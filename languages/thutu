@@ -5,4 +5,3 @@ git clone https://github.com/graue/esofiles.git
 mkdir -p thutu
 cp esofiles/thutu/impl/thutu.pl thutu
 rm -rf esofiles
-cd ..

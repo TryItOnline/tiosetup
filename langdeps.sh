@@ -47,5 +47,3 @@ cp aliases.ps1 /opt/microsoft/lib/
 rm -rf usr
 cd ..
 rm -rf tmp
-
- #autoconf automake libtool
