@@ -8,7 +8,7 @@ rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E032808
 dnf config-manager --add-repo http://download.mono-project.com/repo/centos/
 dnf config-manager --add-repo http://download.opensuse.org/repositories/shells:fish:release:2/Fedora_24/shells:fish:release:2.repo
 dnf copr enable avsej/nim -y
-dnf copr enable mkrawiec/neovim -y
+dnf copr enable dperson/neovim -y
 dnf update -y
 dnf install allegro5-devel ant bison bison-devel chicken clang clisp clojure cmake dash erlang fish flex flex-devel fsharp gc-devel \
   gcc-c++ gforth glib2-devel glibc-devel.i686 golang groovy haskell-platform icu java-1.?.0-openjdk julia ksh libgcc.i686 lldb \
