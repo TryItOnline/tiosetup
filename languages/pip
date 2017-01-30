@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm -rf prelude
+rm -rf pip
 git clone https://github.com/dloscutoff/pip.git
