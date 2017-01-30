@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Vitsy
+git clone https://github.com/VTCAKAVSMoACE/Vitsy.git

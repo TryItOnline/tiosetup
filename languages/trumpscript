@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf TrumpScript
+git clone https://github.com/samshadwell/TrumpScript.git

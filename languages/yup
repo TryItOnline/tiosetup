@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf yup
+git clone https://github.com/ConorOBrien-Foxx/yup.git

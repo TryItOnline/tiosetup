@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf shtriped
+git clone https://github.com/somebody1234/shtriped.git

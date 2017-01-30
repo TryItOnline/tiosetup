@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf Thue
+git clone https://github.com/catseye/Thue.git
+cd Thue
+./build.sh
+cd ..

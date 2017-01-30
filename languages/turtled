@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Turtl-d
+git clone https://github.com/Destructible-Watermelon/Turtl-d.git

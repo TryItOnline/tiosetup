@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -rf trigger
+mkdir -p trigger
+cd trigger
+wget http://yiap.nfshost.com/esoteric/trigger/trigger.c
+gcc trigger.c -o trigger
+cd ..

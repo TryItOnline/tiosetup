@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Woefully
+git clone https://github.com/Destructible-Watermelon/Woefully.git

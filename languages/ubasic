@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf ubasic
+git clone https://github.com/EtchedPixels/ubasic.git
+cd ubasic
+make
+cd ..

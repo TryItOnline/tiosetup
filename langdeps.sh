@@ -8,16 +8,17 @@ rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E032808
 dnf config-manager --add-repo http://download.mono-project.com/repo/centos/
 dnf config-manager --add-repo http://download.opensuse.org/repositories/shells:fish:release:2/Fedora_24/shells:fish:release:2.repo
 dnf copr enable avsej/nim -y
+dnf copr enable mkrawiec/neovim -y
 dnf update -y
-dnf install allegro5-devel ant bison bison-devel chicken clang clisp clojure cmake dash erlang fish flex flex-devel fsharp gcc-c++ \
-  gforth glibc-devel.i686 golang groovy haskell-platform icu java-1.?.0-openjdk julia ksh libgcc.i686 lldb lldb-devel lttng-tools \
-  lttng-ust maxima mercurial mono-complete nasm ncurses-compat-libs nim npm ocaml octave octave-devel pcre-devel perl-CPAN php-cli \
-  pl python3-devel R-littler rakudo ruby rust zsh -y
-npm install -g cheddar-lang coffee-script babel-cli
+dnf install allegro5-devel ant bison bison-devel chicken clang clisp clojure cmake dash erlang fish flex flex-devel fsharp gc-devel \
+  gcc-c++ gforth glib2-devel glibc-devel.i686 golang groovy haskell-platform icu java-1.?.0-openjdk julia ksh libgcc.i686 lldb \
+  lldb-devel lttng-tools lttng-ust maxima mercurial mono-basic mono-complete nasm ncurses-compat-libs neovim nim npm ocaml octave \
+  octave-devel pcre-devel perl-CPAN php-cli pl python3-devel R-littler rakudo ruby rust tcsh vala zsh -y
+npm install -g cheddar-lang coffee-script babel-cli mathjs escape-string-regexp
 python3 -m pip install --upgrade pip
 python3 -m pip install exrex python-pcre hbcht sympy
 python3 -m pip install numpy 
-python -m pip install sympy pyshoco
+python -m pip install sympy pyshoco docopt neovim
 octave --eval "pkg install -forge symbolic"
 octave --eval "pkg rebuild -auto symbolic"
 gem install treetop
@@ -46,3 +47,5 @@ cp aliases.ps1 /opt/microsoft/lib/
 rm -rf usr
 cd ..
 rm -rf tmp
+
+ #autoconf automake libtool
