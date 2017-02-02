@@ -2,6 +2,8 @@
 
 rm -rf grime
 git clone https://github.com/iatorm/grime.git
+## temporarely getting commit that is not broken
+git checkout 54b232bba88b4b91f24ab56e4b8f07e92cf40bfd
 cd grime
 ./rungrime >> /var/log/tioupd/grime 2>&1
 cd ..
