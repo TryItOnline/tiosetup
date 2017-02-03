@@ -17,7 +17,7 @@ python3 -m pip install exrex python-pcre hbcht sympy mathics
 python3 -m pip install numpy 
 python -m pip install sympy pyshoco docopt neovim
 restorecon -Rv /usr/lib{,64}/python3.5
-patch /usr/lib/python3.5/site-packages/mathics/builtin/pympler/asizeof.py mathics.patch
+patch -N /usr/lib/python3.5/site-packages/mathics/builtin/pympler/asizeof.py mathics.patch
 octave --eval "pkg install -forge symbolic"
 octave --eval "pkg rebuild -auto symbolic"
 gem install treetop
