@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Esolangs
+git clone https://github.com/dloscutoff/Esolangs.git

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf tmp-lang
+git clone https://github.com/feresum/tmp-lang.git

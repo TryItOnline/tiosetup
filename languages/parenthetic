@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Parenthetic
+git clone https://github.com/cammckinnon/Parenthetic.git

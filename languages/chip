@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf chip
+git clone https://github.com/Phlarx/chip.git

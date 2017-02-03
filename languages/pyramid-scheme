@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf Pyramid-Scheme
+git clone https://github.com/ConorOBrien-Foxx/Pyramid-Scheme.git

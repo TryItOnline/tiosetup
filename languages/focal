@@ -1,0 +1,9 @@
+#!/bin/bash
+
+rm -rf focal
+wget ftp://www.cozx.com/pub/langs/focal-1.0.4.tar.gz
+tar xf focal-1.0.4.tar.gz
+rm -f focal-1.0.4.tar.gz
+cd focal-1.0.4
+make
+cd ..

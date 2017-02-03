@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf grass
+mkdir -p grass
+cd grass
+wget http://www.blue.sky.or.jp/grass/grass.rb
+cd ..

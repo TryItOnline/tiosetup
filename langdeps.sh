@@ -6,16 +6,18 @@ dnf config-manager --add-repo http://download.opensuse.org/repositories/shells:f
 dnf copr enable avsej/nim -y
 dnf copr enable dperson/neovim -y
 dnf update -y
-dnf install allegro5-devel ant bison bison-devel chicken clang clisp clojure cmake dash erlang fish flex flex-devel fsharp gc-devel \
-  gcc-c++ gforth glib2-devel glibc-devel.i686 golang groovy haskell-platform icu java-1.?.0-openjdk julia ksh libgcc.i686 lldb \
-  lldb-devel lttng-tools lttng-ust maxima mercurial mono-basic mono-complete nasm ncurses-compat-libs neovim nim npm ocaml octave \
-  octave-devel pcre-devel  perl-Digest-CRC perl-List-MoreUtils perl-Text-Soundex php-cli pl python3-devel R-littler rakudo ruby rust \
-  tcsh vala zsh -y
-npm install -g cheddar-lang coffee-script babel-cli mathjs escape-string-regexp
+dnf install allegro5-devel ant bison bison-devel chicken clang clisp clojure cmake dash emacs erlang fish flex flex-devel fsharp \
+  gc-devel gcc-c++ gforth glib2-devel glibc-devel.i686 golang groovy gtkglext-libs haskell-platform icu java-1.?.0-openjdk julia \
+  ksh libgcc.i686 lldb lldb-devel lttng-tools lttng-ust maxima mercurial mono-basic mono-complete nasm ncurses-compat-libs neovim \
+  nim npm ocaml octave octave-devel patch pcre-devel  perl-Digest-CRC perl-List-MoreUtils perl-Text-Soundex php-cli pl pypy python3-devel \
+  R-littler rakudo ruby rust tcsh vala zsh -y
+npm install -g cheddar-lang coffee-script babel-cli mathjs escape-string-regexp clear readline-sync decimal.js minimist shunt.js
 python3 -m pip install --upgrade pip
-python3 -m pip install exrex python-pcre hbcht sympy
+python3 -m pip install exrex python-pcre hbcht sympy mathics
 python3 -m pip install numpy 
 python -m pip install sympy pyshoco docopt neovim
+restorecon -Rv /usr/lib{,64}/python3.5
+patch /usr/lib/python3.5/site-packages/mathics/builtin/pympler/asizeof.py mathics.patch
 octave --eval "pkg install -forge symbolic"
 octave --eval "pkg rebuild -auto symbolic"
 gem install treetop
