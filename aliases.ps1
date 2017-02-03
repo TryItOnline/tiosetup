@@ -14,3 +14,4 @@ Set-Alias sleep Start-Sleep -Option AllScope -Scope Global
 Set-Alias sort Sort-Object -Option AllScope -Scope Global
 Set-Alias tee Tee-Object -Option AllScope -Scope Global
 Set-Alias write Write-Output -Option AllScope -Scope Global
+Set-Alias date Get-Date -Option AllScope -Scope Global
