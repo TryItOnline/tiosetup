@@ -9,8 +9,8 @@ dnf update -y
 dnf install allegro5-devel ant bison bison-devel chicken clang clisp clojure cmake dash emacs-nox erlang-erts fish flex flex-devel fsharp \
   gc-devel gcc-c++ gforth glib2-devel glibc-devel.i686 golang groovy gtkglext-libs haskell-platform icu java-1.?.0-openjdk julia \
   ksh libgcc.i686 lldb lldb-devel lttng-tools lttng-ust maxima mercurial mono-basic mono-complete nasm ncurses-compat-libs neovim \
-  nim npm ocaml octave octave-devel patch pcre-devel perl-Digest-CRC perl-List-MoreUtils perl-Text-Soundex php-cli pl pypy python3-devel \
-  R-littler rakudo ruby rubygem-treetop rust tcsh time vala wget zsh -y
+  nim npm ocaml octave octave-devel patch pcre-devel perl-Digest-CRC perl-List-MoreUtils perl-Text-Soundex php-cli pl pyephem pypy python3-devel \
+  R-littler rakudo ruby rubygem-treetop rust screen tcsh time vala vim-common wget zsh -y
 npm install -g cheddar-lang coffee-script babel-cli mathjs escape-string-regexp clear readline-sync decimal.js minimist shunt.js
 python3 -m pip install --upgrade pip
 python3 -m pip install exrex python-pcre hbcht sympy mathics
@@ -45,3 +45,20 @@ cp aliases.ps1 /opt/microsoft/lib/
 rm -rf usr
 cd ..
 rm -rf tmp
+cat <<EOT >> /etc/security/limits.d/99-tio.conf
+runner soft cpu             2
+runner hard cpu             2
+runner soft core            0
+runner hard core            0
+runner soft fsize        4096
+runner hard fsize        4096
+runner soft nofile        192
+runner hard nofile        192
+runner soft nproc         128
+runner hard nproc         128
+runner soft rss        262144
+runner hard rss        262144
+runner soft sigpending    128
+runner hard sigpending    128
+EOT
+
