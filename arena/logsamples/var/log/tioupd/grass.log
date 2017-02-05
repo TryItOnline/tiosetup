@@ -1,0 +1,12 @@
+Sun Feb  5 02:05:41 UTC 2017
+--2017-02-05 02:05:41--  http://www.blue.sky.or.jp/grass/grass.rb
+Resolving www.blue.sky.or.jp (www.blue.sky.or.jp)... 219.94.232.142, 2403:3a00:202:1101:219:94:232:142
+Connecting to www.blue.sky.or.jp (www.blue.sky.or.jp)|219.94.232.142|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4845 (4.7K) [text/plain]
+Saving to: ‘grass.rb’
+
+     0K ....                                                  100%  756M=0s
+
+2017-02-05 02:05:42 (756 MB/s) - ‘grass.rb’ saved [4845/4845]
+

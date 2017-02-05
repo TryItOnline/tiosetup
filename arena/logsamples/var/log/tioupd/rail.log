@@ -1,0 +1,24 @@
+Sun Feb  5 02:09:55 UTC 2017
+--2017-02-05 02:09:55--  http://www.xmission.com/~tyrecius/rail-0.5.tar.gz
+Resolving www.xmission.com (www.xmission.com)... 198.60.22.4, 2607:fa18:0:3::4
+Connecting to www.xmission.com (www.xmission.com)|198.60.22.4|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://xmission.com/~tyrecius/rail-0.5.tar.gz [following]
+--2017-02-05 02:09:56--  http://xmission.com/~tyrecius/rail-0.5.tar.gz
+Resolving xmission.com (xmission.com)... 198.60.22.4, 2607:fa18:0:3::4
+Reusing existing connection to www.xmission.com:80.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://user.xmission.com/~tyrecius/rail-0.5.tar.gz [following]
+--2017-02-05 02:09:56--  https://user.xmission.com/~tyrecius/rail-0.5.tar.gz
+Resolving user.xmission.com (user.xmission.com)... 198.60.22.38, 2607:fa18:0:3::38
+Connecting to user.xmission.com (user.xmission.com)|198.60.22.38|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 108908 (106K) [application/x-gzip]
+Saving to: ‘rail-0.5.tar.gz’
+
+     0K .......... .......... .......... .......... .......... 47%  468K 0s
+    50K .......... .......... .......... .......... .......... 94%  954K 0s
+   100K ......                                                100%  128M=0.2s
+
+2017-02-05 02:09:56 (667 KB/s) - ‘rail-0.5.tar.gz’ saved [108908/108908]
+

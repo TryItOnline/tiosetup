@@ -1,0 +1,14 @@
+Sun Feb  5 02:11:11 UTC 2017
+Cloning into 'ubasic'...
+cc -Wall -pedantic -g3   -c -o tests.o tests.c
+tests.c: In function ‘clear_display’:
+tests.c:117:3: warning: implicit declaration of function ‘write’ [-Wimplicit-function-declaration]
+   write(1, "\012", 1);
+   ^~~~~
+cc -Wall -pedantic -g3   -c -o ubasic.o ubasic.c
+cc -Wall -pedantic -g3   -c -o tokenizer.o tokenizer.c
+cc   tests.o ubasic.o tokenizer.o   -o tests
+cc -Wall -pedantic -g3   -c -o use-ubasic.o use-ubasic.c
+cc   use-ubasic.o ubasic.o tokenizer.o   -o use-ubasic
+cc -Wall -pedantic -g3   -c -o ubx.o ubx.c
+cc   ubx.o ubasic.o tokenizer.o   -o ubx

@@ -1,0 +1,726 @@
+Sun Feb  5 02:06:07 UTC 2017
+--2017-02-05 02:06:07--  http://www.latrobe.edu.au/__data/assets/file/0007/240298/Joy-Programming.zip
+Resolving www.latrobe.edu.au (www.latrobe.edu.au)... 131.172.22.80
+Connecting to www.latrobe.edu.au (www.latrobe.edu.au)|131.172.22.80|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5071599 (4.8M) [application/zip]
+Saving to: ‘Joy-Programming.zip’
+
+     0K .......... .......... .......... .......... ..........  1% 71.6K 68s
+    50K .......... .......... .......... .......... ..........  2%  156K 49s
+   100K .......... .......... .......... .......... ..........  3%  346K 37s
+   150K .......... .......... .......... .......... ..........  4%  215K 33s
+   200K .......... .......... .......... .......... ..........  5%  215K 31s
+   250K .......... .......... .......... .......... ..........  6%  215K 29s
+   300K .......... .......... .......... .......... ..........  7%  564K 26s
+   350K .......... .......... .......... .......... ..........  8%  345K 24s
+   400K .......... .......... .......... .......... ..........  9%  215K 23s
+   450K .......... .......... .......... .......... .......... 10%  215K 23s
+   500K .......... .......... .......... .......... .......... 11%  215K 22s
+   550K .......... .......... .......... .......... .......... 12% 47.4M 20s
+   600K .......... .......... .......... .......... .......... 13%  215K 20s
+   650K .......... .......... .......... .......... .......... 14%  215K 20s
+   700K .......... .......... .......... .......... .......... 15%  215K 20s
+   750K .......... .......... .......... .......... .......... 16%  215K 19s
+   800K .......... .......... .......... .......... .......... 17% 32.0M 18s
+   850K .......... .......... .......... .......... .......... 18%  215K 18s
+   900K .......... .......... .......... .......... .......... 19%  215K 18s
+   950K .......... .......... .......... .......... .......... 20%  215K 17s
+  1000K .......... .......... .......... .......... .......... 21% 44.2M 16s
+  1050K .......... .......... .......... .......... .......... 22%  215K 16s
+  1100K .......... .......... .......... .......... .......... 23%  215K 16s
+  1150K .......... .......... .......... .......... .......... 24%  215K 16s
+  1200K .......... .......... .......... .......... .......... 25%  215K 16s
+  1250K .......... .......... .......... .......... .......... 26% 45.5M 15s
+  1300K .......... .......... .......... .......... .......... 27%  215K 15s
+  1350K .......... .......... .......... .......... .......... 28%  215K 15s
+  1400K .......... .......... .......... .......... .......... 29%  215K 15s
+  1450K .......... .......... .......... .......... .......... 30% 65.5M 14s
+  1500K .......... .......... .......... .......... .......... 31%  215K 14s
+  1550K .......... .......... .......... .......... .......... 32%  215K 14s
+  1600K .......... .......... .......... .......... .......... 33%  215K 14s
+  1650K .......... .......... .......... .......... .......... 34%  215K 13s
+  1700K .......... .......... .......... .......... .......... 35% 64.0M 13s
+  1750K .......... .......... .......... .......... .......... 36%  215K 13s
+  1800K .......... .......... .......... .......... .......... 37%  215K 12s
+  1850K .......... .......... .......... .......... .......... 38%  215K 12s
+  1900K .......... .......... .......... .......... .......... 39%  215K 12s
+  1950K .......... .......... .......... .......... .......... 40% 39.4M 12s
+  2000K .......... .......... .......... .......... .......... 41%  215K 12s
+  2050K .......... .......... .......... .......... .......... 42%  215K 11s
+  2100K .......... .......... .......... .......... .......... 43%  215K 11s
+  2150K .......... .......... .......... .......... .......... 44% 39.7M 11s
+  2200K .......... .......... .......... .......... .......... 45%  215K 11s
+  2250K .......... .......... .......... .......... .......... 46%  215K 10s
+  2300K .......... .......... .......... .......... .......... 47%  215K 10s
+  2350K .......... .......... .......... .......... .......... 48%  216K 10s
+  2400K .......... .......... .......... .......... .......... 49% 32.8M 10s
+  2450K .......... .......... .......... .......... .......... 50%  215K 10s
+  2500K .......... .......... .......... .......... .......... 51%  215K 9s
+  2550K .......... .......... .......... .......... .......... 52%  215K 9s
+  2600K .......... .......... .......... .......... .......... 53% 58.5M 9s
+  2650K .......... .......... .......... .......... .......... 54%  215K 9s
+  2700K .......... .......... .......... .......... .......... 55%  215K 9s
+  2750K .......... .......... .......... .......... .......... 56%  215K 8s
+  2800K .......... .......... .......... .......... .......... 57%  215K 8s
+  2850K .......... .......... .......... .......... .......... 58% 50.4M 8s
+  2900K .......... .......... .......... .......... .......... 59%  215K 8s
+  2950K .......... .......... .......... .......... .......... 60%  215K 8s
+  3000K .......... .......... .......... .......... .......... 61%  215K 7s
+  3050K .......... .......... .......... .......... .......... 62% 48.3M 7s
+  3100K .......... .......... .......... .......... .......... 63%  215K 7s
+  3150K .......... .......... .......... .......... .......... 64%  215K 7s
+  3200K .......... .......... .......... .......... .......... 65%  215K 7s
+  3250K .......... .......... .......... .......... .......... 66%  215K 6s
+  3300K .......... .......... .......... .......... .......... 67% 43.1M 6s
+  3350K .......... .......... .......... .......... .......... 68%  215K 6s
+  3400K .......... .......... .......... .......... .......... 69%  215K 6s
+  3450K .......... .......... .......... .......... .......... 70%  215K 6s
+  3500K .......... .......... .......... .......... .......... 71%  215K 5s
+  3550K .......... .......... .......... .......... .......... 72% 30.9M 5s
+  3600K .......... .......... .......... .......... .......... 73%  215K 5s
+  3650K .......... .......... .......... .......... .......... 74%  215K 5s
+  3700K .......... .......... .......... .......... .......... 75%  215K 5s
+  3750K .......... .......... .......... .......... .......... 76% 33.2M 4s
+  3800K .......... .......... .......... .......... .......... 77%  215K 4s
+  3850K .......... .......... .......... .......... .......... 78%  215K 4s
+  3900K .......... .......... .......... .......... .......... 79%  215K 4s
+  3950K .......... .......... .......... .......... .......... 80%  215K 4s
+  4000K .......... .......... .......... .......... .......... 81% 25.6M 3s
+  4050K .......... .......... .......... .......... .......... 82%  215K 3s
+  4100K .......... .......... .......... .......... .......... 83%  215K 3s
+  4150K .......... .......... .......... .......... .......... 84%  216K 3s
+  4200K .......... .......... .......... .......... .......... 85% 33.6M 3s
+  4250K .......... .......... .......... .......... .......... 86%  215K 2s
+  4300K .......... .......... .......... .......... .......... 87%  215K 2s
+  4350K .......... .......... .......... .......... .......... 88%  215K 2s
+  4400K .......... .......... .......... .......... .......... 89%  216K 2s
+  4450K .......... .......... .......... .......... .......... 90% 32.9M 2s
+  4500K .......... .......... .......... .......... .......... 91%  215K 2s
+  4550K .......... .......... .......... .......... .......... 92%  215K 1s
+  4600K .......... .......... .......... .......... .......... 93%  215K 1s
+  4650K .......... .......... .......... .......... .......... 94% 50.0M 1s
+  4700K .......... .......... .......... .......... .......... 95%  215K 1s
+  4750K .......... .......... .......... .......... .......... 96%  215K 1s
+  4800K .......... .......... .......... .......... .......... 97%  215K 0s
+  4850K .......... .......... .......... .......... .......... 98%  215K 0s
+  4900K .......... .......... .......... .......... .......... 99% 49.5M 0s
+  4950K ..                                                    100% 12.7M=19s
+
+2017-02-05 02:06:27 (266 KB/s) - ‘Joy-Programming.zip’ saved [5071599/5071599]
+
+Archive:  Joy-Programming.zip
+   creating: joy/
+  inflating: joy.html                
+  inflating: joy/agglib.joy          
+  inflating: joy/allhelp.html        
+  inflating: joy/allhelp.temp        
+  inflating: joy/clean.sh            
+  inflating: joy/faq.html            
+  inflating: joy/faq1.html           
+  inflating: joy/flatjoy.joy         
+  inflating: joy/flatjoy.out         
+  inflating: joy/forth-joy.html      
+  inflating: joy/fraclib.joy         
+   creating: joy/gc/
+ extracting: joy/gc.fail             
+ extracting: joy/gc.tar.gz           
+   creating: joy/gc6.0/
+  inflating: joy/gc6.0/acinclude.m4  
+  inflating: joy/gc6.0/aclocal.m4    
+  inflating: joy/gc6.0/add_gc_prefix.c  
+  inflating: joy/gc6.0/allchblk.c    
+  inflating: joy/gc6.0/allchblk.lo   
+  inflating: joy/gc6.0/alloc.c       
+  inflating: joy/gc6.0/alloc.lo      
+  inflating: joy/gc6.0/alpha_mach_dep.s  
+  inflating: joy/gc6.0/AmigaOS.c     
+  inflating: joy/gc6.0/BCC_MAKEFILE  
+  inflating: joy/gc6.0/blacklst.c    
+  inflating: joy/gc6.0/blacklst.lo   
+  inflating: joy/gc6.0/callprocs     
+  inflating: joy/gc6.0/checksums.c   
+  inflating: joy/gc6.0/checksums.lo  
+  inflating: joy/gc6.0/config.cache  
+  inflating: joy/gc6.0/config.guess  
+  inflating: joy/gc6.0/config.log    
+  inflating: joy/gc6.0/config.status  
+  inflating: joy/gc6.0/config.sub    
+  inflating: joy/gc6.0/configure     
+  inflating: joy/gc6.0/configure.host  
+  inflating: joy/gc6.0/configure.in  
+   creating: joy/gc6.0/cord/
+  inflating: joy/gc6.0/cord/cordbscs.c  
+  inflating: joy/gc6.0/cord/cordprnt.c  
+  inflating: joy/gc6.0/cord/cordtest.c  
+  inflating: joy/gc6.0/cord/cordxtra.c  
+  inflating: joy/gc6.0/cord/de.c     
+  inflating: joy/gc6.0/cord/de_cmds.h  
+  inflating: joy/gc6.0/cord/de_win.c  
+  inflating: joy/gc6.0/cord/de_win.h  
+  inflating: joy/gc6.0/cord/de_win.ICO  
+  inflating: joy/gc6.0/cord/de_win.RC  
+  inflating: joy/gc6.0/dbg_mlc.c     
+  inflating: joy/gc6.0/dbg_mlc.lo    
+  inflating: joy/gc6.0/digimars.mak  
+   creating: joy/gc6.0/doc/
+  inflating: joy/gc6.0/doc/barrett_diagram  
+  inflating: joy/gc6.0/doc/debugging.html  
+  inflating: joy/gc6.0/doc/gc.man    
+  inflating: joy/gc6.0/doc/gcdescr.html  
+  inflating: joy/gc6.0/doc/README    
+  inflating: joy/gc6.0/doc/README.amiga  
+  inflating: joy/gc6.0/doc/README.autoconf  
+  inflating: joy/gc6.0/doc/README.changes  
+  inflating: joy/gc6.0/doc/README.contributors  
+  inflating: joy/gc6.0/doc/README.cords  
+  inflating: joy/gc6.0/doc/README.dj  
+  inflating: joy/gc6.0/doc/README.environment  
+  inflating: joy/gc6.0/doc/README.hp  
+  inflating: joy/gc6.0/doc/README.linux  
+  inflating: joy/gc6.0/doc/README.Mac  
+  inflating: joy/gc6.0/doc/README.MacOSX  
+  inflating: joy/gc6.0/doc/README.macros  
+  inflating: joy/gc6.0/doc/README.OS2  
+  inflating: joy/gc6.0/doc/README.rs6000  
+  inflating: joy/gc6.0/doc/README.sgi  
+  inflating: joy/gc6.0/doc/README.solaris2  
+  inflating: joy/gc6.0/doc/README.uts  
+  inflating: joy/gc6.0/doc/README.win32  
+  inflating: joy/gc6.0/doc/tree.html  
+  inflating: joy/gc6.0/dyn_load.c    
+  inflating: joy/gc6.0/dyn_load.lo   
+  inflating: joy/gc6.0/EMX_MAKEFILE  
+  inflating: joy/gc6.0/finalize.c    
+  inflating: joy/gc6.0/finalize.lo   
+  inflating: joy/gc6.0/gc.h          
+  inflating: joy/gc6.0/gc.mak        
+  inflating: joy/gc6.0/gcc_support.c  
+  inflating: joy/gc6.0/gcj_mlc.c     
+  inflating: joy/gc6.0/gcj_mlc.lo    
+  inflating: joy/gc6.0/gcname.c      
+  inflating: joy/gc6.0/gc_cpp.cc     
+  inflating: joy/gc6.0/gc_cpp.cpp    
+  inflating: joy/gc6.0/gc_dlopen.c   
+  inflating: joy/gc6.0/gc_dlopen.lo  
+  inflating: joy/gc6.0/headers.c     
+  inflating: joy/gc6.0/headers.lo    
+  inflating: joy/gc6.0/hpux_test_and_clear.s  
+  inflating: joy/gc6.0/if_mach.c     
+  inflating: joy/gc6.0/if_not_there.c  
+   creating: joy/gc6.0/include/
+  inflating: joy/gc6.0/include/cord.h  
+  inflating: joy/gc6.0/include/ec.h  
+  inflating: joy/gc6.0/include/gc.h  
+  inflating: joy/gc6.0/include/gc_alloc.h  
+  inflating: joy/gc6.0/include/gc_amiga_redirects.h  
+  inflating: joy/gc6.0/include/gc_backptr.h  
+  inflating: joy/gc6.0/include/gc_cpp.h  
+  inflating: joy/gc6.0/include/gc_gcj.h  
+  inflating: joy/gc6.0/include/gc_inl.h  
+ extracting: joy/gc6.0/include/gc_inline.h  
+  inflating: joy/gc6.0/include/gc_local_alloc.h  
+  inflating: joy/gc6.0/include/gc_mark.h  
+  inflating: joy/gc6.0/include/gc_pthread_redirects.h  
+  inflating: joy/gc6.0/include/gc_typed.h  
+  inflating: joy/gc6.0/include/javaxfc.h  
+  inflating: joy/gc6.0/include/leak_detector.h  
+  inflating: joy/gc6.0/include/new_gc_alloc.h  
+   creating: joy/gc6.0/include/private/
+  inflating: joy/gc6.0/include/private/cord_pos.h  
+  inflating: joy/gc6.0/include/private/dbg_mlc.h  
+  inflating: joy/gc6.0/include/private/gcconfig.h  
+  inflating: joy/gc6.0/include/private/gc_hdrs.h  
+  inflating: joy/gc6.0/include/private/gc_locks.h  
+  inflating: joy/gc6.0/include/private/gc_pmark.h  
+  inflating: joy/gc6.0/include/private/gc_priv.h  
+  inflating: joy/gc6.0/include/private/solaris_threads.h  
+  inflating: joy/gc6.0/include/private/specific.h  
+  inflating: joy/gc6.0/include/weakpointer.h  
+  inflating: joy/gc6.0/install-sh    
+  inflating: joy/gc6.0/irix_threads.c  
+  inflating: joy/gc6.0/irix_threads.lo  
+  inflating: joy/gc6.0/libgc.la      
+  inflating: joy/gc6.0/libtool       
+  inflating: joy/gc6.0/libtool.m4    
+  inflating: joy/gc6.0/linux_threads.c  
+  inflating: joy/gc6.0/linux_threads.lo  
+  inflating: joy/gc6.0/ltconfig      
+  inflating: joy/gc6.0/ltmain.sh     
+  inflating: joy/gc6.0/mach_dep.c    
+  inflating: joy/gc6.0/mach_dep.lo   
+  inflating: joy/gc6.0/MacOS.c       
+  inflating: joy/gc6.0/MacProjects.sit.hqx  
+   creating: joy/gc6.0/Mac_files/
+  inflating: joy/gc6.0/Mac_files/dataend.c  
+  inflating: joy/gc6.0/Mac_files/datastart.c  
+  inflating: joy/gc6.0/Mac_files/MacOS_config.h  
+  inflating: joy/gc6.0/Mac_files/MacOS_Test_config.h  
+  inflating: joy/gc6.0/Makefile      
+  inflating: joy/gc6.0/Makefile.am   
+  inflating: joy/gc6.0/Makefile.direct  
+  inflating: joy/gc6.0/Makefile.dj   
+  inflating: joy/gc6.0/Makefile.DLLs  
+  inflating: joy/gc6.0/Makefile.in   
+  inflating: joy/gc6.0/malloc.c      
+  inflating: joy/gc6.0/malloc.lo     
+  inflating: joy/gc6.0/mallocx.c     
+  inflating: joy/gc6.0/mallocx.lo    
+  inflating: joy/gc6.0/mark.c        
+  inflating: joy/gc6.0/mark.lo       
+  inflating: joy/gc6.0/mark_rts.c    
+  inflating: joy/gc6.0/mark_rts.lo   
+  inflating: joy/gc6.0/mips_sgi_mach_dep.s  
+  inflating: joy/gc6.0/mips_ultrix_mach_dep.s  
+  inflating: joy/gc6.0/misc.c        
+  inflating: joy/gc6.0/misc.lo       
+  inflating: joy/gc6.0/mkinstalldirs  
+  inflating: joy/gc6.0/new_hblk.c    
+  inflating: joy/gc6.0/new_hblk.lo   
+  inflating: joy/gc6.0/NT_MAKEFILE   
+  inflating: joy/gc6.0/NT_THREADS_MAKEFILE  
+  inflating: joy/gc6.0/obj_map.c     
+  inflating: joy/gc6.0/obj_map.lo    
+  inflating: joy/gc6.0/OS2_MAKEFILE  
+  inflating: joy/gc6.0/os_dep.c      
+  inflating: joy/gc6.0/os_dep.lo     
+  inflating: joy/gc6.0/PCR-Makefile  
+  inflating: joy/gc6.0/pcr_interface.c  
+  inflating: joy/gc6.0/pcr_interface.lo  
+  inflating: joy/gc6.0/pc_excludes   
+  inflating: joy/gc6.0/powerpc_macosx_mach_dep.s  
+  inflating: joy/gc6.0/ptr_chck.c    
+  inflating: joy/gc6.0/ptr_chck.lo   
+  inflating: joy/gc6.0/README.QUICK  
+  inflating: joy/gc6.0/real_malloc.c  
+  inflating: joy/gc6.0/real_malloc.lo  
+  inflating: joy/gc6.0/reclaim.c     
+  inflating: joy/gc6.0/reclaim.lo    
+  inflating: joy/gc6.0/rs6000_mach_dep.s  
+  inflating: joy/gc6.0/setjmp_t.c    
+  inflating: joy/gc6.0/SMakefile.amiga  
+  inflating: joy/gc6.0/solaris_pthreads.c  
+  inflating: joy/gc6.0/solaris_pthreads.lo  
+  inflating: joy/gc6.0/solaris_threads.c  
+  inflating: joy/gc6.0/solaris_threads.lo  
+  inflating: joy/gc6.0/sparc_mach_dep.s  
+  inflating: joy/gc6.0/sparc_netbsd_mach_dep.s  
+  inflating: joy/gc6.0/sparc_sunos4_mach_dep.s  
+  inflating: joy/gc6.0/specific.c    
+  inflating: joy/gc6.0/specific.lo   
+  inflating: joy/gc6.0/stubborn.c    
+  inflating: joy/gc6.0/stubborn.lo   
+   creating: joy/gc6.0/tests/
+  inflating: joy/gc6.0/tests/leak_test.c  
+  inflating: joy/gc6.0/tests/test.c  
+  inflating: joy/gc6.0/tests/test_cpp.cc  
+  inflating: joy/gc6.0/tests/thread_leak_test.c  
+  inflating: joy/gc6.0/tests/trace_test.c  
+  inflating: joy/gc6.0/threadlibs.c  
+  inflating: joy/gc6.0/typd_mlc.c    
+  inflating: joy/gc6.0/typd_mlc.lo   
+  inflating: joy/gc6.0/version.h     
+  inflating: joy/gc6.0/WCC_MAKEFILE  
+  inflating: joy/gc6.0/win32_threads.c  
+  inflating: joy/gcd                 
+  inflating: joy/gc/acinclude.m4     
+  inflating: joy/gc/aclocal.m4       
+  inflating: joy/gc/add_gc_prefix.c  
+  inflating: joy/gc/allchblk.c       
+  inflating: joy/gc/allchblk.lo      
+  inflating: joy/gc/alloc.c          
+  inflating: joy/gc/alloc.lo         
+  inflating: joy/gc/alpha_mach_dep.s  
+  inflating: joy/gc/AmigaOS.c        
+  inflating: joy/gc/BCC_MAKEFILE     
+  inflating: joy/gc/blacklst.c       
+  inflating: joy/gc/blacklst.lo      
+  inflating: joy/gc/callprocs        
+  inflating: joy/gc/checksums.c      
+  inflating: joy/gc/checksums.lo     
+  inflating: joy/gc/config.cache     
+  inflating: joy/gc/config.guess     
+  inflating: joy/gc/config.log       
+  inflating: joy/gc/config.status    
+  inflating: joy/gc/config.sub       
+  inflating: joy/gc/configure        
+  inflating: joy/gc/configure.host   
+  inflating: joy/gc/configure.in     
+   creating: joy/gc/cord/
+  inflating: joy/gc/cord/cordbscs.c  
+  inflating: joy/gc/cord/cordprnt.c  
+  inflating: joy/gc/cord/cordtest.c  
+  inflating: joy/gc/cord/cordxtra.c  
+  inflating: joy/gc/cord/de.c        
+  inflating: joy/gc/cord/de_cmds.h   
+  inflating: joy/gc/cord/de_win.c    
+  inflating: joy/gc/cord/de_win.h    
+  inflating: joy/gc/cord/de_win.ICO  
+  inflating: joy/gc/cord/de_win.RC   
+  inflating: joy/gc/dbg_mlc.c        
+  inflating: joy/gc/dbg_mlc.lo       
+  inflating: joy/gc/digimars.mak     
+   creating: joy/gc/doc/
+  inflating: joy/gc/doc/barrett_diagram  
+  inflating: joy/gc/doc/debugging.html  
+  inflating: joy/gc/doc/gc.man       
+  inflating: joy/gc/doc/gcdescr.html  
+  inflating: joy/gc/doc/README       
+  inflating: joy/gc/doc/README.amiga  
+  inflating: joy/gc/doc/README.autoconf  
+  inflating: joy/gc/doc/README.changes  
+  inflating: joy/gc/doc/README.contributors  
+  inflating: joy/gc/doc/README.cords  
+  inflating: joy/gc/doc/README.dj    
+  inflating: joy/gc/doc/README.environment  
+  inflating: joy/gc/doc/README.hp    
+  inflating: joy/gc/doc/README.linux  
+  inflating: joy/gc/doc/README.Mac   
+  inflating: joy/gc/doc/README.MacOSX  
+  inflating: joy/gc/doc/README.macros  
+  inflating: joy/gc/doc/README.OS2   
+  inflating: joy/gc/doc/README.rs6000  
+  inflating: joy/gc/doc/README.sgi   
+  inflating: joy/gc/doc/README.solaris2  
+  inflating: joy/gc/doc/README.uts   
+  inflating: joy/gc/doc/README.win32  
+  inflating: joy/gc/doc/tree.html    
+  inflating: joy/gc/dyn_load.c       
+  inflating: joy/gc/dyn_load.lo      
+  inflating: joy/gc/EMX_MAKEFILE     
+  inflating: joy/gc/finalize.c       
+  inflating: joy/gc/finalize.lo      
+  inflating: joy/gc/gc.h             
+  inflating: joy/gc/gc.mak           
+  inflating: joy/gc/gcc_support.c    
+  inflating: joy/gc/gcj_mlc.c        
+  inflating: joy/gc/gcj_mlc.lo       
+  inflating: joy/gc/gcname.c         
+  inflating: joy/gc/gc_cpp.cc        
+  inflating: joy/gc/gc_cpp.cpp       
+  inflating: joy/gc/gc_dlopen.c      
+  inflating: joy/gc/gc_dlopen.lo     
+  inflating: joy/gc/headers.c        
+  inflating: joy/gc/headers.lo       
+  inflating: joy/gc/hpux_test_and_clear.s  
+  inflating: joy/gc/if_mach.c        
+  inflating: joy/gc/if_not_there.c   
+   creating: joy/gc/include/
+  inflating: joy/gc/include/cord.h   
+  inflating: joy/gc/include/ec.h     
+  inflating: joy/gc/include/gc.h     
+  inflating: joy/gc/include/gc_alloc.h  
+  inflating: joy/gc/include/gc_amiga_redirects.h  
+  inflating: joy/gc/include/gc_backptr.h  
+  inflating: joy/gc/include/gc_cpp.h  
+  inflating: joy/gc/include/gc_gcj.h  
+  inflating: joy/gc/include/gc_inl.h  
+ extracting: joy/gc/include/gc_inline.h  
+  inflating: joy/gc/include/gc_local_alloc.h  
+  inflating: joy/gc/include/gc_mark.h  
+  inflating: joy/gc/include/gc_pthread_redirects.h  
+  inflating: joy/gc/include/gc_typed.h  
+  inflating: joy/gc/include/javaxfc.h  
+  inflating: joy/gc/include/leak_detector.h  
+  inflating: joy/gc/include/new_gc_alloc.h  
+   creating: joy/gc/include/private/
+  inflating: joy/gc/include/private/cord_pos.h  
+  inflating: joy/gc/include/private/dbg_mlc.h  
+  inflating: joy/gc/include/private/gcconfig.h  
+  inflating: joy/gc/include/private/gc_hdrs.h  
+  inflating: joy/gc/include/private/gc_locks.h  
+  inflating: joy/gc/include/private/gc_pmark.h  
+  inflating: joy/gc/include/private/gc_priv.h  
+  inflating: joy/gc/include/private/solaris_threads.h  
+  inflating: joy/gc/include/private/specific.h  
+  inflating: joy/gc/include/weakpointer.h  
+  inflating: joy/gc/install-sh       
+  inflating: joy/gc/irix_threads.c   
+  inflating: joy/gc/irix_threads.lo  
+  inflating: joy/gc/libgc.la         
+  inflating: joy/gc/libtool          
+  inflating: joy/gc/libtool.m4       
+  inflating: joy/gc/linux_threads.c  
+  inflating: joy/gc/linux_threads.lo  
+  inflating: joy/gc/ltconfig         
+  inflating: joy/gc/ltmain.sh        
+  inflating: joy/gc/mach_dep.c       
+  inflating: joy/gc/mach_dep.lo      
+  inflating: joy/gc/MacOS.c          
+  inflating: joy/gc/MacProjects.sit.hqx  
+   creating: joy/gc/Mac_files/
+  inflating: joy/gc/Mac_files/dataend.c  
+  inflating: joy/gc/Mac_files/datastart.c  
+  inflating: joy/gc/Mac_files/MacOS_config.h  
+  inflating: joy/gc/Mac_files/MacOS_Test_config.h  
+  inflating: joy/gc/Makefile         
+  inflating: joy/gc/Makefile.am      
+  inflating: joy/gc/Makefile.direct  
+  inflating: joy/gc/Makefile.dj      
+  inflating: joy/gc/Makefile.DLLs    
+  inflating: joy/gc/Makefile.in      
+  inflating: joy/gc/malloc.c         
+  inflating: joy/gc/malloc.lo        
+  inflating: joy/gc/mallocx.c        
+  inflating: joy/gc/mallocx.lo       
+  inflating: joy/gc/mark.c           
+  inflating: joy/gc/mark.lo          
+  inflating: joy/gc/mark_rts.c       
+  inflating: joy/gc/mark_rts.lo      
+  inflating: joy/gc/mips_sgi_mach_dep.s  
+  inflating: joy/gc/mips_ultrix_mach_dep.s  
+  inflating: joy/gc/misc.c           
+  inflating: joy/gc/misc.lo          
+  inflating: joy/gc/mkinstalldirs    
+  inflating: joy/gc/new_hblk.c       
+  inflating: joy/gc/new_hblk.lo      
+  inflating: joy/gc/NT_MAKEFILE      
+  inflating: joy/gc/NT_THREADS_MAKEFILE  
+  inflating: joy/gc/obj_map.c        
+  inflating: joy/gc/obj_map.lo       
+  inflating: joy/gc/OS2_MAKEFILE     
+  inflating: joy/gc/os_dep.c         
+  inflating: joy/gc/os_dep.lo        
+  inflating: joy/gc/PCR-Makefile     
+  inflating: joy/gc/pcr_interface.c  
+  inflating: joy/gc/pcr_interface.lo  
+  inflating: joy/gc/pc_excludes      
+  inflating: joy/gc/powerpc_macosx_mach_dep.s  
+  inflating: joy/gc/ptr_chck.c       
+  inflating: joy/gc/ptr_chck.lo      
+  inflating: joy/gc/README.QUICK     
+  inflating: joy/gc/real_malloc.c    
+  inflating: joy/gc/real_malloc.lo   
+  inflating: joy/gc/reclaim.c        
+  inflating: joy/gc/reclaim.lo       
+  inflating: joy/gc/rs6000_mach_dep.s  
+  inflating: joy/gc/setjmp_t.c       
+  inflating: joy/gc/SMakefile.amiga  
+  inflating: joy/gc/solaris_pthreads.c  
+  inflating: joy/gc/solaris_pthreads.lo  
+  inflating: joy/gc/solaris_threads.c  
+  inflating: joy/gc/solaris_threads.lo  
+  inflating: joy/gc/sparc_mach_dep.s  
+  inflating: joy/gc/sparc_netbsd_mach_dep.s  
+  inflating: joy/gc/sparc_sunos4_mach_dep.s  
+  inflating: joy/gc/specific.c       
+  inflating: joy/gc/specific.lo      
+  inflating: joy/gc/stubborn.c       
+  inflating: joy/gc/stubborn.lo      
+   creating: joy/gc/tests/
+  inflating: joy/gc/tests/leak_test.c  
+  inflating: joy/gc/tests/test.c     
+  inflating: joy/gc/tests/test_cpp.cc  
+  inflating: joy/gc/tests/thread_leak_test.c  
+  inflating: joy/gc/tests/trace_test.c  
+  inflating: joy/gc/threadlibs.c     
+  inflating: joy/gc/typd_mlc.c       
+  inflating: joy/gc/typd_mlc.lo      
+  inflating: joy/gc/version.h        
+  inflating: joy/gc/WCC_MAKEFILE     
+  inflating: joy/gc/win32_threads.c  
+  inflating: joy/globals.h           
+  inflating: joy/grmlib.joy          
+  inflating: joy/grmtst.joy          
+  inflating: joy/grmtst.out          
+  inflating: joy/hope                
+  inflating: joy/hopefully           
+ extracting: joy/html-head.html      
+  inflating: joy/html-manual.html    
+ extracting: joy/html-tail.html      
+  inflating: joy/inilib.joy          
+  inflating: joy/interp.c            
+  inflating: joy/interp.o            
+  inflating: joy/j-mini-clisp.html   
+  inflating: joy/j-pico-prolog.html  
+  inflating: joy/j000lcj.tex         
+  inflating: joy/j00ovr.html         
+  inflating: joy/j00rat.html         
+  inflating: joy/j01tut.html         
+  inflating: joy/j01tut.html-new     
+  inflating: joy/j02maf.html         
+  inflating: joy/j03atm.html         
+  inflating: joy/j04alg.html         
+  inflating: joy/j05cmp.html         
+  inflating: joy/j06prg.html         
+  inflating: joy/j07rrs.html         
+  inflating: joy/j08cnt.html         
+  inflating: joy/j09imp.html         
+   creating: joy/j0src/
+  inflating: joy/j0src/globals.h     
+  inflating: joy/j0src/interp.c      
+  inflating: joy/j0src/main.c        
+  inflating: joy/j0src/makefile      
+  inflating: joy/j0src/scan.c        
+  inflating: joy/j0src/utils.c       
+  inflating: joy/j1prospect.html     
+  inflating: joy/j1src.html          
+  inflating: joy/jmisc.html          
+  inflating: joy/joy                 
+ extracting: joy/joy.tar.gz          
+ extracting: joy/joy1src.tar.gz      
+  inflating: joy/joybibl.bib         
+  inflating: joy/joydir.txt          
+ extracting: joy/joyhtml.tar.gz      
+ extracting: joy/joylibs.tar.gz      
+  inflating: joy/joytut.com          
+  inflating: joy/joytut.inp          
+  inflating: joy/joytut.joy          
+  inflating: joy/joytut.out          
+  inflating: joy/jp-church.html      
+  inflating: joy/jp-church.joy       
+  inflating: joy/jp-flatjoy.html     
+  inflating: joy/jp-imper.ht         
+  inflating: joy/jp-imper.html       
+  inflating: joy/jp-joyjoy.html      
+  inflating: joy/jp-joyjoy.joy       
+  inflating: joy/jp-joytst.joy       
+  inflating: joy/jp-joytst.out       
+  inflating: joy/jp-matmul.html      
+  inflating: joy/jp-nestrec.html     
+  inflating: joy/jp-nestrec.joy      
+  inflating: joy/jp-quadratic.html   
+  inflating: joy/jp-reprod.html      
+  inflating: joy/jp-reprodtst.joy    
+  inflating: joy/jp-reprodtst.out    
+  inflating: joy/jp-survrep.html     
+  inflating: joy/jp-survrep.html1    
+  inflating: joy/jp-survrep.html2    
+  inflating: joy/jp-trutab.html      
+  inflating: joy/jpearls.html        
+  inflating: joy/lazlib.joy          
+  inflating: joy/laztst.joy          
+  inflating: joy/laztst.out          
+  inflating: joy/LICENSE.html        
+  inflating: joy/lsplib.joy          
+  inflating: joy/lsplib.lsp          
+  inflating: joy/lsptst.joy          
+  inflating: joy/lsptst.lsp          
+  inflating: joy/lsptst.out          
+  inflating: joy/main.c              
+  inflating: joy/main.o              
+  inflating: joy/make.gc             
+  inflating: joy/make.gc-debug       
+  inflating: joy/make.nogc           
+  inflating: joy/makefile            
+  inflating: joy/modtst.joy          
+  inflating: joy/modtst.out          
+  inflating: joy/mthlib.joy          
+  inflating: joy/mtrlib.joy          
+  inflating: joy/mtrtst.joy          
+  inflating: joy/mtrtst.out          
+  inflating: joy/newgc.sh            
+   creating: joy/nforde/
+   creating: joy/nforde/joy/
+ extracting: joy/nforde/joy-040113.tgz  
+  inflating: joy/nforde/joy-040113.txt  
+  inflating: joy/nforde/joy/agglib.joy  
+   creating: joy/nforde/joy/gc/
+   creating: joy/nforde/joy/gc6.2/
+   creating: joy/nforde/joy/gc6.2/doc/
+  inflating: joy/nforde/joy/gc6.2/doc/barrett_diagram  
+  inflating: joy/nforde/joy/gc6.2/doc/debugging.html  
+  inflating: joy/nforde/joy/gc6.2/doc/gc.man  
+  inflating: joy/nforde/joy/gc6.2/doc/gcdescr.html  
+  inflating: joy/nforde/joy/gc6.2/doc/gcinterface.html  
+  inflating: joy/nforde/joy/gc6.2/doc/leak.html  
+  inflating: joy/nforde/joy/gc6.2/doc/Makefile.am  
+  inflating: joy/nforde/joy/gc6.2/doc/Makefile.in  
+  inflating: joy/nforde/joy/gc6.2/doc/README  
+  inflating: joy/nforde/joy/gc6.2/doc/README.amiga  
+  inflating: joy/nforde/joy/gc6.2/doc/README.arm.cross  
+  inflating: joy/nforde/joy/gc6.2/doc/README.autoconf  
+  inflating: joy/nforde/joy/gc6.2/doc/README.changes  
+  inflating: joy/nforde/joy/gc6.2/doc/README.contributors  
+  inflating: joy/nforde/joy/gc6.2/doc/README.cords  
+  inflating: joy/nforde/joy/gc6.2/doc/README.darwin  
+  inflating: joy/nforde/joy/gc6.2/doc/README.DGUX386  
+  inflating: joy/nforde/joy/gc6.2/doc/README.dj  
+  inflating: joy/nforde/joy/gc6.2/doc/README.environment  
+  inflating: joy/nforde/joy/gc6.2/doc/README.ews4800  
+  inflating: joy/nforde/joy/gc6.2/doc/README.hp  
+  inflating: joy/nforde/joy/gc6.2/doc/README.linux  
+  inflating: joy/nforde/joy/gc6.2/doc/README.Mac  
+ extracting: joy/nforde/joy/gc6.2/doc/README.MacOSX  
+  inflating: joy/nforde/joy/gc6.2/doc/README.macros  
+  inflating: joy/nforde/joy/gc6.2/doc/README.OS2  
+  inflating: joy/nforde/joy/gc6.2/doc/README.rs6000  
+  inflating: joy/nforde/joy/gc6.2/doc/README.sgi  
+  inflating: joy/nforde/joy/gc6.2/doc/README.solaris2  
+  inflating: joy/nforde/joy/gc6.2/doc/README.uts  
+  inflating: joy/nforde/joy/gc6.2/doc/README.win32  
+  inflating: joy/nforde/joy/gc6.2/doc/scale.html  
+  inflating: joy/nforde/joy/gc6.2/doc/tree.html  
+   creating: joy/nforde/joy/gc/doc/
+  inflating: joy/nforde/joy/gc/doc/barrett_diagram  
+  inflating: joy/nforde/joy/gc/doc/debugging.html  
+  inflating: joy/nforde/joy/gc/doc/gc.man  
+  inflating: joy/nforde/joy/gc/doc/gcdescr.html  
+  inflating: joy/nforde/joy/gc/doc/gcinterface.html  
+  inflating: joy/nforde/joy/gc/doc/leak.html  
+  inflating: joy/nforde/joy/gc/doc/Makefile.am  
+  inflating: joy/nforde/joy/gc/doc/Makefile.in  
+  inflating: joy/nforde/joy/gc/doc/README  
+  inflating: joy/nforde/joy/gc/doc/README.amiga  
+  inflating: joy/nforde/joy/gc/doc/README.arm.cross  
+  inflating: joy/nforde/joy/gc/doc/README.autoconf  
+  inflating: joy/nforde/joy/gc/doc/README.changes  
+  inflating: joy/nforde/joy/gc/doc/README.contributors  
+  inflating: joy/nforde/joy/gc/doc/README.cords  
+  inflating: joy/nforde/joy/gc/doc/README.darwin  
+  inflating: joy/nforde/joy/gc/doc/README.DGUX386  
+  inflating: joy/nforde/joy/gc/doc/README.dj  
+  inflating: joy/nforde/joy/gc/doc/README.environment  
+  inflating: joy/nforde/joy/gc/doc/README.ews4800  
+  inflating: joy/nforde/joy/gc/doc/README.hp  
+  inflating: joy/nforde/joy/gc/doc/README.linux  
+  inflating: joy/nforde/joy/gc/doc/README.Mac  
+ extracting: joy/nforde/joy/gc/doc/README.MacOSX  
+  inflating: joy/nforde/joy/gc/doc/README.macros  
+  inflating: joy/nforde/joy/gc/doc/README.OS2  
+  inflating: joy/nforde/joy/gc/doc/README.rs6000  
+  inflating: joy/nforde/joy/gc/doc/README.sgi  
+  inflating: joy/nforde/joy/gc/doc/README.solaris2  
+  inflating: joy/nforde/joy/gc/doc/README.uts  
+  inflating: joy/nforde/joy/gc/doc/README.win32  
+  inflating: joy/nforde/joy/gc/doc/scale.html  
+  inflating: joy/nforde/joy/gc/doc/tree.html  
+  inflating: joy/nforde/joy/joytut.inp  
+  inflating: joy/nforde/joy/joytut.joy  
+  inflating: joy/nforde/joy/joytut.out  
+  inflating: joy/nforde/joy/jp-joyjoy.joy  
+  inflating: joy/nforde/joy/make.nogc  
+  inflating: joy/nforde/joy/modtst.joy  
+  inflating: joy/nforde/joy/modtst.out  
+  inflating: joy/nforde/joy/mthlib.joy  
+  inflating: joy/nforde/joy/plain-manual.html  
+  inflating: joy/nforde/joy/plgtst.joy  
+  inflating: joy/nforde/joy/plgtst.out  
+  inflating: joy/numlib.joy          
+  inflating: joy/plain-manual.html   
+  inflating: joy/plain-manual.temp   
+  inflating: joy/plglib.joy          
+  inflating: joy/plgtst.joy          
+  inflating: joy/plgtst.out          
+  inflating: joy/quad.joy            
+  inflating: joy/quadratic.joy       
+  inflating: joy/rec-comb.html       
+  inflating: joy/refs.html           
+  inflating: joy/replib.joy          
+  inflating: joy/reptst.joy          
+  inflating: joy/reptst.out          
+  inflating: joy/scan.c              
+  inflating: joy/scan.o              
+  inflating: joy/seqlib.joy          
+  inflating: joy/symlib.joy          
+  inflating: joy/symtst.joy          
+  inflating: joy/symtst.out          
+  inflating: joy/synops.html         
+  inflating: joy/test.joy            
+  inflating: joy/tutlib.joy          
+  inflating: joy/typlib.joy          
+  inflating: joy/update-tars.sh      
+  inflating: joy/usrlib.joy          
+  inflating: joy/utils.c             
+  inflating: joy/utils.o             
+  inflating: joy/xx                  

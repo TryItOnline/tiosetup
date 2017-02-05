@@ -1,0 +1,499 @@
+Sun Feb  5 01:46:35 UTC 2017
+Last metadata expiration check: 0:00:21 ago on Sun Feb  5 01:46:14 2017.
+Dependencies resolved.
+================================================================================
+ Package                          Arch    Version                Repository
+                                                                           Size
+================================================================================
+Installing:
+ aajohan-comfortaa-fonts          noarch  2.004-6.fc24           fedora   151 k
+ adwaita-cursor-theme             noarch  3.20-1.fc24            fedora   629 k
+ adwaita-icon-theme               noarch  3.20-1.fc24            fedora    12 M
+ at-spi2-atk                      x86_64  2.20.1-1.fc24          fedora    84 k
+ at-spi2-core                     x86_64  2.20.2-2.fc24          updates  162 k
+ atk                              x86_64  2.20.0-1.fc24          fedora   261 k
+ audit-libs-python3               x86_64  2.7.1-1.fc24           updates   96 k
+ cairo                            x86_64  1.14.8-1.fc24          updates  720 k
+ cairo-gobject                    x86_64  1.14.8-1.fc24          updates   29 k
+ colord-libs                      x86_64  1.3.4-1.fc24           updates  196 k
+ fontconfig                       x86_64  2.11.94-7.fc24         updates  241 k
+ fontpackages-filesystem          noarch  1.44-17.fc24           fedora    15 k
+ fros                             noarch  1.1-8.fc24             fedora    27 k
+ gdk-pixbuf2-modules              x86_64  2.34.0-1.fc24          fedora    96 k
+ giflib                           x86_64  4.1.6-15.fc24          fedora    44 k
+ graphite2                        x86_64  1.3.6-1.fc24           fedora   115 k
+ gtk-update-icon-cache            x86_64  3.20.9-1.fc24          updates   33 k
+ gtk2                             x86_64  2.24.31-1.fc24         updates  3.4 M
+ gtk3                             x86_64  3.20.9-1.fc24          updates  4.2 M
+ harfbuzz                         x86_64  1.2.7-1.fc24           fedora   219 k
+ hicolor-icon-theme               noarch  0.15-3.fc24            fedora    46 k
+ imlib2                           x86_64  1.4.9-1.fc24           fedora   212 k
+ jasper-libs                      x86_64  1.900.13-2.fc24        updates  153 k
+ jbigkit-libs                     x86_64  2.1-5.fc24             fedora    52 k
+ lcms2                            x86_64  2.8-2.fc24             updates  157 k
+ libICE                           x86_64  1.0.9-5.fc24           fedora    70 k
+ libSM                            x86_64  1.2.2-4.fc24           fedora    43 k
+ libX11                           x86_64  1.6.3-3.fc24           fedora   607 k
+ libX11-common                    noarch  1.6.3-3.fc24           fedora   164 k
+ libXau                           x86_64  1.0.8-6.fc24           fedora    33 k
+ libXcomposite                    x86_64  0.4.4-8.fc24           fedora    27 k
+ libXcursor                       x86_64  1.1.14-6.fc24          fedora    34 k
+ libXdamage                       x86_64  1.1.4-8.fc24           fedora    25 k
+ libXdmcp                         x86_64  1.1.2-3.fc24           fedora    37 k
+ libXext                          x86_64  1.3.3-4.fc24           fedora    41 k
+ libXfixes                        x86_64  5.0.3-1.fc24           updates   22 k
+ libXfont                         x86_64  1.5.2-1.fc24           updates  154 k
+ libXft                           x86_64  2.3.2-4.fc24           fedora    62 k
+ libXi                            x86_64  1.7.8-2.fc24           updates   43 k
+ libXinerama                      x86_64  1.1.3-6.fc24           fedora    18 k
+ libXmu                           x86_64  1.1.2-4.fc24           fedora    74 k
+ libXrandr                        x86_64  1.5.1-1.fc24           updates   29 k
+ libXrender                       x86_64  0.9.10-1.fc24          updates   29 k
+ libXt                            x86_64  1.1.5-3.fc24           fedora   178 k
+ libXtst                          x86_64  1.2.3-1.fc24           updates   24 k
+ libXxf86misc                     x86_64  1.0.3-11.fc24          fedora    24 k
+ libXxf86vm                       x86_64  1.1.4-3.fc24           fedora    22 k
+ libdatrie                        x86_64  0.2.9-3.fc24           fedora    31 k
+ libdrm                           x86_64  2.4.74-1.fc24          updates  151 k
+ libepoxy                         x86_64  1.3.1-2.fc24           fedora   201 k
+ libfontenc                       x86_64  1.1.3-3.fc24           fedora    35 k
+ libgusb                          x86_64  0.2.9-1.fc24           fedora    46 k
+ libjpeg-turbo                    x86_64  1.5.0-4.fc24           updates  153 k
+ libmcpp                          x86_64  2.7.2-16.fc24          fedora    80 k
+ libnotify                        x86_64  0.7.6-8.fc24           fedora    44 k
+ libpciaccess                     x86_64  0.13.4-3.fc24          fedora    30 k
+ libreport-gtk                    x86_64  2.7.2-1.fc24           updates  113 k
+ libreport-plugin-reportuploader  x86_64  2.7.2-1.fc24           updates   72 k
+ libsemanage-python3              x86_64  2.5-6.fc24             updates  112 k
+ libthai                          x86_64  0.1.24-1.fc24          fedora   196 k
+ libtiff                          x86_64  4.0.7-2.fc24           updates  175 k
+ libunwind                        x86_64  1.1-11.fc24            fedora    64 k
+ libwayland-client                x86_64  1.10.0-1.fc24          fedora    33 k
+ libwayland-cursor                x86_64  1.10.0-1.fc24          fedora    22 k
+ libwayland-server                x86_64  1.10.0-1.fc24          fedora    38 k
+ libxcb                           x86_64  1.11.1-2.fc24          fedora   191 k
+ libxkbfile                       x86_64  1.0.9-3.fc24           fedora    88 k
+ libxshmfence                     x86_64  1.2-3.fc24             fedora    11 k
+ m4                               x86_64  1.4.17-9.fc24          fedora   266 k
+ mcpp                             x86_64  2.7.2-16.fc24          fedora    30 k
+ mesa-libEGL                      x86_64  12.0.3-2.fc24          updates   96 k
+ mesa-libGL                       x86_64  12.0.3-2.fc24          updates  158 k
+ mesa-libgbm                      x86_64  12.0.3-2.fc24          updates   42 k
+ mesa-libglapi                    x86_64  12.0.3-2.fc24          updates   48 k
+ mesa-libwayland-egl              x86_64  12.0.3-2.fc24          updates   24 k
+ openbox                          x86_64  3.6.1-2.fc24           fedora   320 k
+ openbox-libs                     x86_64  3.6.1-2.fc24           fedora    85 k
+ pango                            x86_64  1.40.3-1.fc24          updates  280 k
+ policycoreutils-devel            x86_64  2.5-16.fc24            updates  339 k
+ policycoreutils-python-utils     x86_64  2.5-16.fc24            updates  216 k
+ policycoreutils-python3          x86_64  2.5-16.fc24            updates  1.8 M
+ policycoreutils-sandbox          x86_64  2.5-16.fc24            updates  176 k
+ psmisc                           x86_64  22.21-8.fc24           fedora   148 k
+ python2-pyxdg                    noarch  0.25-10.fc24           updates   92 k
+ python3-cairo                    x86_64  1.10.0-15.fc24         fedora   470 k
+ python3-gobject                  x86_64  3.20.1-1.fc24          fedora    22 k
+ redhat-menus                     noarch  12.0.2-10.fc24         fedora   152 k
+ rest                             x86_64  0.8.0-1.fc24           fedora    66 k
+ selinux-policy-devel             noarch  3.13.1-191.24.fc24     updates  1.3 M
+ selinux-policy-sandbox           noarch  3.13.1-191.24.fc24     updates  475 k
+ setroubleshoot                   x86_64  3.3.11-1.fc24          updates  136 k
+ setroubleshoot-plugins           noarch  3.3.6-1.fc24           updates  362 k
+ setroubleshoot-server            x86_64  3.3.11-1.fc24          updates  391 k
+ startup-notification             x86_64  0.12-11.fc24           fedora    43 k
+ xcb-util                         x86_64  0.4.0-5.fc24           fedora    20 k
+ xcb-util-image                   x86_64  0.4.0-5.fc24           fedora    19 k
+ xcb-util-keysyms                 x86_64  0.4.0-3.fc24           fedora    14 k
+ xcb-util-renderutil              x86_64  0.3.9-6.fc24           fedora    17 k
+ xcb-util-wm                      x86_64  0.4.1-8.fc24           fedora    29 k
+ xorg-x11-server-Xephyr           x86_64  1.18.4-5.fc24          updates  1.0 M
+ xorg-x11-server-common           x86_64  1.18.4-5.fc24          updates   45 k
+ xorg-x11-server-utils            x86_64  7.7-19.fc24            fedora   189 k
+ xorg-x11-xkb-utils               x86_64  7.7-17.fc24            fedora   109 k
+Upgrading:
+ audit                            x86_64  2.7.1-1.fc24           updates  238 k
+ audit-libs                       x86_64  2.7.1-1.fc24           updates  104 k
+ audit-libs-python                x86_64  2.7.1-1.fc24           updates   95 k
+ policycoreutils                  x86_64  2.5-16.fc24            updates  860 k
+ policycoreutils-python           x86_64  2.5-16.fc24            updates  403 k
+ selinux-policy                   noarch  3.13.1-191.24.fc24     updates  477 k
+ selinux-policy-targeted          noarch  3.13.1-191.24.fc24     updates  8.7 M
+
+Transaction Summary
+================================================================================
+Install  103 Packages
+Upgrade    7 Packages
+
+Total download size: 46 M
+Downloading Packages:
+--------------------------------------------------------------------------------
+Total                                            17 MB/s |  45 MB     00:02     
+Delta RPMs reduced 46.1 MB of updates to 45.3 MB (1.1% saved)
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Upgrading   : audit-libs-2.7.1-1.fc24.x86_64                            1/117 
+  Installing  : libICE-1.0.9-5.fc24.x86_64                                2/117 
+  Installing  : atk-2.20.0-1.fc24.x86_64                                  3/117 
+  Installing  : libSM-1.2.2-4.fc24.x86_64                                 4/117 
+  Upgrading   : policycoreutils-2.5-16.fc24.x86_64                        5/117 
+  Installing  : libjpeg-turbo-1.5.0-4.fc24.x86_64                         6/117 
+  Installing  : libwayland-client-1.10.0-1.fc24.x86_64                    7/117 
+  Installing  : libxshmfence-1.2-3.fc24.x86_64                            8/117 
+  Upgrading   : selinux-policy-3.13.1-191.24.fc24.noarch                  9/117 
+  Upgrading   : audit-2.7.1-1.fc24.x86_64                                10/117 
+  Installing  : audit-libs-python3-2.7.1-1.fc24.x86_64                   11/117 
+  Installing  : libwayland-server-1.10.0-1.fc24.x86_64                   12/117 
+  Installing  : gtk-update-icon-cache-3.20.9-1.fc24.x86_64               13/117 
+  Installing  : libepoxy-1.3.1-2.fc24.x86_64                             14/117 
+  Installing  : hicolor-icon-theme-0.15-3.fc24.noarch                    15/117 
+  Installing  : fontpackages-filesystem-1.44-17.fc24.noarch              16/117 
+  Installing  : libXau-1.0.8-6.fc24.x86_64                               17/117 
+  Installing  : libxcb-1.11.1-2.fc24.x86_64                              18/117 
+  Installing  : xcb-util-0.4.0-5.fc24.x86_64                             19/117 
+  Installing  : xcb-util-image-0.4.0-5.fc24.x86_64                       20/117 
+  Installing  : xcb-util-keysyms-0.4.0-3.fc24.x86_64                     21/117 
+  Installing  : xcb-util-renderutil-0.3.9-6.fc24.x86_64                  22/117 
+  Installing  : xcb-util-wm-0.4.1-8.fc24.x86_64                          23/117 
+  Installing  : aajohan-comfortaa-fonts-2.004-6.fc24.noarch              24/117 
+  Installing  : fontconfig-2.11.94-7.fc24.x86_64                         25/117 
+  Upgrading   : selinux-policy-targeted-3.13.1-191.24.fc24.noarch        26/117 
+  Installing  : libwayland-cursor-1.10.0-1.fc24.x86_64                   27/117 
+  Installing  : jasper-libs-1.900.13-2.fc24.x86_64                       28/117 
+  Upgrading   : audit-libs-python-2.7.1-1.fc24.x86_64                    29/117 
+  Installing  : libpciaccess-0.13.4-3.fc24.x86_64                        30/117 
+  Installing  : libdrm-2.4.74-1.fc24.x86_64                              31/117 
+  Installing  : mesa-libgbm-12.0.3-2.fc24.x86_64                         32/117 
+  Installing  : libfontenc-1.1.3-3.fc24.x86_64                           33/117 
+  Installing  : libXfont-1.5.2-1.fc24.x86_64                             34/117 
+  Installing  : python2-pyxdg-0.25-10.fc24.noarch                        35/117 
+  Installing  : mesa-libglapi-12.0.3-2.fc24.x86_64                       36/117 
+  Installing  : lcms2-2.8-2.fc24.x86_64                                  37/117 
+  Installing  : jbigkit-libs-2.1-5.fc24.x86_64                           38/117 
+  Installing  : libtiff-4.0.7-2.fc24.x86_64                              39/117 
+  Installing  : gdk-pixbuf2-modules-2.34.0-1.fc24.x86_64                 40/117 
+  Installing  : mesa-libwayland-egl-12.0.3-2.fc24.x86_64                 41/117 
+  Installing  : libgusb-0.2.9-1.fc24.x86_64                              42/117 
+  Installing  : colord-libs-1.3.4-1.fc24.x86_64                          43/117 
+  Installing  : adwaita-cursor-theme-3.20-1.fc24.noarch                  44/117 
+  Installing  : adwaita-icon-theme-3.20-1.fc24.noarch                    45/117 
+  Installing  : rest-0.8.0-1.fc24.x86_64                                 46/117 
+  Installing  : libunwind-1.1-11.fc24.x86_64                             47/117 
+  Installing  : libXdmcp-1.1.2-3.fc24.x86_64                             48/117 
+  Installing  : libdatrie-0.2.9-3.fc24.x86_64                            49/117 
+  Installing  : libthai-0.1.24-1.fc24.x86_64                             50/117 
+  Installing  : graphite2-1.3.6-1.fc24.x86_64                            51/117 
+  Installing  : harfbuzz-1.2.7-1.fc24.x86_64                             52/117 
+  Installing  : libreport-plugin-reportuploader-2.7.2-1.fc24.x86_64      53/117 
+  Installing  : libnotify-0.7.6-8.fc24.x86_64                            54/117 
+  Installing  : libmcpp-2.7.2-16.fc24.x86_64                             55/117 
+  Installing  : mcpp-2.7.2-16.fc24.x86_64                                56/117 
+  Installing  : libX11-common-1.6.3-3.fc24.noarch                        57/117 
+  Installing  : libX11-1.6.3-3.fc24.x86_64                               58/117 
+  Installing  : libXext-1.3.3-4.fc24.x86_64                              59/117 
+  Installing  : libXrender-0.9.10-1.fc24.x86_64                          60/117 
+  Installing  : libXrandr-1.5.1-1.fc24.x86_64                            61/117 
+  Installing  : libXinerama-1.1.3-6.fc24.x86_64                          62/117 
+  Installing  : libXfixes-5.0.3-1.fc24.x86_64                            63/117 
+  Installing  : libXcursor-1.1.14-6.fc24.x86_64                          64/117 
+  Installing  : libXi-1.7.8-2.fc24.x86_64                                65/117 
+  Installing  : libXdamage-1.1.4-8.fc24.x86_64                           66/117 
+  Installing  : libXft-2.3.2-4.fc24.x86_64                               67/117 
+  Installing  : libXxf86vm-1.1.4-3.fc24.x86_64                           68/117 
+  Installing  : mesa-libGL-12.0.3-2.fc24.x86_64                          69/117 
+  Installing  : libXt-1.1.5-3.fc24.x86_64                                70/117 
+  Installing  : libXcomposite-0.4.4-8.fc24.x86_64                        71/117 
+  Installing  : mesa-libEGL-12.0.3-2.fc24.x86_64                         72/117 
+  Installing  : cairo-1.14.8-1.fc24.x86_64                               73/117 
+  Installing  : pango-1.40.3-1.fc24.x86_64                               74/117 
+  Installing  : cairo-gobject-1.14.8-1.fc24.x86_64                       75/117 
+  Installing  : gtk2-2.24.31-1.fc24.x86_64                               76/117 
+  Installing  : python3-cairo-1.10.0-15.fc24.x86_64                      77/117 
+  Installing  : python3-gobject-3.20.1-1.fc24.x86_64                     78/117 
+  Installing  : fros-1.1-8.fc24.noarch                                   79/117 
+  Installing  : libXmu-1.1.2-4.fc24.x86_64                               80/117 
+  Installing  : libXtst-1.2.3-1.fc24.x86_64                              81/117 
+  Installing  : at-spi2-core-2.20.2-2.fc24.x86_64                        82/117 
+  Installing  : at-spi2-atk-2.20.1-1.fc24.x86_64                         83/117 
+  Installing  : gtk3-3.20.9-1.fc24.x86_64                                84/117 
+  Installing  : libreport-gtk-2.7.2-1.fc24.x86_64                        85/117 
+  Installing  : libXxf86misc-1.0.3-11.fc24.x86_64                        86/117 
+  Installing  : xorg-x11-server-utils-7.7-19.fc24.x86_64                 87/117 
+  Installing  : startup-notification-0.12-11.fc24.x86_64                 88/117 
+  Installing  : giflib-4.1.6-15.fc24.x86_64                              89/117 
+  Installing  : imlib2-1.4.9-1.fc24.x86_64                               90/117 
+  Installing  : openbox-libs-3.6.1-2.fc24.x86_64                         91/117 
+  Installing  : libxkbfile-1.0.9-3.fc24.x86_64                           92/117 
+  Installing  : xorg-x11-xkb-utils-7.7-17.fc24.x86_64                    93/117 
+  Installing  : xorg-x11-server-common-1.18.4-5.fc24.x86_64              94/117 
+  Installing  : xorg-x11-server-Xephyr-1.18.4-5.fc24.x86_64              95/117 
+  Installing  : libsemanage-python3-2.5-6.fc24.x86_64                    96/117 
+  Installing  : policycoreutils-python3-2.5-16.fc24.x86_64               97/117 
+  Installing  : policycoreutils-python-utils-2.5-16.fc24.x86_64          98/117 
+  Installing  : setroubleshoot-plugins-3.3.6-1.fc24.noarch               99/117 
+  Installing  : setroubleshoot-server-3.3.11-1.fc24.x86_64              100/117 
+  Installing  : redhat-menus-12.0.2-10.fc24.noarch                      101/117 
+  Installing  : openbox-3.6.1-2.fc24.x86_64                             102/117 
+  Installing  : m4-1.4.17-9.fc24.x86_64                                 103/117 
+  Installing  : policycoreutils-devel-2.5-16.fc24.x86_64                104/117 
+  Installing  : selinux-policy-devel-3.13.1-191.24.fc24.noarch          105/117 
+  Installing  : policycoreutils-sandbox-2.5-16.fc24.x86_64              106/117 
+  Installing  : setroubleshoot-3.3.11-1.fc24.x86_64                     107/117 
+  Upgrading   : policycoreutils-python-2.5-16.fc24.x86_64               108/117 
+  Installing  : selinux-policy-sandbox-3.13.1-191.24.fc24.noarch        109/117 
+  Installing  : psmisc-22.21-8.fc24.x86_64                              110/117 
+  Cleanup     : selinux-policy-targeted-3.13.1-191.21.fc24.noarch       111/117 
+  Cleanup     : policycoreutils-python-2.5-15.fc24.x86_64               112/117 
+  Cleanup     : selinux-policy-3.13.1-191.21.fc24.noarch                113/117 
+  Cleanup     : policycoreutils-2.5-15.fc24.x86_64                      114/117 
+  Cleanup     : audit-libs-python-2.6.7-1.fc24.x86_64                   115/117 
+  Cleanup     : audit-2.6.7-1.fc24.x86_64                               116/117 
+  Cleanup     : audit-libs-2.6.7-1.fc24.x86_64                          117/117 
+  Verifying   : psmisc-22.21-8.fc24.x86_64                                1/117 
+  Verifying   : selinux-policy-sandbox-3.13.1-191.24.fc24.noarch          2/117 
+  Verifying   : selinux-policy-devel-3.13.1-191.24.fc24.noarch            3/117 
+  Verifying   : m4-1.4.17-9.fc24.x86_64                                   4/117 
+  Verifying   : policycoreutils-sandbox-2.5-16.fc24.x86_64                5/117 
+  Verifying   : openbox-3.6.1-2.fc24.x86_64                               6/117 
+  Verifying   : xorg-x11-server-utils-7.7-19.fc24.x86_64                  7/117 
+  Verifying   : policycoreutils-python3-2.5-16.fc24.x86_64                8/117 
+  Verifying   : imlib2-1.4.9-1.fc24.x86_64                                9/117 
+  Verifying   : libICE-1.0.9-5.fc24.x86_64                               10/117 
+  Verifying   : libSM-1.2.2-4.fc24.x86_64                                11/117 
+  Verifying   : libX11-1.6.3-3.fc24.x86_64                               12/117 
+  Verifying   : libXcursor-1.1.14-6.fc24.x86_64                          13/117 
+  Verifying   : libXext-1.3.3-4.fc24.x86_64                              14/117 
+  Verifying   : libXft-2.3.2-4.fc24.x86_64                               15/117 
+  Verifying   : libXinerama-1.1.3-6.fc24.x86_64                          16/117 
+  Verifying   : openbox-libs-3.6.1-2.fc24.x86_64                         17/117 
+  Verifying   : redhat-menus-12.0.2-10.fc24.noarch                       18/117 
+  Verifying   : startup-notification-0.12-11.fc24.x86_64                 19/117 
+  Verifying   : libXmu-1.1.2-4.fc24.x86_64                               20/117 
+  Verifying   : libXt-1.1.5-3.fc24.x86_64                                21/117 
+  Verifying   : libXxf86misc-1.0.3-11.fc24.x86_64                        22/117 
+  Verifying   : libXxf86vm-1.1.4-3.fc24.x86_64                           23/117 
+  Verifying   : mcpp-2.7.2-16.fc24.x86_64                                24/117 
+  Verifying   : libsemanage-python3-2.5-6.fc24.x86_64                    25/117 
+  Verifying   : giflib-4.1.6-15.fc24.x86_64                              26/117 
+  Verifying   : libX11-common-1.6.3-3.fc24.noarch                        27/117 
+  Verifying   : libxcb-1.11.1-2.fc24.x86_64                              28/117 
+  Verifying   : xcb-util-0.4.0-5.fc24.x86_64                             29/117 
+  Verifying   : libmcpp-2.7.2-16.fc24.x86_64                             30/117 
+  Verifying   : libXau-1.0.8-6.fc24.x86_64                               31/117 
+  Verifying   : setroubleshoot-3.3.11-1.fc24.x86_64                      32/117 
+  Verifying   : atk-2.20.0-1.fc24.x86_64                                 33/117 
+  Verifying   : libnotify-0.7.6-8.fc24.x86_64                            34/117 
+  Verifying   : setroubleshoot-server-3.3.11-1.fc24.x86_64               35/117 
+  Verifying   : policycoreutils-python-utils-2.5-16.fc24.x86_64          36/117 
+  Verifying   : audit-libs-python3-2.7.1-1.fc24.x86_64                   37/117 
+  Verifying   : python3-gobject-3.20.1-1.fc24.x86_64                     38/117 
+  Verifying   : policycoreutils-devel-2.5-16.fc24.x86_64                 39/117 
+  Verifying   : python3-cairo-1.10.0-15.fc24.x86_64                      40/117 
+  Verifying   : libreport-gtk-2.7.2-1.fc24.x86_64                        41/117 
+  Verifying   : fros-1.1-8.fc24.noarch                                   42/117 
+  Verifying   : libreport-plugin-reportuploader-2.7.2-1.fc24.x86_64      43/117 
+  Verifying   : setroubleshoot-plugins-3.3.6-1.fc24.noarch               44/117 
+  Verifying   : cairo-1.14.8-1.fc24.x86_64                               45/117 
+  Verifying   : cairo-gobject-1.14.8-1.fc24.x86_64                       46/117 
+  Verifying   : fontconfig-2.11.94-7.fc24.x86_64                         47/117 
+  Verifying   : fontpackages-filesystem-1.44-17.fc24.noarch              48/117 
+  Verifying   : gtk2-2.24.31-1.fc24.x86_64                               49/117 
+  Verifying   : gdk-pixbuf2-modules-2.34.0-1.fc24.x86_64                 50/117 
+  Verifying   : hicolor-icon-theme-0.15-3.fc24.noarch                    51/117 
+  Verifying   : libXcomposite-0.4.4-8.fc24.x86_64                        52/117 
+  Verifying   : libXdamage-1.1.4-8.fc24.x86_64                           53/117 
+  Verifying   : pango-1.40.3-1.fc24.x86_64                               54/117 
+  Verifying   : harfbuzz-1.2.7-1.fc24.x86_64                             55/117 
+  Verifying   : libthai-0.1.24-1.fc24.x86_64                             56/117 
+  Verifying   : graphite2-1.3.6-1.fc24.x86_64                            57/117 
+  Verifying   : libdatrie-0.2.9-3.fc24.x86_64                            58/117 
+  Verifying   : xorg-x11-server-Xephyr-1.18.4-5.fc24.x86_64              59/117 
+  Verifying   : libXdmcp-1.1.2-3.fc24.x86_64                             60/117 
+  Verifying   : libepoxy-1.3.1-2.fc24.x86_64                             61/117 
+  Verifying   : libunwind-1.1-11.fc24.x86_64                             62/117 
+  Verifying   : libxshmfence-1.2-3.fc24.x86_64                           63/117 
+  Verifying   : xcb-util-image-0.4.0-5.fc24.x86_64                       64/117 
+  Verifying   : xcb-util-keysyms-0.4.0-3.fc24.x86_64                     65/117 
+  Verifying   : xcb-util-renderutil-0.3.9-6.fc24.x86_64                  66/117 
+  Verifying   : xcb-util-wm-0.4.1-8.fc24.x86_64                          67/117 
+  Verifying   : xorg-x11-server-common-1.18.4-5.fc24.x86_64              68/117 
+  Verifying   : xorg-x11-xkb-utils-7.7-17.fc24.x86_64                    69/117 
+  Verifying   : libxkbfile-1.0.9-3.fc24.x86_64                           70/117 
+  Verifying   : libXrender-0.9.10-1.fc24.x86_64                          71/117 
+  Verifying   : gtk3-3.20.9-1.fc24.x86_64                                72/117 
+  Verifying   : adwaita-icon-theme-3.20-1.fc24.noarch                    73/117 
+  Verifying   : at-spi2-atk-2.20.1-1.fc24.x86_64                         74/117 
+  Verifying   : libwayland-client-1.10.0-1.fc24.x86_64                   75/117 
+  Verifying   : libwayland-cursor-1.10.0-1.fc24.x86_64                   76/117 
+  Verifying   : rest-0.8.0-1.fc24.x86_64                                 77/117 
+  Verifying   : adwaita-cursor-theme-3.20-1.fc24.noarch                  78/117 
+  Verifying   : colord-libs-1.3.4-1.fc24.x86_64                          79/117 
+  Verifying   : libgusb-0.2.9-1.fc24.x86_64                              80/117 
+  Verifying   : gtk-update-icon-cache-3.20.9-1.fc24.x86_64               81/117 
+  Verifying   : libXfixes-5.0.3-1.fc24.x86_64                            82/117 
+  Verifying   : libXi-1.7.8-2.fc24.x86_64                                83/117 
+  Verifying   : libXrandr-1.5.1-1.fc24.x86_64                            84/117 
+  Verifying   : mesa-libwayland-egl-12.0.3-2.fc24.x86_64                 85/117 
+  Verifying   : libtiff-4.0.7-2.fc24.x86_64                              86/117 
+  Verifying   : jbigkit-libs-2.1-5.fc24.x86_64                           87/117 
+  Verifying   : lcms2-2.8-2.fc24.x86_64                                  88/117 
+  Verifying   : mesa-libEGL-12.0.3-2.fc24.x86_64                         89/117 
+  Verifying   : libwayland-server-1.10.0-1.fc24.x86_64                   90/117 
+  Verifying   : mesa-libGL-12.0.3-2.fc24.x86_64                          91/117 
+  Verifying   : mesa-libglapi-12.0.3-2.fc24.x86_64                       92/117 
+  Verifying   : python2-pyxdg-0.25-10.fc24.noarch                        93/117 
+  Verifying   : libjpeg-turbo-1.5.0-4.fc24.x86_64                        94/117 
+  Verifying   : jasper-libs-1.900.13-2.fc24.x86_64                       95/117 
+  Verifying   : at-spi2-core-2.20.2-2.fc24.x86_64                        96/117 
+  Verifying   : libXfont-1.5.2-1.fc24.x86_64                             97/117 
+  Verifying   : libfontenc-1.1.3-3.fc24.x86_64                           98/117 
+  Verifying   : libdrm-2.4.74-1.fc24.x86_64                              99/117 
+  Verifying   : libpciaccess-0.13.4-3.fc24.x86_64                       100/117 
+  Verifying   : mesa-libgbm-12.0.3-2.fc24.x86_64                        101/117 
+  Verifying   : libXtst-1.2.3-1.fc24.x86_64                             102/117 
+  Verifying   : aajohan-comfortaa-fonts-2.004-6.fc24.noarch             103/117 
+  Verifying   : selinux-policy-targeted-3.13.1-191.24.fc24.noarch       104/117 
+  Verifying   : selinux-policy-3.13.1-191.24.fc24.noarch                105/117 
+  Verifying   : policycoreutils-2.5-16.fc24.x86_64                      106/117 
+  Verifying   : policycoreutils-python-2.5-16.fc24.x86_64               107/117 
+  Verifying   : audit-2.7.1-1.fc24.x86_64                               108/117 
+  Verifying   : audit-libs-2.7.1-1.fc24.x86_64                          109/117 
+  Verifying   : audit-libs-python-2.7.1-1.fc24.x86_64                   110/117 
+  Verifying   : selinux-policy-3.13.1-191.21.fc24.noarch                111/117 
+  Verifying   : selinux-policy-targeted-3.13.1-191.21.fc24.noarch       112/117 
+  Verifying   : policycoreutils-2.5-15.fc24.x86_64                      113/117 
+  Verifying   : policycoreutils-python-2.5-15.fc24.x86_64               114/117 
+  Verifying   : audit-2.6.7-1.fc24.x86_64                               115/117 
+  Verifying   : audit-libs-2.6.7-1.fc24.x86_64                          116/117 
+  Verifying   : audit-libs-python-2.6.7-1.fc24.x86_64                   117/117 
+
+Installed:
+  aajohan-comfortaa-fonts.noarch 2.004-6.fc24                                   
+  adwaita-cursor-theme.noarch 3.20-1.fc24                                       
+  adwaita-icon-theme.noarch 3.20-1.fc24                                         
+  at-spi2-atk.x86_64 2.20.1-1.fc24                                              
+  at-spi2-core.x86_64 2.20.2-2.fc24                                             
+  atk.x86_64 2.20.0-1.fc24                                                      
+  audit-libs-python3.x86_64 2.7.1-1.fc24                                        
+  cairo.x86_64 1.14.8-1.fc24                                                    
+  cairo-gobject.x86_64 1.14.8-1.fc24                                            
+  colord-libs.x86_64 1.3.4-1.fc24                                               
+  fontconfig.x86_64 2.11.94-7.fc24                                              
+  fontpackages-filesystem.noarch 1.44-17.fc24                                   
+  fros.noarch 1.1-8.fc24                                                        
+  gdk-pixbuf2-modules.x86_64 2.34.0-1.fc24                                      
+  giflib.x86_64 4.1.6-15.fc24                                                   
+  graphite2.x86_64 1.3.6-1.fc24                                                 
+  gtk-update-icon-cache.x86_64 3.20.9-1.fc24                                    
+  gtk2.x86_64 2.24.31-1.fc24                                                    
+  gtk3.x86_64 3.20.9-1.fc24                                                     
+  harfbuzz.x86_64 1.2.7-1.fc24                                                  
+  hicolor-icon-theme.noarch 0.15-3.fc24                                         
+  imlib2.x86_64 1.4.9-1.fc24                                                    
+  jasper-libs.x86_64 1.900.13-2.fc24                                            
+  jbigkit-libs.x86_64 2.1-5.fc24                                                
+  lcms2.x86_64 2.8-2.fc24                                                       
+  libICE.x86_64 1.0.9-5.fc24                                                    
+  libSM.x86_64 1.2.2-4.fc24                                                     
+  libX11.x86_64 1.6.3-3.fc24                                                    
+  libX11-common.noarch 1.6.3-3.fc24                                             
+  libXau.x86_64 1.0.8-6.fc24                                                    
+  libXcomposite.x86_64 0.4.4-8.fc24                                             
+  libXcursor.x86_64 1.1.14-6.fc24                                               
+  libXdamage.x86_64 1.1.4-8.fc24                                                
+  libXdmcp.x86_64 1.1.2-3.fc24                                                  
+  libXext.x86_64 1.3.3-4.fc24                                                   
+  libXfixes.x86_64 5.0.3-1.fc24                                                 
+  libXfont.x86_64 1.5.2-1.fc24                                                  
+  libXft.x86_64 2.3.2-4.fc24                                                    
+  libXi.x86_64 1.7.8-2.fc24                                                     
+  libXinerama.x86_64 1.1.3-6.fc24                                               
+  libXmu.x86_64 1.1.2-4.fc24                                                    
+  libXrandr.x86_64 1.5.1-1.fc24                                                 
+  libXrender.x86_64 0.9.10-1.fc24                                               
+  libXt.x86_64 1.1.5-3.fc24                                                     
+  libXtst.x86_64 1.2.3-1.fc24                                                   
+  libXxf86misc.x86_64 1.0.3-11.fc24                                             
+  libXxf86vm.x86_64 1.1.4-3.fc24                                                
+  libdatrie.x86_64 0.2.9-3.fc24                                                 
+  libdrm.x86_64 2.4.74-1.fc24                                                   
+  libepoxy.x86_64 1.3.1-2.fc24                                                  
+  libfontenc.x86_64 1.1.3-3.fc24                                                
+  libgusb.x86_64 0.2.9-1.fc24                                                   
+  libjpeg-turbo.x86_64 1.5.0-4.fc24                                             
+  libmcpp.x86_64 2.7.2-16.fc24                                                  
+  libnotify.x86_64 0.7.6-8.fc24                                                 
+  libpciaccess.x86_64 0.13.4-3.fc24                                             
+  libreport-gtk.x86_64 2.7.2-1.fc24                                             
+  libreport-plugin-reportuploader.x86_64 2.7.2-1.fc24                           
+  libsemanage-python3.x86_64 2.5-6.fc24                                         
+  libthai.x86_64 0.1.24-1.fc24                                                  
+  libtiff.x86_64 4.0.7-2.fc24                                                   
+  libunwind.x86_64 1.1-11.fc24                                                  
+  libwayland-client.x86_64 1.10.0-1.fc24                                        
+  libwayland-cursor.x86_64 1.10.0-1.fc24                                        
+  libwayland-server.x86_64 1.10.0-1.fc24                                        
+  libxcb.x86_64 1.11.1-2.fc24                                                   
+  libxkbfile.x86_64 1.0.9-3.fc24                                                
+  libxshmfence.x86_64 1.2-3.fc24                                                
+  m4.x86_64 1.4.17-9.fc24                                                       
+  mcpp.x86_64 2.7.2-16.fc24                                                     
+  mesa-libEGL.x86_64 12.0.3-2.fc24                                              
+  mesa-libGL.x86_64 12.0.3-2.fc24                                               
+  mesa-libgbm.x86_64 12.0.3-2.fc24                                              
+  mesa-libglapi.x86_64 12.0.3-2.fc24                                            
+  mesa-libwayland-egl.x86_64 12.0.3-2.fc24                                      
+  openbox.x86_64 3.6.1-2.fc24                                                   
+  openbox-libs.x86_64 3.6.1-2.fc24                                              
+  pango.x86_64 1.40.3-1.fc24                                                    
+  policycoreutils-devel.x86_64 2.5-16.fc24                                      
+  policycoreutils-python-utils.x86_64 2.5-16.fc24                               
+  policycoreutils-python3.x86_64 2.5-16.fc24                                    
+  policycoreutils-sandbox.x86_64 2.5-16.fc24                                    
+  psmisc.x86_64 22.21-8.fc24                                                    
+  python2-pyxdg.noarch 0.25-10.fc24                                             
+  python3-cairo.x86_64 1.10.0-15.fc24                                           
+  python3-gobject.x86_64 3.20.1-1.fc24                                          
+  redhat-menus.noarch 12.0.2-10.fc24                                            
+  rest.x86_64 0.8.0-1.fc24                                                      
+  selinux-policy-devel.noarch 3.13.1-191.24.fc24                                
+  selinux-policy-sandbox.noarch 3.13.1-191.24.fc24                              
+  setroubleshoot.x86_64 3.3.11-1.fc24                                           
+  setroubleshoot-plugins.noarch 3.3.6-1.fc24                                    
+  setroubleshoot-server.x86_64 3.3.11-1.fc24                                    
+  startup-notification.x86_64 0.12-11.fc24                                      
+  xcb-util.x86_64 0.4.0-5.fc24                                                  
+  xcb-util-image.x86_64 0.4.0-5.fc24                                            
+  xcb-util-keysyms.x86_64 0.4.0-3.fc24                                          
+  xcb-util-renderutil.x86_64 0.3.9-6.fc24                                       
+  xcb-util-wm.x86_64 0.4.1-8.fc24                                               
+  xorg-x11-server-Xephyr.x86_64 1.18.4-5.fc24                                   
+  xorg-x11-server-common.x86_64 1.18.4-5.fc24                                   
+  xorg-x11-server-utils.x86_64 7.7-19.fc24                                      
+  xorg-x11-xkb-utils.x86_64 7.7-17.fc24                                         
+
+Upgraded:
+  audit.x86_64 2.7.1-1.fc24                                                     
+  audit-libs.x86_64 2.7.1-1.fc24                                                
+  audit-libs-python.x86_64 2.7.1-1.fc24                                         
+  policycoreutils.x86_64 2.5-16.fc24                                            
+  policycoreutils-python.x86_64 2.5-16.fc24                                     
+  selinux-policy.noarch 3.13.1-191.24.fc24                                      
+  selinux-policy-targeted.noarch 3.13.1-191.24.fc24                             
+
+Complete!
+/usr/share/selinux/devel/include/contrib/firewalld.if:13: Error: duplicate definition of firewalld_read_config(). Original definition on 13.
+/usr/share/selinux/devel/include/contrib/firewalld.if:32: Error: duplicate definition of firewalld_initrc_domtrans(). Original definition on 32.
+/usr/share/selinux/devel/include/contrib/firewalld.if:50: Error: duplicate definition of firewalld_systemctl(). Original definition on 50.
+/usr/share/selinux/devel/include/contrib/firewalld.if:75: Error: duplicate definition of firewalld_dbus_chat(). Original definition on 75.
+/usr/share/selinux/devel/include/contrib/firewalld.if:96: Error: duplicate definition of firewalld_dontaudit_write_tmp_files(). Original definition on 96.
+/usr/share/selinux/devel/include/contrib/firewalld.if:114: Error: duplicate definition of firewalld_read_pid_files(). Original definition on 114.
+/usr/share/selinux/devel/include/contrib/firewalld.if:133: Error: duplicate definition of firewalld_dontaudit_leaks(). Original definition on 133.
+/usr/share/selinux/devel/include/contrib/firewalld.if:158: Error: duplicate definition of firewalld_admin(). Original definition on 158.
+Compiling targeted sandbox_extra module
+/usr/bin/checkmodule:  loading policy configuration from tmp/sandbox_extra.tmp
+/usr/bin/checkmodule:  policy configuration loaded
+/usr/bin/checkmodule:  writing binary representation (version 17) to tmp/sandbox_extra.mod
+Creating targeted sandbox_extra.pp policy package
+rm tmp/sandbox_extra.mod tmp/sandbox_extra.mod.fc

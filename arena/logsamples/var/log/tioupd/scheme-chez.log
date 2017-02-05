@@ -1,0 +1,650 @@
+Sun Feb  5 02:10:03 UTC 2017
+Cloning into 'ChezScheme'...
+Submodule 'nanopass' (https://github.com/nanopass/nanopass-framework-scheme.git) registered for path 'nanopass'
+Submodule 'stex' (https://github.com/dybvig/stex) registered for path 'stex'
+Submodule 'zlib' (https://github.com/madler/zlib.git) registered for path 'zlib'
+Cloning into 'nanopass'...
+Submodule path 'nanopass': checked out '1f7e80bcff16766ef419183169bbc343db07db0c'
+Cloning into 'stex'...
+Submodule path 'stex': checked out '3bd2b86cc5ae1797d05fc5cc6f11cc43383f741d'
+Cloning into 'zlib'...
+Submodule path 'zlib': checked out '50893291621658f355bc5b4d450a8d06a563053d'
+(cd a6le && make build)
+(cd c ; make)
+ln -s ../../c/statics.c statics.c
+ln -s ../../c/system.h system.h
+ln -s ../../c/types.h types.h
+ln -s ../../c/version.h version.h
+ln -s ../../c/externs.h externs.h
+ln -s ../../c/globals.h globals.h
+ln -s ../../c/segment.h segment.h
+ln -s ../../c/thread.h thread.h
+ln -s ../../c/sort.h sort.h
+(cd ../zlib; CFLAGS=-m64 ./configure --64)
+Checking for gcc...
+Checking for shared library support...
+Building shared library libz.so.1.2.8 with gcc.
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+Checking for strerror... Yes.
+Checking for unistd.h... Yes.
+Checking for stdarg.h... Yes.
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+Checking for vsnprintf() in stdio.h... Yes.
+Checking for return value of vsnprintf()... Yes.
+Checking for attribute(visibility) support... Yes.
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib statics.c
+ln -s ../../c/segment.c segment.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib segment.c
+ln -s ../../c/alloc.c alloc.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib alloc.c
+ln -s ../../c/symbol.c symbol.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib symbol.c
+ln -s ../../c/intern.c intern.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib intern.c
+ln -s ../../c/gcwrapper.c gcwrapper.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib gcwrapper.c
+ln -s ../../c/gc-ocd.c gc-ocd.c
+ln -s ../../c/gc.c gc.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib gc-ocd.c
+ln -s ../../c/gc-oce.c gc-oce.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib gc-oce.c
+ln -s ../../c/number.c number.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib number.c
+ln -s ../../c/schsig.c schsig.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib schsig.c
+ln -s ../../c/io.c io.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib io.c
+ln -s ../../c/new-io.c new-io.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib new-io.c
+ln -s ../../c/print.c print.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib print.c
+ln -s ../../c/fasl.c fasl.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib fasl.c
+ln -s ../../c/stats.c stats.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib stats.c
+ln -s ../../c/foreign.c foreign.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib foreign.c
+ln -s ../../c/prim.c prim.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib prim.c
+ln -s ../../c/prim5.c prim5.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib prim5.c
+ln -s ../../c/flushcache.c flushcache.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib flushcache.c
+ln -s ../../c/schlib.c schlib.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib schlib.c
+ln -s ../../c/thread.c thread.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib thread.c
+ln -s ../../c/expeditor.c expeditor.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib expeditor.c
+ln -s ../../c/scheme.c scheme.c
+ln -s ../../c/itest.c itest.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib scheme.c
+ln -s ../../c/i3le.c i3le.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib i3le.c
+(cd ../zlib; make)
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -c -o example.o test/example.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o adler32.o adler32.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o crc32.o crc32.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o deflate.o deflate.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o infback.o infback.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o inffast.o inffast.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o inflate.o inflate.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o inftrees.o inftrees.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o trees.o trees.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o zutil.o zutil.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o compress.o compress.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o uncompr.o uncompr.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o gzclose.o gzclose.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o gzlib.o gzlib.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o gzread.o gzread.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o gzwrite.o gzwrite.c
+ar rc libz.a adler32.o crc32.o deflate.o infback.o inffast.o inflate.o inftrees.o trees.o zutil.o compress.o uncompr.o gzclose.o gzlib.o gzread.o gzwrite.o 
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o example example.o -L. libz.a
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -c -o minigzip.o test/minigzip.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o minigzip minigzip.o -L. libz.a
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/adler32.o adler32.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/crc32.o crc32.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/deflate.o deflate.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/infback.o infback.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/inffast.o inffast.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/inflate.o inflate.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/inftrees.o inftrees.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/trees.o trees.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/zutil.o zutil.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/compress.o compress.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/uncompr.o uncompr.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/gzclose.o gzclose.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/gzlib.o gzlib.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/gzread.o gzread.c
+gcc -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/gzwrite.o gzwrite.c
+gcc -shared -Wl,-soname,libz.so.1,--version-script,zlib.map -m64  -fPIC -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o libz.so.1.2.8 adler32.lo crc32.lo deflate.lo infback.lo inffast.lo inflate.lo inftrees.lo trees.lo zutil.lo compress.lo uncompr.lo gzclose.lo gzlib.lo gzread.lo gzwrite.lo  -lc 
+rm -f libz.so libz.so.1
+ln -s libz.so.1.2.8 libz.so
+ln -s libz.so.1.2.8 libz.so.1
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o examplesh example.o -L. libz.so.1.2.8
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o minigzipsh minigzip.o -L. libz.so.1.2.8
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -D_FILE_OFFSET_BITS=64 -c -o example64.o test/example.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o example64 example64.o -L. libz.a
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -D_FILE_OFFSET_BITS=64 -c -o minigzip64.o test/minigzip.c
+gcc -m64  -m64 -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o minigzip64 minigzip64.o -L. libz.a
+ld -melf_x86_64 -r -X -o ../boot/a6le/kernel.o statics.o segment.o alloc.o symbol.o intern.o gcwrapper.o gc-ocd.o gc-oce.o number.o schsig.o io.o new-io.o print.o fasl.o stats.o foreign.o prim.o prim5.o flushcache.o schlib.o thread.o expeditor.o scheme.o i3le.o ../zlib/libz.a
+ln -s ../../c/main.c main.c
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -c -DX86_64 -I../boot/a6le -I../zlib main.c
+cp -p main.o ../boot/a6le/main.o
+gcc  -m64 -msse2 -Wpointer-arith -Wall -Wextra -Werror -O2  -rdynamic -o ../bin/a6le/scheme ../boot/a6le/kernel.o ../boot/a6le/main.o -lm -ldl -lncurses -lrt 
+(cd s ; make bootstrap)
+ln -s ../../s/library.ss library.ss
+ln -s ../../s/prims.ss prims.ss
+ln -s ../../s/mathprims.ss mathprims.ss
+ln -s ../../s/record.ss record.ss
+ln -s ../../s/5_1.ss 5_1.ss
+ln -s ../../s/5_2.ss 5_2.ss
+ln -s ../../s/5_3.ss 5_3.ss
+ln -s ../../s/strnum.ss strnum.ss
+ln -s ../../s/bytevector.ss bytevector.ss
+ln -s ../../s/5_4.ss 5_4.ss
+ln -s ../../s/5_6.ss 5_6.ss
+ln -s ../../s/5_7.ss 5_7.ss
+ln -s ../../s/event.ss event.ss
+ln -s ../../s/4.ss 4.ss
+ln -s ../../s/front.ss front.ss
+ln -s ../../s/foreign.ss foreign.ss
+ln -s ../../s/6.ss 6.ss
+ln -s ../../s/print.ss print.ss
+ln -s ../../s/newhash.ss newhash.ss
+ln -s ../../s/format.ss format.ss
+ln -s ../../s/date.ss date.ss
+ln -s ../../s/7.ss 7.ss
+ln -s ../../s/cafe.ss cafe.ss
+ln -s ../../s/trace.ss trace.ss
+ln -s ../../s/engine.ss engine.ss
+ln -s ../../s/interpret.ss interpret.ss
+ln -s ../../s/cprep.ss cprep.ss
+ln -s ../../s/cpcheck.ss cpcheck.ss
+ln -s ../../s/cp0.ss cp0.ss
+ln -s ../../s/cpvalid.ss cpvalid.ss
+ln -s ../../s/cpletrec.ss cpletrec.ss
+ln -s ../../s/inspect.ss inspect.ss
+ln -s ../../s/enum.ss enum.ss
+ln -s ../../s/io.ss io.ss
+ln -s ../../s/read.ss read.ss
+ln -s ../../s/primvars.ss primvars.ss
+ln -s ../../s/syntax.ss syntax.ss
+ln -s ../../s/costctr.ss costctr.ss
+ln -s ../../s/expeditor.ss expeditor.ss
+ln -s ../../s/exceptions.ss exceptions.ss
+ln -s ../../s/pretty.ss pretty.ss
+ln -s ../../s/env.ss env.ss
+ln -s ../../s/fasl.ss fasl.ss
+ln -s ../../s/reloc.ss reloc.ss
+ln -s ../../s/pdhtml.ss pdhtml.ss
+ln -s ../../s/strip.ss strip.ss
+ln -s ../../s/ftype.ss ftype.ss
+ln -s ../../s/back.ss back.ss
+ln -s ../../s/cpnanopass.ss cpnanopass.ss
+ln -s ../../s/compile.ss compile.ss
+ln -s ../../s/cback.ss cback.ss
+ln -s ../../s/cmacros.ss cmacros.ss
+ln -s ../../s/x86_64.ss x86_64.ss
+ln -s ../../s/setup.ss setup.ss
+ln -s ../../s/debug.ss debug.ss
+ln -s ../../s/priminfo.ss priminfo.ss
+ln -s ../../s/primdata.ss primdata.ss
+ln -s ../../s/layout.ss layout.ss
+ln -s ../../s/base-lang.ss base-lang.ss
+ln -s ../../s/expand-lang.ss expand-lang.ss
+ln -s ../../s/primref.ss primref.ss
+ln -s ../../s/types.ss types.ss
+ln -s ../../s/io-types.ss io-types.ss
+ln -s ../../s/fasl-helpers.ss fasl-helpers.ss
+ln -s ../../s/hashtable-types.ss hashtable-types.ss
+ln -s ../../s/np-languages.ss np-languages.ss
+make allx
+rm -f *.a6le xpatch patch *.patch *.so *.asm script.all header.tmp *.html
+rm -rf nanopass
+cp -p -f ../boot/a6le/petite.boot ../boot/a6le/sbb
+cp -p -f ../boot/a6le/scheme.boot ../boot/a6le/scb
+make all
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+             '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "cmacros.ss" "cmacros.so")'\
+             | ../bin/a6le/scheme -q
+compiling cmacros.ss with output to cmacros.so
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+             '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "priminfo.ss" "priminfo.so")'\
+             | ../bin/a6le/scheme -q cmacros.so
+compiling priminfo.ss with output to priminfo.so
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+     '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "primvars.ss" "primvars.so")'\
+             | ../bin/a6le/scheme -q cmacros.so priminfo.so
+compiling primvars.ss with output to primvars.so
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+     '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "env.ss" "env.so")'\
+             | ../bin/a6le/scheme -q cmacros.so priminfo.so
+compiling env.ss with output to env.so
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+     '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "setup.ss" "setup.so")'\
+             | ../bin/a6le/scheme -q cmacros.so priminfo.so
+compiling setup.ss with output to setup.so
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+             '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(collect-trip-bytes (expt 2 24))'\
+             '(collect-request-handler (lambda () (collect 0 1)))'\
+             '(collect 1 2)'\
+             '(compile-library "../nanopass/nanopass.ss" "nanopass.so")'\
+             | ../bin/a6le/scheme -q --libdirs "../nanopass::." --compile-imported-libraries
+compiling ../nanopass/nanopass.ss with output to nanopass.so
+compiling ../nanopass/nanopass/language.ss with output to nanopass/language.so
+compiling ../nanopass/nanopass/helpers.ss with output to nanopass/helpers.so
+compiling ../nanopass/nanopass/implementation-helpers.chezscheme.sls with output to nanopass/implementation-helpers.chezscheme.so
+compiling ../nanopass/nanopass/language-helpers.ss with output to nanopass/language-helpers.so
+compiling ../nanopass/nanopass/records.ss with output to nanopass/records.so
+compiling ../nanopass/nanopass/syntaxconvert.ss with output to nanopass/syntaxconvert.so
+compiling ../nanopass/nanopass/unparser.ss with output to nanopass/unparser.so
+compiling ../nanopass/nanopass/meta-parser.ss with output to nanopass/meta-parser.so
+compiling ../nanopass/nanopass/meta-syntax-dispatch.ss with output to nanopass/meta-syntax-dispatch.so
+compiling ../nanopass/nanopass/parser.ss with output to nanopass/parser.so
+compiling ../nanopass/nanopass/nano-syntax-dispatch.ss with output to nanopass/nano-syntax-dispatch.so
+compiling ../nanopass/nanopass/language-node-counter.ss with output to nanopass/language-node-counter.so
+compiling ../nanopass/nanopass/pass.ss with output to nanopass/pass.so
+echo '(reset-handler abort)'\
+             '(for-each load (command-line-arguments))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(when #f (compile-profile (quote source)))'\
+             '(when #f (compile-profile (quote block)))'\
+             '(when #f (profile-load-data "source.pd"))'\
+             '(when #f (profile-load-data "block.pd"))'\
+             '(generate-inspector-information #f)'\
+             '(generate-allocation-counts #f)'\
+             '(generate-instruction-counts #f)'\
+             '(#%$enable-pass-timing #f)'\
+             '(run-cp0 (lambda (cp0 x)'\
+             '           (do ([i 2 (fx- i 1)] [x x (cp0 x)])'\
+             '               ((fx= i 0) x))))'\
+             '(collect-trip-bytes (expt 2 24))'\
+             '(collect-request-handler (lambda () (collect 0 1)))'\
+             '(time (for-each (lambda (x y)'\
+             '                   (collect 1 2)'\
+             '                   (compile-file (symbol->string x)'\
+             '                                 (symbol->string y)'\
+             '                                 (quote a6le)))'\
+             '                (quote (library.ss prims.ss mathprims.ss record.ss 5_1.ss 5_2.ss 5_3.ss strnum.ss bytevector.ss 5_4.ss 5_6.ss 5_7.ss event.ss 4.ss front.ss foreign.ss 6.ss print.ss newhash.ss format.ss date.ss 7.ss cafe.ss trace.ss engine.ss interpret.ss cprep.ss cpcheck.ss cp0.ss cpvalid.ss cpletrec.ss inspect.ss enum.ss io.ss read.ss primvars.ss syntax.ss costctr.ss expeditor.ss exceptions.ss pretty.ss env.ss fasl.ss reloc.ss pdhtml.ss strip.ss ftype.ss back.ss cpnanopass.ss compile.ss cback.ss))'\
+             '                (quote (library.a6le prims.a6le mathprims.a6le record.a6le 5_1.a6le 5_2.a6le 5_3.a6le strnum.a6le bytevector.a6le 5_4.a6le 5_6.a6le 5_7.a6le event.a6le 4.a6le front.a6le foreign.a6le 6.a6le print.a6le newhash.a6le format.a6le date.a6le 7.a6le cafe.a6le trace.a6le engine.a6le interpret.a6le cprep.a6le cpcheck.a6le cp0.a6le cpvalid.a6le cpletrec.a6le inspect.a6le enum.a6le io.a6le read.a6le primvars.a6le syntax.a6le costctr.a6le expeditor.a6le exceptions.a6le pretty.a6le env.a6le fasl.a6le reloc.a6le pdhtml.a6le strip.a6le ftype.a6le back.a6le cpnanopass.a6le compile.a6le cback.a6le))))'\
+             '(when #f (#%$print-pass-stats))'\
+             '(apply #%$make-boot-file "../boot/a6le/petite.boot" (quote a6le) (quote ())'\
+             '  (map symbol->string (quote (library.a6le prims.a6le mathprims.a6le record.a6le 5_1.a6le 5_2.a6le 5_3.a6le strnum.a6le bytevector.a6le 5_4.a6le 5_6.a6le 5_7.a6le event.a6le 4.a6le front.a6le foreign.a6le 6.a6le print.a6le newhash.a6le format.a6le date.a6le 7.a6le cafe.a6le trace.a6le engine.a6le interpret.a6le cprep.a6le cpcheck.a6le cp0.a6le cpvalid.a6le cpletrec.a6le inspect.a6le enum.a6le io.a6le read.a6le primvars.a6le syntax.a6le costctr.a6le expeditor.a6le exceptions.a6le pretty.a6le env.a6le fasl.a6le reloc.a6le pdhtml.a6le strip.a6le ftype.a6le back.a6le))))'\
+             '(apply #%$make-boot-file "../boot/a6le/scheme.boot" (quote a6le) (quote ("petite"))'\
+             '  (map symbol->string (quote (cpnanopass.a6le compile.a6le cback.a6le))))'\
+             '(when #f (profile-dump-html))'\
+             '(when #f (profile-dump-data "source.pd"))'\
+             '(when #f (profile-dump-data "block.pd"))'\
+             > script.all
+../bin/a6le/scheme -q cmacros.so priminfo.so primvars.so env.so setup.so  --script script.all
+compiling library.ss with output to library.a6le
+compiling prims.ss with output to prims.a6le
+compiling mathprims.ss with output to mathprims.a6le
+compiling record.ss with output to record.a6le
+compiling 5_1.ss with output to 5_1.a6le
+compiling 5_2.ss with output to 5_2.a6le
+compiling 5_3.ss with output to 5_3.a6le
+compiling strnum.ss with output to strnum.a6le
+compiling bytevector.ss with output to bytevector.a6le
+compiling 5_4.ss with output to 5_4.a6le
+compiling 5_6.ss with output to 5_6.a6le
+compiling 5_7.ss with output to 5_7.a6le
+compiling event.ss with output to event.a6le
+compiling 4.ss with output to 4.a6le
+compiling front.ss with output to front.a6le
+compiling foreign.ss with output to foreign.a6le
+compiling 6.ss with output to 6.a6le
+compiling print.ss with output to print.a6le
+compiling newhash.ss with output to newhash.a6le
+compiling format.ss with output to format.a6le
+compiling date.ss with output to date.a6le
+compiling 7.ss with output to 7.a6le
+compiling cafe.ss with output to cafe.a6le
+compiling trace.ss with output to trace.a6le
+compiling engine.ss with output to engine.a6le
+compiling interpret.ss with output to interpret.a6le
+compiling cprep.ss with output to cprep.a6le
+compiling cpcheck.ss with output to cpcheck.a6le
+compiling cp0.ss with output to cp0.a6le
+compiling cpvalid.ss with output to cpvalid.a6le
+compiling cpletrec.ss with output to cpletrec.a6le
+compiling inspect.ss with output to inspect.a6le
+compiling enum.ss with output to enum.a6le
+compiling io.ss with output to io.a6le
+compiling read.ss with output to read.a6le
+compiling primvars.ss with output to primvars.a6le
+compiling syntax.ss with output to syntax.a6le
+compiling costctr.ss with output to costctr.a6le
+compiling expeditor.ss with output to expeditor.a6le
+compiling exceptions.ss with output to exceptions.a6le
+compiling pretty.ss with output to pretty.a6le
+compiling env.ss with output to env.a6le
+compiling fasl.ss with output to fasl.a6le
+compiling reloc.ss with output to reloc.a6le
+compiling pdhtml.ss with output to pdhtml.a6le
+compiling strip.ss with output to strip.a6le
+compiling ftype.ss with output to ftype.a6le
+compiling back.ss with output to back.a6le
+compiling cpnanopass.ss with output to cpnanopass.a6le
+compiling compile.ss with output to compile.a6le
+compiling cback.ss with output to cback.a6le
+(time (for-each (lambda (...) ...) ...))
+    455 collections
+    10.746809761s elapsed cpu time, including 3.498568035s collecting
+    13.476043414s elapsed real time, including 4.523570511s collecting
+    7238653152 bytes allocated, including 7235471536 bytes reclaimed
+ln -s ../../s/mkheader.ss mkheader.ss
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+             '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "mkheader.ss" "mkheader.so")'\
+             | ../bin/a6le/scheme -q cmacros.so priminfo.so primvars.so env.so
+compiling mkheader.ss with output to mkheader.so
+(if [ -r ../boot/a6le/scheme.h ]; then mv -f ../boot/a6le/scheme.h ../boot/a6le/scheme.h.bak; fi)
+echo '(reset-handler abort)'\
+             '(mkscheme.h "../boot/a6le/scheme.h" (quote a6le))' |\
+         ../bin/a6le/scheme -q cmacros.so priminfo.so primvars.so env.so setup.so mkheader.so
+(if `cmp -s ../boot/a6le/scheme.h ../boot/a6le/scheme.h.bak`;\
+          then mv -f ../boot/a6le/scheme.h.bak ../boot/a6le/scheme.h;\
+          else rm -f ../boot/a6le/scheme.h.bak; fi)
+(if [ -r ../boot/a6le/equates.h ]; then mv -f ../boot/a6le/equates.h ../boot/a6le/equates.h.bak; fi)
+echo '(reset-handler abort)'\
+             '(mkequates.h "../boot/a6le/equates.h")' |\
+         ../bin/a6le/scheme -q cmacros.so priminfo.so primvars.so env.so setup.so mkheader.so
+(if `cmp -s ../boot/a6le/equates.h ../boot/a6le/equates.h.bak`;\
+          then mv -f ../boot/a6le/equates.h.bak ../boot/a6le/equates.h;\
+          else rm -f ../boot/a6le/equates.h.bak; fi)
+if make checkboot; then echo fine ; else\
+  make prettyclean saveboot &&\
+  make all &&\
+  make checkboot ;\
+fi
+Exception in $fasl-file-equal?: code comparison failed while comparing ../boot/a6le/sbb and ../boot/a6le/petite.boot within fasl entry 103
+Mf-base:275: recipe for target 'checkboot' failed
+make[4]: *** [checkboot] Error 255
+rm -f *.a6le xpatch patch *.patch *.so *.asm script.all header.tmp *.html
+rm -rf nanopass
+cp -p -f ../boot/a6le/petite.boot ../boot/a6le/sbb
+cp -p -f ../boot/a6le/scheme.boot ../boot/a6le/scb
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+             '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "cmacros.ss" "cmacros.so")'\
+             | ../bin/a6le/scheme -q
+compiling cmacros.ss with output to cmacros.so
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+             '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "priminfo.ss" "priminfo.so")'\
+             | ../bin/a6le/scheme -q cmacros.so
+compiling priminfo.ss with output to priminfo.so
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+     '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "primvars.ss" "primvars.so")'\
+             | ../bin/a6le/scheme -q cmacros.so priminfo.so
+compiling primvars.ss with output to primvars.so
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+     '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "env.ss" "env.so")'\
+             | ../bin/a6le/scheme -q cmacros.so priminfo.so
+compiling env.ss with output to env.so
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+     '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "setup.ss" "setup.so")'\
+             | ../bin/a6le/scheme -q cmacros.so priminfo.so
+compiling setup.ss with output to setup.so
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+             '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(collect-trip-bytes (expt 2 24))'\
+             '(collect-request-handler (lambda () (collect 0 1)))'\
+             '(collect 1 2)'\
+             '(compile-library "../nanopass/nanopass.ss" "nanopass.so")'\
+             | ../bin/a6le/scheme -q --libdirs "../nanopass::." --compile-imported-libraries
+compiling ../nanopass/nanopass.ss with output to nanopass.so
+compiling ../nanopass/nanopass/language.ss with output to nanopass/language.so
+compiling ../nanopass/nanopass/helpers.ss with output to nanopass/helpers.so
+compiling ../nanopass/nanopass/implementation-helpers.chezscheme.sls with output to nanopass/implementation-helpers.chezscheme.so
+compiling ../nanopass/nanopass/language-helpers.ss with output to nanopass/language-helpers.so
+compiling ../nanopass/nanopass/records.ss with output to nanopass/records.so
+compiling ../nanopass/nanopass/syntaxconvert.ss with output to nanopass/syntaxconvert.so
+compiling ../nanopass/nanopass/unparser.ss with output to nanopass/unparser.so
+compiling ../nanopass/nanopass/meta-parser.ss with output to nanopass/meta-parser.so
+compiling ../nanopass/nanopass/meta-syntax-dispatch.ss with output to nanopass/meta-syntax-dispatch.so
+compiling ../nanopass/nanopass/parser.ss with output to nanopass/parser.so
+compiling ../nanopass/nanopass/nano-syntax-dispatch.ss with output to nanopass/nano-syntax-dispatch.so
+compiling ../nanopass/nanopass/language-node-counter.ss with output to nanopass/language-node-counter.so
+compiling ../nanopass/nanopass/pass.ss with output to nanopass/pass.so
+echo '(reset-handler abort)'\
+             '(for-each load (command-line-arguments))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(when #f (compile-profile (quote source)))'\
+             '(when #f (compile-profile (quote block)))'\
+             '(when #f (profile-load-data "source.pd"))'\
+             '(when #f (profile-load-data "block.pd"))'\
+             '(generate-inspector-information #f)'\
+             '(generate-allocation-counts #f)'\
+             '(generate-instruction-counts #f)'\
+             '(#%$enable-pass-timing #f)'\
+             '(run-cp0 (lambda (cp0 x)'\
+             '           (do ([i 2 (fx- i 1)] [x x (cp0 x)])'\
+             '               ((fx= i 0) x))))'\
+             '(collect-trip-bytes (expt 2 24))'\
+             '(collect-request-handler (lambda () (collect 0 1)))'\
+             '(time (for-each (lambda (x y)'\
+             '                   (collect 1 2)'\
+             '                   (compile-file (symbol->string x)'\
+             '                                 (symbol->string y)'\
+             '                                 (quote a6le)))'\
+             '                (quote (library.ss prims.ss mathprims.ss record.ss 5_1.ss 5_2.ss 5_3.ss strnum.ss bytevector.ss 5_4.ss 5_6.ss 5_7.ss event.ss 4.ss front.ss foreign.ss 6.ss print.ss newhash.ss format.ss date.ss 7.ss cafe.ss trace.ss engine.ss interpret.ss cprep.ss cpcheck.ss cp0.ss cpvalid.ss cpletrec.ss inspect.ss enum.ss io.ss read.ss primvars.ss syntax.ss costctr.ss expeditor.ss exceptions.ss pretty.ss env.ss fasl.ss reloc.ss pdhtml.ss strip.ss ftype.ss back.ss cpnanopass.ss compile.ss cback.ss))'\
+             '                (quote (library.a6le prims.a6le mathprims.a6le record.a6le 5_1.a6le 5_2.a6le 5_3.a6le strnum.a6le bytevector.a6le 5_4.a6le 5_6.a6le 5_7.a6le event.a6le 4.a6le front.a6le foreign.a6le 6.a6le print.a6le newhash.a6le format.a6le date.a6le 7.a6le cafe.a6le trace.a6le engine.a6le interpret.a6le cprep.a6le cpcheck.a6le cp0.a6le cpvalid.a6le cpletrec.a6le inspect.a6le enum.a6le io.a6le read.a6le primvars.a6le syntax.a6le costctr.a6le expeditor.a6le exceptions.a6le pretty.a6le env.a6le fasl.a6le reloc.a6le pdhtml.a6le strip.a6le ftype.a6le back.a6le cpnanopass.a6le compile.a6le cback.a6le))))'\
+             '(when #f (#%$print-pass-stats))'\
+             '(apply #%$make-boot-file "../boot/a6le/petite.boot" (quote a6le) (quote ())'\
+             '  (map symbol->string (quote (library.a6le prims.a6le mathprims.a6le record.a6le 5_1.a6le 5_2.a6le 5_3.a6le strnum.a6le bytevector.a6le 5_4.a6le 5_6.a6le 5_7.a6le event.a6le 4.a6le front.a6le foreign.a6le 6.a6le print.a6le newhash.a6le format.a6le date.a6le 7.a6le cafe.a6le trace.a6le engine.a6le interpret.a6le cprep.a6le cpcheck.a6le cp0.a6le cpvalid.a6le cpletrec.a6le inspect.a6le enum.a6le io.a6le read.a6le primvars.a6le syntax.a6le costctr.a6le expeditor.a6le exceptions.a6le pretty.a6le env.a6le fasl.a6le reloc.a6le pdhtml.a6le strip.a6le ftype.a6le back.a6le))))'\
+             '(apply #%$make-boot-file "../boot/a6le/scheme.boot" (quote a6le) (quote ("petite"))'\
+             '  (map symbol->string (quote (cpnanopass.a6le compile.a6le cback.a6le))))'\
+             '(when #f (profile-dump-html))'\
+             '(when #f (profile-dump-data "source.pd"))'\
+             '(when #f (profile-dump-data "block.pd"))'\
+             > script.all
+../bin/a6le/scheme -q cmacros.so priminfo.so primvars.so env.so setup.so  --script script.all
+compiling library.ss with output to library.a6le
+compiling prims.ss with output to prims.a6le
+compiling mathprims.ss with output to mathprims.a6le
+compiling record.ss with output to record.a6le
+compiling 5_1.ss with output to 5_1.a6le
+compiling 5_2.ss with output to 5_2.a6le
+compiling 5_3.ss with output to 5_3.a6le
+compiling strnum.ss with output to strnum.a6le
+compiling bytevector.ss with output to bytevector.a6le
+compiling 5_4.ss with output to 5_4.a6le
+compiling 5_6.ss with output to 5_6.a6le
+compiling 5_7.ss with output to 5_7.a6le
+compiling event.ss with output to event.a6le
+compiling 4.ss with output to 4.a6le
+compiling front.ss with output to front.a6le
+compiling foreign.ss with output to foreign.a6le
+compiling 6.ss with output to 6.a6le
+compiling print.ss with output to print.a6le
+compiling newhash.ss with output to newhash.a6le
+compiling format.ss with output to format.a6le
+compiling date.ss with output to date.a6le
+compiling 7.ss with output to 7.a6le
+compiling cafe.ss with output to cafe.a6le
+compiling trace.ss with output to trace.a6le
+compiling engine.ss with output to engine.a6le
+compiling interpret.ss with output to interpret.a6le
+compiling cprep.ss with output to cprep.a6le
+compiling cpcheck.ss with output to cpcheck.a6le
+compiling cp0.ss with output to cp0.a6le
+compiling cpvalid.ss with output to cpvalid.a6le
+compiling cpletrec.ss with output to cpletrec.a6le
+compiling inspect.ss with output to inspect.a6le
+compiling enum.ss with output to enum.a6le
+compiling io.ss with output to io.a6le
+compiling read.ss with output to read.a6le
+compiling primvars.ss with output to primvars.a6le
+compiling syntax.ss with output to syntax.a6le
+compiling costctr.ss with output to costctr.a6le
+compiling expeditor.ss with output to expeditor.a6le
+compiling exceptions.ss with output to exceptions.a6le
+compiling pretty.ss with output to pretty.a6le
+compiling env.ss with output to env.a6le
+compiling fasl.ss with output to fasl.a6le
+compiling reloc.ss with output to reloc.a6le
+compiling pdhtml.ss with output to pdhtml.a6le
+compiling strip.ss with output to strip.a6le
+compiling ftype.ss with output to ftype.a6le
+compiling back.ss with output to back.a6le
+compiling cpnanopass.ss with output to cpnanopass.a6le
+compiling compile.ss with output to compile.a6le
+compiling cback.ss with output to cback.a6le
+(time (for-each (lambda (...) ...) ...))
+    455 collections
+    10.082667281s elapsed cpu time, including 3.308236227s collecting
+    13.041655701s elapsed real time, including 3.824200411s collecting
+    7238657184 bytes allocated, including 7235475488 bytes reclaimed
+echo '(reset-handler abort)'\
+             '(base-exception-handler (lambda (c) (fresh-line) (display-condition c) (newline) (reset)))'\
+             '(keyboard-interrupt-handler (lambda () (display "interrupted---aborting\n") (reset)))'\
+             '(optimize-level 3)'\
+             '(debug-level 0)'\
+             '(generate-inspector-information #f)'\
+             '(subset-mode (quote system))'\
+             '(compile-file "mkheader.ss" "mkheader.so")'\
+             | ../bin/a6le/scheme -q cmacros.so priminfo.so primvars.so env.so
+compiling mkheader.ss with output to mkheader.so
+(if [ -r ../boot/a6le/scheme.h ]; then mv -f ../boot/a6le/scheme.h ../boot/a6le/scheme.h.bak; fi)
+echo '(reset-handler abort)'\
+             '(mkscheme.h "../boot/a6le/scheme.h" (quote a6le))' |\
+         ../bin/a6le/scheme -q cmacros.so priminfo.so primvars.so env.so setup.so mkheader.so
+(if `cmp -s ../boot/a6le/scheme.h ../boot/a6le/scheme.h.bak`;\
+          then mv -f ../boot/a6le/scheme.h.bak ../boot/a6le/scheme.h;\
+          else rm -f ../boot/a6le/scheme.h.bak; fi)
+(if [ -r ../boot/a6le/equates.h ]; then mv -f ../boot/a6le/equates.h ../boot/a6le/equates.h.bak; fi)
+echo '(reset-handler abort)'\
+             '(mkequates.h "../boot/a6le/equates.h")' |\
+         ../bin/a6le/scheme -q cmacros.so priminfo.so primvars.so env.so setup.so mkheader.so
+(if `cmp -s ../boot/a6le/equates.h ../boot/a6le/equates.h.bak`;\
+          then mv -f ../boot/a6le/equates.h.bak ../boot/a6le/equates.h;\
+          else rm -f ../boot/a6le/equates.h.bak; fi)
+bootfile comparison succeeded
+make restoreboot
+mv -f ../boot/a6le/sbb ../boot/a6le/petite.boot
+mv -f ../boot/a6le/scb ../boot/a6le/scheme.boot
+make resetbootlinks
+touch bootstrap
+(cd a6le && make install)
+(cd c ; make)
+make[2]: Nothing to be done for 'doit'.
+(cd s ; make bootstrap)
+make[2]: 'bootstrap' is up to date.
+make -f Mf-install
+./installsh -o "" -g "" -d -m 755 /opt/ChezScheme/bin
+./installsh -o "" -g "" -m 555 bin/a6le/scheme /opt/ChezScheme/bin/scheme
+ln -f /opt/ChezScheme/bin/scheme /opt/ChezScheme/bin/petite
+ln -f /opt/ChezScheme/bin/scheme /opt/ChezScheme/bin/scheme-script
+./installsh -o "" -g "" -d -m 755 /opt/ChezScheme/lib/csv9.4.1
+./installsh -o "" -g "" -d -m 755 /opt/ChezScheme/lib/csv9.4.1/a6le
+./installsh -o "" -g "" -m 444 boot/a6le/petite.boot /opt/ChezScheme/lib/csv9.4.1/a6le/petite.boot
+if [ "petite" != "petite" ]; then\
+          /bin/rm -f /opt/ChezScheme/lib/csv9.4.1/a6le/petite.boot;\
+          ln -f /opt/ChezScheme/lib/csv9.4.1/a6le/petite.boot /opt/ChezScheme/lib/csv9.4.1/a6le/petite.boot;\
+        fi
+./installsh -o "" -g "" -m 444 boot/a6le/scheme.boot /opt/ChezScheme/lib/csv9.4.1/a6le/scheme.boot;\
+if [ "scheme" != "scheme" ]; then\
+          /bin/rm -f /opt/ChezScheme/lib/csv9.4.1/a6le/scheme.boot;\
+          ln -f /opt/ChezScheme/lib/csv9.4.1/a6le/scheme.boot /opt/ChezScheme/lib/csv9.4.1/a6le/scheme.boot;\
+        fi
+ln -sf /opt/ChezScheme/lib/csv9.4.1/a6le/scheme.boot /opt/ChezScheme/lib/csv9.4.1/a6le/scheme-script.boot;
+./installsh -o "" -g "" -m 444 boot/a6le/scheme.h /opt/ChezScheme/lib/csv9.4.1/a6le
+sed -e "s;{InstallBin};/opt/ChezScheme/bin;g" \
+            -e "s;{InstallLibExamples};/opt/ChezScheme/lib/csv9.4.1/examples;g" \
+            -e "s;{InstallLibBin};/opt/ChezScheme/lib/csv9.4.1/a6le;g" \
+            -e "s;{InstallPetiteName};petite;g" \
+            -e "s;{InstallSchemeName};scheme;g" \
+            -e "s;{InstallScriptName};scheme-script;g" \
+            scheme.1.in > scheme.1
+sed -e "s;{InstallBin};/opt/ChezScheme/bin;g" \
+            -e "s;{InstallLibExamples};/opt/ChezScheme/lib/csv9.4.1/examples;g" \
+            -e "s;{InstallLibBin};/opt/ChezScheme/lib/csv9.4.1/a6le;g" \
+            -e "s;{InstallPetiteName};petite;g" \
+            -e "s;{InstallSchemeName};scheme;g" \
+            -e "s;{InstallScriptName};scheme-script;g" \
+            scheme.1.in > petite.1
+./installsh -o "" -g "" -d -m 755 /opt/ChezScheme/share/man/man1
+./installsh -o "" -g "" -m 444 scheme.1 /opt/ChezScheme/share/man/man1/scheme.1
+if [ yes = yes ] ; then gzip -f /opt/ChezScheme/share/man/man1/scheme.1 ; fi
+./installsh -o "" -g "" -m 444 petite.1 /opt/ChezScheme/share/man/man1/petite.1
+if [ yes = yes ] ; then gzip -f /opt/ChezScheme/share/man/man1/petite.1 ; fi
+./installsh -o "" -g "" -d -m 755 /opt/ChezScheme/lib/csv9.4.1/examples
+./installsh -o "" -g "" -m 444 ../examples/* /opt/ChezScheme/lib/csv9.4.1/examples

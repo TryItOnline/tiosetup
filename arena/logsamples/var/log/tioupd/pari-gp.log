@@ -1,0 +1,302 @@
+Sun Feb  5 02:07:04 UTC 2017
+--2017-02-05 02:07:04--  http://pari.math.u-bordeaux.fr/pub/pari/unix/pari-2.9.1.tar.gz
+Resolving pari.math.u-bordeaux.fr (pari.math.u-bordeaux.fr)... 147.210.16.88
+Connecting to pari.math.u-bordeaux.fr (pari.math.u-bordeaux.fr)|147.210.16.88|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3833846 (3.7M) [application/x-gzip]
+Saving to: ‘pari-2.9.1.tar.gz’
+
+     0K .......... .......... .......... .......... ..........  1%  220K 17s
+    50K .......... .......... .......... .......... ..........  2%  441K 12s
+   100K .......... .......... .......... .......... ..........  4%  101M 8s
+   150K .......... .......... .......... .......... ..........  5% 89.8M 6s
+   200K .......... .......... .......... .......... ..........  6%  442K 6s
+   250K .......... .......... .......... .......... ..........  8%  116M 5s
+   300K .......... .......... .......... .......... ..........  9%  126M 4s
+   350K .......... .......... .......... .......... .......... 10% 94.1M 4s
+   400K .......... .......... .......... .......... .......... 12%  446K 4s
+   450K .......... .......... .......... .......... .......... 13%  108M 4s
+   500K .......... .......... .......... .......... .......... 14%  146M 3s
+   550K .......... .......... .......... .......... .......... 16%  102M 3s
+   600K .......... .......... .......... .......... .......... 17%  122M 3s
+   650K .......... .......... .......... .......... .......... 18%  120M 2s
+   700K .......... .......... .......... .......... .......... 20% 93.2M 2s
+   750K .......... .......... .......... .......... .......... 21%  113M 2s
+   800K .......... .......... .......... .......... .......... 22%  139M 2s
+   850K .......... .......... .......... .......... .......... 24%  453K 2s
+   900K .......... .......... .......... .......... .......... 25%  113M 2s
+   950K .......... .......... .......... .......... .......... 26% 81.1M 2s
+  1000K .......... .......... .......... .......... .......... 28% 97.1M 2s
+  1050K .......... .......... .......... .......... .......... 29%  114M 2s
+  1100K .......... .......... .......... .......... .......... 30% 91.8M 2s
+  1150K .......... .......... .......... .......... .......... 32%  118M 1s
+  1200K .......... .......... .......... .......... .......... 33%  132M 1s
+  1250K .......... .......... .......... .......... .......... 34%  129M 1s
+  1300K .......... .......... .......... .......... .......... 36% 87.9M 1s
+  1350K .......... .......... .......... .......... .......... 37%  123M 1s
+  1400K .......... .......... .......... .......... .......... 38%  120M 1s
+  1450K .......... .......... .......... .......... .......... 40%  124M 1s
+  1500K .......... .......... .......... .......... .......... 41% 89.7M 1s
+  1550K .......... .......... .......... .......... .......... 42%  123M 1s
+  1600K .......... .......... .......... .......... .......... 44%  122M 1s
+  1650K .......... .......... .......... .......... .......... 45%  128M 1s
+  1700K .......... .......... .......... .......... .......... 46% 89.2M 1s
+  1750K .......... .......... .......... .......... .......... 48%  472K 1s
+  1800K .......... .......... .......... .......... .......... 49%  438K 1s
+  1850K .......... .......... .......... .......... .......... 50%  345M 1s
+  1900K .......... .......... .......... .......... .......... 52%  296M 1s
+  1950K .......... .......... .......... .......... .......... 53%  434M 1s
+  2000K .......... .......... .......... .......... .......... 54%  471M 1s
+  2050K .......... .......... .......... .......... .......... 56%  478M 1s
+  2100K .......... .......... .......... .......... .......... 57%  407M 1s
+  2150K .......... .......... .......... .......... .......... 58%  720M 1s
+  2200K .......... .......... .......... .......... .......... 60%  603M 1s
+  2250K .......... .......... .......... .......... .......... 61%  621M 1s
+  2300K .......... .......... .......... .......... .......... 62%  619M 1s
+  2350K .......... .......... .......... .......... .......... 64%  682M 1s
+  2400K .......... .......... .......... .......... .......... 65%  725M 0s
+  2450K .......... .......... .......... .......... .......... 66%  552M 0s
+  2500K .......... .......... .......... .......... .......... 68%  704M 0s
+  2550K .......... .......... .......... .......... .......... 69%  375M 0s
+  2600K .......... .......... .......... .......... .......... 70%  671M 0s
+  2650K .......... .......... .......... .......... .......... 72%  548M 0s
+  2700K .......... .......... .......... .......... .......... 73%  647M 0s
+  2750K .......... .......... .......... .......... .......... 74%  657M 0s
+  2800K .......... .......... .......... .......... .......... 76%  741M 0s
+  2850K .......... .......... .......... .......... .......... 77%  602M 0s
+  2900K .......... .......... .......... .......... .......... 78%  729M 0s
+  2950K .......... .......... .......... .......... .......... 80%  715M 0s
+  3000K .......... .......... .......... .......... .......... 81%  603M 0s
+  3050K .......... .......... .......... .......... .......... 82%  554M 0s
+  3100K .......... .......... .......... .......... .......... 84%  719M 0s
+  3150K .......... .......... .......... .......... .......... 85%  726M 0s
+  3200K .......... .......... .......... .......... .......... 86%  462M 0s
+  3250K .......... .......... .......... .......... .......... 88%  489M 0s
+  3300K .......... .......... .......... .......... .......... 89%  274M 0s
+  3350K .......... .......... .......... .......... .......... 90%  498M 0s
+  3400K .......... .......... .......... .......... .......... 92%  733M 0s
+  3450K .......... .......... .......... .......... .......... 93%  621M 0s
+  3500K .......... .......... .......... .......... .......... 94%  737M 0s
+  3550K .......... .......... .......... .......... .......... 96%  722M 0s
+  3600K .......... .......... .......... .......... .......... 97%  711M 0s
+  3650K .......... .......... .......... .......... .......... 98%  595M 0s
+  3700K .......... .......... .......... .......... ...       100%  556M=0.9s
+
+2017-02-05 02:07:06 (4.00 MB/s) - ‘pari-2.9.1.tar.gz’ saved [3833846/3833846]
+
+Configuring pari-2.9.1 (STABLE) 
+Checking echo to see how to suppress newlines...
+...using -n.
+Looking for some tools first ...
+...gzip is /usr/bin/gzip
+...cc is /usr/bin/cc
+...gcc is /usr/bin/gcc
+...ld is /usr/bin/ld
+...perl is /usr/bin/perl
+...zcat is /usr/bin/zcat
+Choosing C compiler ...
+GNU compatible compiler: gcc version 6.3.1 20161221 (Red Hat 6.3.1-1) (GCC)
+Using mt engine single
+Given the previous choices, sizeof(long) is 8 chars.
+The internal word representation of a double is not needed (64bit).
+==========================================================================
+Building for: amd64 running linux (x86-64/GMP kernel) 64-bit version
+==========================================================================
+C compiler is          /usr/bin/gcc -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -fPIC
+Executable linker is   /usr/bin/gcc  -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -Wl,--export-dynamic 
+Dynamic Lib linker is  /usr/bin/gcc  -shared  $(CFLAGS) $(DLCFLAGS) -Wl,-shared,-soname=$(LIBPARI_SONAME) 
+Looking in C lib for some symbols...
+...Found exp2.
+...Found log2.
+...Found strftime.
+...Found getrusage.
+...Found gettimeofday.
+...Found sigaction.
+...Found TIOCGWINSZ.
+...Found getrlimit.
+...Found stat.
+...Found vsnprintf.
+...Found mmap.
+...Found waitpid.
+...Found setsid.
+...Found getenv.
+...Found isatty.
+...Found alarm.
+...Found system.
+...I did not find dlopen.
+Try again, with -ldl this time...
+...Found dlopen.
+Checking for optional libraries and headers...
+Using GNU MP, version 6.1.1
+...Found X11 header files in /usr/include/X11
+...X11 libraries: -lX11 
+Hi-Res Graphics: X11
+Using GNU readline, version 6.3
+Installation prefix ? [/usr/local]
+...for architecture-independent files (share-prefix) ? [/usr/local/share]
+Installation directories for:
+...executables (gp, gphelp) ? [/usr/local/bin]
+...libraries (libpari) ? [/usr/local/lib]
+...include files ? [/usr/local/include]
+...manual pages ? [/usr/local/share/man/man1]
+...other system-dependent data ? [/usr/local/lib/pari]
+...other system-independent data ? [/usr/local/share/pari]
+Default is dynamic executable and shared library
+==========================================================================
+Extracting examples/Makefile.linux-x86_64
+Extracting Olinux-x86_64/Makefile
+Extracting Olinux-x86_64/paricfg.h
+Extracting Makefile
+Extracting scripts and macros
+...in doc
+...in misc
+==========================================================================
+Shall we try to build pari 2.9.1 (released) now (y/n)? [n]
+Ok. Type "make install" when you are ready
+Bye !
+Making gp in Olinux-x86_64
+make[1]: Entering directory '/opt/pari-2.9.1/Olinux-x86_64'
+../config/genkernel ../src ../src/kernel/x86_64/asm0.h > parilvl0.h
+if test -r ./tune.h; then d=.; else d=../src/kernel/gmp; fi;          cat $d/tune.h ../src/kernel/gmp/int.h ../src/kernel/none/level1.h > parilvl1.h
+cat parilvl0.h parilvl1.h > mpinl.h
+cat ../src/mt/single.h > parimt.h
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o emacs.o ../src/gp/emacs.c
+f=funclist-$$-linux-x86_64.tmp; (cd ../src/desc && /usr/bin/perl merge_822 ../../src/funclist > $f) && mv ../src/desc/$f ../src/desc/pari.desc
+f=highlvl-$$-linux-x86_64.tmp; (cd ../src/desc && /usr/bin/perl gen_proto highlevel pari.desc > $f) && mv ../src/desc/$f ../src/gp/highlvl.h
+f=gp_init-$$-linux-x86_64.tmp; (cd ../src/desc && /usr/bin/perl gen_proto gp pari.desc > $f) && mv ../src/desc/$f ../src/gp/gp_init.h
+/usr/bin/gcc  -c -I. -I../src/headers -I../src/language -DDL_DFLT_NAME=NULL -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o gp.o ../src/gp/gp.c
+/usr/bin/gcc  -c -I. -I../src/headers -I../src/language  -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o gp_rl.o ../src/gp/gp_rl.c
+/usr/bin/gcc  -c -I. -I../src/headers -I../src/language  -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o texmacs.o ../src/gp/texmacs.c
+/usr/bin/gcc  -c -I. -I../src/headers -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o whatnow.o ../src/gp/whatnow.c
+/usr/bin/gcc  -c -I. -I../src/headers -I/usr/include -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o plotX.o ../src/graph/plotX.c
+/usr/bin/gcc  -c -I. -I../src/headers -I../src/graph -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o plotport.o ../src/graph/plotport.c
+cat ../src/kernel/gmp/mp.c ../src/kernel/none/cmp.c ../src/kernel/none/gcdll.c ../src/kernel/none/ratlift.c  ../src/kernel/none/invmod.c ../src/kernel/gmp/gcd.c ../src/kernel/gmp/gcdext.c ../src/kernel/none/mp_indep.c ../src/kernel/none/add.c > mpker.c
+/usr/bin/gcc  -c -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -funroll-loops -fPIC -I. -I../src/headers  -o mpker.o mpker.c
+/usr/bin/gcc  -c -I. -I../src/headers -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -fPIC -o mpinl.o ../src/kernel/none/mpinl.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o alglin1.o ../src/basemath/alglin1.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o alglin2.o ../src/basemath/alglin2.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o alglin3.o ../src/basemath/alglin3.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o arith1.o ../src/basemath/arith1.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o arith2.o ../src/basemath/arith2.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o base1.o ../src/basemath/base1.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o base2.o ../src/basemath/base2.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o base3.o ../src/basemath/base3.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o base4.o ../src/basemath/base4.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o base5.o ../src/basemath/base5.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o bb_group.o ../src/basemath/bb_group.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o bibli1.o ../src/basemath/bibli1.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o bibli2.o ../src/basemath/bibli2.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o bit.o ../src/basemath/bit.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o bnflog.o ../src/basemath/bnflog.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o buch1.o ../src/basemath/buch1.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o buch2.o ../src/basemath/buch2.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o buch3.o ../src/basemath/buch3.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o buch4.o ../src/basemath/buch4.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o char.o ../src/basemath/char.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o concat.o ../src/basemath/concat.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o crvwtors.o ../src/basemath/crvwtors.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o dirichlet.o ../src/basemath/dirichlet.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o ellanal.o ../src/basemath/ellanal.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o elliptic.o ../src/basemath/elliptic.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o ellisog.o ../src/basemath/ellisog.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o ellsea.o ../src/basemath/ellsea.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o elltors.o ../src/basemath/elltors.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o F2x.o ../src/basemath/F2x.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o F2xqE.o ../src/basemath/F2xqE.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o FF.o ../src/basemath/FF.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o Fle.o ../src/basemath/Fle.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o Flx.o ../src/basemath/Flx.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o FlxqE.o ../src/basemath/FlxqE.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o Flxq_log.o ../src/basemath/Flxq_log.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o FpE.o ../src/basemath/FpE.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o FpV.o ../src/basemath/FpV.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o FpX.o ../src/basemath/FpX.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o FpX_factor.o ../src/basemath/FpX_factor.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o FpXQX_factor.o ../src/basemath/FpXQX_factor.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o FpXX.o ../src/basemath/FpXX.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o galconj.o ../src/basemath/galconj.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o gen1.o ../src/basemath/gen1.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o gen2.o ../src/basemath/gen2.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o gen3.o ../src/basemath/gen3.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o Hensel.o ../src/basemath/Hensel.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o hnf_snf.o ../src/basemath/hnf_snf.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o hyperell.o ../src/basemath/hyperell.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o ifactor1.o ../src/basemath/ifactor1.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o lfun.o ../src/basemath/lfun.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o lfunutils.o ../src/basemath/lfunutils.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o lll.o ../src/basemath/lll.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o map.o ../src/basemath/map.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o mellininv.o ../src/basemath/mellininv.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o modsym.o ../src/basemath/modsym.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o nffactor.o ../src/basemath/nffactor.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o perm.o ../src/basemath/perm.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o polarit1.o ../src/basemath/polarit1.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o polarit2.o ../src/basemath/polarit2.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o polarit3.o ../src/basemath/polarit3.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o polclass.o ../src/basemath/polclass.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o polmodular.o ../src/basemath/polmodular.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o prime.o ../src/basemath/prime.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o Qfb.o ../src/basemath/Qfb.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o qfisom.o ../src/basemath/qfisom.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o qfsolve.o ../src/basemath/qfsolve.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o QX_factor.o ../src/basemath/QX_factor.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o random.o ../src/basemath/random.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o RgV.o ../src/basemath/RgV.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o RgX.o ../src/basemath/RgX.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o rootpol.o ../src/basemath/rootpol.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o subcyclo.o ../src/basemath/subcyclo.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o subgroup.o ../src/basemath/subgroup.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o trans1.o ../src/basemath/trans1.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o trans2.o ../src/basemath/trans2.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o trans3.o ../src/basemath/trans3.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o volcano.o ../src/basemath/volcano.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o zetamult.o ../src/basemath/zetamult.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o ZG.o ../src/basemath/ZG.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o ZV.o ../src/basemath/ZV.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o ZX.o ../src/basemath/ZX.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o anal.o ../src/language/anal.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o compile.o ../src/language/compile.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o default.o ../src/language/default.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o es.o ../src/language/es.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o eval.o ../src/language/eval.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o forprime.o ../src/language/forprime.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o gplib.o ../src/language/gplib.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o hash.o ../src/language/hash.c
+f=init-$$-linux-x86_64.tmp; (cd ../src/desc && /usr/bin/perl gen_proto basic pari.desc > $f) && mv ../src/desc/$f ../src/language/init.h
+f=default-$$-linux-x86_64.tmp; (cd ../src/desc && /usr/bin/perl gen_proto default pari.desc > $f) && mv ../src/desc/$f ../src/language/default.h
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o init.o ../src/language/init.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o intnum.o ../src/language/intnum.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o members.o ../src/language/members.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o paricfg.o ../src/language/paricfg.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o pariinl.o ../src/language/pariinl.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o parse.o ../src/language/parse.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o readline.o ../src/language/readline.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o sumiter.o ../src/language/sumiter.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o algebras.o ../src/modules/algebras.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o aprcl.o ../src/modules/aprcl.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o elldata.o ../src/modules/elldata.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o ellfromeqn.o ../src/modules/ellfromeqn.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o galois.o ../src/modules/galois.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o galpol.o ../src/modules/galpol.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o genus2red.o ../src/modules/genus2red.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o groupid.o ../src/modules/groupid.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o krasner.o ../src/modules/krasner.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o kummer.o ../src/modules/kummer.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o mpqs.o ../src/modules/mpqs.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o part.o ../src/modules/part.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o stark.o ../src/modules/stark.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o subfield.o ../src/modules/subfield.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o thue.o ../src/modules/thue.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o mt.o ../src/mt/mt.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o single.o ../src/mt/single.c
+/usr/bin/gcc  -c -I. -I../src/headers -fPIC -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -o plottty.o ../src/graph/plottty.c
+rm -f libpari-gmp.so.2.9.1
+/usr/bin/gcc  -o "/opt/pari-2.9.1/Olinux-x86_64"/libpari-gmp.so.2.9.1 -shared  -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -fPIC -Wl,-shared,-soname=libpari-gmp.so.5  mpker.o mpinl.o alglin1.o alglin2.o alglin3.o arith1.o arith2.o base1.o base2.o base3.o base4.o base5.o bb_group.o bibli1.o bibli2.o bit.o bnflog.o buch1.o buch2.o buch3.o buch4.o char.o concat.o crvwtors.o dirichlet.o ellanal.o elliptic.o ellisog.o ellsea.o elltors.o F2x.o F2xqE.o FF.o Fle.o Flx.o FlxqE.o Flxq_log.o FpE.o FpV.o FpX.o FpX_factor.o FpXQX_factor.o FpXX.o galconj.o gen1.o gen2.o gen3.o Hensel.o hnf_snf.o hyperell.o ifactor1.o lfun.o lfunutils.o lll.o map.o mellininv.o modsym.o nffactor.o perm.o polarit1.o polarit2.o polarit3.o polclass.o polmodular.o prime.o Qfb.o qfisom.o qfsolve.o QX_factor.o random.o RgV.o RgX.o rootpol.o subcyclo.o subgroup.o trans1.o trans2.o trans3.o volcano.o zetamult.o ZG.o ZV.o ZX.o anal.o compile.o default.o es.o eval.o forprime.o gplib.o hash.o init.o intnum.o members.o paricfg.o pariinl.o parse.o readline.o sumiter.o algebras.o aprcl.o elldata.o ellfromeqn.o galois.o galpol.o genus2red.o groupid.o krasner.o kummer.o mpqs.o part.o stark.o subfield.o thue.o mt.o single.o plottty.o -lc -lm -lgmp -ldl   -lm 
+if test "libpari-gmp.so.2.9.1" != "libpari.so"; then 	  rm -f libpari.so;	  ln -s libpari-gmp.so.2.9.1 libpari.so; fi
+if test "libpari-gmp.so.2.9.1" != "libpari-gmp.so.5"; then 	  rm -f libpari-gmp.so.5;	  ln -s libpari-gmp.so.2.9.1 libpari-gmp.so.5; fi
+rm -f gp-dyn
+/usr/bin/gcc  -o gp-dyn -L"/opt/pari-2.9.1/Olinux-x86_64" -O3 -Wall -fno-strict-aliasing -fomit-frame-pointer    -Wl,--export-dynamic  emacs.o gp.o gp_rl.o texmacs.o whatnow.o plotX.o plotport.o -Wl,-rpath,"/opt/pari-2.9.1"/Olinux-x86_64:"/usr/local/lib":/usr/lib -lreadline -lpari -lX11  -lm
+: gp-dyn
+rm -f ../gp
+ln -s Olinux-x86_64/gp-dyn ../gp
+make[1]: Leaving directory '/opt/pari-2.9.1/Olinux-x86_64'

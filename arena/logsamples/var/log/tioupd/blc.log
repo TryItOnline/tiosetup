@@ -1,0 +1,12 @@
+Sun Feb  5 01:57:56 UTC 2017
+--2017-02-05 01:57:56--  https://tromp.github.io/cl/uni.c
+Resolving tromp.github.io (tromp.github.io)... 151.101.20.133
+Connecting to tromp.github.io (tromp.github.io)|151.101.20.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1148 (1.1K) [text/x-c]
+Saving to: ‘uni.c’
+
+     0K .                                                     100%  561M=0s
+
+2017-02-05 01:57:56 (561 MB/s) - ‘uni.c’ saved [1148/1148]
+

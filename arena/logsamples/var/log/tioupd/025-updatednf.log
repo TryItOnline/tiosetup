@@ -1,0 +1,602 @@
+Sun Feb  5 01:47:56 UTC 2017
+Dependencies resolved.
+================================================================================
+ Package                     Arch   Version                       Repository
+                                                                           Size
+================================================================================
+Installing:
+ kernel                      x86_64 4.9.6-100.fc24                updates  77 k
+ kernel-core                 x86_64 4.9.6-100.fc24                updates  20 M
+ kernel-modules              x86_64 4.9.6-100.fc24                updates  22 M
+Upgrading:
+ GeoIP-GeoLite-data          noarch 2017.01-1.fc24                updates 472 k
+ NetworkManager              x86_64 1:1.2.6-1.fc24                updates 2.7 M
+ NetworkManager-libnm        x86_64 1:1.2.6-1.fc24                updates 539 k
+ NetworkManager-team         x86_64 1:1.2.6-1.fc24                updates 239 k
+ bind-libs                   x86_64 32:9.10.4-3.P5.fc24           updates 152 k
+ bind-libs-lite              x86_64 32:9.10.4-3.P5.fc24           updates 1.0 M
+ bind-license                noarch 32:9.10.4-3.P5.fc24           updates  89 k
+ bind-utils                  x86_64 32:9.10.4-3.P5.fc24           updates 406 k
+ bind99-libs                 x86_64 9.9.9-4.P5.fc24               updates 670 k
+ bind99-license              noarch 9.9.9-4.P5.fc24               updates  12 k
+ bzip2                       x86_64 1.0.6-21.fc24                 updates  57 k
+ bzip2-libs                  x86_64 1.0.6-21.fc24                 updates  44 k
+ ca-certificates             noarch 2017.2.11-1.0.fc24            updates 437 k
+ cpp                         x86_64 6.3.1-1.fc24                  updates 9.0 M
+ cups-libs                   x86_64 1:2.1.4-3.fc24                updates 403 k
+ curl                        x86_64 7.47.1-10.fc24                updates 294 k
+ desktop-file-utils          x86_64 0.23-2.fc24                   updates  75 k
+ dnf                         noarch 1.1.10-4.fc24                 updates 275 k
+ dnf-conf                    noarch 1.1.10-4.fc24                 updates  95 k
+ dnf-yum                     noarch 1.1.10-4.fc24                 updates  79 k
+ elfutils                    x86_64 0.168-1.fc24                  updates 297 k
+ elfutils-default-yama-scope noarch 0.168-1.fc24                  updates  38 k
+ elfutils-libelf             x86_64 0.168-1.fc24                  updates 199 k
+ elfutils-libs               x86_64 0.168-1.fc24                  updates 276 k
+ firewalld                   noarch 0.4.4.2-2.fc24                updates 454 k
+     replacing  firewalld-selinux.noarch 0.4.4.2-1.fc24
+ firewalld-filesystem        noarch 0.4.4.2-2.fc24                updates  68 k
+ gcc                         x86_64 6.3.1-1.fc24                  updates  20 M
+ gcc-gdb-plugin              x86_64 6.3.1-1.fc24                  updates  85 k
+ gnutls                      x86_64 3.4.17-2.fc24                 updates 661 k
+ hawkey                      x86_64 0.6.3-6.1.fc24                updates  63 k
+ hwdata                      noarch 0.296-1.fc24                  updates 1.4 M
+ js-jquery                   noarch 2.2.4-1.fc24                  updates 167 k
+ kernel-headers              x86_64 4.9.6-100.fc24                updates 1.1 M
+ libappstream-glib           x86_64 0.6.7-3.fc24                  updates 282 k
+ libcurl                     x86_64 7.47.1-10.fc24                updates 260 k
+ libgcc                      x86_64 6.3.1-1.fc24                  updates  89 k
+ libgomp                     x86_64 6.3.1-1.fc24                  updates 191 k
+ libidn2                     x86_64 0.16-1.fc24                   updates  85 k
+ libipa_hbac                 x86_64 1.14.2-2.fc24                 updates  77 k
+ libnl3                      x86_64 3.2.28-4.fc24                 updates 279 k
+ libnl3-cli                  x86_64 3.2.28-4.fc24                 updates 164 k
+ libpng                      x86_64 2:1.6.27-1.fc24               updates 120 k
+ libsmbclient                x86_64 2:4.4.9-0.fc24                updates 123 k
+ libsss_autofs               x86_64 1.14.2-2.fc24                 updates  78 k
+ libsss_idmap                x86_64 1.14.2-2.fc24                 updates  81 k
+ libsss_nss_idmap            x86_64 1.14.2-2.fc24                 updates  78 k
+ libsss_sudo                 x86_64 1.14.2-2.fc24                 updates  77 k
+ libstdc++                   x86_64 6.3.1-1.fc24                  updates 451 k
+ libstoraged                 x86_64 2.5.2-2.fc24                  updates 121 k
+ libtool-ltdl                x86_64 2.4.6-13.fc24                 updates  54 k
+ libwbclient                 x86_64 2:4.4.9-0.fc24                updates  98 k
+ linux-firmware              noarch 20161205-69.git91ddce49.fc24  updates  37 M
+ lz4                         x86_64 1.7.5-1.fc24                  updates 101 k
+ nano                        x86_64 2.5.3-2.fc24                  updates 551 k
+ nmap-ncat                   x86_64 2:7.40-1.fc24                 updates 228 k
+ nss                         x86_64 3.28.1-1.3.fc24               updates 857 k
+ nss-softokn                 x86_64 3.28.1-1.0.fc24               updates 385 k
+ nss-softokn-freebl          x86_64 3.28.1-1.0.fc24               updates 225 k
+ nss-sysinit                 x86_64 3.28.1-1.3.fc24               updates  59 k
+ nss-tools                   x86_64 3.28.1-1.3.fc24               updates 500 k
+ nss-util                    x86_64 3.28.1-1.0.fc24               updates  82 k
+ openssl                     x86_64 1:1.0.2j-3.fc24               updates 492 k
+ openssl-libs                x86_64 1:1.0.2j-3.fc24               updates 1.2 M
+ pcre                        x86_64 8.40-1.fc24                   updates 404 k
+ pcsc-lite                   x86_64 1.8.20-1.fc24                 updates 105 k
+ pcsc-lite-libs              x86_64 1.8.20-1.fc24                 updates  40 k
+ python                      x86_64 2.7.13-1.fc24                 updates  96 k
+ python-libs                 x86_64 2.7.13-1.fc24                 updates 5.8 M
+ python3-decorator           noarch 4.0.11-1.fc24                 updates  25 k
+ python3-dnf                 noarch 1.1.10-4.fc24                 updates 451 k
+ python3-firewall            noarch 0.4.4.2-2.fc24                updates 351 k
+ python3-hawkey              x86_64 0.6.3-6.1.fc24                updates  45 k
+ python3-sssdconfig          noarch 1.14.2-2.fc24                 updates 103 k
+ realmd                      x86_64 0.16.2-6.fc24                 updates 208 k
+ rpcbind                     x86_64 0.2.3-17.rc2.fc24             updates  64 k
+ samba-client-libs           x86_64 2:4.4.9-0.fc24                updates 4.6 M
+ samba-common                noarch 2:4.4.9-0.fc24                updates 189 k
+ sssd                        x86_64 1.14.2-2.fc24                 updates  69 k
+ sssd-ad                     x86_64 1.14.2-2.fc24                 updates 189 k
+ sssd-client                 x86_64 1.14.2-2.fc24                 updates 132 k
+ sssd-common                 x86_64 1.14.2-2.fc24                 updates 1.2 M
+ sssd-common-pac             x86_64 1.14.2-2.fc24                 updates 113 k
+ sssd-ipa                    x86_64 1.14.2-2.fc24                 updates 261 k
+ sssd-krb5                   x86_64 1.14.2-2.fc24                 updates 107 k
+ sssd-krb5-common            x86_64 1.14.2-2.fc24                 updates 136 k
+ sssd-ldap                   x86_64 1.14.2-2.fc24                 updates 175 k
+ sssd-nfs-idmap              x86_64 1.14.2-2.fc24                 updates  69 k
+ sssd-proxy                  x86_64 1.14.2-2.fc24                 updates 102 k
+ storaged                    x86_64 2.5.2-2.fc24                  updates 378 k
+ storaged-lvm2               x86_64 2.5.2-2.fc24                  updates  67 k
+ tzdata                      noarch 2016j-2.fc24                  updates 419 k
+ unzip                       x86_64 6.0-31.fc24                   updates 184 k
+ vim-minimal                 x86_64 2:8.0.206-1.fc24              updates 512 k
+
+Transaction Summary
+================================================================================
+Install   3 Packages
+Upgrade  93 Packages
+
+Total download size: 145 M
+Downloading Packages:
+--------------------------------------------------------------------------------
+Total                                           2.4 MB/s |  91 MB     00:37     
+Delta RPMs reduced 144.9 MB of updates to 90.8 MB (37.1% saved)
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Upgrading   : nss-util-3.28.1-1.0.fc24.x86_64                           1/190 
+  Upgrading   : libgcc-6.3.1-1.fc24.x86_64                                2/190 
+  Upgrading   : libsss_idmap-1.14.2-2.fc24.x86_64                         3/190 
+  Upgrading   : libstdc++-6.3.1-1.fc24.x86_64                             4/190 
+  Upgrading   : pcre-8.40-1.fc24.x86_64                                   5/190 
+  Upgrading   : bzip2-libs-1.0.6-21.fc24.x86_64                           6/190 
+  Upgrading   : libnl3-3.2.28-4.fc24.x86_64                               7/190 
+  Upgrading   : samba-common-2:4.4.9-0.fc24.noarch                        8/190 
+  Upgrading   : gnutls-3.4.17-2.fc24.x86_64                               9/190 
+  Upgrading   : elfutils-libelf-0.168-1.fc24.x86_64                      10/190 
+  Upgrading   : bind-license-32:9.10.4-3.P5.fc24.noarch                  11/190 
+  Upgrading   : cups-libs-1:2.1.4-3.fc24.x86_64                          12/190 
+  Upgrading   : libwbclient-2:4.4.9-0.fc24.x86_64                        13/190 
+  Upgrading   : samba-client-libs-2:4.4.9-0.fc24.x86_64                  14/190 
+  Upgrading   : libsmbclient-2:4.4.9-0.fc24.x86_64                       15/190 
+  Upgrading   : python3-decorator-4.0.11-1.fc24.noarch                   16/190 
+  Upgrading   : python3-firewall-0.4.4.2-2.fc24.noarch                   17/190 
+  Upgrading   : pcsc-lite-libs-1.8.20-1.fc24.x86_64                      18/190 
+  Upgrading   : nss-softokn-freebl-3.28.1-1.0.fc24.x86_64                19/190 
+  Upgrading   : nss-softokn-3.28.1-1.0.fc24.x86_64                       20/190 
+  Upgrading   : nss-sysinit-3.28.1-1.3.fc24.x86_64                       21/190 
+  Upgrading   : nss-3.28.1-1.3.fc24.x86_64                               22/190 
+  Upgrading   : NetworkManager-libnm-1:1.2.6-1.fc24.x86_64               23/190 
+  Upgrading   : NetworkManager-1:1.2.6-1.fc24.x86_64                     24/190 
+  Upgrading   : libcurl-7.47.1-10.fc24.x86_64                            25/190 
+  Upgrading   : linux-firmware-20161205-69.git91ddce49.fc24.noarch       26/190 
+  Installing  : kernel-core-4.9.6-100.fc24.x86_64                        27/190 
+  Installing  : kernel-modules-4.9.6-100.fc24.x86_64                     28/190 
+  Upgrading   : libstoraged-2.5.2-2.fc24.x86_64                          29/190 
+  Upgrading   : storaged-2.5.2-2.fc24.x86_64                             30/190 
+  Upgrading   : libsss_nss_idmap-1.14.2-2.fc24.x86_64                    31/190 
+  Upgrading   : sssd-client-1.14.2-2.fc24.x86_64                         32/190 
+  Upgrading   : sssd-common-1.14.2-2.fc24.x86_64                         33/190 
+  Upgrading   : sssd-krb5-common-1.14.2-2.fc24.x86_64                    34/190 
+  Upgrading   : sssd-common-pac-1.14.2-2.fc24.x86_64                     35/190 
+  Upgrading   : sssd-ad-1.14.2-2.fc24.x86_64                             36/190 
+  Upgrading   : sssd-krb5-1.14.2-2.fc24.x86_64                           37/190 
+  Upgrading   : sssd-ldap-1.14.2-2.fc24.x86_64                           38/190 
+  Upgrading   : python3-sssdconfig-1.14.2-2.fc24.noarch                  39/190 
+  Upgrading   : libipa_hbac-1.14.2-2.fc24.x86_64                         40/190 
+  Upgrading   : sssd-ipa-1.14.2-2.fc24.x86_64                            41/190 
+  Upgrading   : firewalld-filesystem-0.4.4.2-2.fc24.noarch               42/190 
+  Upgrading   : elfutils-default-yama-scope-0.168-1.fc24.noarch          43/190 
+  Upgrading   : elfutils-libs-0.168-1.fc24.x86_64                        44/190 
+  Upgrading   : hawkey-0.6.3-6.1.fc24.x86_64                             45/190 
+  Upgrading   : python3-hawkey-0.6.3-6.1.fc24.x86_64                     46/190 
+  Upgrading   : dnf-conf-1.1.10-4.fc24.noarch                            47/190 
+  Upgrading   : python3-dnf-1.1.10-4.fc24.noarch                         48/190 
+  Upgrading   : dnf-1.1.10-4.fc24.noarch                                 49/190 
+  Upgrading   : libgomp-6.3.1-1.fc24.x86_64                              50/190 
+  Upgrading   : cpp-6.3.1-1.fc24.x86_64                                  51/190 
+  Upgrading   : gcc-6.3.1-1.fc24.x86_64                                  52/190 
+  Upgrading   : ca-certificates-2017.2.11-1.0.fc24.noarch                53/190 
+  Upgrading   : openssl-libs-1:1.0.2j-3.fc24.x86_64                      54/190 
+  Upgrading   : bind-libs-lite-32:9.10.4-3.P5.fc24.x86_64                55/190 
+  Upgrading   : bind-libs-32:9.10.4-3.P5.fc24.x86_64                     56/190 
+  Upgrading   : python-libs-2.7.13-1.fc24.x86_64                         57/190 
+  Upgrading   : bind99-license-9.9.9-4.P5.fc24.noarch                    58/190 
+  Upgrading   : bind99-libs-9.9.9-4.P5.fc24.x86_64                       59/190 
+  Upgrading   : python-2.7.13-1.fc24.x86_64                              60/190 
+  Upgrading   : bind-utils-32:9.10.4-3.P5.fc24.x86_64                    61/190 
+  Upgrading   : nmap-ncat-2:7.40-1.fc24.x86_64                           62/190 
+  Upgrading   : openssl-1:1.0.2j-3.fc24.x86_64                           63/190 
+  Upgrading   : gcc-gdb-plugin-6.3.1-1.fc24.x86_64                       64/190 
+  Upgrading   : dnf-yum-1.1.10-4.fc24.noarch                             65/190 
+  Upgrading   : elfutils-0.168-1.fc24.x86_64                             66/190 
+  Upgrading   : firewalld-0.4.4.2-2.fc24.noarch                          67/190 
+  Upgrading   : sssd-1.14.2-2.fc24.x86_64                                68/190 
+  Upgrading   : sssd-proxy-1.14.2-2.fc24.x86_64                          69/190 
+  Upgrading   : storaged-lvm2-2.5.2-2.fc24.x86_64                        70/190 
+  Installing  : kernel-4.9.6-100.fc24.x86_64                             71/190 
+  Upgrading   : curl-7.47.1-10.fc24.x86_64                               72/190 
+  Upgrading   : NetworkManager-team-1:1.2.6-1.fc24.x86_64                73/190 
+  Upgrading   : nss-tools-3.28.1-1.3.fc24.x86_64                         74/190 
+  Upgrading   : pcsc-lite-1.8.20-1.fc24.x86_64                           75/190 
+  Upgrading   : libnl3-cli-3.2.28-4.fc24.x86_64                          76/190 
+  Upgrading   : bzip2-1.0.6-21.fc24.x86_64                               77/190 
+  Upgrading   : unzip-6.0-31.fc24.x86_64                                 78/190 
+  Upgrading   : libappstream-glib-0.6.7-3.fc24.x86_64                    79/190 
+  Upgrading   : vim-minimal-2:8.0.206-1.fc24.x86_64                      80/190 
+  Upgrading   : tzdata-2016j-2.fc24.noarch                               81/190 
+  Upgrading   : sssd-nfs-idmap-1.14.2-2.fc24.x86_64                      82/190 
+  Upgrading   : rpcbind-0.2.3-17.rc2.fc24.x86_64                         83/190 
+  Upgrading   : realmd-0.16.2-6.fc24.x86_64                              84/190 
+  Upgrading   : nano-2.5.3-2.fc24.x86_64                                 85/190 
+  Upgrading   : lz4-1.7.5-1.fc24.x86_64                                  86/190 
+  Upgrading   : libtool-ltdl-2.4.6-13.fc24.x86_64                        87/190 
+  Upgrading   : libsss_sudo-1.14.2-2.fc24.x86_64                         88/190 
+  Upgrading   : libsss_autofs-1.14.2-2.fc24.x86_64                       89/190 
+  Upgrading   : libpng-2:1.6.27-1.fc24.x86_64                            90/190 
+  Upgrading   : libidn2-0.16-1.fc24.x86_64                               91/190 
+  Upgrading   : kernel-headers-4.9.6-100.fc24.x86_64                     92/190 
+  Upgrading   : js-jquery-2.2.4-1.fc24.noarch                            93/190 
+  Upgrading   : hwdata-0.296-1.fc24.noarch                               94/190 
+  Upgrading   : desktop-file-utils-0.23-2.fc24.x86_64                    95/190 
+  Upgrading   : GeoIP-GeoLite-data-2017.01-1.fc24.noarch                 96/190 
+  Cleanup     : sssd-1.14.2-1.fc24.x86_64                                97/190 
+  Cleanup     : firewalld-0.4.4.2-1.fc24.noarch                          98/190 
+  Cleanup     : python3-firewall-0.4.4.2-1.fc24.noarch                   99/190 
+  Cleanup     : dnf-yum-1.1.10-2.fc24.noarch                            100/190 
+  Cleanup     : dnf-1.1.10-2.fc24.noarch                                101/190 
+  Cleanup     : python3-dnf-1.1.10-2.fc24.noarch                        102/190 
+  Cleanup     : dnf-conf-1.1.10-2.fc24.noarch                           103/190 
+  Cleanup     : python3-decorator-4.0.10-3.fc24.noarch                  104/190 
+  Cleanup     : firewalld-filesystem-0.4.4.2-1.fc24.noarch              105/190 
+  Obsoleting  : firewalld-selinux-0.4.4.2-1.fc24.noarch                 106/190 
+  Cleanup     : python3-sssdconfig-1.14.2-1.fc24.noarch                 107/190 
+  Cleanup     : tzdata-2016j-1.fc24.noarch                              108/190 
+  Cleanup     : linux-firmware-20160923-68.git42ad5367.fc24.noarch      109/190 
+  Cleanup     : kernel-headers-4.8.13-200.fc24.x86_64                   110/190 
+  Cleanup     : js-jquery-2.1.3-2.fc23.noarch                           111/190 
+  Cleanup     : hwdata-0.294-1.fc24.noarch                              112/190 
+  Cleanup     : GeoIP-GeoLite-data-2016.10-1.fc24.noarch                113/190 
+  Cleanup     : sssd-ad-1.14.2-1.fc24.x86_64                            114/190 
+  Cleanup     : sssd-ipa-1.14.2-1.fc24.x86_64                           115/190 
+  Cleanup     : sssd-common-pac-1.14.2-1.fc24.x86_64                    116/190 
+  Cleanup     : sssd-ldap-1.14.2-1.fc24.x86_64                          117/190 
+  Cleanup     : sssd-krb5-1.14.2-1.fc24.x86_64                          118/190 
+  Cleanup     : bind-utils-32:9.10.4-2.P4.fc24.x86_64                   119/190 
+  Cleanup     : nss-tools-3.27.0-1.2.fc24.x86_64                        120/190 
+  Cleanup     : sssd-proxy-1.14.2-1.fc24.x86_64                         121/190 
+  Cleanup     : bind-libs-lite-32:9.10.4-2.P4.fc24.x86_64               122/190 
+  Cleanup     : bind-libs-32:9.10.4-2.P4.fc24.x86_64                    123/190 
+  Cleanup     : elfutils-0.167-1.fc24.x86_64                            124/190 
+  Cleanup     : elfutils-libs-0.167-1.fc24.x86_64                       125/190 
+  Cleanup     : curl-7.47.1-9.fc24.x86_64                               126/190 
+  Cleanup     : libcurl-7.47.1-9.fc24.x86_64                            127/190 
+  Cleanup     : gcc-gdb-plugin-6.2.1-2.fc24.x86_64                      128/190 
+  Cleanup     : libsmbclient-2:4.4.7-2.fc24.x86_64                      129/190 
+  Cleanup     : libwbclient-2:4.4.7-2.fc24.x86_64                       130/190 
+  Cleanup     : samba-client-libs-2:4.4.7-2.fc24.x86_64                 131/190 
+  Cleanup     : cups-libs-1:2.1.4-2.fc24.x86_64                         132/190 
+  Cleanup     : gcc-6.2.1-2.fc24.x86_64                                 133/190 
+  Cleanup     : sssd-krb5-common-1.14.2-1.fc24.x86_64                   134/190 
+  Cleanup     : sssd-common-1.14.2-1.fc24.x86_64                        135/190 
+  Cleanup     : pcre-8.39-6.fc24.x86_64                                 136/190 
+  Cleanup     : sssd-client-1.14.2-1.fc24.x86_64                        137/190 
+  Cleanup     : bind99-libs-9.9.9-4.P4.fc24.x86_64                      138/190 
+  Cleanup     : NetworkManager-team-1:1.2.4-3.fc24.x86_64               139/190 
+  Cleanup     : NetworkManager-1:1.2.4-3.fc24.x86_64                    140/190 
+  Cleanup     : NetworkManager-libnm-1:1.2.4-3.fc24.x86_64              141/190 
+  Cleanup     : nss-sysinit-3.27.0-1.2.fc24.x86_64                      142/190 
+  Cleanup     : nss-3.27.0-1.2.fc24.x86_64                              143/190 
+  Cleanup     : nss-softokn-3.27.0-1.0.fc24.x86_64                      144/190 
+  Cleanup     : libstdc++-6.2.1-2.fc24.x86_64                           145/190 
+  Cleanup     : python3-hawkey-0.6.3-6.fc24.x86_64                      146/190 
+  Cleanup     : unzip-6.0-30.fc24.x86_64                                147/190 
+  Cleanup     : python-2.7.12-6.fc24.x86_64                             148/190 
+  Cleanup     : python-libs-2.7.12-6.fc24.x86_64                        149/190 
+  Cleanup     : pcsc-lite-1.8.17-2.fc24.x86_64                          150/190 
+  Cleanup     : openssl-1:1.0.2j-1.fc24.x86_64                          151/190 
+  Cleanup     : nmap-ncat-2:7.12-1.fc24.x86_64                          152/190 
+  Cleanup     : openssl-libs-1:1.0.2j-1.fc24.x86_64                     153/190 
+  Cleanup     : storaged-lvm2-2.5.1-1.fc24.x86_64                       154/190 
+  Cleanup     : storaged-2.5.1-1.fc24.x86_64                            155/190 
+  Cleanup     : libnl3-cli-3.2.28-3.fc24.x86_64                         156/190 
+  Cleanup     : libappstream-glib-0.5.18-1.fc24.x86_64                  157/190 
+  Cleanup     : bzip2-1.0.6-20.fc24.x86_64                              158/190 
+  Cleanup     : ca-certificates-2016.2.10-1.0.fc24.noarch               159/190 
+  Cleanup     : bind99-license-9.9.9-4.P4.fc24.noarch                   160/190 
+  Cleanup     : samba-common-2:4.4.7-2.fc24.noarch                      161/190 
+  Cleanup     : elfutils-default-yama-scope-0.167-1.fc24.noarch         162/190 
+  Cleanup     : bind-license-32:9.10.4-2.P4.fc24.noarch                 163/190 
+  Cleanup     : bzip2-libs-1.0.6-20.fc24.x86_64                         164/190 
+  Cleanup     : libgcc-6.2.1-2.fc24.x86_64                              165/190 
+  Cleanup     : libnl3-3.2.28-3.fc24.x86_64                             166/190 
+  Cleanup     : libstoraged-2.5.1-1.fc24.x86_64                         167/190 
+  Cleanup     : pcsc-lite-libs-1.8.17-2.fc24.x86_64                     168/190 
+  Cleanup     : hawkey-0.6.3-6.fc24.x86_64                              169/190 
+  Cleanup     : nss-util-3.27.0-1.0.fc24.x86_64                         170/190 
+  Cleanup     : nss-softokn-freebl-3.27.0-1.0.fc24.x86_64               171/190 
+  Cleanup     : libsss_idmap-1.14.2-1.fc24.x86_64                       172/190 
+  Cleanup     : libsss_nss_idmap-1.14.2-1.fc24.x86_64                   173/190 
+  Cleanup     : cpp-6.2.1-2.fc24.x86_64                                 174/190 
+  Cleanup     : libgomp-6.2.1-2.fc24.x86_64                             175/190 
+  Cleanup     : gnutls-3.4.17-1.fc24.x86_64                             176/190 
+  Cleanup     : elfutils-libelf-0.167-1.fc24.x86_64                     177/190 
+  Cleanup     : libipa_hbac-1.14.2-1.fc24.x86_64                        178/190 
+  Cleanup     : vim-minimal-2:8.0.124-2.fc24.x86_64                     179/190 
+  Cleanup     : sssd-nfs-idmap-1.14.2-1.fc24.x86_64                     180/190 
+  Cleanup     : rpcbind-0.2.3-12.rc2.fc24.x86_64                        181/190 
+  Cleanup     : realmd-0.16.2-5.fc24.x86_64                             182/190 
+  Cleanup     : nano-2.5.3-1.fc24.x86_64                                183/190 
+  Cleanup     : lz4-1.7.3-1.fc24.x86_64                                 184/190 
+  Cleanup     : libtool-ltdl-2.4.6-12.fc24.x86_64                       185/190 
+  Cleanup     : libsss_sudo-1.14.2-1.fc24.x86_64                        186/190 
+  Cleanup     : libsss_autofs-1.14.2-1.fc24.x86_64                      187/190 
+  Cleanup     : libpng-2:1.6.26-1.fc24.x86_64                           188/190 
+  Cleanup     : libidn2-0.11-1.fc24.x86_64                              189/190 
+  Cleanup     : desktop-file-utils-0.23-1.fc24.x86_64                   190/190 
+  Verifying   : kernel-4.9.6-100.fc24.x86_64                              1/190 
+  Verifying   : kernel-core-4.9.6-100.fc24.x86_64                         2/190 
+  Verifying   : kernel-modules-4.9.6-100.fc24.x86_64                      3/190 
+  Verifying   : GeoIP-GeoLite-data-2017.01-1.fc24.noarch                  4/190 
+  Verifying   : NetworkManager-1:1.2.6-1.fc24.x86_64                      5/190 
+  Verifying   : NetworkManager-libnm-1:1.2.6-1.fc24.x86_64                6/190 
+  Verifying   : NetworkManager-team-1:1.2.6-1.fc24.x86_64                 7/190 
+  Verifying   : bind-libs-32:9.10.4-3.P5.fc24.x86_64                      8/190 
+  Verifying   : bind-libs-lite-32:9.10.4-3.P5.fc24.x86_64                 9/190 
+  Verifying   : bind-license-32:9.10.4-3.P5.fc24.noarch                  10/190 
+  Verifying   : bind-utils-32:9.10.4-3.P5.fc24.x86_64                    11/190 
+  Verifying   : bind99-libs-9.9.9-4.P5.fc24.x86_64                       12/190 
+  Verifying   : bind99-license-9.9.9-4.P5.fc24.noarch                    13/190 
+  Verifying   : bzip2-1.0.6-21.fc24.x86_64                               14/190 
+  Verifying   : bzip2-libs-1.0.6-21.fc24.x86_64                          15/190 
+  Verifying   : ca-certificates-2017.2.11-1.0.fc24.noarch                16/190 
+  Verifying   : cpp-6.3.1-1.fc24.x86_64                                  17/190 
+  Verifying   : gcc-6.3.1-1.fc24.x86_64                                  18/190 
+  Verifying   : gcc-gdb-plugin-6.3.1-1.fc24.x86_64                       19/190 
+  Verifying   : libgcc-6.3.1-1.fc24.x86_64                               20/190 
+  Verifying   : libgomp-6.3.1-1.fc24.x86_64                              21/190 
+  Verifying   : cups-libs-1:2.1.4-3.fc24.x86_64                          22/190 
+  Verifying   : curl-7.47.1-10.fc24.x86_64                               23/190 
+  Verifying   : libcurl-7.47.1-10.fc24.x86_64                            24/190 
+  Verifying   : desktop-file-utils-0.23-2.fc24.x86_64                    25/190 
+  Verifying   : dnf-1.1.10-4.fc24.noarch                                 26/190 
+  Verifying   : python3-dnf-1.1.10-4.fc24.noarch                         27/190 
+  Verifying   : dnf-conf-1.1.10-4.fc24.noarch                            28/190 
+  Verifying   : python3-hawkey-0.6.3-6.1.fc24.x86_64                     29/190 
+  Verifying   : dnf-yum-1.1.10-4.fc24.noarch                             30/190 
+  Verifying   : hawkey-0.6.3-6.1.fc24.x86_64                             31/190 
+  Verifying   : elfutils-0.168-1.fc24.x86_64                             32/190 
+  Verifying   : elfutils-libelf-0.168-1.fc24.x86_64                      33/190 
+  Verifying   : elfutils-libs-0.168-1.fc24.x86_64                        34/190 
+  Verifying   : elfutils-default-yama-scope-0.168-1.fc24.noarch          35/190 
+  Verifying   : firewalld-0.4.4.2-2.fc24.noarch                          36/190 
+  Verifying   : firewalld-filesystem-0.4.4.2-2.fc24.noarch               37/190 
+  Verifying   : python3-firewall-0.4.4.2-2.fc24.noarch                   38/190 
+  Verifying   : gnutls-3.4.17-2.fc24.x86_64                              39/190 
+  Verifying   : hwdata-0.296-1.fc24.noarch                               40/190 
+  Verifying   : js-jquery-2.2.4-1.fc24.noarch                            41/190 
+  Verifying   : kernel-headers-4.9.6-100.fc24.x86_64                     42/190 
+  Verifying   : libappstream-glib-0.6.7-3.fc24.x86_64                    43/190 
+  Verifying   : libidn2-0.16-1.fc24.x86_64                               44/190 
+  Verifying   : libipa_hbac-1.14.2-2.fc24.x86_64                         45/190 
+  Verifying   : sssd-ipa-1.14.2-2.fc24.x86_64                            46/190 
+  Verifying   : sssd-1.14.2-2.fc24.x86_64                                47/190 
+  Verifying   : sssd-common-1.14.2-2.fc24.x86_64                         48/190 
+  Verifying   : sssd-common-pac-1.14.2-2.fc24.x86_64                     49/190 
+  Verifying   : sssd-krb5-common-1.14.2-2.fc24.x86_64                    50/190 
+  Verifying   : python3-sssdconfig-1.14.2-2.fc24.noarch                  51/190 
+  Verifying   : sssd-ad-1.14.2-2.fc24.x86_64                             52/190 
+  Verifying   : sssd-krb5-1.14.2-2.fc24.x86_64                           53/190 
+  Verifying   : sssd-ldap-1.14.2-2.fc24.x86_64                           54/190 
+  Verifying   : sssd-client-1.14.2-2.fc24.x86_64                         55/190 
+  Verifying   : libsss_idmap-1.14.2-2.fc24.x86_64                        56/190 
+  Verifying   : sssd-proxy-1.14.2-2.fc24.x86_64                          57/190 
+  Verifying   : libnl3-3.2.28-4.fc24.x86_64                              58/190 
+  Verifying   : libnl3-cli-3.2.28-4.fc24.x86_64                          59/190 
+  Verifying   : libpng-2:1.6.27-1.fc24.x86_64                            60/190 
+  Verifying   : libsmbclient-2:4.4.9-0.fc24.x86_64                       61/190 
+  Verifying   : samba-client-libs-2:4.4.9-0.fc24.x86_64                  62/190 
+  Verifying   : samba-common-2:4.4.9-0.fc24.noarch                       63/190 
+  Verifying   : libwbclient-2:4.4.9-0.fc24.x86_64                        64/190 
+  Verifying   : libsss_autofs-1.14.2-2.fc24.x86_64                       65/190 
+  Verifying   : libsss_nss_idmap-1.14.2-2.fc24.x86_64                    66/190 
+  Verifying   : libsss_sudo-1.14.2-2.fc24.x86_64                         67/190 
+  Verifying   : libstdc++-6.3.1-1.fc24.x86_64                            68/190 
+  Verifying   : libstoraged-2.5.2-2.fc24.x86_64                          69/190 
+  Verifying   : storaged-2.5.2-2.fc24.x86_64                             70/190 
+  Verifying   : storaged-lvm2-2.5.2-2.fc24.x86_64                        71/190 
+  Verifying   : libtool-ltdl-2.4.6-13.fc24.x86_64                        72/190 
+  Verifying   : linux-firmware-20161205-69.git91ddce49.fc24.noarch       73/190 
+  Verifying   : lz4-1.7.5-1.fc24.x86_64                                  74/190 
+  Verifying   : nano-2.5.3-2.fc24.x86_64                                 75/190 
+  Verifying   : nmap-ncat-2:7.40-1.fc24.x86_64                           76/190 
+  Verifying   : nss-3.28.1-1.3.fc24.x86_64                               77/190 
+  Verifying   : nss-softokn-3.28.1-1.0.fc24.x86_64                       78/190 
+  Verifying   : nss-util-3.28.1-1.0.fc24.x86_64                          79/190 
+  Verifying   : nss-softokn-freebl-3.28.1-1.0.fc24.x86_64                80/190 
+  Verifying   : nss-tools-3.28.1-1.3.fc24.x86_64                         81/190 
+  Verifying   : nss-sysinit-3.28.1-1.3.fc24.x86_64                       82/190 
+  Verifying   : openssl-1:1.0.2j-3.fc24.x86_64                           83/190 
+  Verifying   : openssl-libs-1:1.0.2j-3.fc24.x86_64                      84/190 
+  Verifying   : pcre-8.40-1.fc24.x86_64                                  85/190 
+  Verifying   : pcsc-lite-1.8.20-1.fc24.x86_64                           86/190 
+  Verifying   : pcsc-lite-libs-1.8.20-1.fc24.x86_64                      87/190 
+  Verifying   : python-2.7.13-1.fc24.x86_64                              88/190 
+  Verifying   : python-libs-2.7.13-1.fc24.x86_64                         89/190 
+  Verifying   : python3-decorator-4.0.11-1.fc24.noarch                   90/190 
+  Verifying   : realmd-0.16.2-6.fc24.x86_64                              91/190 
+  Verifying   : rpcbind-0.2.3-17.rc2.fc24.x86_64                         92/190 
+  Verifying   : sssd-nfs-idmap-1.14.2-2.fc24.x86_64                      93/190 
+  Verifying   : tzdata-2016j-2.fc24.noarch                               94/190 
+  Verifying   : unzip-6.0-31.fc24.x86_64                                 95/190 
+  Verifying   : vim-minimal-2:8.0.206-1.fc24.x86_64                      96/190 
+  Verifying   : GeoIP-GeoLite-data-2016.10-1.fc24.noarch                 97/190 
+  Verifying   : NetworkManager-1:1.2.4-3.fc24.x86_64                     98/190 
+  Verifying   : NetworkManager-libnm-1:1.2.4-3.fc24.x86_64               99/190 
+  Verifying   : NetworkManager-team-1:1.2.4-3.fc24.x86_64               100/190 
+  Verifying   : libappstream-glib-0.5.18-1.fc24.x86_64                  101/190 
+  Verifying   : python-2.7.12-6.fc24.x86_64                             102/190 
+  Verifying   : python-libs-2.7.12-6.fc24.x86_64                        103/190 
+  Verifying   : libcurl-7.47.1-9.fc24.x86_64                            104/190 
+  Verifying   : python3-decorator-4.0.10-3.fc24.noarch                  105/190 
+  Verifying   : python3-dnf-1.1.10-2.fc24.noarch                        106/190 
+  Verifying   : python3-firewall-0.4.4.2-1.fc24.noarch                  107/190 
+  Verifying   : python3-hawkey-0.6.3-6.fc24.x86_64                      108/190 
+  Verifying   : libgcc-6.2.1-2.fc24.x86_64                              109/190 
+  Verifying   : libgomp-6.2.1-2.fc24.x86_64                             110/190 
+  Verifying   : bind-libs-32:9.10.4-2.P4.fc24.x86_64                    111/190 
+  Verifying   : bind-libs-lite-32:9.10.4-2.P4.fc24.x86_64               112/190 
+  Verifying   : bind-license-32:9.10.4-2.P4.fc24.noarch                 113/190 
+  Verifying   : bind-utils-32:9.10.4-2.P4.fc24.x86_64                   114/190 
+  Verifying   : bind99-libs-9.9.9-4.P4.fc24.x86_64                      115/190 
+  Verifying   : bind99-license-9.9.9-4.P4.fc24.noarch                   116/190 
+  Verifying   : libidn2-0.11-1.fc24.x86_64                              117/190 
+  Verifying   : libipa_hbac-1.14.2-1.fc24.x86_64                        118/190 
+  Verifying   : python3-sssdconfig-1.14.2-1.fc24.noarch                 119/190 
+  Verifying   : bzip2-1.0.6-20.fc24.x86_64                              120/190 
+  Verifying   : bzip2-libs-1.0.6-20.fc24.x86_64                         121/190 
+  Verifying   : ca-certificates-2016.2.10-1.0.fc24.noarch               122/190 
+  Verifying   : realmd-0.16.2-5.fc24.x86_64                             123/190 
+  Verifying   : rpcbind-0.2.3-12.rc2.fc24.x86_64                        124/190 
+  Verifying   : libnl3-3.2.28-3.fc24.x86_64                             125/190 
+  Verifying   : libnl3-cli-3.2.28-3.fc24.x86_64                         126/190 
+  Verifying   : samba-client-libs-2:4.4.7-2.fc24.x86_64                 127/190 
+  Verifying   : samba-common-2:4.4.7-2.fc24.noarch                      128/190 
+  Verifying   : cpp-6.2.1-2.fc24.x86_64                                 129/190 
+  Verifying   : libpng-2:1.6.26-1.fc24.x86_64                           130/190 
+  Verifying   : cups-libs-1:2.1.4-2.fc24.x86_64                         131/190 
+  Verifying   : curl-7.47.1-9.fc24.x86_64                               132/190 
+  Verifying   : desktop-file-utils-0.23-1.fc24.x86_64                   133/190 
+  Verifying   : sssd-1.14.2-1.fc24.x86_64                               134/190 
+  Verifying   : sssd-ad-1.14.2-1.fc24.x86_64                            135/190 
+  Verifying   : sssd-client-1.14.2-1.fc24.x86_64                        136/190 
+  Verifying   : sssd-common-1.14.2-1.fc24.x86_64                        137/190 
+  Verifying   : sssd-common-pac-1.14.2-1.fc24.x86_64                    138/190 
+  Verifying   : sssd-ipa-1.14.2-1.fc24.x86_64                           139/190 
+  Verifying   : sssd-krb5-1.14.2-1.fc24.x86_64                          140/190 
+  Verifying   : sssd-krb5-common-1.14.2-1.fc24.x86_64                   141/190 
+  Verifying   : sssd-ldap-1.14.2-1.fc24.x86_64                          142/190 
+  Verifying   : sssd-nfs-idmap-1.14.2-1.fc24.x86_64                     143/190 
+  Verifying   : sssd-proxy-1.14.2-1.fc24.x86_64                         144/190 
+  Verifying   : dnf-1.1.10-2.fc24.noarch                                145/190 
+  Verifying   : dnf-conf-1.1.10-2.fc24.noarch                           146/190 
+  Verifying   : libsmbclient-2:4.4.7-2.fc24.x86_64                      147/190 
+  Verifying   : storaged-2.5.1-1.fc24.x86_64                            148/190 
+  Verifying   : storaged-lvm2-2.5.1-1.fc24.x86_64                       149/190 
+  Verifying   : dnf-yum-1.1.10-2.fc24.noarch                            150/190 
+  Verifying   : libsss_autofs-1.14.2-1.fc24.x86_64                      151/190 
+  Verifying   : libsss_idmap-1.14.2-1.fc24.x86_64                       152/190 
+  Verifying   : libsss_nss_idmap-1.14.2-1.fc24.x86_64                   153/190 
+  Verifying   : libsss_sudo-1.14.2-1.fc24.x86_64                        154/190 
+  Verifying   : libstdc++-6.2.1-2.fc24.x86_64                           155/190 
+  Verifying   : libstoraged-2.5.1-1.fc24.x86_64                         156/190 
+  Verifying   : elfutils-0.167-1.fc24.x86_64                            157/190 
+  Verifying   : elfutils-default-yama-scope-0.167-1.fc24.noarch         158/190 
+  Verifying   : elfutils-libelf-0.167-1.fc24.x86_64                     159/190 
+  Verifying   : elfutils-libs-0.167-1.fc24.x86_64                       160/190 
+  Verifying   : libtool-ltdl-2.4.6-12.fc24.x86_64                       161/190 
+  Verifying   : tzdata-2016j-1.fc24.noarch                              162/190 
+  Verifying   : unzip-6.0-30.fc24.x86_64                                163/190 
+  Verifying   : vim-minimal-2:8.0.124-2.fc24.x86_64                     164/190 
+  Verifying   : libwbclient-2:4.4.7-2.fc24.x86_64                       165/190 
+  Verifying   : firewalld-0.4.4.2-1.fc24.noarch                         166/190 
+  Verifying   : firewalld-filesystem-0.4.4.2-1.fc24.noarch              167/190 
+  Verifying   : firewalld-selinux-0.4.4.2-1.fc24.noarch                 168/190 
+  Verifying   : linux-firmware-20160923-68.git42ad5367.fc24.noarch      169/190 
+  Verifying   : gcc-6.2.1-2.fc24.x86_64                                 170/190 
+  Verifying   : gcc-gdb-plugin-6.2.1-2.fc24.x86_64                      171/190 
+  Verifying   : lz4-1.7.3-1.fc24.x86_64                                 172/190 
+  Verifying   : nano-2.5.3-1.fc24.x86_64                                173/190 
+  Verifying   : gnutls-3.4.17-1.fc24.x86_64                             174/190 
+  Verifying   : nmap-ncat-2:7.12-1.fc24.x86_64                          175/190 
+  Verifying   : nss-3.27.0-1.2.fc24.x86_64                              176/190 
+  Verifying   : nss-softokn-3.27.0-1.0.fc24.x86_64                      177/190 
+  Verifying   : nss-softokn-freebl-3.27.0-1.0.fc24.x86_64               178/190 
+  Verifying   : nss-sysinit-3.27.0-1.2.fc24.x86_64                      179/190 
+  Verifying   : nss-tools-3.27.0-1.2.fc24.x86_64                        180/190 
+  Verifying   : nss-util-3.27.0-1.0.fc24.x86_64                         181/190 
+  Verifying   : hawkey-0.6.3-6.fc24.x86_64                              182/190 
+  Verifying   : hwdata-0.294-1.fc24.noarch                              183/190 
+  Verifying   : openssl-1:1.0.2j-1.fc24.x86_64                          184/190 
+  Verifying   : openssl-libs-1:1.0.2j-1.fc24.x86_64                     185/190 
+  Verifying   : js-jquery-2.1.3-2.fc23.noarch                           186/190 
+  Verifying   : pcre-8.39-6.fc24.x86_64                                 187/190 
+  Verifying   : pcsc-lite-1.8.17-2.fc24.x86_64                          188/190 
+  Verifying   : pcsc-lite-libs-1.8.17-2.fc24.x86_64                     189/190 
+  Verifying   : kernel-headers-4.8.13-200.fc24.x86_64                   190/190 
+
+Installed:
+  kernel.x86_64 4.9.6-100.fc24             kernel-core.x86_64 4.9.6-100.fc24    
+  kernel-modules.x86_64 4.9.6-100.fc24    
+
+Upgraded:
+  GeoIP-GeoLite-data.noarch 2017.01-1.fc24                                      
+  NetworkManager.x86_64 1:1.2.6-1.fc24                                          
+  NetworkManager-libnm.x86_64 1:1.2.6-1.fc24                                    
+  NetworkManager-team.x86_64 1:1.2.6-1.fc24                                     
+  bind-libs.x86_64 32:9.10.4-3.P5.fc24                                          
+  bind-libs-lite.x86_64 32:9.10.4-3.P5.fc24                                     
+  bind-license.noarch 32:9.10.4-3.P5.fc24                                       
+  bind-utils.x86_64 32:9.10.4-3.P5.fc24                                         
+  bind99-libs.x86_64 9.9.9-4.P5.fc24                                            
+  bind99-license.noarch 9.9.9-4.P5.fc24                                         
+  bzip2.x86_64 1.0.6-21.fc24                                                    
+  bzip2-libs.x86_64 1.0.6-21.fc24                                               
+  ca-certificates.noarch 2017.2.11-1.0.fc24                                     
+  cpp.x86_64 6.3.1-1.fc24                                                       
+  cups-libs.x86_64 1:2.1.4-3.fc24                                               
+  curl.x86_64 7.47.1-10.fc24                                                    
+  desktop-file-utils.x86_64 0.23-2.fc24                                         
+  dnf.noarch 1.1.10-4.fc24                                                      
+  dnf-conf.noarch 1.1.10-4.fc24                                                 
+  dnf-yum.noarch 1.1.10-4.fc24                                                  
+  elfutils.x86_64 0.168-1.fc24                                                  
+  elfutils-default-yama-scope.noarch 0.168-1.fc24                               
+  elfutils-libelf.x86_64 0.168-1.fc24                                           
+  elfutils-libs.x86_64 0.168-1.fc24                                             
+  firewalld.noarch 0.4.4.2-2.fc24                                               
+  firewalld-filesystem.noarch 0.4.4.2-2.fc24                                    
+  gcc.x86_64 6.3.1-1.fc24                                                       
+  gcc-gdb-plugin.x86_64 6.3.1-1.fc24                                            
+  gnutls.x86_64 3.4.17-2.fc24                                                   
+  hawkey.x86_64 0.6.3-6.1.fc24                                                  
+  hwdata.noarch 0.296-1.fc24                                                    
+  js-jquery.noarch 2.2.4-1.fc24                                                 
+  kernel-headers.x86_64 4.9.6-100.fc24                                          
+  libappstream-glib.x86_64 0.6.7-3.fc24                                         
+  libcurl.x86_64 7.47.1-10.fc24                                                 
+  libgcc.x86_64 6.3.1-1.fc24                                                    
+  libgomp.x86_64 6.3.1-1.fc24                                                   
+  libidn2.x86_64 0.16-1.fc24                                                    
+  libipa_hbac.x86_64 1.14.2-2.fc24                                              
+  libnl3.x86_64 3.2.28-4.fc24                                                   
+  libnl3-cli.x86_64 3.2.28-4.fc24                                               
+  libpng.x86_64 2:1.6.27-1.fc24                                                 
+  libsmbclient.x86_64 2:4.4.9-0.fc24                                            
+  libsss_autofs.x86_64 1.14.2-2.fc24                                            
+  libsss_idmap.x86_64 1.14.2-2.fc24                                             
+  libsss_nss_idmap.x86_64 1.14.2-2.fc24                                         
+  libsss_sudo.x86_64 1.14.2-2.fc24                                              
+  libstdc++.x86_64 6.3.1-1.fc24                                                 
+  libstoraged.x86_64 2.5.2-2.fc24                                               
+  libtool-ltdl.x86_64 2.4.6-13.fc24                                             
+  libwbclient.x86_64 2:4.4.9-0.fc24                                             
+  linux-firmware.noarch 20161205-69.git91ddce49.fc24                            
+  lz4.x86_64 1.7.5-1.fc24                                                       
+  nano.x86_64 2.5.3-2.fc24                                                      
+  nmap-ncat.x86_64 2:7.40-1.fc24                                                
+  nss.x86_64 3.28.1-1.3.fc24                                                    
+  nss-softokn.x86_64 3.28.1-1.0.fc24                                            
+  nss-softokn-freebl.x86_64 3.28.1-1.0.fc24                                     
+  nss-sysinit.x86_64 3.28.1-1.3.fc24                                            
+  nss-tools.x86_64 3.28.1-1.3.fc24                                              
+  nss-util.x86_64 3.28.1-1.0.fc24                                               
+  openssl.x86_64 1:1.0.2j-3.fc24                                                
+  openssl-libs.x86_64 1:1.0.2j-3.fc24                                           
+  pcre.x86_64 8.40-1.fc24                                                       
+  pcsc-lite.x86_64 1.8.20-1.fc24                                                
+  pcsc-lite-libs.x86_64 1.8.20-1.fc24                                           
+  python.x86_64 2.7.13-1.fc24                                                   
+  python-libs.x86_64 2.7.13-1.fc24                                              
+  python3-decorator.noarch 4.0.11-1.fc24                                        
+  python3-dnf.noarch 1.1.10-4.fc24                                              
+  python3-firewall.noarch 0.4.4.2-2.fc24                                        
+  python3-hawkey.x86_64 0.6.3-6.1.fc24                                          
+  python3-sssdconfig.noarch 1.14.2-2.fc24                                       
+  realmd.x86_64 0.16.2-6.fc24                                                   
+  rpcbind.x86_64 0.2.3-17.rc2.fc24                                              
+  samba-client-libs.x86_64 2:4.4.9-0.fc24                                       
+  samba-common.noarch 2:4.4.9-0.fc24                                            
+  sssd.x86_64 1.14.2-2.fc24                                                     
+  sssd-ad.x86_64 1.14.2-2.fc24                                                  
+  sssd-client.x86_64 1.14.2-2.fc24                                              
+  sssd-common.x86_64 1.14.2-2.fc24                                              
+  sssd-common-pac.x86_64 1.14.2-2.fc24                                          
+  sssd-ipa.x86_64 1.14.2-2.fc24                                                 
+  sssd-krb5.x86_64 1.14.2-2.fc24                                                
+  sssd-krb5-common.x86_64 1.14.2-2.fc24                                         
+  sssd-ldap.x86_64 1.14.2-2.fc24                                                
+  sssd-nfs-idmap.x86_64 1.14.2-2.fc24                                           
+  sssd-proxy.x86_64 1.14.2-2.fc24                                               
+  storaged.x86_64 2.5.2-2.fc24                                                  
+  storaged-lvm2.x86_64 2.5.2-2.fc24                                             
+  tzdata.noarch 2016j-2.fc24                                                    
+  unzip.x86_64 6.0-31.fc24                                                      
+  vim-minimal.x86_64 2:8.0.206-1.fc24                                           
+
+Complete!

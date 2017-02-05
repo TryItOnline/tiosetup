@@ -1,0 +1,5 @@
+Sun Feb  5 01:57:55 UTC 2017
+Cloning into 'Befunge-93'...
+cc -std=c99 -D_POSIX_C_SOURCE=200809L -W -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith	-Wno-uninitialized -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch          -Wcast-align -Wchar-subscripts -Winline -Wnested-externs -Wredundant-decls  src/bef.c -o bin/bef
+cc -std=c99 -D_POSIX_C_SOURCE=200809L -W -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith	-Wno-uninitialized -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch          -Wcast-align -Wchar-subscripts -Winline -Wnested-externs -Wredundant-decls  src/befprof.c -o bin/befprof
+cc -std=c99 -D_POSIX_C_SOURCE=200809L -W -Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith	-Wno-uninitialized -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch          -Wcast-align -Wchar-subscripts -Winline -Wnested-externs -Wredundant-decls  src/bef2c.c -o bin/bef2c

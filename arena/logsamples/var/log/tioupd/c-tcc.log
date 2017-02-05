@@ -1,0 +1,61 @@
+Sun Feb  5 01:57:58 UTC 2017
+Cloning into 'tinycc'...
+Binary  directory   /opt/tinycc/bin
+TinyCC directory    /opt/tinycc/lib/tcc
+Library directory   /opt/tinycc/lib
+Include directory   /opt/tinycc/include
+Manual directory    /opt/tinycc/share/man
+Info directory      /opt/tinycc/share/info
+Doc directory       /opt/tinycc/share/doc
+Target root prefix  -
+Source path         /opt/tinycc
+C compiler          gcc
+Target OS           Linux
+CPU                 x86-64
+Big Endian          no
+Profiling           no
+Cross compilers     no
+Use libgcc          no
+Triplet             -
+Creating config.mak and config.h
+gcc -o tcc.o -c tcc.c -DCONFIG_LDDIR="\"lib64\"" -DTCC_TARGET_X86_64 -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I. 
+gcc -o libtcc.o -c libtcc.c -DCONFIG_LDDIR="\"lib64\"" -DTCC_TARGET_X86_64 -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I. 
+gcc -o tccpp.o -c tccpp.c -DCONFIG_LDDIR="\"lib64\"" -DTCC_TARGET_X86_64 -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I. 
+gcc -o tccgen.o -c tccgen.c -DCONFIG_LDDIR="\"lib64\"" -DTCC_TARGET_X86_64 -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I. 
+gcc -o tccelf.o -c tccelf.c -DCONFIG_LDDIR="\"lib64\"" -DTCC_TARGET_X86_64 -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I. 
+gcc -o tccasm.o -c tccasm.c -DCONFIG_LDDIR="\"lib64\"" -DTCC_TARGET_X86_64 -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I. 
+gcc -o tccrun.o -c tccrun.c -DCONFIG_LDDIR="\"lib64\"" -DTCC_TARGET_X86_64 -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I. 
+gcc -o x86_64-gen.o -c x86_64-gen.c -DCONFIG_LDDIR="\"lib64\"" -DTCC_TARGET_X86_64 -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I. 
+gcc -o x86_64-link.o -c x86_64-link.c -DCONFIG_LDDIR="\"lib64\"" -DTCC_TARGET_X86_64 -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I. 
+gcc -o i386-asm.o -c i386-asm.c -DCONFIG_LDDIR="\"lib64\"" -DTCC_TARGET_X86_64 -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I. 
+ar rcs libtcc.a libtcc.o tccpp.o tccgen.o tccelf.o tccasm.o tccrun.o x86_64-gen.o x86_64-link.o i386-asm.o
+gcc -o tcc tcc.o libtcc.a -Wall -g -O2 -Wdeclaration-after-statement -Wno-deprecated-declarations -Wno-strict-aliasing -Wno-pointer-sign -Wno-sign-compare -Wno-unused-result -Wno-uninitialized -fno-strict-aliasing -I.   -lm -ldl 
+make -C lib native
+make[1]: Entering directory '/opt/tinycc/lib'
+mkdir -p x86_64
+../tcc -B.. -c libtcc1.c -o x86_64/libtcc1.o -DTCC_TARGET_X86_64
+../tcc -B.. -c alloca86_64.S -o x86_64/alloca86_64.o -DTCC_TARGET_X86_64
+../tcc -B.. -c alloca86_64-bt.S -o x86_64/alloca86_64-bt.o -DTCC_TARGET_X86_64
+../tcc -B.. -c bcheck.c -o x86_64/bcheck.o -DTCC_TARGET_X86_64
+ar rcs ../libtcc1.a x86_64/libtcc1.o x86_64/alloca86_64.o x86_64/alloca86_64-bt.o x86_64/bcheck.o
+make[1]: Leaving directory '/opt/tinycc/lib'
+./texi2pod.pl tcc-doc.texi tcc.pod
+pod2man --section=1 --center="Tiny C Compiler" --release="0.9.26" tcc.pod > tcc.1
+makeinfo --no-split --html --number-sections -o tcc-doc.html tcc-doc.texi
+makeinfo tcc-doc.texi
+mkdir -p "/opt/tinycc/bin"
+install  -m755 tcc "/opt/tinycc/bin"
+mkdir -p "/opt/tinycc/lib/tcc"
+install -m644 libtcc1.a "/opt/tinycc/lib/tcc"
+mkdir -p "/opt/tinycc/lib/tcc/include"
+install -m644 ./include/*.h ./tcclib.h "/opt/tinycc/lib/tcc/include"
+mkdir -p "/opt/tinycc/lib"
+install -m644 libtcc.a "/opt/tinycc/lib"
+mkdir -p "/opt/tinycc/include"
+install -m644 ./libtcc.h "/opt/tinycc/include"
+mkdir -p "/opt/tinycc/share/man/man1"
+install -m644 tcc.1 "/opt/tinycc/share/man/man1"
+mkdir -p "/opt/tinycc/share/info"
+install -m644 tcc-doc.info "/opt/tinycc/share/info"
+mkdir -p "/opt/tinycc/share/doc"
+install -m644 tcc-doc.html "/opt/tinycc/share/doc"

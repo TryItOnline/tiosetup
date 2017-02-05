@@ -1,0 +1,1517 @@
+Sun Feb  5 01:58:54 UTC 2017
+Cloning into 'factor'...
+Finding OS...
+Finding ARCH...
+Checking for all(clang clang++)...found!
+Finding WORD...
+OS=linux
+ARCH=x86
+WORD=64
+DEBUG=
+FACTOR_BINARY=factor
+FACTOR_LIBRARY=libfactor.a
+FACTOR_IMAGE=factor.image
+MAKE_TARGET=linux-x86-64
+BOOT_IMAGE=boot.unix-x86.64.image
+MAKE_IMAGE_TARGET=unix-x86.64
+GIT_PROTOCOL=git
+GIT_URL=git://factorcode.org/git/factor.git
+DOWNLOADER=wget
+CC=clang
+CXX=clang++
+MAKE=make
+COPY=cp
+DELETE=rm
+Checking for any(chmod)...found chmod!
+Checking for any(uname)...found uname!
+Checking for any(git)...found git!
+Checking for any(wget curl)...found wget!
+Checking for any(clang gcc)...found clang!
+Checking for any(clang++ g++ cl)...found clang++!
+Checking for any(make gmake)...found make!
+Checking for any(md5sum md5)...found md5sum!
+Checking for any(cut)...found cut!
+Checking for library GL...found.
+Checking for library X11...found.
+Checking for library pango-1.0...not found.
+***Factor will compile NO_UI=1
+Fetching the git repository from factorcode.org...
+From git://factorcode.org/git/factor
+ * branch            master     -> FETCH_HEAD
+Updating the working tree...
+From git://factorcode.org/git/factor
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+Backing up factor...
+cp: cannot stat 'factor': No such file or directory
+cp: cannot stat 'libfactor.a': No such file or directory
+cp: cannot stat 'boot.unix-x86.64.image': No such file or directory
+cp: cannot stat 'factor.image': No such file or directory
+Done with backup.
+rm -f vm/*.gch
+rm -f vm/*.o
+rm -f factor.dll
+rm -f factor.lib
+rm -f factor.dll.lib
+rm -f libfactor.*
+rm -f libfactor-ffi-test.*
+rm -f Factor.app/Contents/Frameworks/libfactor.dylib
+make factor factor-ffi-test factor-lib CONFIG=vm/Config.linux.x86.64
+make[1]: Entering directory '/opt/factor'
+clang++ -c -x c++-header -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/master.hpp.gch vm/master.hpp
+clang -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -fPIC -std=c99 -o vm/ffi_test.o vm/ffi_test.c
+clang -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -fPIC -shared -o libfactor-ffi-test.so vm/ffi_test.o
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/main-unix.o vm/main-unix.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/os-unix.o vm/os-unix.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/os-genunix.o vm/os-genunix.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/os-linux.o vm/os-linux.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/mvm-unix.o vm/mvm-unix.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/cpu-x86.o vm/cpu-x86.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/aging_collector.o vm/aging_collector.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/alien.o vm/alien.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/arrays.o vm/arrays.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/bignum.o vm/bignum.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/byte_arrays.o vm/byte_arrays.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/callbacks.o vm/callbacks.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/callstack.o vm/callstack.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/code_blocks.o vm/code_blocks.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/code_heap.o vm/code_heap.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/compaction.o vm/compaction.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/contexts.o vm/contexts.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/data_heap.o vm/data_heap.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/data_heap_checker.o vm/data_heap_checker.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/debug.o vm/debug.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/dispatch.o vm/dispatch.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/entry_points.o vm/entry_points.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/errors.o vm/errors.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/factor.o vm/factor.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/full_collector.o vm/full_collector.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/gc.o vm/gc.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/image.o vm/image.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/inline_cache.o vm/inline_cache.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/instruction_operands.o vm/instruction_operands.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/io.o vm/io.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/jit.o vm/jit.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/math.o vm/math.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/mvm.o vm/mvm.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/nursery_collector.o vm/nursery_collector.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/object_start_map.o vm/object_start_map.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/objects.o vm/objects.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/primitives.o vm/primitives.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/quotations.o vm/quotations.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/run.o vm/run.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/safepoints.o vm/safepoints.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/sampling_profiler.o vm/sampling_profiler.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/strings.o vm/strings.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/to_tenured_collector.o vm/to_tenured_collector.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/tuples.o vm/tuples.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/utilities.o vm/utilities.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/vm.o vm/vm.cpp
+clang++ -c -Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o vm/words.o vm/words.cpp
+clang++ -L. vm/os-unix.o vm/os-genunix.o vm/os-linux.o vm/mvm-unix.o vm/cpu-x86.o vm/aging_collector.o vm/alien.o vm/arrays.o vm/bignum.o vm/byte_arrays.o vm/callbacks.o vm/callstack.o vm/code_blocks.o vm/code_heap.o vm/compaction.o vm/contexts.o vm/data_heap.o vm/data_heap_checker.o vm/debug.o vm/dispatch.o vm/entry_points.o vm/errors.o vm/factor.o vm/full_collector.o vm/gc.o vm/image.o vm/inline_cache.o vm/instruction_operands.o vm/io.o vm/jit.o vm/math.o vm/mvm.o vm/nursery_collector.o vm/object_start_map.o vm/objects.o vm/primitives.o vm/quotations.o vm/run.o vm/safepoints.o vm/sampling_profiler.o vm/strings.o vm/to_tenured_collector.o vm/tuples.o vm/utilities.o vm/vm.o vm/words.o \
+	-Wall -pedantic -DFACTOR_VERSION="0.98" -DFACTOR_GIT_LABEL="heads/master-f342fd04d9aad172dca83533ab8d3a525f47784f" -fomit-frame-pointer -m64 -O3 -std=c++11 -o factor -ldl -lm -lrt -lpthread -Wl,--export-dynamic vm/main-unix.o
+ar rcs libfactor.a vm/os-unix.o vm/os-genunix.o vm/os-linux.o vm/mvm-unix.o vm/cpu-x86.o vm/aging_collector.o vm/alien.o vm/arrays.o vm/bignum.o vm/byte_arrays.o vm/callbacks.o vm/callstack.o vm/code_blocks.o vm/code_heap.o vm/compaction.o vm/contexts.o vm/data_heap.o vm/data_heap_checker.o vm/debug.o vm/dispatch.o vm/entry_points.o vm/errors.o vm/factor.o vm/full_collector.o vm/gc.o vm/image.o vm/inline_cache.o vm/instruction_operands.o vm/io.o vm/jit.o vm/math.o vm/mvm.o vm/nursery_collector.o vm/object_start_map.o vm/objects.o vm/primitives.o vm/quotations.o vm/run.o vm/safepoints.o vm/sampling_profiler.o vm/strings.o vm/to_tenured_collector.o vm/tuples.o vm/utilities.o vm/vm.o vm/words.o
+make[1]: Leaving directory '/opt/factor'
+Deleting old images...
+Downloading boot image boot.unix-x86.64.image.
+wget http://downloads.factorcode.org/images/latest/boot.unix-x86.64.image
+--2017-02-05 01:59:44--  http://downloads.factorcode.org/images/latest/boot.unix-x86.64.image
+Resolving downloads.factorcode.org (downloads.factorcode.org)... 208.113.161.214
+Connecting to downloads.factorcode.org (downloads.factorcode.org)|208.113.161.214|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4095336 (3.9M) [text/plain]
+Saving to: ‘boot.unix-x86.64.image’
+
+     0K .......... .......... .......... .......... ..........  1% 2.80M 1s
+    50K .......... .......... .......... .......... ..........  2% 2.81M 1s
+   100K .......... .......... .......... .......... ..........  3% 5.53M 1s
+   150K .......... .......... .......... .......... ..........  5% 5.48M 1s
+   200K .......... .......... .......... .......... ..........  6% 5.61M 1s
+   250K .......... .......... .......... .......... ..........  7% 5.51M 1s
+   300K .......... .......... .......... .......... ..........  8% 17.5M 1s
+   350K .......... .......... .......... .......... .......... 10% 7.76M 1s
+   400K .......... .......... .......... .......... .......... 11% 5.70M 1s
+   450K .......... .......... .......... .......... .......... 12%  106M 1s
+   500K .......... .......... .......... .......... .......... 13% 5.70M 1s
+   550K .......... .......... .......... .......... .......... 15% 5.64M 1s
+   600K .......... .......... .......... .......... .......... 16% 5.75M 1s
+   650K .......... .......... .......... .......... .......... 17% 5.60M 1s
+   700K .......... .......... .......... .......... .......... 18% 5.66M 1s
+   750K .......... .......... .......... .......... .......... 20% 5.83M 1s
+   800K .......... .......... .......... .......... .......... 21% 64.8M 1s
+   850K .......... .......... .......... .......... .......... 22% 5.61M 1s
+   900K .......... .......... .......... .......... .......... 23% 5.65M 1s
+   950K .......... .......... .......... .......... .......... 25% 66.3M 0s
+  1000K .......... .......... .......... .......... .......... 26% 6.02M 0s
+  1050K .......... .......... .......... .......... .......... 27%  102M 0s
+  1100K .......... .......... .......... .......... .......... 28% 5.71M 0s
+  1150K .......... .......... .......... .......... .......... 30%  110M 0s
+  1200K .......... .......... .......... .......... .......... 31% 5.99M 0s
+  1250K .......... .......... .......... .......... .......... 32% 82.3M 0s
+  1300K .......... .......... .......... .......... .......... 33%  114M 0s
+  1350K .......... .......... .......... .......... .......... 35% 5.94M 0s
+  1400K .......... .......... .......... .......... .......... 36% 88.4M 0s
+  1450K .......... .......... .......... .......... .......... 37% 5.97M 0s
+  1500K .......... .......... .......... .......... .......... 38% 76.2M 0s
+  1550K .......... .......... .......... .......... .......... 40%  110M 0s
+  1600K .......... .......... .......... .......... .......... 41% 6.00M 0s
+  1650K .......... .......... .......... .......... .......... 42% 77.8M 0s
+  1700K .......... .......... .......... .......... .......... 43% 6.51M 0s
+  1750K .......... .......... .......... .......... .......... 45% 37.3M 0s
+  1800K .......... .......... .......... .......... .......... 46%  127M 0s
+  1850K .......... .......... .......... .......... .......... 47% 6.78M 0s
+  1900K .......... .......... .......... .......... .......... 48% 31.7M 0s
+  1950K .......... .......... .......... .......... .......... 50% 7.02M 0s
+  2000K .......... .......... .......... .......... .......... 51%  105M 0s
+  2050K .......... .......... .......... .......... .......... 52%  146M 0s
+  2100K .......... .......... .......... .......... .......... 53% 31.9M 0s
+  2150K .......... .......... .......... .......... .......... 55% 7.38M 0s
+  2200K .......... .......... .......... .......... .......... 56% 67.1M 0s
+  2250K .......... .......... .......... .......... .......... 57% 30.6M 0s
+  2300K .......... .......... .......... .......... .......... 58% 77.9M 0s
+  2350K .......... .......... .......... .......... .......... 60% 7.93M 0s
+  2400K .......... .......... .......... .......... .......... 61% 84.3M 0s
+  2450K .......... .......... .......... .......... .......... 62% 28.7M 0s
+  2500K .......... .......... .......... .......... .......... 63% 7.65M 0s
+  2550K .......... .......... .......... .......... .......... 65% 68.1M 0s
+  2600K .......... .......... .......... .......... .......... 66% 28.3M 0s
+  2650K .......... .......... .......... .......... .......... 67% 7.86M 0s
+  2700K .......... .......... .......... .......... .......... 68% 62.1M 0s
+  2750K .......... .......... .......... .......... .......... 70% 25.7M 0s
+  2800K .......... .......... .......... .......... .......... 71%  105M 0s
+  2850K .......... .......... .......... .......... .......... 72% 8.18M 0s
+  2900K .......... .......... .......... .......... .......... 73% 57.6M 0s
+  2950K .......... .......... .......... .......... .......... 75% 6.49M 0s
+  3000K .......... .......... .......... .......... .......... 76% 41.6M 0s
+  3050K .......... .......... .......... .......... .......... 77% 32.1M 0s
+  3100K .......... .......... .......... .......... .......... 78% 7.07M 0s
+  3150K .......... .......... .......... .......... .......... 80% 60.2M 0s
+  3200K .......... .......... .......... .......... .......... 81% 6.42M 0s
+  3250K .......... .......... .......... .......... .......... 82% 76.9M 0s
+  3300K .......... .......... .......... .......... .......... 83% 55.8M 0s
+  3350K .......... .......... .......... .......... .......... 85% 6.54M 0s
+  3400K .......... .......... .......... .......... .......... 86% 48.2M 0s
+  3450K .......... .......... .......... .......... .......... 87% 6.34M 0s
+  3500K .......... .......... .......... .......... .......... 88%  118M 0s
+  3550K .......... .......... .......... .......... .......... 90% 48.0M 0s
+  3600K .......... .......... .......... .......... .......... 91% 6.57M 0s
+  3650K .......... .......... .......... .......... .......... 92%  107M 0s
+  3700K .......... .......... .......... .......... .......... 93% 54.9M 0s
+  3750K .......... .......... .......... .......... .......... 95% 56.8M 0s
+  3800K .......... .......... .......... .......... .......... 96% 7.04M 0s
+  3850K .......... .......... .......... .......... .......... 97% 94.3M 0s
+  3900K .......... .......... .......... .......... .......... 98% 34.6M 0s
+  3950K .......... .......... .......... .......... ......... 100% 7.43M=0.4s
+
+2017-02-05 01:59:45 (11.1 MB/s) - ‘boot.unix-x86.64.image’ saved [4095336/4095336]
+
+*** Stage 2 early init... done
+Loading resource:basis/bootstrap/stage2.factor
+Loading resource:basis/command-line/command-line.factor
+Loading resource:basis/fry/fry.factor
+Loading resource:basis/locals/backend/backend.factor
+Loading resource:basis/debugger/debugger.factor
+Loading resource:basis/combinators/short-circuit/short-circuit.factor
+Loading resource:basis/generalizations/generalizations.factor
+Loading resource:basis/macros/macros.factor
+Loading resource:basis/memoize/memoize.factor
+Loading resource:basis/hashtables/identity/identity.factor
+Loading resource:basis/hashtables/wrapped/wrapped.factor
+Loading resource:basis/math/ranges/ranges.factor
+Loading resource:basis/compiler/errors/errors.factor
+Loading resource:basis/summary/summary.factor
+Loading resource:basis/grouping/grouping.factor
+Loading resource:basis/io/styles/styles.factor
+Loading resource:basis/colors/colors.factor
+Loading resource:basis/colors/constants/constants.factor
+Loading resource:basis/ascii/ascii.factor
+Loading resource:basis/hints/hints.factor
+Loading resource:basis/io/streams/string/string.factor
+Loading resource:basis/delegate/delegate.factor
+Loading resource:basis/delegate/protocols/protocols.factor
+Loading resource:basis/present/present.factor
+Loading resource:basis/strings/tables/tables.factor
+Loading resource:basis/libc/libc.factor
+Loading resource:basis/alien/c-types/c-types.factor
+Loading resource:basis/cpu/architecture/architecture.factor
+Loading resource:basis/alien/destructors/destructors.factor
+Loading resource:basis/functors/functors.factor
+Loading resource:basis/functors/backend/backend.factor
+Loading resource:basis/locals/types/types.factor
+Loading resource:basis/interpolate/interpolate.factor
+Loading resource:basis/locals/locals.factor
+Loading resource:basis/locals/parser/parser.factor
+Loading resource:basis/locals/errors/errors.factor
+Loading resource:basis/locals/rewrite/closures/closures.factor
+Loading resource:basis/locals/rewrite/point-free/point-free.factor
+Loading resource:basis/locals/rewrite/sugar/sugar.factor
+Loading resource:basis/sequences/generalizations/generalizations.factor
+Loading resource:basis/macros/expander/expander.factor
+Loading resource:basis/locals/macros/macros.factor
+Loading resource:basis/locals/fry/fry.factor
+Loading resource:basis/multiline/multiline.factor
+Loading resource:basis/alien/syntax/syntax.factor
+Loading resource:basis/alien/enums/enums.factor
+Loading resource:basis/alien/libraries/libraries.factor
+Loading resource:basis/alien/libraries/unix/unix.factor
+Loading resource:basis/alien/parser/parser.factor
+Loading resource:basis/alien/arrays/arrays.factor
+Loading resource:basis/libc/linux/linux.factor
+Loading resource:basis/prettyprint/prettyprint.factor
+Loading resource:basis/prettyprint/config/config.factor
+Loading resource:basis/prettyprint/custom/custom.factor
+Loading resource:basis/prettyprint/sections/sections.factor
+Loading resource:basis/vocabs/prettyprint/prettyprint.factor
+Loading resource:basis/prettyprint/backend/backend.factor
+Loading resource:basis/prettyprint/stylesheet/stylesheet.factor
+Loading resource:basis/literals/literals.factor
+Loading resource:basis/hashtables/wrapped/prettyprint/prettyprint.factor
+Loading resource:basis/hashtables/identity/prettyprint/prettyprint.factor
+Loading resource:basis/locals/definitions/definitions.factor
+Loading resource:basis/see/see.factor
+Loading resource:basis/locals/prettyprint/prettyprint.factor
+Loading resource:basis/source-files/errors/debugger/debugger.factor
+Loading resource:basis/command-line/debugger/debugger.factor
+Loading resource:basis/listener/listener.factor
+* Loading the math component
+Loading resource:basis/bootstrap/math/math.factor
+Loading resource:basis/math/complex/complex.factor
+Loading resource:basis/math/functions/functions.factor
+Loading resource:basis/math/constants/constants.factor
+Loading resource:basis/math/bits/bits.factor
+Loading resource:basis/math/libm/libm.factor
+* Loading the compiler component
+Loading resource:basis/bootstrap/compiler/compiler.factor
+Loading resource:basis/compiler/compiler.factor
+Loading resource:basis/compiler/cfg/cfg.factor
+Loading resource:basis/compiler/cfg/stack-frame/stack-frame.factor
+Loading resource:basis/compiler/cfg/builder/builder.factor
+Loading resource:basis/compiler/cfg/builder/blocks/blocks.factor
+Loading resource:basis/compiler/cfg/instructions/instructions.factor
+Loading resource:basis/compiler/cfg/instructions/syntax/syntax.factor
+Loading resource:basis/compiler/cfg/registers/registers.factor
+Loading resource:basis/compiler/cfg/stacks/local/local.factor
+Loading resource:basis/compiler/cfg/parallel-copy/parallel-copy.factor
+Loading resource:basis/compiler/cfg/ssa/destruction/leaders/leaders.factor
+Loading resource:basis/compiler/utilities/utilities.factor
+Loading resource:basis/deques/deques.factor
+Loading resource:basis/dlists/dlists.factor
+Loading resource:basis/search-deques/search-deques.factor
+Loading resource:basis/dlists/prettyprint/prettyprint.factor
+Loading resource:basis/compiler/cfg/utilities/utilities.factor
+Loading resource:basis/compiler/cfg/rpo/rpo.factor
+Loading resource:basis/heaps/heaps.factor
+Loading resource:basis/compiler/cfg/comparisons/comparisons.factor
+Loading resource:basis/compiler/cfg/hats/hats.factor
+Loading resource:basis/compiler/constants/constants.factor
+Loading resource:basis/compiler/cfg/intrinsics/intrinsics.factor
+Loading resource:basis/compiler/cfg/intrinsics/alien/alien.factor
+Loading resource:basis/compiler/cfg/stacks/stacks.factor
+Loading resource:basis/biassocs/biassocs.factor
+Loading resource:basis/compiler/cfg/stacks/finalize/finalize.factor
+Loading resource:basis/compiler/cfg/stacks/global/global.factor
+Loading resource:basis/compiler/cfg/dataflow-analysis/dataflow-analysis.factor
+Loading resource:basis/compiler/cfg/predecessors/predecessors.factor
+Loading resource:basis/compiler/tree/propagation/info/info.factor
+Loading resource:basis/compiler/tree/propagation/copy/copy.factor
+Loading resource:basis/compiler/tree/tree.factor
+Loading resource:basis/stack-checker/visitor/visitor.factor
+Loading resource:basis/compiler/tree/def-use/def-use.factor
+Loading resource:basis/compiler/tree/combinators/combinators.factor
+Loading resource:basis/stack-checker/inlining/inlining.factor
+Loading resource:basis/stack-checker/backend/backend.factor
+Loading resource:basis/stack-checker/dependencies/dependencies.factor
+Loading resource:basis/stack-checker/errors/errors.factor
+Loading resource:basis/stack-checker/errors/prettyprint/prettyprint.factor
+Loading resource:basis/stack-checker/recursive-state/recursive-state.factor
+Loading resource:basis/stack-checker/recursive-state/tree/tree.factor
+Loading resource:basis/stack-checker/state/state.factor
+Loading resource:basis/stack-checker/values/values.factor
+Loading resource:basis/stack-checker/known-words/known-words.factor
+Loading resource:basis/stack-checker/alien/alien.factor
+Loading resource:basis/stack-checker/branches/branches.factor
+Loading resource:basis/stack-checker/transforms/transforms.factor
+Loading resource:basis/stack-checker/row-polymorphism/row-polymorphism.factor
+Loading resource:basis/math/intervals/intervals.factor
+Loading resource:basis/compiler/cfg/intrinsics/allot/allot.factor
+Loading resource:basis/compiler/cfg/intrinsics/fixnum/fixnum.factor
+Loading resource:basis/compiler/cfg/intrinsics/float/float.factor
+Loading resource:basis/compiler/cfg/intrinsics/misc/misc.factor
+Loading resource:basis/classes/struct/struct.factor
+Loading resource:basis/alien/data/data.factor
+Loading resource:basis/classes/struct/bit-accessors/bit-accessors.factor
+Loading resource:basis/math/bitwise/bitwise.factor
+Loading resource:basis/specialized-arrays/specialized-arrays.factor
+Loading resource:basis/math/vectors/vectors.factor
+Loading resource:basis/vocabs/generated/generated.factor
+Loading resource:basis/specialized-arrays/prettyprint/prettyprint.factor
+Loading resource:basis/combinators/smart/smart.factor
+Loading resource:basis/stack-checker/stack-checker.factor
+Loading resource:basis/stack-checker/visitor/dummy/dummy.factor
+Loading resource:basis/classes/struct/prettyprint/prettyprint.factor
+Loading resource:basis/alien/prettyprint/prettyprint.factor
+Loading resource:basis/mirrors/mirrors.factor
+Loading resource:basis/hashtables/identity/mirrors/mirrors.factor
+Loading resource:basis/specialized-arrays/mirrors/mirrors.factor
+Loading resource:basis/vm/vm.factor
+Loading resource:basis/compiler/cfg/intrinsics/slots/slots.factor
+Loading resource:basis/compiler/cfg/intrinsics/strings/strings.factor
+Loading resource:basis/compiler/cfg/builder/alien/alien.factor
+Loading resource:basis/compiler/cfg/builder/alien/boxing/boxing.factor
+Loading resource:basis/compiler/cfg/builder/alien/params/params.factor
+Loading resource:basis/compiler/cfg/finalization/finalization.factor
+Loading resource:basis/compiler/cfg/build-stack-frame/build-stack-frame.factor
+Loading resource:basis/compiler/cfg/linearization/linearization.factor
+Loading resource:basis/compiler/cfg/loop-detection/loop-detection.factor
+Loading resource:basis/compiler/cfg/gc-checks/gc-checks.factor
+Loading resource:basis/compiler/cfg/linear-scan/linear-scan.factor
+Loading resource:basis/compiler/cfg/linear-scan/allocation/allocation.factor
+Loading resource:basis/compiler/cfg/linear-scan/allocation/spilling/spilling.factor
+Loading resource:basis/compiler/cfg/linear-scan/allocation/splitting/splitting.factor
+Loading resource:basis/binary-search/binary-search.factor
+Loading resource:basis/compiler/cfg/linear-scan/allocation/state/state.factor
+Loading resource:basis/compiler/cfg/linear-scan/live-intervals/live-intervals.factor
+Loading resource:basis/compiler/cfg/def-use/def-use.factor
+Loading resource:basis/compiler/cfg/linear-scan/ranges/ranges.factor
+Loading resource:basis/compiler/cfg/liveness/liveness.factor
+Loading resource:basis/linked-assocs/linked-assocs.factor
+Loading resource:basis/linked-assocs/prettyprint/prettyprint.factor
+Loading resource:basis/compiler/cfg/linear-scan/assignment/assignment.factor
+Loading resource:basis/compiler/cfg/renaming/functor/functor.factor
+Loading resource:basis/compiler/cfg/linear-scan/numbering/numbering.factor
+Loading resource:basis/compiler/cfg/linear-scan/resolve/resolve.factor
+Loading resource:basis/compiler/cfg/representations/representations.factor
+Loading resource:basis/compiler/cfg/representations/coalescing/coalescing.factor
+Loading resource:basis/disjoint-sets/disjoint-sets.factor
+Loading resource:basis/compiler/cfg/representations/peephole/peephole.factor
+Loading resource:basis/compiler/cfg/representations/rewrite/rewrite.factor
+Loading resource:basis/compiler/cfg/representations/conversion/conversion.factor
+Loading resource:basis/compiler/cfg/representations/preferred/preferred.factor
+Loading resource:basis/compiler/cfg/representations/selection/selection.factor
+Loading resource:basis/compiler/cfg/save-contexts/save-contexts.factor
+Loading resource:basis/compiler/cfg/ssa/destruction/destruction.factor
+Loading resource:basis/compiler/cfg/dominance/dominance.factor
+Loading resource:basis/compiler/cfg/ssa/cssa/cssa.factor
+Loading resource:basis/compiler/cfg/ssa/destruction/coalescing/coalescing.factor
+Loading resource:basis/compiler/cfg/ssa/interference/interference.factor
+Loading resource:basis/compiler/cfg/ssa/interference/live-ranges/live-ranges.factor
+Loading resource:basis/sorting/slots/slots.factor
+Loading resource:basis/compiler/cfg/stacks/clearing/clearing.factor
+Loading resource:basis/compiler/cfg/stacks/padding/padding.factor
+Loading resource:basis/compiler/cfg/write-barrier/write-barrier.factor
+Loading resource:basis/compiler/cfg/optimizer/optimizer.factor
+Loading resource:basis/compiler/cfg/alias-analysis/alias-analysis.factor
+Loading resource:basis/compiler/cfg/block-joining/block-joining.factor
+Loading resource:basis/compiler/cfg/branch-splitting/branch-splitting.factor
+Loading resource:basis/compiler/cfg/renaming/renaming.factor
+Loading resource:basis/compiler/cfg/copy-prop/copy-prop.factor
+Loading resource:basis/compiler/cfg/dce/dce.factor
+Loading resource:basis/compiler/cfg/ssa/construction/construction.factor
+Loading resource:basis/compiler/cfg/ssa/construction/tdmsc/tdmsc.factor
+Loading resource:basis/bit-sets/bit-sets.factor
+Loading resource:basis/bit-arrays/bit-arrays.factor
+Loading resource:basis/compiler/cfg/tco/tco.factor
+Loading resource:basis/compiler/cfg/useless-conditionals/useless-conditionals.factor
+Loading resource:basis/compiler/cfg/value-numbering/value-numbering.factor
+Loading resource:basis/sequences/deep/deep.factor
+Loading resource:basis/compiler/cfg/value-numbering/alien/alien.factor
+Loading resource:basis/compiler/cfg/value-numbering/graph/graph.factor
+Loading resource:basis/compiler/cfg/value-numbering/math/math.factor
+Loading resource:basis/compiler/cfg/value-numbering/folding/folding.factor
+Loading resource:basis/compiler/cfg/value-numbering/rewrite/rewrite.factor
+Loading resource:basis/compiler/cfg/value-numbering/comparisons/comparisons.factor
+Loading resource:basis/compiler/cfg/value-numbering/expressions/expressions.factor
+Loading resource:basis/compiler/cfg/value-numbering/misc/misc.factor
+Loading resource:basis/compiler/cfg/value-numbering/slots/slots.factor
+Loading resource:basis/compiler/codegen/codegen.factor
+Loading resource:basis/compiler/codegen/gc-maps/gc-maps.factor
+Loading resource:basis/compiler/codegen/relocation/relocation.factor
+Loading resource:basis/compiler/codegen/labels/labels.factor
+Loading resource:basis/compiler/crossref/crossref.factor
+Loading resource:basis/compiler/tree/builder/builder.factor
+Loading resource:basis/compiler/tree/optimizer/optimizer.factor
+Loading resource:basis/compiler/tree/recursive/recursive.factor
+Loading resource:basis/compiler/tree/normalization/normalization.factor
+Loading resource:basis/compiler/tree/normalization/introductions/introductions.factor
+Loading resource:basis/compiler/tree/normalization/renaming/renaming.factor
+Loading resource:basis/compiler/tree/propagation/propagation.factor
+Loading resource:basis/compiler/tree/propagation/branches/branches.factor
+Loading resource:basis/compiler/tree/propagation/constraints/constraints.factor
+Loading resource:basis/compiler/tree/propagation/nodes/nodes.factor
+Loading resource:basis/compiler/tree/propagation/simple/simple.factor
+Loading resource:basis/compiler/tree/propagation/inlining/inlining.factor
+Loading resource:basis/math/partial-dispatch/partial-dispatch.factor
+Loading resource:basis/compiler/tree/propagation/slots/slots.factor
+Loading resource:basis/compiler/tree/propagation/call-effect/call-effect.factor
+Loading resource:basis/compiler/tree/propagation/known-words/known-words.factor
+Loading resource:basis/compiler/tree/comparisons/comparisons.factor
+Loading resource:basis/compiler/tree/propagation/recursive/recursive.factor
+Loading resource:basis/compiler/tree/propagation/transforms/transforms.factor
+Loading resource:basis/compiler/tree/cleanup/cleanup.factor
+Loading resource:basis/compiler/tree/escape-analysis/escape-analysis.factor
+Loading resource:basis/compiler/tree/escape-analysis/allocations/allocations.factor
+Loading resource:basis/compiler/tree/escape-analysis/nodes/nodes.factor
+Loading resource:basis/compiler/tree/escape-analysis/recursive/recursive.factor
+Loading resource:basis/compiler/tree/escape-analysis/branches/branches.factor
+Loading resource:basis/compiler/tree/escape-analysis/simple/simple.factor
+Loading resource:basis/compiler/tree/escape-analysis/check/check.factor
+Loading resource:basis/compiler/tree/tuple-unboxing/tuple-unboxing.factor
+Loading resource:basis/compiler/tree/identities/identities.factor
+Loading resource:basis/compiler/tree/dead-code/dead-code.factor
+Loading resource:basis/compiler/tree/dead-code/branches/branches.factor
+Loading resource:basis/columns/columns.factor
+Loading resource:basis/compiler/tree/dead-code/liveness/liveness.factor
+Loading resource:basis/compiler/tree/dead-code/simple/simple.factor
+Loading resource:basis/compiler/tree/dead-code/recursive/recursive.factor
+Loading resource:basis/compiler/tree/modular-arithmetic/modular-arithmetic.factor
+Loading resource:basis/compiler/tree/def-use/simplified/simplified.factor
+Loading resource:basis/compiler/tree/late-optimizations/late-optimizations.factor
+Loading resource:basis/compiler/tree/finalization/finalization.factor
+Loading resource:basis/compiler/tree/checker/checker.factor
+Loading resource:basis/compiler/prettyprint/prettyprint.factor
+Loading resource:basis/alien/remote-control/remote-control.factor
+Loading resource:basis/eval/eval.factor
+Loading resource:basis/threads/threads.factor
+Loading resource:basis/boxes/boxes.factor
+Loading resource:basis/debugger/threads/threads.factor
+Loading resource:basis/compiler/threads/threads.factor
+Loading resource:basis/cpu/x86/64/64.factor
+Loading resource:basis/cpu/x86/x86.factor
+Loading resource:basis/cpu/x86/assembler/assembler.factor
+Loading resource:basis/cpu/x86/assembler/operands/operands.factor
+Loading resource:basis/cpu/x86/assembler/syntax/syntax.factor
+Loading resource:basis/cpu/x86/features/features.factor
+Loading resource:basis/cpu/x86/64/unix/unix.factor
+Checking for multimedia extensions... SSE4.2 detected
+Loading resource:basis/cpu/x86/sse/sse.factor
+Building with POPCNT support
+
+Compiling........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................ done
+Loading resource:basis/io/streams/byte-array/fast/fast.factor
+* Loading the threads component
+Loading resource:basis/bootstrap/threads/threads.factor
+Loading resource:basis/io/thread/thread.factor
+* Loading the io component
+Loading resource:basis/bootstrap/io/io.factor
+Loading resource:basis/io/backend/unix/linux/linux.factor
+Loading resource:basis/io/files/unix/unix.factor
+Loading resource:basis/environment/environment.factor
+Loading resource:basis/environment/unix/unix.factor
+Loading resource:basis/unix/ffi/ffi.factor
+Loading resource:basis/unix/time/time.factor
+Loading resource:basis/unix/types/types.factor
+Loading resource:basis/unix/types/linux/linux.factor
+Loading resource:basis/unix/ffi/linux/linux.factor
+Loading resource:basis/unix/utilities/utilities.factor
+Loading resource:basis/io/backend/unix/unix.factor
+Loading resource:basis/io/backend/unix/multiplexers/multiplexers.factor
+Loading resource:basis/io/buffers/buffers.factor
+Loading resource:basis/typed/typed.factor
+Loading resource:basis/typed/prettyprint/prettyprint.factor
+Loading resource:basis/io/ports/ports.factor
+Loading resource:basis/io/timeouts/timeouts.factor
+Loading resource:basis/io/streams/null/null.factor
+Loading resource:basis/timers/timers.factor
+Loading resource:basis/calendar/calendar.factor
+Loading resource:basis/calendar/unix/unix.factor
+Loading resource:basis/unix/unix.factor
+Loading resource:basis/unix/debugger/debugger.factor
+Loading resource:basis/calendar/threads/threads.factor
+Loading resource:basis/unix/stat/stat.factor
+Loading resource:basis/unix/stat/linux/linux.factor
+Loading resource:basis/unix/stat/linux/64/64.factor
+Loading resource:basis/io/backend/unix/multiplexers/epoll/epoll.factor
+Loading resource:basis/unix/linux/epoll/epoll.factor
+* Loading the tools component
+Loading resource:basis/bootstrap/tools/tools.factor
+Loading resource:basis/editors/editors.factor
+Loading resource:basis/io/launcher/launcher.factor
+Loading resource:basis/concurrency/flags/flags.factor
+Loading resource:basis/concurrency/conditions/conditions.factor
+Loading resource:basis/io/pipes/pipes.factor
+Loading resource:basis/concurrency/combinators/combinators.factor
+Loading resource:basis/concurrency/count-downs/count-downs.factor
+Loading resource:basis/concurrency/promises/promises.factor
+Loading resource:basis/concurrency/mailboxes/mailboxes.factor
+Loading resource:basis/concurrency/mailboxes/debugger/debugger.factor
+Loading resource:basis/concurrency/futures/futures.factor
+Loading resource:basis/sequences/product/product.factor
+Loading resource:basis/io/streams/duplex/duplex.factor
+Loading resource:basis/simple-tokenizer/simple-tokenizer.factor
+Loading resource:basis/peg/ebnf/ebnf.factor
+Loading resource:basis/peg/peg.factor
+Loading resource:basis/unicode/unicode.factor
+Loading resource:basis/interval-maps/interval-maps.factor
+Loading resource:basis/unicode/breaks/breaks.factor
+Loading resource:basis/simple-flat-file/simple-flat-file.factor
+Loading resource:basis/unicode/categories/categories.factor
+Loading resource:basis/unicode/data/data.factor
+Loading resource:basis/interval-sets/interval-sets.factor
+Loading resource:basis/unicode/normalize/normalize.factor
+Loading resource:basis/sorting/insertion/insertion.factor
+Loading resource:basis/unicode/case/case.factor
+Loading resource:basis/unicode/collation/collation.factor
+Loading resource:basis/unicode/script/script.factor
+Loading resource:basis/peg/debugger/debugger.factor
+Loading resource:basis/peg/parsers/parsers.factor
+Loading resource:basis/peg/search/search.factor
+Loading resource:basis/io/pipes/unix/unix.factor
+Loading resource:basis/io/launcher/unix/unix.factor
+Loading resource:basis/unix/process/process.factor
+Loading resource:basis/tools/crossref/crossref.factor
+Loading resource:basis/hash-sets/identity/identity.factor
+Loading resource:basis/hash-sets/wrapped/wrapped.factor
+Loading resource:basis/hash-sets/wrapped/prettyprint/prettyprint.factor
+Loading resource:basis/hash-sets/identity/prettyprint/prettyprint.factor
+Loading resource:basis/help/help.factor
+Loading resource:basis/help/crossref/crossref.factor
+Loading resource:basis/help/markup/markup.factor
+Loading resource:basis/definitions/icons/icons.factor
+Loading resource:basis/help/topics/topics.factor
+Loading resource:basis/help/stylesheet/stylesheet.factor
+Loading resource:basis/fonts/fonts.factor
+Loading resource:basis/ui/theme/theme.factor
+Loading resource:basis/colors/hex/hex.factor
+Loading resource:basis/formatting/formatting.factor
+Loading resource:basis/calendar/english/english.factor
+Loading resource:basis/urls/urls.factor
+Loading resource:basis/io/sockets/sockets.factor
+Loading resource:basis/ip-parser/ip-parser.factor
+Loading resource:basis/random/random.factor
+Loading resource:basis/random/unix/unix.factor
+Loading resource:basis/random/mersenne-twister/mersenne-twister.factor
+Loading resource:basis/io/sockets/unix/unix.factor
+Loading resource:basis/io/sockets/unix/linux/linux.factor
+Loading resource:basis/io/sockets/secure/secure.factor
+Loading resource:basis/openssl/libssl/libssl.factor
+Loading resource:basis/openssl/libcrypto/libcrypto.factor
+Loading resource:basis/io/sockets/secure/unix/unix.factor
+Loading resource:basis/io/sockets/secure/openssl/openssl.factor
+Loading resource:basis/io/encodings/8-bit/latin1/latin1.factor
+Loading resource:basis/io/encodings/8-bit/8-bit.factor
+Loading resource:basis/io/encodings/iana/iana.factor
+Loading resource:core/io/encodings/utf16/utf16.factor
+Loading resource:basis/openssl/openssl.factor
+Loading resource:basis/urls/encoding/encoding.factor
+Loading resource:basis/io/encodings/string/string.factor
+Loading resource:basis/urls/prettyprint/prettyprint.factor
+Loading resource:basis/vocabs/files/files.factor
+Loading resource:basis/io/directories/directories.factor
+Loading resource:basis/io/directories/unix/unix.factor
+Loading resource:basis/io/files/info/info.factor
+Loading resource:basis/io/files/types/types.factor
+Loading resource:basis/io/files/info/unix/unix.factor
+Loading resource:basis/unix/groups/groups.factor
+Loading resource:basis/unix/users/users.factor
+Loading resource:basis/io/files/info/unix/linux/linux.factor
+Loading resource:basis/csv/csv.factor
+Loading resource:basis/unix/statfs/linux/linux.factor
+Loading resource:basis/unix/statvfs/linux/linux.factor
+Loading resource:basis/io/directories/unix/linux/linux.factor
+Loading resource:basis/vocabs/hierarchy/hierarchy.factor
+Loading resource:basis/vocabs/metadata/metadata.factor
+Loading resource:basis/inspector/inspector.factor
+Loading resource:basis/bootstrap/image/image.factor
+Loading resource:basis/tools/annotations/annotations.factor
+Loading resource:basis/tools/time/time.factor
+Loading resource:basis/tools/memory/memory.factor
+Loading resource:basis/math/statistics/statistics.factor
+Loading resource:basis/tools/dispatch/dispatch.factor
+Loading resource:basis/tools/errors/errors.factor
+Loading resource:basis/tools/deploy/deploy.factor
+Loading resource:basis/tools/deploy/backend/backend.factor
+Loading resource:basis/io/files/temp/temp.factor
+Loading resource:basis/io/files/temp/unix/unix.factor
+Loading resource:basis/xdg/xdg.factor
+Loading resource:basis/tools/deploy/config/config.factor
+Loading resource:basis/tools/deploy/config/editor/editor.factor
+Loading resource:basis/tools/deploy/embed/embed.factor
+Loading resource:basis/tools/deploy/libraries/libraries.factor
+Loading resource:basis/tools/deploy/libraries/unix/unix.factor
+Loading resource:basis/vocabs/metadata/resources/resources.factor
+Loading resource:basis/globs/globs.factor
+Loading resource:basis/regexp/regexp.factor
+Loading resource:basis/regexp/parser/parser.factor
+Loading resource:basis/regexp/ast/ast.factor
+Loading resource:basis/regexp/classes/classes.factor
+Loading resource:basis/regexp/negation/negation.factor
+Loading resource:basis/regexp/dfa/dfa.factor
+Loading resource:basis/regexp/transition-tables/transition-tables.factor
+Loading resource:basis/regexp/disambiguate/disambiguate.factor
+Loading resource:basis/regexp/minimize/minimize.factor
+Loading resource:basis/regexp/nfa/nfa.factor
+Loading resource:basis/regexp/compiler/compiler.factor
+Loading resource:basis/regexp/prettyprint/prettyprint.factor
+Loading resource:basis/regexp/combinators/combinators.factor
+Loading resource:basis/io/directories/hierarchy/hierarchy.factor
+Loading resource:basis/io/files/links/links.factor
+Loading resource:basis/io/files/links/unix/unix.factor
+Loading resource:basis/webbrowser/webbrowser.factor
+Loading resource:basis/ui/operations/operations.factor
+Loading resource:basis/ui/commands/commands.factor
+Loading resource:basis/tr/tr.factor
+Loading resource:basis/ui/gestures/gestures.factor
+Loading resource:basis/ui/gadgets/gadgets.factor
+Loading resource:basis/math/rectangles/rectangles.factor
+Loading resource:basis/math/rectangles/prettyprint/prettyprint.factor
+Loading resource:basis/models/models.factor
+Loading resource:basis/ui/gadgets/prettyprint/prettyprint.factor
+Loading resource:basis/webbrowser/linux/linux.factor
+Loading resource:basis/tools/deploy/unix/unix.factor
+Loading resource:basis/tools/destructors/destructors.factor
+Loading resource:basis/tools/disassembler/disassembler.factor
+Loading resource:basis/tools/disassembler/udis/udis.factor
+Loading resource:basis/tools/disassembler/utils/utils.factor
+Loading resource:basis/tools/profiler/sampling/sampling.factor
+Loading resource:basis/tools/test/test.factor
+Loading resource:basis/io/files/unique/unique.factor
+Loading resource:basis/random/data/data.factor
+Loading resource:basis/combinators/random/random.factor
+Loading resource:basis/io/files/unique/unix/unix.factor
+Loading resource:basis/tools/threads/threads.factor
+Loading resource:basis/tools/deprecation/deprecation.factor
+Loading resource:basis/vocabs/refresh/refresh.factor
+Loading resource:basis/vocabs/refresh/monitor/monitor.factor
+Loading resource:basis/io/monitors/monitors.factor
+Loading resource:basis/io/monitors/linux/linux.factor
+Loading resource:basis/io/monitors/recursive/recursive.factor
+Loading resource:basis/concurrency/messaging/messaging.factor
+Loading resource:basis/unix/linux/inotify/inotify.factor
+Loading resource:basis/vocabs/cache/cache.factor
+Loading resource:basis/debugger/unix/unix.factor
+* Loading the ui component
+Loading resource:basis/bootstrap/ui/ui.factor
+Loading resource:basis/ui/backend/gtk/gtk.factor
+Loading resource:basis/gdk/ffi/ffi.factor
+Loading resource:basis/cairo/ffi/ffi.factor
+Loading resource:basis/gobject-introspection/gobject-introspection.factor
+Loading resource:basis/gobject-introspection/common/common.factor
+Loading resource:basis/gobject-introspection/ffi/ffi.factor
+Loading resource:basis/gobject-introspection/repository/repository.factor
+Loading resource:basis/gobject-introspection/types/types.factor
+Loading resource:basis/splitting/monotonic/monotonic.factor
+Loading resource:basis/gobject-introspection/loader/loader.factor
+Loading resource:basis/xml/data/data.factor
+Loading resource:basis/xml/traversal/traversal.factor
+Loading resource:basis/xml/xml.factor
+Loading resource:basis/xml/autoencoding/autoencoding.factor
+Loading resource:basis/xml/name/name.factor
+Loading resource:basis/xml/tokenize/tokenize.factor
+Loading resource:basis/xml/state/state.factor
+Loading resource:basis/xml/char-classes/char-classes.factor
+Loading resource:basis/xml/errors/errors.factor
+Loading resource:basis/xml/errors/debugger/debugger.factor
+Loading resource:basis/xml/writer/writer.factor
+Loading resource:basis/wrap/strings/strings.factor
+Loading resource:basis/wrap/wrap.factor
+Loading resource:basis/xml/entities/entities.factor
+Loading resource:basis/xml/elements/elements.factor
+Loading resource:basis/xml/dtd/dtd.factor
+Loading resource:basis/gobject-introspection/standard-types/standard-types.factor
+Loading resource:basis/pango/ffi/ffi.factor
+Loading resource:basis/gobject/ffi/ffi.factor
+Loading resource:basis/glib/ffi/ffi.factor
+Loading vocab:glib/GLib-2.0.gir
+Loading vocab:gobject/GObject-2.0.gir
+Loading vocab:pango/Pango-1.0.gir
+Loading resource:basis/gdk/pixbuf/ffi/ffi.factor
+Loading resource:basis/gio/ffi/ffi.factor
+Loading vocab:gio/Gio-2.0.gir
+Loading vocab:gdk/pixbuf/GdkPixbuf-2.0.gir
+Loading vocab:gdk/Gdk-3.0.gir
+Loading resource:basis/gdk/gl/ffi/ffi.factor
+Loading vocab:gdk/gl/GdkGLExt-1.0.gir
+Loading resource:basis/gtk/ffi/ffi.factor
+Loading resource:basis/atk/ffi/ffi.factor
+Loading vocab:atk/Atk-1.0.gir
+Loading vocab:gtk/Gtk-3.0.gir
+Loading resource:basis/gtk/gl/ffi/ffi.factor
+Loading vocab:gtk/gl/GtkGLExt-1.0.gir
+Loading resource:basis/ui/ui.factor
+Loading resource:basis/ui/backend/backend.factor
+Loading resource:basis/ui/gadgets/worlds/worlds.factor
+Loading resource:basis/cache/cache.factor
+Loading resource:basis/opengl/opengl.factor
+Loading resource:basis/opengl/gl/gl.factor
+Loading resource:basis/opengl/gl/extensions/extensions.factor
+Loading resource:basis/opengl/gl/gtk/gtk.factor
+Loading resource:basis/opengl/capabilities/capabilities.factor
+Loading resource:basis/opengl/textures/textures.factor
+Loading resource:basis/images/images.factor
+Loading resource:basis/images/tessellation/tessellation.factor
+Loading resource:basis/ui/gadgets/tracks/tracks.factor
+Loading resource:basis/ui/gadgets/packs/packs.factor
+Loading resource:basis/ui/baseline-alignment/baseline-alignment.factor
+Loading resource:basis/ui/pixel-formats/pixel-formats.factor
+Loading resource:basis/ui/render/render.factor
+Loading resource:basis/ui/pens/pens.factor
+Loading resource:basis/ui/backend/gtk/input-methods/input-methods.factor
+Loading resource:basis/ui/backend/gtk/io/io.factor
+Loading resource:basis/ui/backend/x11/keys/keys.factor
+Loading resource:basis/x11/X/X.factor
+Loading resource:basis/x11/keysymdef/keysymdef.factor
+Loading resource:basis/ui/clipboards/clipboards.factor
+Loading resource:basis/ui/event-loop/event-loop.factor
+* Loading the ui.tools component
+Loading resource:basis/bootstrap/ui/tools/tools.factor
+Loading resource:basis/ui/tools/tools.factor
+Loading resource:basis/ui/tools/browser/browser.factor
+Loading resource:basis/documents/documents.factor
+Loading resource:basis/help/apropos/apropos.factor
+Loading resource:basis/tools/completion/completion.factor
+Loading resource:basis/help/vocabs/vocabs.factor
+Loading resource:basis/help/home/home.factor
+Loading resource:basis/ui/gadgets/borders/borders.factor
+Loading resource:basis/ui/gadgets/editors/editors.factor
+Loading resource:basis/documents/elements/elements.factor
+Loading resource:basis/models/arrow/arrow.factor
+Loading resource:basis/ui/gadgets/line-support/line-support.factor
+Loading resource:basis/ui/gadgets/scrollers/scrollers.factor
+Loading resource:basis/models/product/product.factor
+Loading resource:basis/models/range/range.factor
+Loading resource:basis/ui/gadgets/frames/frames.factor
+Loading resource:basis/ui/gadgets/grids/grids.factor
+Loading resource:basis/ui/gadgets/sliders/sliders.factor
+Loading resource:basis/ui/gadgets/buttons/buttons.factor
+Loading resource:basis/ui/gadgets/labels/labels.factor
+Loading resource:basis/ui/pens/solid/solid.factor
+Loading resource:basis/ui/pens/caching/caching.factor
+Loading resource:basis/ui/text/text.factor
+Loading resource:basis/ui/text/pango/pango.factor
+Loading resource:basis/cairo/cairo.factor
+Loading resource:basis/images/memory/memory.factor
+Loading resource:basis/pango/cairo/ffi/ffi.factor
+Loading vocab:pango/cairo/PangoCairo-1.0.gir
+Loading resource:basis/ui/theme/images/images.factor
+Loading resource:basis/ui/images/images.factor
+Loading resource:basis/images/loader/loader.factor
+Loading resource:basis/images/loader/gtk/gtk.factor
+Loading resource:basis/ui/pens/image/image.factor
+Loading resource:basis/ui/pens/tile/tile.factor
+Loading resource:basis/ui/gadgets/icons/icons.factor
+Loading resource:basis/ui/gadgets/viewports/viewports.factor
+Loading resource:basis/ui/gadgets/menus/menus.factor
+Loading resource:basis/ui/gadgets/glass/glass.factor
+Loading resource:basis/math/rectangles/positioning/positioning.factor
+Loading resource:basis/ui/gadgets/wrappers/wrappers.factor
+Loading resource:basis/ui/tools/common/common.factor
+Loading resource:basis/ui/backend/gtk/input-methods/editors/editors.factor
+Loading resource:basis/ui/gadgets/panes/panes.factor
+Loading resource:basis/ui/gadgets/grid-lines/grid-lines.factor
+Loading resource:basis/ui/gadgets/incremental/incremental.factor
+Loading resource:basis/ui/gadgets/paragraphs/paragraphs.factor
+Loading resource:basis/wrap/words/words.factor
+Loading resource:basis/ui/gadgets/presentations/presentations.factor
+Loading resource:basis/ui/gadgets/status-bar/status-bar.factor
+Loading resource:basis/models/delay/delay.factor
+Loading resource:basis/ui/traverse/traverse.factor
+Loading resource:basis/ui/gadgets/toolbar/toolbar.factor
+Loading resource:basis/ui/tools/browser/history/history.factor
+Loading resource:basis/ui/tools/browser/popups/popups.factor
+Loading resource:basis/ui/gadgets/labeled/labeled.factor
+Loading resource:basis/ui/pens/gradient/gradient.factor
+Loading resource:basis/ui/gadgets/search-tables/search-tables.factor
+Loading resource:basis/models/search/search.factor
+Loading resource:basis/models/arrow/smart/smart.factor
+Loading resource:basis/ui/gadgets/tables/tables.factor
+Loading resource:basis/ui/tools/error-list/error-list.factor
+Loading resource:basis/models/mapping/mapping.factor
+Loading resource:basis/ui/tools/inspector/inspector.factor
+Loading resource:basis/refs/refs.factor
+Loading resource:basis/ui/gadgets/slots/slots.factor
+Loading resource:basis/tools/errors/model/model.factor
+Loading resource:basis/ui/tools/listener/listener.factor
+Loading resource:basis/help/tips/tips.factor
+Loading resource:basis/ui/tools/debugger/debugger.factor
+Loading resource:basis/ui/debugger/debugger.factor
+Loading resource:basis/ui/tools/traceback/traceback.factor
+Loading resource:basis/ui/tools/listener/completion/completion.factor
+Loading resource:basis/ui/tools/listener/history/history.factor
+Loading resource:basis/ui/tools/listener/popups/popups.factor
+Loading resource:basis/ui/tools/walker/walker.factor
+Loading resource:basis/tools/walker/walker.factor
+Loading resource:basis/tools/continuations/continuations.factor
+* Loading the unicode component
+Loading resource:basis/bootstrap/unicode/unicode.factor
+* Loading the help component
+Loading resource:basis/bootstrap/help/help.factor
+Loading resource:basis/help/syntax/syntax.factor
+Loading resource:basis/help/definitions/definitions.factor
+Loading resource:basis/help/lint/lint.factor
+Loading resource:basis/help/lint/checks/checks.factor
+Loading resource:basis/ui/gadgets/buttons/buttons-docs.factor
+Loading resource:core/syntax/syntax-docs.factor
+Loading resource:core/arrays/arrays-docs.factor
+Loading resource:core/kernel/kernel-docs.factor
+Loading resource:core/alien/alien-docs.factor
+Loading resource:basis/alien/c-types/c-types-docs.factor
+Loading resource:basis/libc/libc-docs.factor
+Loading resource:core/destructors/destructors-docs.factor
+Loading resource:core/classes/classes-docs.factor
+Loading resource:core/quotations/quotations-docs.factor
+Loading resource:core/sequences/sequences-docs.factor
+Loading resource:core/assocs/assocs-docs.factor
+Loading resource:core/namespaces/namespaces-docs.factor
+Loading resource:core/math/math-docs.factor
+Loading resource:core/words/words-docs.factor
+Loading resource:core/compiler/units/units-docs.factor
+Loading resource:core/definitions/definitions-docs.factor
+Loading resource:core/generic/generic-docs.factor
+Loading resource:core/classes/algebra/algebra-docs.factor
+Loading resource:core/generic/single/single-docs.factor
+Loading resource:core/effects/effects-docs.factor
+Loading resource:core/strings/strings-docs.factor
+Loading resource:core/byte-arrays/byte-arrays-docs.factor
+Loading resource:core/vectors/vectors-docs.factor
+Loading resource:core/sbufs/sbufs-docs.factor
+Loading resource:basis/help/vocabs/vocabs-docs.factor
+Loading resource:basis/help/help-docs.factor
+Loading resource:basis/help/crossref/crossref-docs.factor
+Loading resource:basis/help/topics/topics-docs.factor
+Loading resource:basis/io/styles/styles-docs.factor
+Loading resource:core/io/streams/plain/plain-docs.factor
+Loading resource:core/io/io-docs.factor
+Loading resource:core/hashtables/hashtables-docs.factor
+Loading resource:core/continuations/continuations-docs.factor
+Loading resource:core/lexer/lexer-docs.factor
+Loading resource:basis/specialized-arrays/specialized-arrays-docs.factor
+Loading resource:basis/colors/colors-docs.factor
+Loading resource:basis/help/lint/lint-docs.factor
+Loading resource:basis/prettyprint/prettyprint-docs.factor
+Loading resource:basis/prettyprint/backend/backend-docs.factor
+Loading resource:basis/prettyprint/config/config-docs.factor
+Loading resource:basis/prettyprint/sections/sections-docs.factor
+Loading resource:basis/prettyprint/custom/custom-docs.factor
+Loading resource:basis/see/see-docs.factor
+Loading resource:basis/summary/summary-docs.factor
+Loading resource:core/vocabs/vocabs-docs.factor
+Loading resource:core/vocabs/loader/loader-docs.factor
+Loading resource:core/math/parser/parser-docs.factor
+Loading resource:core/make/make-docs.factor
+Loading resource:core/generic/standard/standard-docs.factor
+Loading resource:core/generic/hook/hook-docs.factor
+Loading resource:core/generic/math/math-docs.factor
+Loading resource:core/combinators/combinators-docs.factor
+Loading resource:core/hash-sets/hash-sets-docs.factor
+Loading resource:core/sets/sets-docs.factor
+Loading resource:core/source-files/source-files-docs.factor
+Loading resource:core/io/pathnames/pathnames-docs.factor
+Loading resource:core/io/backend/backend-docs.factor
+Loading resource:basis/io/directories/directories-docs.factor
+Loading resource:core/io/files/files-docs.factor
+Loading resource:core/system/system-docs.factor
+Loading resource:core/classes/singleton/singleton-docs.factor
+Loading resource:core/init/init-docs.factor
+Loading resource:core/parser/parser-docs.factor
+Loading resource:core/vocabs/parser/parser-docs.factor
+Loading resource:core/words/symbol/symbol-docs.factor
+Loading resource:basis/stack-checker/errors/errors-docs.factor
+Loading resource:core/layouts/layouts-docs.factor
+Loading resource:core/memory/memory-docs.factor
+Loading resource:basis/debugger/debugger-docs.factor
+Loading resource:basis/alien/libraries/libraries-docs.factor
+Loading resource:basis/alien/syntax/syntax-docs.factor
+Loading resource:basis/alien/enums/enums-docs.factor
+Loading resource:basis/classes/struct/struct-docs.factor
+Loading resource:core/classes/builtin/builtin-docs.factor
+Loading resource:core/math/order/order-docs.factor
+Loading resource:core/alien/strings/strings-docs.factor
+Loading resource:basis/io/encodings/string/string-docs.factor
+Loading resource:basis/cpu/x86/x86-docs.factor
+Loading resource:basis/compiler/cfg/registers/registers-docs.factor
+Loading resource:basis/compiler/cfg/instructions/instructions-docs.factor
+Loading resource:basis/compiler/cfg/cfg-docs.factor
+Loading resource:basis/compiler/cfg/rpo/rpo-docs.factor
+Loading resource:basis/compiler/cfg/stack-frame/stack-frame-docs.factor
+Loading resource:basis/compiler/cfg/stacks/local/local-docs.factor
+Loading resource:basis/compiler/cfg/stacks/stacks-docs.factor
+Loading resource:basis/compiler/tree/tree-docs.factor
+Loading resource:basis/stack-checker/alien/alien-docs.factor
+Loading resource:basis/stack-checker/inlining/inlining-docs.factor
+Loading resource:basis/stack-checker/values/values-docs.factor
+Loading resource:basis/stack-checker/visitor/visitor-docs.factor
+Loading resource:basis/cpu/x86/assembler/operands/operands-docs.factor
+Loading resource:basis/compiler/cfg/builder/builder-docs.factor
+Loading resource:basis/compiler/cfg/builder/blocks/blocks-docs.factor
+Loading resource:basis/literals/literals-docs.factor
+Loading resource:basis/multiline/multiline-docs.factor
+Loading resource:basis/compiler/cfg/intrinsics/fixnum/fixnum-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/assignment/assignment-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/allocation/allocation-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/allocation/state/state-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/live-intervals/live-intervals-docs.factor
+Loading resource:basis/compiler/cfg/def-use/def-use-docs.factor
+Loading resource:basis/cpu/architecture/architecture-docs.factor
+Loading resource:basis/cpu/x86/assembler/assembler-docs.factor
+Loading resource:basis/compiler/codegen/labels/labels-docs.factor
+Loading resource:basis/compiler/codegen/relocation/relocation-docs.factor
+Loading resource:core/byte-vectors/byte-vectors-docs.factor
+Loading resource:basis/compiler/constants/constants-docs.factor
+Loading resource:basis/vm/vm-docs.factor
+Loading resource:basis/heaps/heaps-docs.factor
+Loading resource:basis/compiler/cfg/liveness/liveness-docs.factor
+Loading resource:basis/compiler/cfg/representations/representations-docs.factor
+Loading resource:basis/compiler/cfg/ssa/destruction/destruction-docs.factor
+Loading resource:basis/compiler/cfg/ssa/destruction/leaders/leaders-docs.factor
+Loading resource:basis/compiler/cfg/ssa/destruction/coalescing/coalescing-docs.factor
+Loading resource:basis/compiler/cfg/ssa/interference/interference-docs.factor
+Loading resource:basis/compiler/codegen/gc-maps/gc-maps-docs.factor
+Loading resource:basis/bit-arrays/bit-arrays-docs.factor
+Loading resource:basis/eval/eval-docs.factor
+Loading resource:basis/listener/listener-docs.factor
+Loading resource:basis/threads/threads-docs.factor
+Loading resource:basis/boxes/boxes-docs.factor
+Loading resource:basis/deques/deques-docs.factor
+Loading resource:basis/dlists/dlists-docs.factor
+Loading resource:basis/search-deques/search-deques-docs.factor
+Loading resource:core/io/encodings/utf16n/utf16n.factor
+Loading resource:core/io/encodings/encodings-docs.factor
+Loading resource:core/io/encodings/utf16/utf16-docs.factor
+Loading resource:core/io/encodings/utf16n/utf16n-docs.factor
+Loading resource:core/io/encodings/utf8/utf8-docs.factor
+Loading resource:core/classes/tuple/tuple-docs.factor
+Loading resource:core/growable/growable-docs.factor
+Loading resource:core/slots/slots-docs.factor
+Loading resource:basis/command-line/command-line-docs.factor
+Loading resource:core/words/alias/alias-docs.factor
+Loading resource:core/words/constant/constant-docs.factor
+Loading resource:basis/ui/gadgets/gadgets-docs.factor
+Loading resource:basis/concurrency/flags/flags-docs.factor
+Loading resource:basis/calendar/calendar-docs.factor
+Loading resource:basis/math/rectangles/rectangles-docs.factor
+Loading resource:basis/models/models-docs.factor
+Loading resource:basis/ui/gadgets/labels/labels-docs.factor
+Loading resource:basis/ui/gadgets/toolbar/toolbar-docs.factor
+Loading resource:basis/ui/pens/pens-docs.factor
+Loading resource:basis/csv/csv-docs.factor
+Loading resource:basis/ascii/ascii-docs.factor
+Loading resource:basis/compiler/cfg/dominance/dominance-docs.factor
+Loading resource:basis/models/range/range-docs.factor
+Loading resource:basis/compiler/tree/def-use/def-use-docs.factor
+Loading resource:basis/models/arrow/smart/smart-docs.factor
+Loading resource:basis/models/product/product-docs.factor
+Loading resource:basis/io/encodings/iana/iana-docs.factor
+Loading resource:basis/io/directories/directories-docs.factor
+Loading resource:basis/prettyprint/config/config-docs.factor
+Loading resource:core/generic/parser/parser-docs.factor
+Loading resource:core/parser/notes/notes-docs.factor
+Loading resource:basis/vocabs/refresh/refresh-docs.factor
+Loading resource:basis/present/present-docs.factor
+Loading resource:basis/compiler/cfg/dataflow-analysis/dataflow-analysis-docs.factor
+Loading resource:basis/concurrency/flags/flags-docs.factor
+Loading resource:basis/binary-search/binary-search-docs.factor
+Loading resource:basis/compiler/tree/escape-analysis/check/check-docs.factor
+Loading resource:basis/sequences/deep/deep-docs.factor
+Loading resource:basis/alien/data/data-docs.factor
+Loading resource:basis/search-deques/search-deques-docs.factor
+Loading resource:basis/unix/users/users-docs.factor
+Loading resource:basis/io/streams/string/string-docs.factor
+Loading resource:basis/delegate/delegate-docs.factor
+Loading resource:core/alien/alien-docs.factor
+Loading resource:basis/interval-sets/interval-sets-docs.factor
+Loading resource:core/io/encodings/utf16/utf16-docs.factor
+Loading resource:basis/vocabs/hierarchy/hierarchy-docs.factor
+Loading resource:core/source-files/errors/errors-docs.factor
+Loading resource:basis/compiler/codegen/relocation/relocation-docs.factor
+Loading resource:core/classes/union/union-docs.factor
+Loading resource:basis/math/partial-dispatch/partial-dispatch-docs.factor
+Loading resource:basis/compiler/cfg/ssa/construction/construction-docs.factor
+Loading resource:basis/stack-checker/errors/errors-docs.factor
+Loading resource:basis/ui/gadgets/sliders/sliders-docs.factor
+Loading resource:basis/math/ranges/ranges-docs.factor
+Loading resource:basis/unicode/unicode-docs.factor
+Loading resource:basis/math/libm/libm-docs.factor
+Loading resource:basis/math/functions/functions-docs.factor
+Loading resource:basis/math/constants/constants-docs.factor
+Loading resource:basis/generalizations/generalizations-docs.factor
+Loading resource:basis/help/lint/checks/checks-docs.factor
+Loading resource:basis/io/ports/ports-docs.factor
+Loading resource:basis/io/buffers/buffers-docs.factor
+Loading resource:core/io/backend/backend-docs.factor
+Loading resource:core/classes/mixin/mixin-docs.factor
+Loading resource:basis/see/see-docs.factor
+Loading resource:basis/unicode/data/data-docs.factor
+Loading resource:basis/compiler/tree/builder/builder-docs.factor
+Loading resource:basis/refs/refs-docs.factor
+Loading resource:core/hashtables/hashtables-docs.factor
+Loading resource:basis/compiler/cfg/registers/registers-docs.factor
+Loading resource:basis/opengl/capabilities/capabilities-docs.factor
+Loading resource:basis/opengl/gl/gl-docs.factor
+Loading resource:core/hash-sets/hash-sets-docs.factor
+Loading resource:basis/tools/completion/completion-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/live-intervals/live-intervals-docs.factor
+Loading resource:basis/compiler/cfg/linearization/linearization-docs.factor
+Loading resource:basis/compiler/codegen/codegen-docs.factor
+Loading resource:basis/macros/macros-docs.factor
+Loading resource:basis/stack-checker/transforms/transforms-docs.factor
+Loading resource:basis/wrap/words/words-docs.factor
+Loading resource:basis/bit-arrays/bit-arrays-docs.factor
+Loading resource:basis/opengl/textures/textures-docs.factor
+Loading resource:basis/images/images-docs.factor
+Loading resource:basis/compiler/tree/propagation/recursive/recursive-docs.factor
+Loading resource:basis/compiler/tree/propagation/info/info-docs.factor
+Loading resource:basis/math/intervals/intervals-docs.factor
+Loading resource:basis/compiler/tree/propagation/nodes/nodes-docs.factor
+Loading resource:basis/documents/documents-docs.factor
+Loading resource:basis/math/vectors/vectors-docs.factor
+Loading resource:basis/cpu/x86/assembler/operands/operands-docs.factor
+Loading resource:core/byte-vectors/byte-vectors-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/allocation/allocation-docs.factor
+Loading resource:basis/io/encodings/8-bit/latin1/latin1-docs.factor
+Loading resource:basis/vocabs/files/files-docs.factor
+Loading resource:basis/io/launcher/launcher-docs.factor
+Loading resource:basis/math/complex/complex-docs.factor
+Loading resource:basis/tools/walker/walker-docs.factor
+Loading resource:basis/tools/annotations/annotations-docs.factor
+Loading resource:basis/tools/continuations/continuations-docs.factor
+Loading resource:basis/tools/annotations/annotations-docs.factor
+Loading resource:basis/compiler/cfg/intrinsics/alien/alien-docs.factor
+Loading resource:basis/compiler/tree/dead-code/simple/simple-docs.factor
+Loading resource:core/growable/growable-docs.factor
+Loading resource:basis/compiler/tree/propagation/call-effect/call-effect-docs.factor
+Loading resource:basis/ui/pens/pens-docs.factor
+Loading resource:basis/stack-checker/inlining/inlining-docs.factor
+Loading resource:core/math/floats/floats-docs.factor
+Loading resource:basis/peg/parsers/parsers-docs.factor
+Loading resource:basis/alien/prettyprint/prettyprint-docs.factor
+Loading resource:basis/xml/data/data-docs.factor
+Loading resource:basis/ui/tools/tools-docs.factor
+Loading resource:basis/editors/editors-docs.factor
+Loading resource:basis/inspector/inspector-docs.factor
+Loading resource:basis/mirrors/mirrors-docs.factor
+Loading resource:basis/ui/commands/commands-docs.factor
+Loading resource:basis/ui/gestures/gestures-docs.factor
+Loading resource:basis/ui/gadgets/worlds/worlds-docs.factor
+Loading resource:basis/ui/render/render-docs.factor
+Loading resource:basis/ui/gadgets/panes/panes-docs.factor
+Loading resource:basis/ui/gadgets/presentations/presentations-docs.factor
+Loading resource:basis/ui/gadgets/menus/menus-docs.factor
+Loading resource:basis/ui/operations/operations-docs.factor
+Loading resource:basis/ui/gadgets/status-bar/status-bar-docs.factor
+Loading resource:basis/ui/ui-docs.factor
+Loading resource:basis/fonts/fonts-docs.factor
+Loading resource:basis/ui/gadgets/books/books.factor
+Loading resource:basis/fry/fry-docs.factor
+Loading resource:basis/ui/gadgets/books/books-docs.factor
+Loading resource:basis/ui/gadgets/grids/grids-docs.factor
+Loading resource:basis/ui/gadgets/packs/packs-docs.factor
+Loading resource:basis/ui/baseline-alignment/baseline-alignment-docs.factor
+Loading resource:basis/ui/gadgets/tracks/tracks-docs.factor
+Loading resource:basis/ui/text/text-docs.factor
+Loading resource:basis/ui/tools/operations/operations.factor
+Loading resource:basis/combinators/short-circuit/short-circuit-docs.factor
+Loading resource:basis/compiler/errors/errors-docs.factor
+Loading resource:basis/stack-checker/stack-checker-docs.factor
+Loading resource:basis/tools/crossref/crossref-docs.factor
+Loading resource:basis/tools/test/test-docs.factor
+Loading resource:basis/tools/time/time-docs.factor
+Loading resource:basis/tools/dispatch/dispatch-docs.factor
+Loading resource:basis/tools/memory/memory-docs.factor
+Loading resource:basis/ui/tools/browser/browser-docs.factor
+Loading resource:basis/ui/tools/deploy/deploy.factor
+Loading resource:basis/tools/deploy/config/config-docs.factor
+Loading resource:basis/tools/deploy/config/editor/editor-docs.factor
+Loading resource:basis/tools/deploy/deploy-docs.factor
+Loading resource:basis/ui/gadgets/editors/editors-docs.factor
+Loading resource:basis/help/tips/tips-docs.factor
+Loading resource:basis/help/apropos/apropos-docs.factor
+Loading resource:basis/tools/destructors/destructors-docs.factor
+Loading resource:basis/ui/gadgets/line-support/line-support-docs.factor
+Loading resource:basis/ui/gadgets/scrollers/scrollers-docs.factor
+Loading resource:basis/ui/gadgets/viewports/viewports-docs.factor
+Loading resource:basis/ui/gadgets/borders/borders-docs.factor
+Loading resource:basis/ui/tools/listener/listener-docs.factor
+Loading resource:basis/ui/tools/common/common-docs.factor
+Loading resource:basis/ui/tools/deploy/deploy-docs.factor
+Loading resource:basis/ui/tools/inspector/inspector-docs.factor
+Loading resource:basis/ui/tools/operations/operations-docs.factor
+Loading resource:basis/compiler/cfg/ssa/destruction/leaders/leaders-docs.factor
+Loading resource:core/vectors/vectors-docs.factor
+Loading resource:basis/compiler/cfg/intrinsics/fixnum/fixnum-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/assignment/assignment-docs.factor
+Loading resource:basis/disjoint-sets/disjoint-sets-docs.factor
+Loading resource:basis/compiler/tree/escape-analysis/escape-analysis-docs.factor
+Loading resource:core/effects/effects-docs.factor
+Loading resource:core/generic/hook/hook-docs.factor
+Loading resource:basis/compiler/cfg/stacks/finalize/finalize-docs.factor
+Loading resource:basis/compiler/cfg/predecessors/predecessors-docs.factor
+Loading resource:basis/io/directories/hierarchy/hierarchy-docs.factor
+Loading resource:basis/help/home/home-docs.factor
+Loading resource:basis/stack-checker/state/state-docs.factor
+Loading resource:basis/stack-checker/backend/backend-docs.factor
+Loading resource:core/generic/standard/standard-docs.factor
+Loading resource:basis/locals/locals-docs.factor
+Loading resource:basis/memoize/memoize-docs.factor
+Loading resource:basis/ui/tools/error-list/error-list-docs.factor
+Loading resource:core/continuations/continuations-docs.factor
+Loading resource:core/generic/math/math-docs.factor
+Loading resource:basis/tools/crossref/crossref-docs.factor
+Loading resource:basis/ui/gadgets/line-support/line-support-docs.factor
+Loading resource:basis/compiler/cfg/block-joining/block-joining-docs.factor
+Loading resource:basis/compiler/tree/escape-analysis/nodes/nodes-docs.factor
+Loading resource:core/generic/single/single-docs.factor
+Loading resource:basis/io/files/unique/unique-docs.factor
+Loading resource:basis/compiler/cfg/ssa/destruction/coalescing/coalescing-docs.factor
+Loading resource:basis/documents/elements/elements-docs.factor
+Loading resource:core/byte-arrays/byte-arrays-docs.factor
+Loading resource:basis/bootstrap/image/image-docs.factor
+Loading resource:core/checksums/crc32/crc32-docs.factor
+Loading resource:basis/prettyprint/sections/sections-docs.factor
+Loading resource:basis/concurrency/count-downs/count-downs-docs.factor
+Loading resource:core/words/symbol/symbol-docs.factor
+Loading resource:basis/compiler/cfg/stacks/padding/padding-docs.factor
+Loading resource:basis/tools/deploy/deploy-docs.factor
+Loading resource:core/destructors/destructors-docs.factor
+Loading resource:basis/wrap/wrap-docs.factor
+Loading resource:basis/compiler/cfg/representations/conversion/conversion-docs.factor
+Loading resource:basis/ui/tools/common/common-docs.factor
+Loading resource:basis/deques/deques-docs.factor
+Loading resource:basis/io/sockets/sockets-docs.factor
+Loading resource:core/sorting/sorting-docs.factor
+Loading resource:basis/compiler/cfg/ssa/interference/live-ranges/live-ranges-docs.factor
+Loading resource:basis/columns/columns-docs.factor
+Loading resource:basis/help/topics/topics-docs.factor
+Loading resource:basis/simple-tokenizer/simple-tokenizer-docs.factor
+Loading resource:basis/compiler/cfg/loop-detection/loop-detection-docs.factor
+Loading resource:basis/ui/tools/debugger/debugger-docs.factor
+Loading resource:basis/compiler/cfg/representations/peephole/peephole-docs.factor
+Loading resource:basis/inspector/inspector-docs.factor
+Loading resource:basis/math/functions/functions-docs.factor
+Loading resource:core/vocabs/parser/parser-docs.factor
+Loading resource:basis/compiler/cfg/comparisons/comparisons-docs.factor
+Loading resource:basis/ui/gadgets/gadgets-docs.factor
+Loading resource:basis/calendar/calendar-docs.factor
+Loading resource:basis/io/styles/styles-docs.factor
+Loading resource:basis/ui/gadgets/menus/menus-docs.factor
+Loading resource:basis/tools/threads/threads-docs.factor
+Loading resource:basis/command-line/command-line-docs.factor
+Loading resource:basis/sequences/product/product-docs.factor
+Loading resource:basis/xml/writer/writer-docs.factor
+Loading resource:basis/io/timeouts/timeouts-docs.factor
+Loading resource:basis/ui/gadgets/worlds/worlds-docs.factor
+Loading resource:basis/compiler/cfg/intrinsics/misc/misc-docs.factor
+Loading resource:core/io/encodings/encodings-docs.factor
+Loading resource:basis/literals/literals-docs.factor
+Loading resource:core/source-files/source-files-docs.factor
+Loading resource:basis/io/streams/duplex/duplex-docs.factor
+Loading resource:basis/compiler/tree/propagation/known-words/known-words-docs.factor
+Loading resource:basis/ui/gadgets/scrollers/scrollers-docs.factor
+Loading resource:basis/concurrency/promises/promises-docs.factor
+Loading resource:basis/compiler/tree/propagation/info/info-docs.factor
+Loading resource:core/splitting/splitting-docs.factor
+Loading resource:basis/ui/gadgets/grids/grids-docs.factor
+Loading resource:basis/prettyprint/custom/custom-docs.factor
+Loading resource:core/init/init-docs.factor
+Loading resource:basis/io/encodings/string/string-docs.factor
+Loading resource:basis/compiler/cfg/instructions/syntax/syntax-docs.factor
+Loading resource:basis/io/streams/string/string-docs.factor
+Loading resource:basis/compiler/cfg/cfg-docs.factor
+Loading resource:basis/ui/gadgets/labeled/labeled-docs.factor
+Loading resource:basis/ui/gestures/gestures-docs.factor
+Loading resource:basis/ui/gadgets/glass/glass-docs.factor
+Loading resource:basis/compiler/cfg/builder/alien/alien-docs.factor
+Loading resource:basis/stack-checker/visitor/visitor-docs.factor
+Loading resource:basis/compiler/tree/escape-analysis/allocations/allocations-docs.factor
+Loading resource:basis/urls/urls-docs.factor
+Loading resource:basis/ui/pens/solid/solid-docs.factor
+Loading resource:basis/ui/gadgets/incremental/incremental-docs.factor
+Loading resource:core/memory/memory-docs.factor
+Loading resource:basis/alien/libraries/libraries-docs.factor
+Loading resource:basis/biassocs/biassocs-docs.factor
+Loading resource:basis/boxes/boxes-docs.factor
+Loading resource:basis/ui/tools/browser/browser-docs.factor
+Loading resource:basis/compiler/cfg/instructions/instructions-docs.factor
+Loading resource:core/system/system-docs.factor
+Loading resource:core/sbufs/sbufs-docs.factor
+Loading resource:basis/compiler/cfg/save-contexts/save-contexts-docs.factor
+Loading resource:basis/unicode/collation/collation-docs.factor
+Loading resource:basis/compiler/cfg/value-numbering/rewrite/rewrite-docs.factor
+Loading resource:basis/unicode/breaks/breaks-docs.factor
+Loading resource:basis/ui/tools/walker/walker-docs.factor
+Loading resource:basis/alien/syntax/syntax-docs.factor
+Loading resource:basis/alien/c-types/c-types-docs.factor
+Loading resource:basis/ui/text/text-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/resolve/resolve-docs.factor
+Loading resource:core/namespaces/namespaces-docs.factor
+Loading resource:basis/models/arrow/arrow-docs.factor
+Loading resource:basis/summary/summary-docs.factor
+Loading resource:core/math/math-docs.factor
+Loading resource:basis/stack-checker/transforms/transforms-docs.factor
+Loading resource:basis/ui/render/render-docs.factor
+Loading resource:core/classes/algebra/algebra-docs.factor
+Loading resource:basis/memoize/memoize-docs.factor
+Loading resource:basis/opengl/gl/gl-docs.factor
+Loading resource:basis/compiler/tree/propagation/constraints/constraints-docs.factor
+Loading resource:basis/tools/test/test-docs.factor
+Loading resource:basis/help/tips/tips-docs.factor
+Loading resource:basis/compiler/cfg/ssa/destruction/destruction-docs.factor
+Loading resource:basis/libc/libc-docs.factor
+Loading resource:basis/heaps/heaps-docs.factor
+Loading resource:basis/compiler/cfg/intrinsics/slots/slots-docs.factor
+Loading resource:basis/compiler/tree/late-optimizations/late-optimizations-docs.factor
+Loading resource:basis/compiler/cfg/alias-analysis/alias-analysis-docs.factor
+Loading resource:basis/tools/deploy/backend/backend-docs.factor
+Loading resource:basis/alien/destructors/destructors-docs.factor
+Loading resource:core/syntax/syntax-docs.factor
+Loading resource:basis/ui/operations/operations-docs.factor
+Loading resource:basis/fry/fry-docs.factor
+Loading resource:basis/help/lint/lint-docs.factor
+Loading resource:core/parser/parser-docs.factor
+Loading resource:basis/compiler/tree/finalization/finalization-docs.factor
+Loading resource:basis/cpu/x86/assembler/assembler-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/allocation/spilling/spilling-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/linear-scan-docs.factor
+Loading resource:core/math/integers/integers-docs.factor
+Loading resource:basis/locals/parser/parser-docs.factor
+Loading resource:basis/hints/hints-docs.factor
+Loading resource:basis/dlists/dlists-docs.factor
+Loading resource:basis/unicode/normalize/normalize-docs.factor
+Loading resource:basis/compiler/utilities/utilities-docs.factor
+Loading resource:basis/fonts/fonts-docs.factor
+Loading resource:basis/timers/timers-docs.factor
+Loading resource:basis/io/files/links/links-docs.factor
+Loading resource:basis/io/files/info/info-docs.factor
+Loading resource:basis/models/product/product-docs.factor
+Loading resource:basis/io/monitors/monitors-docs.factor
+Loading resource:basis/concurrency/mailboxes/mailboxes-docs.factor
+Loading resource:basis/compiler/tree/propagation/simple/simple-docs.factor
+Loading resource:basis/compiler/cfg/stacks/global/global-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/ranges/ranges-docs.factor
+Loading resource:basis/ui/pixel-formats/pixel-formats-docs.factor
+Loading resource:basis/tools/errors/errors-docs.factor
+Loading resource:basis/stack-checker/backend/backend-docs.factor
+Loading resource:basis/compiler/cfg/parallel-copy/parallel-copy-docs.factor
+Loading resource:basis/compiler/cfg/builder/blocks/blocks-docs.factor
+Loading resource:basis/io/pipes/pipes-docs.factor
+Loading resource:basis/peg/peg-docs.factor
+Loading resource:basis/tools/deploy/config/editor/editor-docs.factor
+Loading resource:core/io/binary/binary-docs.factor
+Loading resource:basis/sequences/generalizations/generalizations-docs.factor
+Loading resource:basis/compiler/cfg/build-stack-frame/build-stack-frame-docs.factor
+Loading resource:core/classes/builtin/builtin-docs.factor
+Loading resource:core/io/encodings/ascii/ascii-docs.factor
+Loading resource:core/classes/tuple/tuple-docs.factor
+Loading resource:basis/combinators/random/random-docs.factor
+Loading resource:basis/xml/entities/entities-docs.factor
+Loading resource:core/io/pathnames/pathnames-docs.factor
+Loading resource:basis/compiler/compiler-docs.factor
+Loading resource:basis/xml/traversal/traversal-docs.factor
+Loading resource:basis/compiler/cfg/stacks/local/local-docs.factor
+Loading resource:basis/compiler/cfg/builder/alien/params/params-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/linear-scan-docs.factor
+Loading resource:core/io/streams/plain/plain-docs.factor
+Loading resource:basis/compiler/cfg/value-numbering/math/math-docs.factor
+Loading resource:basis/regexp/combinators/combinators-docs.factor
+Loading resource:basis/regexp/regexp-docs.factor
+Loading resource:basis/unix/groups/groups-docs.factor
+Loading resource:core/io/files/files-docs.factor
+Loading resource:basis/compiler/cfg/liveness/liveness-docs.factor
+Loading resource:basis/compiler/codegen/labels/labels-docs.factor
+Loading resource:basis/peg/ebnf/ebnf-docs.factor
+Loading resource:basis/peg/search/search-docs.factor
+Loading resource:basis/compiler/tree/propagation/nodes/nodes-docs.factor
+Loading resource:basis/images/images-docs.factor
+Loading resource:basis/ui/backend/gtk/gtk-docs.factor
+Loading resource:basis/ui/commands/commands-docs.factor
+Loading resource:basis/ui/gadgets/panes/panes-docs.factor
+Loading resource:basis/prettyprint/stylesheet/stylesheet-docs.factor
+Loading resource:core/definitions/definitions-docs.factor
+Loading resource:basis/math/ranges/ranges-docs.factor
+Loading resource:basis/ui/gadgets/status-bar/status-bar-docs.factor
+Loading resource:basis/compiler/cfg/rpo/rpo-docs.factor
+Loading resource:core/sequences/sequences-docs.factor
+Loading resource:basis/unicode/categories/categories-docs.factor
+Loading resource:basis/math/rectangles/positioning/positioning-docs.factor
+Loading resource:basis/ui/gadgets/presentations/presentations-docs.factor
+Loading resource:basis/urls/encoding/encoding-docs.factor
+Loading resource:core/alien/strings/strings-docs.factor
+Loading resource:basis/xml/xml-docs.factor
+Loading resource:basis/compiler/tree/normalization/normalization-docs.factor
+Loading resource:basis/ui/clipboards/clipboards-docs.factor
+Loading resource:basis/math/bits/bits-docs.factor
+Loading resource:basis/compiler/codegen/gc-maps/gc-maps-docs.factor
+Loading resource:basis/ui/gadgets/tracks/tracks-docs.factor
+Loading resource:basis/cpu/architecture/architecture-docs.factor
+Loading resource:basis/regexp/regexp-docs.factor
+Loading resource:basis/ui/gadgets/tables/tables-docs.factor
+Loading resource:basis/compiler/crossref/crossref-docs.factor
+Loading resource:basis/xml/errors/errors-docs.factor
+Loading resource:basis/ui/gadgets/grid-lines/grid-lines-docs.factor
+Loading resource:basis/compiler/cfg/representations/selection/selection-docs.factor
+Loading resource:core/generic/generic-docs.factor
+Loading resource:core/compiler/units/units-docs.factor
+Loading resource:basis/prettyprint/prettyprint-docs.factor
+Loading resource:basis/tools/profiler/sampling/sampling-docs.factor
+Loading resource:core/quotations/quotations-docs.factor
+Loading resource:basis/math/bitwise/bitwise-docs.factor
+Loading resource:basis/compiler/cfg/stacks/stacks-docs.factor
+Loading resource:basis/stack-checker/dependencies/dependencies-docs.factor
+Loading resource:basis/specialized-arrays/specialized-arrays-docs.factor
+Loading resource:core/words/alias/alias-docs.factor
+Loading resource:core/layouts/layouts-docs.factor
+Loading resource:basis/ui/gadgets/borders/borders-docs.factor
+Loading resource:basis/tools/memory/memory-docs.factor
+Loading resource:basis/compiler/cfg/stack-frame/stack-frame-docs.factor
+Loading resource:basis/splitting/monotonic/monotonic-docs.factor
+Loading resource:basis/macros/macros-docs.factor
+Loading resource:basis/tools/time/time-docs.factor
+Loading resource:core/strings/parser/parser-docs.factor
+Loading resource:basis/tools/deploy/config/config-docs.factor
+Loading resource:core/io/io-docs.factor
+Loading resource:basis/io/files/temp/temp-docs.factor
+Loading resource:basis/compiler/cfg/intrinsics/intrinsics-docs.factor
+Loading resource:basis/tools/continuations/continuations-docs.factor
+Loading resource:basis/interpolate/interpolate-docs.factor
+Loading resource:basis/prettyprint/backend/backend-docs.factor
+Loading resource:basis/webbrowser/webbrowser-docs.factor
+Loading resource:core/combinators/combinators-docs.factor
+Loading resource:basis/classes/struct/struct-docs.factor
+Loading resource:basis/typed/typed-docs.factor
+Loading resource:basis/compiler/cfg/utilities/utilities-docs.factor
+Loading resource:basis/images/loader/loader-docs.factor
+Loading resource:basis/io/encodings/8-bit/8-bit-docs.factor
+Loading resource:basis/ui/gadgets/labels/labels-docs.factor
+Loading resource:core/arrays/arrays-docs.factor
+Loading resource:core/effects/parser/parser-docs.factor
+Loading resource:basis/stack-checker/branches/branches-docs.factor
+Loading resource:basis/stack-checker/recursive-state/recursive-state-docs.factor
+Loading resource:basis/wrap/strings/strings-docs.factor
+Loading resource:core/classes/classes-docs.factor
+Loading resource:basis/compiler/tree/tuple-unboxing/tuple-unboxing-docs.factor
+Loading resource:basis/compiler/cfg/representations/representations-docs.factor
+Loading resource:basis/io/sockets/secure/secure-docs.factor
+Loading resource:basis/sorting/slots/slots-docs.factor
+Loading resource:basis/concurrency/messaging/messaging-docs.factor
+Loading resource:basis/editors/editors-docs.factor
+Loading resource:basis/linked-assocs/linked-assocs-docs.factor
+Loading resource:basis/io/streams/null/null-docs.factor
+Loading resource:basis/math/constants/constants-docs.factor
+Loading resource:core/classes/singleton/singleton-docs.factor
+Loading resource:basis/compiler/cfg/stacks/clearing/clearing-docs.factor
+Loading resource:basis/eval/eval-docs.factor
+Loading resource:basis/compiler/cfg/gc-checks/gc-checks-docs.factor
+Loading resource:basis/io/files/info/info-docs.factor
+Loading resource:basis/concurrency/mailboxes/mailboxes-docs.factor
+Loading resource:basis/math/rectangles/rectangles-docs.factor
+Loading resource:core/make/make-docs.factor
+Loading resource:core/classes/tuple/parser/parser-docs.factor
+Loading resource:basis/io/files/info/unix/unix-docs.factor
+Loading resource:core/lexer/lexer-docs.factor
+Loading resource:basis/ui/baseline-alignment/baseline-alignment-docs.factor
+Loading resource:basis/ui/gadgets/viewports/viewports-docs.factor
+Loading resource:basis/math/intervals/intervals-docs.factor
+Loading resource:basis/listener/listener-docs.factor
+Loading resource:basis/combinators/short-circuit/short-circuit-docs.factor
+Loading resource:basis/compiler/cfg/builder/builder-docs.factor
+Loading resource:basis/help/crossref/crossref-docs.factor
+Loading resource:core/slots/slots-docs.factor
+Loading resource:basis/models/delay/delay-docs.factor
+Loading resource:basis/peg/search/search-docs.factor
+Loading resource:basis/ui/pens/gradient/gradient-docs.factor
+Loading resource:basis/compiler/tree/propagation/propagation-docs.factor
+Loading resource:basis/compiler/errors/errors-docs.factor
+Loading resource:basis/ui/tools/listener/listener-docs.factor
+Loading resource:basis/ui/gadgets/editors/editors-docs.factor
+Loading resource:basis/multiline/multiline-docs.factor
+Loading resource:basis/io/buffers/buffers-docs.factor
+Loading resource:basis/simple-flat-file/simple-flat-file-docs.factor
+Loading resource:basis/interval-maps/interval-maps-docs.factor
+Loading resource:basis/grouping/grouping-docs.factor
+Loading resource:core/vocabs/vocabs-docs.factor
+Loading resource:core/io/streams/byte-array/byte-array-docs.factor
+Loading resource:core/classes/intersection/intersection-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/allocation/state/state-docs.factor
+Loading resource:basis/compiler/constants/constants-docs.factor
+Loading resource:core/assocs/assocs-docs.factor
+Loading resource:basis/ui/gadgets/frames/frames-docs.factor
+Loading resource:basis/colors/colors-docs.factor
+Loading resource:basis/io/files/types/types-docs.factor
+Loading resource:core/vocabs/loader/loader-docs.factor
+Loading resource:basis/random/random-docs.factor
+Loading resource:core/math/ratios/ratios-docs.factor
+Loading resource:basis/colors/constants/constants-docs.factor
+Loading resource:basis/ui/gadgets/packs/packs-docs.factor
+Loading resource:basis/tools/disassembler/disassembler-docs.factor
+Loading resource:core/strings/strings-docs.factor
+Loading resource:basis/compiler/tree/tree-docs.factor
+Loading resource:basis/calendar/english/english-docs.factor
+Loading resource:basis/compiler/cfg/linear-scan/allocation/splitting/splitting-docs.factor
+Loading resource:basis/colors/hex/hex-docs.factor
+Loading resource:basis/compiler/cfg/intrinsics/allot/allot-docs.factor
+Loading resource:core/math/order/order-docs.factor
+Loading resource:basis/stack-checker/known-words/known-words-docs.factor
+Loading resource:basis/compiler/cfg/ssa/cssa/cssa-docs.factor
+Loading resource:basis/compiler/tree/propagation/slots/slots-docs.factor
+Loading resource:core/io/encodings/binary/binary-docs.factor
+Loading resource:basis/tools/deprecation/deprecation-docs.factor
+Loading resource:core/sets/sets-docs.factor
+Loading resource:core/checksums/checksums-docs.factor
+Loading resource:basis/compiler/cfg/representations/rewrite/rewrite-docs.factor
+Loading resource:basis/interval-maps/interval-maps-docs.factor
+Loading resource:basis/io/sockets/secure/openssl/openssl-docs.factor
+Loading resource:basis/vm/vm-docs.factor
+Loading resource:basis/compiler/tree/propagation/inlining/inlining-docs.factor
+Loading resource:basis/combinators/smart/smart-docs.factor
+Loading resource:basis/ip-parser/ip-parser-docs.factor
+Loading resource:basis/cpu/x86/64/64-docs.factor
+Loading resource:basis/compiler/tree/cleanup/cleanup-docs.factor
+Loading resource:basis/definitions/icons/icons-docs.factor
+Loading resource:core/math/parser/parser-docs.factor
+Loading resource:basis/ui/ui-docs.factor
+Loading resource:core/words/constant/constant-docs.factor
+Loading resource:basis/models/models-docs.factor
+Loading resource:basis/compiler/cfg/builder/alien/boxing/boxing-docs.factor
+Loading resource:basis/ui/tools/listener/history/history-docs.factor
+Loading resource:basis/stack-checker/stack-checker-docs.factor
+Loading resource:basis/unicode/case/case-docs.factor
+Loading resource:basis/concurrency/futures/futures-docs.factor
+Loading resource:basis/environment/environment-docs.factor
+Loading resource:basis/math/statistics/statistics-docs.factor
+Loading resource:basis/concurrency/combinators/combinators-docs.factor
+Loading resource:basis/stack-checker/values/values-docs.factor
+Loading resource:core/words/words-docs.factor
+Loading resource:basis/unicode/script/script-docs.factor
+Loading resource:basis/help/help-docs.factor
+Loading resource:basis/compiler/tree/propagation/copy/copy-docs.factor
+Loading resource:basis/compiler/cfg/def-use/def-use-docs.factor
+Loading resource:basis/opengl/opengl-docs.factor
+Loading resource:basis/ui/tools/inspector/inspector-docs.factor
+Loading resource:basis/bit-sets/bit-sets-docs.factor
+Loading resource:basis/debugger/debugger-docs.factor
+Loading resource:basis/stack-checker/alien/alien-docs.factor
+Loading resource:core/kernel/kernel-docs.factor
+Loading resource:core/graphs/graphs-docs.factor
+Loading resource:core/io/encodings/utf8/utf8-docs.factor
+Loading resource:basis/help/vocabs/vocabs-docs.factor
+Loading resource:basis/compiler/cfg/value-numbering/graph/graph-docs.factor
+Loading resource:basis/ui/gadgets/toolbar/toolbar-docs.factor
+Loading resource:basis/formatting/formatting-docs.factor
+Loading resource:basis/compiler/cfg/ssa/interference/interference-docs.factor
+Loading resource:basis/compiler/cfg/dce/dce-docs.factor
+Loading resource:basis/compiler/cfg/branch-splitting/branch-splitting-docs.factor
+Loading resource:basis/vocabs/metadata/metadata-docs.factor
+Loading resource:basis/cpu/x86/x86-docs.factor
+Loading resource:core/io/streams/c/c-docs.factor
+Loading resource:basis/alien/enums/enums-docs.factor
+Loading resource:core/classes/predicate/predicate-docs.factor
+Loading resource:basis/vocabs/metadata/resources/resources-docs.factor
+Loading resource:basis/threads/threads-docs.factor
+Loading resource:basis/compiler/codegen/codegen-docs.factor
+Loading resource:basis/tools/destructors/destructors-docs.factor
+Loading resource:basis/tools/dispatch/dispatch-docs.factor
+Loading resource:basis/help/apropos/apropos-docs.factor
+Loading resource:basis/mirrors/mirrors-docs.factor
+Loading resource:basis/compiler/tree/dead-code/dead-code-docs.factor
+* Loading the handbook component
+Loading resource:basis/bootstrap/handbook/handbook.factor
+Loading resource:basis/help/handbook/handbook.factor
+Loading resource:basis/help/cookbook/cookbook.factor
+Loading resource:basis/help/tutorial/tutorial.factor
+Core bootstrap completed in 5 minutes and 37 seconds.
+Bootstrap completed in 5 minutes and 37 seconds.
+Bootstrapping is complete.
+Now, you can run Factor:
+/opt/factor/factor -i=factor.image
+Loading vocab:bootstrap/finish-bootstrap.factor
+Loading resource:basis/command-line/startup/startup.factor
+Copying factor.image to factor.image.fresh...

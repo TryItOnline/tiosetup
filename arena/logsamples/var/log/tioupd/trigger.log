@@ -1,0 +1,12 @@
+Sun Feb  5 02:11:11 UTC 2017
+--2017-02-05 02:11:11--  http://yiap.nfshost.com/esoteric/trigger/trigger.c
+Resolving yiap.nfshost.com (yiap.nfshost.com)... 208.94.118.132
+Connecting to yiap.nfshost.com (yiap.nfshost.com)|208.94.118.132|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2945 (2.9K) [text/x-c]
+Saving to: ‘trigger.c’
+
+     0K ..                                                    100%  746M=0s
+
+2017-02-05 02:11:11 (746 MB/s) - ‘trigger.c’ saved [2945/2945]
+

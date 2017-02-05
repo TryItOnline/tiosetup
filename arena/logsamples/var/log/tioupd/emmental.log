@@ -1,0 +1,6 @@
+Sun Feb  5 01:58:21 UTC 2017
+Cloning into 'Emmental'...
+which: no runhugs in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin)
+[1 of 2] Compiling Emmental         ( Emmental.hs, Emmental.o )
+[2 of 2] Compiling Main             ( Main.hs, Main.o )
+Linking ../bin/emmental ...

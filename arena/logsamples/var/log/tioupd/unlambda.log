@@ -1,0 +1,45 @@
+Sun Feb  5 02:11:12 UTC 2017
+--2017-02-05 02:11:12--  http://www.eleves.ens.fr:8080/home/madore/unlambda-2.0.0.tar.gz
+Resolving www.eleves.ens.fr (www.eleves.ens.fr)... 129.199.129.42
+Connecting to www.eleves.ens.fr (www.eleves.ens.fr)|129.199.129.42|:8080... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://www.madore.org/~david/unlambda-2.0.0.tar.gz [following]
+--2017-02-05 02:11:12--  http://www.madore.org/~david/unlambda-2.0.0.tar.gz
+Resolving www.madore.org (www.madore.org)... 62.210.170.129, 2001:bc8:30e8:200::1
+Connecting to www.madore.org (www.madore.org)|62.210.170.129|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 492894 (481K) [application/x-gzip]
+Saving to: ‘unlambda-2.0.0.tar.gz’
+
+     0K .......... .......... .......... .......... .......... 10%  291K 1s
+    50K .......... .......... .......... .......... .......... 20%  582K 1s
+   100K .......... .......... .......... .......... .......... 31% 80.0M 1s
+   150K .......... .......... .......... .......... .......... 41%  111M 0s
+   200K .......... .......... .......... .......... .......... 51%  585K 0s
+   250K .......... .......... .......... .......... .......... 62%  109M 0s
+   300K .......... .......... .......... .......... .......... 72%  123M 0s
+   350K .......... .......... .......... .......... .......... 83%  132M 0s
+   400K .......... .......... .......... .......... .......... 93%  592K 0s
+   450K .......... .......... .......... .                    100% 81.3M=0.4s
+
+2017-02-05 02:11:13 (1.09 MB/s) - ‘unlambda-2.0.0.tar.gz’ saved [492894/492894]
+
+unlambda.c: In function ‘parse’:
+unlambda.c:560:7: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+       exit (1);
+       ^~~~
+unlambda.c:560:7: warning: incompatible implicit declaration of built-in function ‘exit’
+unlambda.c:560:7: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+unlambda.c:565:7: warning: incompatible implicit declaration of built-in function ‘exit’
+       exit (1);
+       ^~~~
+unlambda.c:565:7: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+unlambda.c: In function ‘main’:
+unlambda.c:586:4: warning: incompatible implicit declaration of built-in function ‘exit’
+    exit (1);
+    ^~~~
+unlambda.c:586:4: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+unlambda.c:594:7: warning: incompatible implicit declaration of built-in function ‘exit’
+       exit (1);
+       ^~~~
+unlambda.c:594:7: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’

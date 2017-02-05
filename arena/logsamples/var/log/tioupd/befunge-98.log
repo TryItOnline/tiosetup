@@ -1,0 +1,12 @@
+Sun Feb  5 01:57:56 UTC 2017
+Cloning into 'FBBI'...
+mkdir -p ../bin
+cc -ansi -pedantic -g -Wall -O    -c -o bf98spc.o bf98spc.c
+cc -ansi -pedantic -g -Wall -O    -c -o f98fp.o f98fp.c
+cc -ansi -pedantic -g -Wall -O    -c -o f98i.o f98i.c
+cc -ansi -pedantic -g -Wall -O    -c -o f98ip.o f98ip.c
+cc -ansi -pedantic -g -Wall -O    -c -o f98stack.o f98stack.c
+cc -ansi -pedantic -g -Wall -O    -c -o fbbi.o fbbi.c
+cc -ansi -pedantic -g -Wall -O    -c -o fp/NULL.o fp/NULL.c
+cc -ansi -pedantic -g -Wall -O    -c -o fp/ROMA.o fp/ROMA.c
+cc -o../bin/fbbi bf98spc.o f98fp.o f98i.o f98ip.o f98stack.o fbbi.o fp/NULL.o fp/ROMA.o 

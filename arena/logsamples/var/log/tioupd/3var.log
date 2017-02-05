@@ -1,0 +1,3 @@
+Sun Feb  5 01:57:42 UTC 2017
+Cloning into '3var-interpreter'...
+gcc main.c -lm -o 3var

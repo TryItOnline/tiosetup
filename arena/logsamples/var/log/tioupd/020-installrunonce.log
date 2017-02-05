@@ -1,0 +1,2 @@
+Sun Feb  5 01:47:07 UTC 2017
+Created symlink from /etc/systemd/system/multi-user.target.wants/runonce.service to /etc/systemd/system/runonce.service.

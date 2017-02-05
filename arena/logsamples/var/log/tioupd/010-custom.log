@@ -1,0 +1,16 @@
+Sun Feb  5 02:11:17 UTC 2017
+Last metadata expiration check: 0:23:18 ago on Sun Feb  5 01:48:00 2017.
+Package screen-4.5.0-1.fc24.x86_64 is already installed, skipping.
+Dependencies resolved.
+Nothing to do.
+Complete!
+Collecting glances
+  Downloading Glances-2.8.tar.gz (22.1MB)
+Collecting psutil>=2.0.0 (from glances)
+  Downloading psutil-5.1.2.tar.gz (341kB)
+Installing collected packages: psutil, glances
+  Running setup.py install for psutil: started
+    Running setup.py install for psutil: finished with status 'done'
+  Running setup.py install for glances: started
+    Running setup.py install for glances: finished with status 'done'
+Successfully installed glances-2.8 psutil-5.1.2
