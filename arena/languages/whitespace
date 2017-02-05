@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 rm -rf WSpace
-git clone https://github.com/TryItOnline-Collateral/WSpace.git
+git clone https://github.com/TryItOnline/WSpace.git
 cd WSpace
 make
 cd ..

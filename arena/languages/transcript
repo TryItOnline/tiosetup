@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf transcript
-git clone https://github.com/TryItOnline-Collateral/transcript.git
+git clone https://github.com/TryItOnline/transcript.git
 
 exit "$err"

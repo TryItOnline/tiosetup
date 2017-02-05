@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf purple
-git clone https://github.com/TryItOnline-Collateral/purple.git
+git clone https://github.com/TryItOnline/purple.git
 
 exit "$err"
