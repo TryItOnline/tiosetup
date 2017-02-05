@@ -1,6 +1,6 @@
 # Setting up Try it Online
 
-**These instructions are now outdated. I'm working on a new ones**
+**These instructions are now outdated. I'm working on new ones**
 
 ## What is Try It Online?
 
