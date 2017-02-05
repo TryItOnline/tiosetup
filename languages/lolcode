@@ -1,5 +1,8 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf lci
 git clone https://github.com/justinmeza/lci.git
 cd lci
@@ -8,3 +11,5 @@ cd bin
 cmake ..
 make
 cd ../..
+
+exit "$err"

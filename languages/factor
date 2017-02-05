@@ -1,8 +1,13 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf factor
 git clone https://github.com/factor/factor.git
 cd factor
 sed -i 's:/dev/random:/dev/urandom:g' basis/random/unix/unix.factor
 ./build.sh update
 cd ..
+
+exit "$err"

@@ -1,12 +1,13 @@
 #!/bin/bash
 
-if [ -f linux_64_15.0.29007_unicode.zip ]; then
-    rm -rf mdyalog
-    unzip linux_64_15.0.29007_unicode.zip
-    rpm2cpio linux_64_15.0.29007_unicode.x86_64.rpm | cpio -idmv -D /
-    rm -f linux_64_15.0.29007_unicode.x86_64.deb
-    rm -f linux_64_15.0.29007_unicode.x86_64.rpm
-    #rm -f linux_64_15.0.29007_unicode.zip
-else
-   echo "Skipping, you do not have Dyalog APL."
-fi
+err=0
+trap 'err=1' ERR
+
+rm -rf mdyalog
+unzip linux_64_15.0.29007_unicode.zip
+rpm2cpio linux_64_15.0.29007_unicode.x86_64.rpm | cpio -idmv -D /
+rm -f linux_64_15.0.29007_unicode.x86_64.deb
+rm -f linux_64_15.0.29007_unicode.x86_64.rpm
+#rm -f linux_64_15.0.29007_unicode.zip
+
+exit "$err"

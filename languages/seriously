@@ -1,7 +1,12 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf Seriously
 git clone https://github.com/Mego/Seriously.git
 cd Seriously
 git checkout v1
 cd ..
+
+exit "$err"

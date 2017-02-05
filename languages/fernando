@@ -1,4 +1,9 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf fernando
 git clone https://github.com/TryItOnline-Collateral/fernando.git
+
+exit "$err"

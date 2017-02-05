@@ -1,7 +1,12 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf kona
 git clone https://github.com/kevinlawler/kona.git
 cd kona
 make
 cd ..
+
+exit "$err"

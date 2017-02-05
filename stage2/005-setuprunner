@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+source private/setup.conf 
+adduser runner
+sudo -u runner mkdir -p /home/runner/.ssh
+sudo -u runner touch /home/runner/.ssh/authorized_keys
+sudo -u runner chmod 640 /home/runner/.ssh/authorized_keys
+sudo -u runner chmod 700 /home/runner/.ssh
+echo "$FrontEndKey" >> /home/runner/.ssh/authorized_keys
+chattr +i  ~runner
+
+exit "$err"

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf unlambda-2.0.0
 wget http://www.eleves.ens.fr:8080/home/madore/unlambda-2.0.0.tar.gz
 tar xf unlambda-2.0.0.tar.gz
@@ -7,3 +10,5 @@ rm -f unlambda-2.0.0.tar.gz
 cd unlambda-2.0.0/c
 gcc unlambda.c -o unlambda -lgc
 cd ../..
+
+exit "$err"

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf emojicode
 git clone https://github.com/emojicode/emojicode.git
 cd emojicode
@@ -8,3 +11,5 @@ cd builds/*
 ln -s $(pwd) ../../bin
 ln -s $(pwd)/packages ../../packages
 cd ../../..
+
+exit "$err"

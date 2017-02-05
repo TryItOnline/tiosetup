@@ -1,5 +1,8 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf underload
 git clone https://github.com/catseye/Dipple.git
 mkdir -p underload
@@ -8,3 +11,5 @@ rm -rf Dipple
 cd underload
 gcc stringie.c -o stringie
 cd ..
+
+exit "$err"

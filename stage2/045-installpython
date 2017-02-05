@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+python3 -m pip install --upgrade pip
+python2 -m pip install --upgrade pip
+python3 -m pip install exrex python-pcre hbcht sympy mathics
+python3 -m pip install numpy 
+python2 -m pip install sympy pyshoco docopt neovim
+restorecon -Rv /usr/lib{,64}/python3.5
+
+exit "$err"

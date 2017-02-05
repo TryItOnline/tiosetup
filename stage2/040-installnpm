@@ -1,0 +1,8 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+npm install -g cheddar-lang coffee-script babel-cli mathjs escape-string-regexp clear readline-sync decimal.js minimist shunt.js
+
+exit "$err"

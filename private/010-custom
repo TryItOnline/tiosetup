@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# This script is executed in the end
+# add any custom commands you might want to execute here
+
+err=0
+trap 'err=1' ERR
+
+dnf install screen -y
+pip install glances
+
+exit "$err"

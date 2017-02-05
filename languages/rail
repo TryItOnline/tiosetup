@@ -1,5 +1,8 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf rail
 wget http://www.xmission.com/~tyrecius/rail-0.5.tar.gz
 tar xf rail-0.5.tar.gz
@@ -10,3 +13,5 @@ cd rail
 ./compile.sh
 cd ..
 
+
+exit "$err"

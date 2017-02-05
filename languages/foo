@@ -1,5 +1,8 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf foo
 mkdir -p foo
 cd foo
@@ -9,3 +12,5 @@ rm -f foo.tar.gz
 gcc foo.c -o foo
 cd ..
 
+
+exit "$err"

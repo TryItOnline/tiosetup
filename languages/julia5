@@ -1,6 +1,11 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf julia-3c9d75391c
 wget https://julialang.s3.amazonaws.com/bin/linux/x64/0.5/julia-0.5.0-linux-x86_64.tar.gz
 tar zxvf julia-0.5.0-linux-x86_64.tar.gz
 rm -f julia-0.5.0-linux-x86_64.tar.gz
+
+exit "$err"

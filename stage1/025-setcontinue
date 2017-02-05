@@ -1,0 +1,10 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+echo "cd $(pwd)" > /usr/local/etc/runonce.d/tioupd-continue
+echo "./setup-main" >> /usr/local/etc/runonce.d/tioupd-continue
+chmod +x /usr/local/etc/runonce.d/tioupd-continue
+
+exit "$err"

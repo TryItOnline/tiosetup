@@ -1,7 +1,12 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf apeartree
 mkdir -p apeartree
 cd apeartree
 wget http://nethack4.org/esolangs/apeartree-v2.pl
 cd ..
+
+exit "$err"

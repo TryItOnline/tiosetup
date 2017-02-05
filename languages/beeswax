@@ -1,7 +1,12 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf beeswax
 git clone https://github.com/TryItOnline/beeswax.git
 cd beeswax
-./build
+HOME=/root ./build
 cd ..
+
+exit "$err"

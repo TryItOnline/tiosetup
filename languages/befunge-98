@@ -1,7 +1,12 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf FBBI
 git clone https://github.com/catseye/FBBI.git
 cd FBBI/src
 make
 cd ../..
+
+exit "$err"

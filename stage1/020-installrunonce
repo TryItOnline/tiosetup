@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+mkdir -p /var/log/runonce
+mkdir -p /usr/local/bin
+mkdir -p /usr/local/etc/runonce.d/ran
+cp files/runonce /usr/local/bin/runonce
+cp files/runonce.service /etc/systemd/system/runonce.service
+systemctl enable runonce.service
+
+exit "$err"

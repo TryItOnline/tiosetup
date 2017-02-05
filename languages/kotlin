@@ -1,6 +1,11 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf kotlinc
 wget https://github.com/JetBrains/kotlin/releases/download/v1.0.6/kotlin-compiler-1.0.6.zip
 unzip kotlin-compiler-1.0.6.zip
 rm -f kotlin-compiler-1.0.6.zip
+
+exit "$err"

@@ -1,0 +1,14 @@
+#!/bin/bash
+for file in /usr/local/etc/runonce.d/*
+do
+    if [ ! -f "$file" ]
+    then
+        continue
+    fi
+
+    filebase=$(basename $file)
+    stamp="$filebase.$(date +%Y%m%dT%H%M%S)"
+    "$file" 2> "/var/log/runonce/$stamp.errors" 1> "/var/log/runonce/$stamp.log"
+    mv "$file" "/usr/local/etc/runonce.d/ran/$filebase.$(date +%Y%m%dT%H%M%S)"
+    logger -t runonce "$file"
+done

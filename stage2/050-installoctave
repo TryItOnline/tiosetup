@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+octave --eval "pkg install -forge symbolic"
+octave --eval "pkg rebuild -auto symbolic"
+
+exit "$err"

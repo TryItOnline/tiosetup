@@ -1,7 +1,12 @@
 #!/bin/bash
 
+err=0
+trap 'err=1' ERR
+
 rm -rf snowman-lang
 git clone https://github.com/KeyboardFire/snowman-lang.git
 cd snowman-lang/lib
 make
 cd ../..
+
+exit "$err"

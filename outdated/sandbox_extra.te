@@ -1,0 +1,11 @@
+module sandbox_extra 1.0;
+
+require {
+        type sandbox_t;
+        type proc_t;
+        class dir read;
+        class file { open read };
+}
+
+allow sandbox_t proc_t:dir read;
+allow sandbox_t proc_t:file { open read };
