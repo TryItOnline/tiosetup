@@ -1,0 +1,8 @@
+cat <<EOT >> /etc/systemd/system/tiotests.service
+[Unit]
+Description=Try-it-online test suite for every language
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c 'dotnet /root/TioTests/bin/Debug/netcoreapp1.0/TioTests.dll -d off >> /var/log/helloworld.backend.tryitonline.net.log'
+WorkingDirectory=/root/TioTests

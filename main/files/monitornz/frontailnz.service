@@ -1,0 +1,11 @@
+[Unit]
+Description=Frontails job that serves TIO test logs on the web
+After=network.target auditd.service
+
+[Service]
+ExecStart=/bin/sh -c 'frontail -p 82 -n 300 -t dark --ui-highlight --ui-highlight-preset /root/TioTests/frontail.json /var/log/helloworld.backend.tryitonline.nz.log'
+WorkingDirectory=/root
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

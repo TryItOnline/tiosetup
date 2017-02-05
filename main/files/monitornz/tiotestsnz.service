@@ -1,0 +1,7 @@
+[Unit]
+Description=Try-it-online test suite for every language
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c 'dotnet /root/TioTests/bin/Debug/netcoreapp1.0/TioTests.dll -d off -u https://backend.tryitonline.nz/run/api/no-cache/ >> /var/log/helloworld.backend.tryitonline.nz.log'
+WorkingDirectory=/root/TioTests

@@ -1,0 +1,21 @@
+policy_module(arena, 1.0);
+
+require {
+        type httpd_sys_script_t;
+        type ssh_home_t;
+        type ssh_port_t;
+    type user_home_dir_t;
+        type unconfined_t;
+        class dir { getatrr search };
+        class fifo_file read;
+        class tcp_socket name_connect;
+        class unix_stream_socket connectto;
+        class file { getattr open read };
+        class sock_file write;
+}
+
+allow httpd_sys_script_t user_home_dir_t:dir { getattr search };
+allow httpd_sys_script_t ssh_port_t:tcp_socket name_connect;
+
+allow httpd_sys_script_t ssh_home_t:dir { getattr search write };
+allow httpd_sys_script_t ssh_home_t:dir { search };

@@ -1,0 +1,10 @@
+cat <<EOT >> /etc/systemd/system/renewssl.timer
+[Unit]
+Description=Run renewssl.service twice a day
+
+[Timer]
+OnCalendar=04:14
+OnCalendar=16:14
+
+[Install]
+WantedBy=timers.target
