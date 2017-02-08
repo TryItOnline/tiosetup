@@ -1,0 +1,2 @@
+dnf install 'dnf-command(versionlock)'
+dnf versionlock add systemd.x86_64
