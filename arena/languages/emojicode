@@ -6,8 +6,12 @@ trap 'err=1' ERR
 rm -rf emojicode
 git clone https://github.com/emojicode/emojicode.git
 cd emojicode
-make HEAP_SIZE=128000000 DEFAULT_PACKAGES_DIRECTORY=/opt/emojicode/packages
-cd builds/*
+mkdir -p build
+cd build
+cmake -DheapSize=128000000 -DdefaultPackagesDirectory='"/opt/emojicode/packages"' .. -GNinja
+ninja
+ninja tests
+cd Emojicode-*
 ln -s $(pwd) ../../bin
 ln -s $(pwd)/packages ../../packages
 cd ../../..
