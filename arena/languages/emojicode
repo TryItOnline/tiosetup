@@ -8,7 +8,7 @@ git clone https://github.com/emojicode/emojicode.git
 cd emojicode
 mkdir -p build
 cd build
-cmake -DheapSize=128000000 -DdefaultPackagesDirectory='"/opt/emojicode/packages"' .. -GNinja
+cmake -DheapSize=128000000 -DdefaultPackagesDirectory= .. -GNinja
 ninja
 ninja tests
 cd Emojicode-*
