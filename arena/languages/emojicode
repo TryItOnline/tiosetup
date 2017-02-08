@@ -6,7 +6,7 @@ trap 'err=1' ERR
 rm -rf emojicode
 git clone https://github.com/emojicode/emojicode.git
 cd emojicode
-git checkout 4cc4be517da29c6b7a47d790a93ef5f37a7807e7
+git checkout f74fc4a97778e6589b9bb6ae973769661bf0da81
 make HEAP_SIZE=128000000 DEFAULT_PACKAGES_DIRECTORY=/opt/emojicode/packages
 cd builds/*
 ln -s $(pwd) ../../bin
