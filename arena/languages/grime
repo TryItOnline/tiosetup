@@ -8,7 +8,7 @@ git clone https://github.com/iatorm/grime.git
 cd grime
 echo '"Hello, World!"' > code
 echo '"Hello, World!"' > input
-./rungrime code input
+HOME=/root ./rungrime code input
 rm -f code
 rm -f input
 cd ..
