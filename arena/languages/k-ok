@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ok
+git clone https://github.com/JohnEarnest/ok.git
+
+exit "$err"
