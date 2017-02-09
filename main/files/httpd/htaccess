@@ -1,4 +1,0 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^nexus/?(.*)$ nexus.html [L,NE]
-RewriteRule ^index/?(.*)$ index.html [L,NE]
