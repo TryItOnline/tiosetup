@@ -28,7 +28,7 @@ sed -i "s/server-costs@tryitonline.net/$SERVERCOSTS/g" index.html
 sed -i "s/feedback@tryitonline.net/$FEEDBACK/g" index.html
 sed -i "s/tryitonline.net/$TRYITONLINENET/g" index.html
 sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" index.html
-sed -i "s/backend.tryitonline.net/BACKEND/g" nexus.html
+sed -i "s/backend.tryitonline.net/$BACKEND/g" nexus.html
 sed -i "s/tio.run/$TIORUN/g" nexus.html
 sed -i "s/server-costs@tryitonline.net/$SERVERCOSTS/g" nexus.html
 sed -i "s/feedback@tryitonline.net/$FEEDBACK/g" nexus.html

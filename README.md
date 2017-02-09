@@ -4,7 +4,7 @@
 
 ## What is Try It Online?
 
-<https://tritonline.net> is a community-maintained web site for hosting solutions to [code golf](https://en.wikipedia.org/wiki/Code_golf) puzzles presented on <http://codegolf.stackexchange.com/>. It can be used by anyone for free to quickly try out and share code snippents in a big number of practical and recreational programming languages.
+<https://tryitonline.net> is a community-maintained web site for hosting solutions to [code golf](https://en.wikipedia.org/wiki/Code_golf) puzzles presented on <http://codegolf.stackexchange.com/>. It can be used by anyone for free to quickly try out and share code snippents in a big number of practical and recreational programming languages.
 
 ## Setup Overview
 

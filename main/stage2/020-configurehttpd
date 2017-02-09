@@ -13,18 +13,18 @@ BACKEND=backend2.tryitonline.nz
 
 yes | cp files/httpd/backend.tryitonline.net.conf /etc/httpd/conf.d/backend.tryitonline.net.conf
 yes | cp files/httpd/nexus.tryitonline.net.conf /etc/httpd/conf.d/nexus.tryitonline.net.conf
-yes | cp files/httpd/talk.tritonline.net.conf /etc/httpd/conf.d/talk.tritonline.net.conf
+yes | cp files/httpd/talk.tryitonline.net.conf /etc/httpd/conf.d/talk.tryitonline.net.conf
 yes | cp files/httpd/tio.run.conf /etc/httpd/conf.d/tio.run.conf
-yes | cp files/httpd/tritonline.net.conf  /etc/httpd/conf.d/tritonline.net.conf 
+yes | cp files/httpd/tryitonline.net.conf  /etc/httpd/conf.d/tryitonline.net.conf 
 
-sed -i "s/ServerName tryitonline.net/ServerName $TRYITONLINENET/g" /etc/httpd/conf.d/tritonline.net.conf 
+sed -i "s/ServerName tryitonline.net/ServerName $TRYITONLINENET/g" /etc/httpd/conf.d/tryitonline.net.conf 
 sed -i "s/ServerName tio.run/ServerName $TIORUN/g" /etc/httpd/conf.d/tio.run.conf
 sed -i "s/ServerName backend.tryitonline.net/ServerName $BACKEND/g" /etc/httpd/conf.d/backend.tryitonline.net.conf
 
 
 #sed -i "s/nexus.tryitonline.net/$NEXUS/g" /etc/httpd/conf.d/nexus.tryitonline.net.conf
 #sed -i "s/tio.run/$TIORUN/g" /etc/httpd/conf.d/nexus.tryitonline.net.conf
-#sed -i "s/talk.tritonline.net/$TALK/g" /etc/httpd/conf.d/talk.tritonline.net.conf
+#sed -i "s/talk.tryitonline.net/$TALK/g" /etc/httpd/conf.d/talk.tryitonline.net.conf
 
 
 chkconfig httpd on

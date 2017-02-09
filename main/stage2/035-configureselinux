@@ -11,4 +11,12 @@ semanage fcontext -a -t httpd_sys_content_t '/srv/tio.run(/.*)?'
 semanage fcontext -a -t httpd_sys_rw_content_t '/srv/tmp(/.*)?'
 semanage fcontext -a -t httpd_sys_content_t '/srv/tryitonline.net(/.*)?'
 
+restorecon -Rv /srv/backend.tryitonline.net
+restorecon -Rv /srv/bin
+restorecon -Rv /srv/cache
+restorecon -Rv /srv/store
+restorecon -Rv /srv/tio.run
+restorecon -Rv /srv/tmp
+restorecon -Rv /srv/tryitonline.net
+
 exit "$err"
