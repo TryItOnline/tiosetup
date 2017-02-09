@@ -1,4 +1,3 @@
-cat <<EOT >> /etc/systemd/system/renewssl.timer
 [Unit]
 Description=Run renewssl.service twice a day
 
