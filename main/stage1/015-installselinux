@@ -5,9 +5,9 @@ trap 'err=1' ERR
 
 dnf install psmisc selinux-policy-sandbox policycoreutils-sandbox setroubleshoot selinux-policy-devel -y
 sed -i 's/SELINUX=disabled/SELINUX=enforcing/g' /etc/selinux/config
-cp files/sandbox_extra.te ./sandbox_extra.te
-make -f /usr/share/selinux/devel/Makefile sandbox_extra.pp
-semodule -i sandbox_extra.pp
-rm sandbox_extra.*
+cp files/selinux/arena.te ./arena.te
+make -f /usr/share/selinux/devel/Makefile arena.pp
+semodule -i arena.pp
+rm arena.*
 
 exit "$err"

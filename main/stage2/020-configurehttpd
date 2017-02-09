@@ -1,0 +1,6 @@
+#!/bin/bash
+
+err=0
+trap "err=1" ERR
+
+exit "$err"
