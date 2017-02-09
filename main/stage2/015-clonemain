@@ -3,10 +3,11 @@
 err=0
 trap "err=1" ERR
 
-TRYITONLINENET=tryitonline.nz
-TIORUN=tio.tryitonline.nz
+#TODO - read the variables
+TRYITONLINENET=www2.tryitonline.nz
+TIORUN=tio2.tryitonline.nz
 
-BACKEND=backend.tryitonline.nz
+BACKEND=backend2.tryitonline.nz
 SERVERCOSTS=this-is-a-site-copy
 FEEDBACK=this-is-a-site-copy
 
@@ -40,7 +41,10 @@ sed -i "s/tryitonline.net/$TRYITONLINENET/g" run-legacy
 cd ..
 
 mkdir -p /srv/tmp
+chown apache:apache /srv/tmp
 mkdir -p /srv/cache
+chown apache:apache /srv/cache
 mkdir -p /srv/store
+chown apache:apache /srv/store
 
 exit "$err"

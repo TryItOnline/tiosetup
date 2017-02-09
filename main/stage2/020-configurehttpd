@@ -3,4 +3,12 @@
 err=0
 trap "err=1" ERR
 
+yes | cp files/httpd/backend.tryitonline.net.conf /etc/httpd/conf.d/backend.tryitonline.net.conf
+yes | cp files/httpd/nexus.tryitonline.net.conf /etc/httpd/conf.d/nexus.tryitonline.net.conf
+yes | cp files/httpd/talk.tritonline.net.conf /etc/httpd/conf.d/talk.tritonline.net.conf
+yes | cp files/httpd/tio.run.conf /etc/httpd/conf.d/tio.run.conf
+yes | cp files/httpd/tritonline.net.conf  /etc/httpd/conf.d/tritonline.net.conf 
+chkconfig httpd on
+systemctl restart httpd
+   
 exit "$err"

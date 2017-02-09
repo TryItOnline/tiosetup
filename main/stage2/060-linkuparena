@@ -3,4 +3,10 @@
 err=0
 trap "err=1" ERR
 
+#TODO - read the variables
+ARENA=arena.tryitonline.nz
+
+sudo -u apache ssh-keyscan $ARENA > $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts
+sudo -u apache ssh-keyscan $(dig +short $ARENA) >> $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts
+
 exit "$err"

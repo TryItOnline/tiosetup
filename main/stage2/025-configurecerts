@@ -3,4 +3,16 @@
 err=0
 trap "err=1" ERR
 
+#TODO - read the variables
+TRYITONLINENET=www2.tryitonline.nz
+TIORUN=tio2.tryitonline.nz
+
+BACKEND=backend2.tryitonline.nz
+EMAIL=letsencrypt@tryitonline.nz
+
+certbot --staging --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN,$BACKEND --redirect
+
+#TODO - copy existing certs
+
+
 exit "$err"

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+source private/setup.conf 
+if [[ "$ConfigChanged" != "y" ]]; then
+   echo "Please edit private/setup.conf!";
+   exit;
+fi
+./run-scripts stage1 
+reboot
