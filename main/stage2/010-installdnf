@@ -3,7 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-dnf update -y
 dnf install httpd mod_ssl git python-certbot-apache libunwind libicu npm -y
 
 exit "$err"
