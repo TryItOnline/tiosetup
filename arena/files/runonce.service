@@ -1,6 +1,6 @@
 [Unit]
 Description=Runs configured scripts once on boot
-After=network.target auditd.service
+After=network.target auditd.service systemd-resolved.service
 
 [Service]
 ExecStart=/bin/bash -c '/usr/local/bin/runonce >> /var/log/runonce.log 2>&1'
