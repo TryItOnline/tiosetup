@@ -9,4 +9,7 @@ restorecon -Rv /home/runner/.ssh/authorized_keys
 restorecon -Rv /srv/bin
 restorecon -Rv /srv/wrappers
 
+semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/.*/bin(/.*)?'
+restorecon -Rv /usr/lib /usr/lib64
+
 exit "$err"
