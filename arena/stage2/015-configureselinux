@@ -10,6 +10,10 @@ restorecon -Rv /srv/bin
 restorecon -Rv /srv/wrappers
 
 semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/.*/bin(/.*)?'
+semanage fcontext -a -s system_u -t bin_t '/usr/lib/node_modules/cheddar-lang/dist/cli(/.*)?'
+semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/clisp-.*/base(/.*)?'
+semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/maxima/.*/binary-sbcl(/.*)?'
+semanage fcontext -a -s system_u -t bin_t '/usr/lib/golang/pkg/tool/linux_amd64(/.*)?'
 restorecon -Rv /usr/lib /usr/lib64
 
 exit "$err"
