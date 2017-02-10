@@ -3,7 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-cat /etc/resolv.conf
 restorecon -Rv /usr/lib /usr/lib64
 chown -R root: /opt
 

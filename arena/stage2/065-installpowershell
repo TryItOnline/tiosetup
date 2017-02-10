@@ -3,7 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-cat /etc/resolv.conf
 mkdir -p tmp
 cd tmp
 wget http://archives.fedoraproject.org/pub/archive/fedora/linux/releases/19/Everything/x86_64/os/Packages/l/libicu-50.1.2-5.fc19.x86_64.rpm

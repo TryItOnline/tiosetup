@@ -3,7 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-cat /etc/resolv.conf
 adduser runner
 sudo -u runner mkdir -p /home/runner/.ssh
 sudo -u runner touch /home/runner/.ssh/authorized_keys

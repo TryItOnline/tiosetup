@@ -3,7 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-cat /etc/resolv.conf
 wget http://downloads.dlang.org/releases/2.x/2.073.0/dmd-2.073.0-0.fedora.x86_64.rpm
 dnf install dmd-2.073.0-0.fedora.x86_64.rpm -y
 rm -f dmd-2.073.0-0.fedora.x86_64.rpm

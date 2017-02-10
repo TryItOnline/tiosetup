@@ -3,7 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-cat /etc/resolv.conf
 semanage fcontext -a -t bin_t '/srv/bin(/.*)?'
 semanage fcontext -a -t bin_t '/srv/wrappers(/.*)?'
 restorecon -Rv /home/runner/.ssh/authorized_keys

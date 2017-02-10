@@ -3,7 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-cat /etc/resolv.conf
 python3 -m pip install --upgrade pip
 python2 -m pip install --upgrade pip
 python3 -m pip install exrex python-pcre hbcht sympy mathics

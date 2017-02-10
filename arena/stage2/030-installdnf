@@ -3,7 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-cat /etc/resolv.conf
 dnf install allegro5-devel allegro5-addon-ttf-devel allegro5-addon-image-devel allegro5-addon-audio-devel allegro5-addon-acodec-devel \
   ant bison bison-devel bsd-games chicken clang clisp clojure cmake dash emacs-nox erlang-erts fish flex flex-devel fsharp gc-devel gcc-c++ \
   gforth glib2-devel glibc-devel glibc-devel.i686 golang groovy gtkglext-libs haskell-platform icu java-1.?.0-openjdk java-9-openjdk-devel\

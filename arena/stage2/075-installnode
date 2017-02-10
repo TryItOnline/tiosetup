@@ -3,7 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-cat /etc/resolv.conf
 pushd /opt
 rm -rf node-v7.2.0-linux-x64
 wget https://nodejs.org/download/release/v7.2.0/node-v7.2.0-linux-x64.tar.gz
