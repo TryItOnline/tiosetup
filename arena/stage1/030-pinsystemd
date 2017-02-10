@@ -1,3 +1,0 @@
-#dnf install systemd-229-16.fc24 -y
-#dnf install 'dnf-command(versionlock)' -y
-#dnf versionlock add systemd
