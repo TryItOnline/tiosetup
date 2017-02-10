@@ -3,6 +3,7 @@
 err=0
 trap 'err=1' ERR
 
+cat /etc/resolv.conf
 rm -f /etc/security/limits.d/99-tio.conf
 cp files/99-tio.conf /etc/security/limits.d/99-tio.conf
 

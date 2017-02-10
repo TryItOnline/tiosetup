@@ -3,6 +3,7 @@
 err=0
 trap 'err=1' ERR
 
+cat /etc/resolv.conf
 mkdir -p tmp
 cd tmp
 wget https://haskell.org/platform/download/8.0.2/haskell-platform-8.0.2-unknown-posix--full-x86_64.tar.gz

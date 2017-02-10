@@ -3,6 +3,7 @@
 err=0
 trap 'err=1' ERR
 
+cat /etc/resolv.conf
 dnf update -y
 
 exit "$err"

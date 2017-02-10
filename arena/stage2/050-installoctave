@@ -3,6 +3,7 @@
 err=0
 trap 'err=1' ERR
 
+cat /etc/resolv.conf
 octave --eval "pkg install -forge symbolic"
 octave --eval "pkg rebuild -auto symbolic"
 
