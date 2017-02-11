@@ -1,0 +1,8 @@
+[Unit]
+Description=Timer for Try-it-online test suite for every language
+
+[Timer]
+OnCalendar=20:00
+
+[Install]
+WantedBy=timers.target

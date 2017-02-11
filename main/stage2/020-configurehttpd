@@ -28,6 +28,9 @@ sed -i "s/ServerName backend.tryitonline.net/ServerName $BACKEND/g" /etc/httpd/c
 
 sed -i 's/SSLEngine on/SSLEngine off/g' /etc/httpd/conf.d/ssl.conf
 sed -i 's/#ServerName www.example.com:80/ServerName 127.0.0.1:80/g' /etc/httpd/conf/httpd.conf
+if [ -f /etc/httpd/conf.d/welcome.conf ]; then
+  mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.bak
+fi
 
 chkconfig httpd on
 systemctl restart httpd

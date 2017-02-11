@@ -1,0 +1,9 @@
+domain prefix
+arena url
+(ssh key)
+port
+extended errors
+extended success
+test subset
+schedule
+(dns record)

@@ -1,0 +1,10 @@
+npm i frontail -g
+
+curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?LinkID=835025
+sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
+sudo ln -s /opt/dotnet/dotnet /usr/local/bin
+mkdir -p /root/waldo
+TMPDIR=/root/waldo HOME=/root dotnet restore >> /var/log/dotnetrestore 2>&1
+HOME=/root dotnet build >> /var/log/dotnetbuild 2>&1
+rm -rf /root/waldo
+

@@ -1,0 +1,13 @@
+{
+  "words": {
+    "MISSING": "color: red;",
+    "EXTRA": "color: red;",
+    "FAIL": "color: red;",
+    "PASS": "color: green;"
+  },
+  "lines": {
+    "FAIL": "font-weight: bold;",
+    "MISSING": "font-weight: bold;",
+    "EXTRA": "font-weight: bold;"
+  }
+}
