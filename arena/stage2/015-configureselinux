@@ -13,7 +13,7 @@ semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/swipl-.*/bin/x86_64-lin
 semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/node_modules/coffee-script/bin(/.*)?'
 semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/golang/bin(/.*)?'
 semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/node_modules/babel-cli/bin(/.*)?'
-semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/pypy-5.4.0/bin(/.*)?'
+semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/pypy-.*/bin(/.*)?'
 semanage fcontext -a -s system_u -t bin_t '/usr/lib/node_modules/cheddar-lang/dist/cli(/.*)?'
 semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/clisp-.*/base(/.*)?'
 semanage fcontext -a -s system_u -t bin_t '/usr/lib(64)?/maxima/.*/binary-sbcl(/.*)?'
