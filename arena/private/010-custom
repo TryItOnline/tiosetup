@@ -6,7 +6,7 @@
 err=0
 trap 'err=1' ERR
 
-dnf install screen -y
 pip install glances
+HOME=/root git config --global core.editor "nano"
 
 exit "$err"
