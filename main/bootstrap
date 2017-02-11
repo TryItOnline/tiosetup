@@ -1,5 +1,6 @@
 #!/bin/bash
 
+dnf update systemd -y
 source private/setup.conf 
 if [[ "$ConfigChanged" != "y" ]]; then
    echo "Please edit private/setup.conf!";
