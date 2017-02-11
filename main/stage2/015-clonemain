@@ -5,6 +5,7 @@ trap "err=1" ERR
 
 #TODO - read the variables
 TRYITONLINENET=www2.tryitonline.nz
+ARENA=arena2.tryitonline.nz
 TIORUN=tio2.tryitonline.nz
 
 BACKEND=backend2.tryitonline.nz
@@ -36,8 +37,8 @@ sed -i "s/tryitonline.net/$TRYITONLINENET/g" nexus.html
 sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" nexus.html
 cd ..
 cd backend.tryitonline.net
-sed -i "s/tryitonline.net/$TRYITONLINENET/g" run
-sed -i "s/tryitonline.net/$TRYITONLINENET/g" run-legacy
+sed -i "s/arena.tryitonline.net/$ARENA/g" run
+sed -i "s/arena.tryitonline.net/$ARENA/g" run-legacy
 cd ..
 
 mkdir -p /srv/tmp
