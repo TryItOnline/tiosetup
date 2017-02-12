@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# This script is executed in the end
+# add any custom commands you might want to execute here
+
+err=0
+trap 'err=1' ERR
+
+pip install --upgrade pip
+pip install glances
+HOME=/root git config --global core.editor "nano"
+
+exit "$err"

@@ -3,7 +3,7 @@
 err=0
 trap "err=1" ERR
 
-ARENA=arena2.tryitonline.nz
+source private/setup.conf 
 
 #TODO - provide instructions for generation the key pair
 mkdir -p $(getent passwd apache | cut -d: -f6)/.ssh

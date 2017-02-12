@@ -3,14 +3,7 @@
 err=0
 trap "err=1" ERR
 
-#TODO - read the variables
-TRYITONLINENET=www2.tryitonline.nz
-ARENA=arena2.tryitonline.nz
-TIORUN=tio2.tryitonline.nz
-
-BACKEND=backend2.tryitonline.nz
-SERVERCOSTS=this-is-a-site-copy
-FEEDBACK=this-is-a-site-copy
+source private/setup.conf 
 
 git clone https://github.com/TryItOnline/main-server.git
 yes | cp -r ./main-server/* /srv

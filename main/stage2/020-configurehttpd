@@ -3,13 +3,7 @@
 err=0
 trap "err=1" ERR
 
-#TODO - read the variables
-TRYITONLINENET=www2.tryitonline.nz
-TIORUN=tio2.tryitonline.nz
-BACKEND=backend2.tryitonline.nz
-#NEXUS=nexus.tryitonline.nz
-#TALK=talk.tryitonline.nz
-
+source private/setup.conf 
 
 yes | cp files/httpd/backend.tryitonline.net.conf /etc/httpd/conf.d/backend.tryitonline.net.conf
 yes | cp files/httpd/nexus.tryitonline.net.conf /etc/httpd/conf.d/nexus.tryitonline.net.conf
