@@ -1,10 +1,16 @@
 #!/bin/bash
 
-dnf update systemd -y
 source private/setup.conf 
 if [[ "$ConfigChanged" != "y" ]]; then
    echo "Please edit private/setup.conf!";
    exit;
 fi
-./run-scripts stage1 
-reboot
+dnf update systemd -y
+if [[ -z $(sestatus | grep "SELinux status:\s*enabled")  ]]; then
+    ./run-scripts stage1 
+    reboot
+else
+    echo "$(date)" >> /var/log/tioupd/010-createswap
+    ./stage1/010-createswap >> /var/log/tioupd/010-createswap 2>&1 
+    ./setup-main
+fi
