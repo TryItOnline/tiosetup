@@ -10,6 +10,7 @@ if [[ "$UseSavedCerts" != "y" ]]; then
 else
     certbot --staging --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN,$BACKEND --redirect
     tar xf private/letsencrypt.tar.gz -C /
+    systemctl restart httpd
 fi
 
 exit "$err"
