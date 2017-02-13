@@ -10,5 +10,8 @@ if [[ -z $(sestatus | grep "SELinux status:\s*enabled")  ]]; then
     ./run-scripts stage1 
     reboot
 else
+    mkdir -p /var/log/tioupd
+    echo "$(date)" >> /var/log/tioupd/010-installselinux
+    dnf install psmisc selinux-policy-sandbox policycoreutils-sandbox setroubleshoot selinux-policy-devel -y >> /var/log/tioupd/010-installselinux 2>&1
     ./setup-main
 fi

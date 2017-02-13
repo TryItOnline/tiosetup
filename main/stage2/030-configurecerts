@@ -5,9 +5,11 @@ trap "err=1" ERR
 
 source private/setup.conf 
 
-certbot --staging --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN,$BACKEND --redirect
-
-#TODO - copy existing certs
-
+if [[ "$UseSavedCerts" != "y" ]]; then
+    certbot --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN,$BACKEND --redirect
+else
+    certbot --staging --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN,$BACKEND --redirect
+    tar xf letsencrypt.tar.gz -C /
+fi
 
 exit "$err"
