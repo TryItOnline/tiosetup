@@ -3,8 +3,10 @@
 err=0
 trap "err=1" ERR
 
-firewall-cmd --permanent --add-port=80/tcp
-firewall-cmd --permanent --add-port=443/tcp
-firewall-cmd --reload
+if which firewall-cmd; then 
+  firewall-cmd --permanent --add-port=80/tcp
+  firewall-cmd --permanent --add-port=443/tcp
+  firewall-cmd --reload
+fi
 
 exit "$err"
