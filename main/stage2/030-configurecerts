@@ -9,7 +9,7 @@ if [[ "$UseSavedCerts" != "y" ]]; then
     certbot --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN,$BACKEND --redirect
 else
     certbot --staging --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN,$BACKEND --redirect
-    tar xf letsencrypt.tar.gz -C /
+    tar xf private/letsencrypt.tar.gz -C /
 fi
 
 exit "$err"
