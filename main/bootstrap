@@ -10,6 +10,8 @@ if [[ -z $(sestatus | grep "SELinux status:\s*enabled")  ]]; then
     ./run-scripts stage1 
     reboot
 else
-    dnf install psmisc selinux-policy-sandbox policycoreutils-sandbox setroubleshoot selinux-policy-devel -y
+    rm -f stage1/910-installrunonce
+    rm -f stage1/920-setcontinue
+    ./run-scripts stage1 
     ./setup-main
 fi
