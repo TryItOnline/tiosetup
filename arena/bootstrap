@@ -10,10 +10,7 @@ if [[ -z $(sestatus | grep "SELinux status:\s*enabled")  ]]; then
     ./run-scripts stage1 
     reboot
 else
-    mkdir -p /var/log/tioupd
-    echo "$(date)" >> /var/log/tioupd/010-createswap
-    ./stage1/010-createswap >> /var/log/tioupd/010-createswap 2>&1 
-    echo "$(date)" >> /var/log/tioupd/015-installselinux
-    dnf install psmisc selinux-policy-sandbox policycoreutils-sandbox setroubleshoot selinux-policy-devel -y >> /var/log/tioupd/015-installselinux 2>&1
+    ./stage1/010-createswap
+    dnf install psmisc selinux-policy-sandbox policycoreutils-sandbox setroubleshoot selinux-policy-devel -y
     ./setup-main
 fi
