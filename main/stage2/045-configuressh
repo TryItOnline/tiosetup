@@ -12,7 +12,6 @@ yes | cp private/id_rsa $(getent passwd apache | cut -d: -f6)/.ssh/id_rsa
 yes | cp private/id_rsa.pub $(getent passwd apache | cut -d: -f6)/.ssh/id_rsa.pub
 yes | cp files/ssh/config $(getent passwd apache | cut -d: -f6)/.ssh/config
 
-
-sed -i "s/arena.tryitonline.net/$ARENA/g" run
+sed -i "s/arena.tryitonline.net/$ARENA/g" $(getent passwd apache | cut -d: -f6)/.ssh/config
 
 exit "$err"
