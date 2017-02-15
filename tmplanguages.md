@@ -23,7 +23,7 @@ repository if/when build system is implemented.
 
 - dnf - installed with `dnf install` from a downloaded image
 - fix - does not require build, but require something else to make it work on tio. See below
-- no - does not requite build
+- no - does not require build
 - script - uses language developer provided script to build (and possibly tio-provided script, if required)
 
 The following indicate building with this compiler or tool:
