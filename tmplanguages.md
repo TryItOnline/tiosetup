@@ -50,7 +50,7 @@ As a rule all of these are installed with a tio-provided script of various compl
 ## Notes
 
 - binary in repo - compiled binary is provided in the github repo
-- end of life - these langauges will never get updated which is indicated either by their location in a repository of abandoned languages (starry, thutu, underload) or because they are of an older version that presents historical interest (bracylog, fission, julia)
+- end of life - these langauges will never get updated which is indicated either by their location in a repository of abandoned languages (starry, thutu, underload) or because they are of an older version that presents historical interest (brachylog, fission, julia)
 - has tio github repo - the language implementation was copied to a tio github repo. This typicaly means that the language is no longer maintained and does not have it's own repository. Fission2 is forked because it has not been updated for awhile and need changes to be compiled on modern stricter compilers without modification.
 - license required - Dyalog APL is provided by Dyalog, through obtaining a license from them and dowmloading the language from customers download area on their website.
 - no version - this is website hosted language, where the language archive does not have a version number as part of the url. In most cases these are going to be never updated. In some case the url may indicate the latest version and might be updated (such as arnoldc).
