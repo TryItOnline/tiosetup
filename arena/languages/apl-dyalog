@@ -8,6 +8,6 @@ unzip linux_64_15.0.29007_unicode.zip
 rpm2cpio linux_64_15.0.29007_unicode.x86_64.rpm | cpio -idmv -D /
 rm -f linux_64_15.0.29007_unicode.x86_64.deb
 rm -f linux_64_15.0.29007_unicode.x86_64.rpm
-#rm -f linux_64_15.0.29007_unicode.zip
+rm -f linux_64_15.0.29007_unicode.zip
 
 exit "$err"
