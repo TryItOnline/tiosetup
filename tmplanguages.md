@@ -1,7 +1,7 @@
 # Languages
 
 This is a temporary list of supported languages to better understand
-how the get built on tio. This table is not intended to be maintained
+how they get built on tio. This table is not intended to be maintained
 but will probably live on in a form of json file somewhere in the source
 repository if/when build system is implemented.
 
@@ -22,7 +22,7 @@ repository if/when build system is implemented.
 ## Builds
 
 - dnf - installed with `dnf install` from a downloaded image
-- fix - does not requite build, but require something else to make it work on tio. See below
+- fix - does not require build, but require something else to make it work on tio. See below
 - no - does not requite build
 - script - uses language developer provided script to build (and possibly tio-provided script, if required)
 
