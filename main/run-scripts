@@ -33,6 +33,11 @@ for i in $(LC_ALL=C; echo ${1%/}/*) ; do
     $i >> "$LOGS/$(basename $i).log" 2>&1 
     status="$?"
     end=`date +%s`
+    if [ $status ]; then
+      $status = "SUCCESS"
+    else
+      $status = "FAILURE: $status"
+    fi
     echo "$(date) Executed  $(basename $i)... $(formattime $((end-start))) {$status}"
     logger -t "run-scripts[$$]" "($1) finished $(basename $i) $(formattime $((end-start))) {$status}"
   fi
