@@ -10,4 +10,5 @@ make -f /usr/share/selinux/devel/Makefile arena.pp
 semodule -i arena.pp
 rm arena.*
 
-exit "$err"
+#exit "$err"
+exit 1
