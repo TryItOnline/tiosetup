@@ -130,10 +130,10 @@ fernando|github|no|python|has tio github repo
 feu|github|no|ruby|
 fish|gist|no|python|
 fish-shell|ext-dnf|no||
-fission|github|clang|c++|has tio github repo|
-fission2|github|clang|c++|has tio github repo|
+fission|github|clang|c++|has tio github repo
+fission2|github|clang|c++|has tio github repo
 focal|website|make|c|url version
-foo|website|gcc|c|no version
+foo|github|gcc|c|has tio github repo
 forte|github|no|ruby|
 forth-gforth|fedora|no||
 fourier|github|no|python|

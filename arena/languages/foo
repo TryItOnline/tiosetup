@@ -4,13 +4,9 @@ err=0
 trap 'err=1' ERR
 
 rm -rf foo
-mkdir -p foo
+https://github.com/TryItOnline/Foo.git foo
 cd foo
-wget http://feky.bizhat.com/apps/foo.tar.gz
-tar zxvf foo.tar.gz
-rm -f foo.tar.gz
 gcc foo.c -o foo
 cd ..
-
 
 exit "$err"
