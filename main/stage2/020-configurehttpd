@@ -6,7 +6,7 @@ trap "err=1" ERR
 source private/setup.conf 
 
 yes | cp files/httpd/backend.tryitonline.net.conf /etc/httpd/conf.d/backend.tryitonline.net.conf
-yes | cp files/httpd/nexus.tryitonline.net.conf /etc/httpd/conf.d/nexus.tryitonline.net.conf
+yes | cp files/httpd/nexus.tryitonline.net.conf /etc/httpd/conf.d/znexus.tryitonline.net.conf
 yes | cp files/httpd/talk.tryitonline.net.conf /etc/httpd/conf.d/talk.tryitonline.net.conf
 yes | cp files/httpd/tio.run.conf /etc/httpd/conf.d/tio.run.conf
 yes | cp files/httpd/tryitonline.net.conf  /etc/httpd/conf.d/tryitonline.net.conf 
