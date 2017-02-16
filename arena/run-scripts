@@ -33,7 +33,7 @@ for i in $(LC_ALL=C; echo ${1%/}/*) ; do
     $i >> "$LOGS/$(basename $i).log" 2>&1 
     status="$?"
     end=`date +%s`
-    if [ $status ]; then
+    if [ "$status" -eq "0" ]; then
       status="SUCCESS"
     else
       status="FAILURE: $status"
