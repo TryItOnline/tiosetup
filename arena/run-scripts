@@ -34,9 +34,9 @@ for i in $(LC_ALL=C; echo ${1%/}/*) ; do
     status="$?"
     end=`date +%s`
     if [ $status ]; then
-      $status = "SUCCESS"
+      status = "SUCCESS"
     else
-      $status = "FAILURE: $status"
+      status = "FAILURE: $status"
     fi
     echo "$(date) Executed  $(basename $i)... $(formattime $((end-start))) {$status}"
     logger -t "run-scripts[$$]" "($1) finished $(basename $i) $(formattime $((end-start))) {$status}"
