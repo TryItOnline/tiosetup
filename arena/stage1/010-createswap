@@ -5,7 +5,7 @@ trap 'err=1' ERR
 
 source private/setup.conf 
 
-if [[! -z $SwapfileSize ]]; then
+if [[ ! -z $SwapfileSize ]]; then
     dd if=/dev/zero of=/swapfile bs=1024 count="$SwapfileSize"
     chmod 0600 /swapfile
     mkswap /swapfile
