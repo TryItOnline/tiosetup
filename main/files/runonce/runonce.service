@@ -1,10 +1,1 @@
-[Unit]
-Description=Runs configured scripts once on boot
-After=network-online.target auditd.service 
-Wants=network-online.target
-
-[Service]
-ExecStart=/bin/bash -c '/usr/local/bin/runonce >> /var/log/runonce.log 2>&1'
-
-[Install]
-WantedBy=multi-user.target
+../../../common/runonce/runonce.service
