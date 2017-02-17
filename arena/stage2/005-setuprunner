@@ -10,6 +10,5 @@ sudo -u runner chmod 640 /home/runner/.ssh/authorized_keys
 sudo -u runner chmod 700 /home/runner/.ssh
 cat private/id_rsa.pub >> /home/runner/.ssh/authorized_keys
 chattr +i  ~runner
-ln -st /usr/local/sbin /root/TioSetup/misc/*
 
 exit "$err"
