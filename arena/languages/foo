@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 rm -rf foo
-https://github.com/TryItOnline/Foo.git foo
+git clone https://github.com/TryItOnline/Foo.git foo
 cd foo
 gcc foo.c -o foo
 cd ..
