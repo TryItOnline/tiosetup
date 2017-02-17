@@ -1,0 +1,22 @@
+#!/bin/bash
+
+source private/setup.conf 
+if [[ "$ConfigChanged" != "y" ]]; then
+   echo "Please edit private/setup.conf!";
+   exit;
+fi
+
+# we run dnf update -y later, if we start logging to journald before that
+# our logs can get screwed up because of different versiond of journald
+# thus let's update systemd first, to avoid this problem altogether
+dnf update systemd -y
+
+if [[ -z $(sestatus | grep "SELinux status:\s*enabled")  ]]; then
+    ./run-scripts stage1 
+    reboot
+else
+    rm -f stage1/910-installrunonce
+    rm -f stage1/920-setcontinue
+    ./run-scripts stage1 
+    ./setup-main
+fi
