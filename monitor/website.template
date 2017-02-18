@@ -1,7 +1,0 @@
-<VirtualHost *:80>
-    ProxyPass "/"  "http://127.0.0.1:81/"
-    ProxyPassReverse "/"  "http://127.0.0.1:81/"
-    ServerName monitor.tryitonline.nz
-    ErrorLog /var/log/monitor.tryitonline.net.error.log
-    CustomLog /var/log/monitor.tryitonline.net.access.log combined
-</VirtualHost>
