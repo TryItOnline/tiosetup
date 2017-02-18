@@ -1,5 +1,10 @@
 #!/bin/bash 
 
+ARENA=arena.tryitonline.nz
+if [[ ! -z $1 ]]; then
+    ARENA=$1
+fi
+
 rm -f $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts
-sudo -u apache ssh-keyscan arena.tryitonline.nz >> $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts
-sudo -u apache ssh-keyscan $(dig +short arena.tryitonline.nz) >> $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts
+sudo -u apache ssh-keyscan $ARENA >> $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts
+sudo -u apache ssh-keyscan $(dig +short $ARENA) >> $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts
