@@ -26,8 +26,9 @@ sed -i "s://tryitonline.net://$TRYITONLINENET:g" nexus.html
 sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" nexus.html
 cd ..
 cd backend.tryitonline.net
-sed -i "s/\s*ssh_user_host=.*/ssh_user_host=runner@$ARENA/g" run
-sed -i "s/arena.tryitonline.net/$ARENA/g" run-legacy
+yes | cp -r etc/cache.default etc/cache
+yes | cp -r etc/run.default etc/run
+sed -i "s/\s*ssh_user_host=.*/ssh_user_host=runner@$ARENA/g" etc/run
 cd ..
 
 mkdir -p /srv/tmp
