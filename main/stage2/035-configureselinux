@@ -10,7 +10,7 @@ semanage fcontext -a -t httpd_sys_rw_content_t '/srv/store(/.*)?'
 semanage fcontext -a -t httpd_sys_content_t '/srv/tio.run(/.*)?'
 semanage fcontext -a -t httpd_sys_rw_content_t '/srv/tmp(/.*)?'
 semanage fcontext -a -t httpd_sys_content_t '/srv/tryitonline.net(/.*)?'
-semanage fcontext -m -s system_u -t etc_t '/srv/etc(/.*)?'
+semanage fcontext -a -s system_u -t etc_t '/srv/etc(/.*)?'
 semanage fcontext -a -s system_u -t lib_t '/srv/lib(/.*)?'
 
 restorecon -Rv /srv/backend.tryitonline.net
