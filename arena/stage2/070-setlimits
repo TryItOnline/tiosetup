@@ -6,4 +6,7 @@ trap 'err=1' ERR
 rm -f /etc/security/limits.d/99-tio.conf
 cp files/ulimits.conf /etc/security/limits.d/99-tio.conf
 
+rm -f /etc/sysctl.d/99-tio.conf
+cp files/sysctl.d.conf /etc/sysctl.d/99-tio.conf
+
 exit "$err"
