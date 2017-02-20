@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+pushd /root/TioSetup/arena
+stage2/015-clonemain
+popd
