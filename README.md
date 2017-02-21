@@ -159,7 +159,7 @@ Update `private/setup.conf` as per below.
 
 ```Bash
 # The following four settings are for the domain names used in the setup
-# Please read more about them in accompaning documentation.
+# Please read more about them in accompanying documentation.
 # Domain where https://tryitonline.net will be hosted
 TRYITONLINENET=www2.tryitonline.nz
 # Domain where https://tio.run will be hosted
@@ -179,12 +179,12 @@ JOURNALRETENTION="1week"
 # UseSavedCerts="n"
 # Note that LetsEncrypt limits you to 5 cert requests per week so you do not want
 # to keep this setting saying n if your first attempt to install the mirror failed
-# see accompaning documentation to find out how to back up generated letsencrypt
-# certifcates in this case
+# see accompanying documentation to find out how to back up generated letsencrypt
+# certificates in this case
 UseSavedCerts="y"
 # In order for the install to succeed you need to provide a public and private ssh key
-# that will be used for establishing ssh connection between backemd and arena. See
-# accompaning documentation to find out how to generate them.
+# that will be used for establishing ssh connection between backend and arena. See
+# accompanying documentation to find out how to generate them.
 # Put the private key to private/id_rsa
 # Put the public key to public/id_rsa.pub
 # letsencrypt.tar.gz
