@@ -101,19 +101,19 @@ In order to enable SeLinux a reboot must be performed. In this case everything b
 Once you cloned the repository you will need to make changes to files in the `arena\private` directory. Here is `setup.conf`:
 
 ```Bash
-# This number should be dividable by 1024. This is the size of the swap file.
-# On 512MB of ram, size smaller than 1572864 may lead to some languages failing to compile
+# This number should be divisible by 1024. This is the size of the swap file.
+# On 512MB of RAM, a size smaller than 1572864 may lead to some languages failing to compile
 SwapfileSize="1572864"
 #Sets MaxRetentionSec in journald.conf
 JOURNALRETENTION=1week
-# In order for the scripts to work, you need to download 64bit Dyalog APL to /opt.
-# You need a valid Dyalog license for that. 
+# In order for the scripts to work, you need to download 64-bit Dyalog APL to /opt.
+# You need a valid Dyalog license for that.
 # The install script depends on the Dyalog APL archive name, which has a version,
-# thus, for a different version of the archive to work you will need to modify 
+# thus, for a different version of the archive to work you will need to modify
 # languages/apl-dyalog script. If you do not have the license you
 # can run the setup script without the Dyalog APL archive, but Dyalog APL won't be installed.
 # In order to acknowledge that you configured all required information in
-# the private folder set the following line to
+# the private folder, set the following line to
 # ConfigChanged="y"
 ConfigChanged="n"
 ```
