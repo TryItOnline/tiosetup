@@ -6,9 +6,9 @@ if [[ "$ConfigChanged" != "y" ]]; then
    exit;
 fi
 
-# we run dnf update -y later, if we start logging to journald before that
-# our logs can get screwed up because of different versiond of journald
-# thus let's update systemd first, to avoid this problem altogether
+# We run dnf update -y later, if we start logging to journald before that
+# our logs can get screwed up because of different versiond of journald.
+# Therefore, let's update systemd first, to avoid this problem altogether.
 dnf update systemd -y
 
 if [[ -z $(sestatus | grep "SELinux status:\s*enabled")  ]]; then
