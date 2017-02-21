@@ -64,7 +64,6 @@ Thus, a recommended sequence would be following:
 After that Certbot will be able to validate the fact that it's you who are controlling these domains, and generate the certificates for you.
 Note, that LetsEncrypt limits you to 5 sets of certificates per week for each domain combination you use. Thus, if you are going to run the setup scripts multiple times (for testing), it is advisable to `tar czf letsencrypt.tar.gz /etc/letsencrypt` after the first tun of the setup scripts, so that you can reuse these certificates on the next run, and thus avoid hitting the rate limit.
 
-
 ## Generating ssh key
 
 Backend communicates with arena via ssh. Because of this there should be a private ssh key on the Main server and corresponding public key on the arena server.
@@ -121,7 +120,7 @@ ConfigChanged="n"
 Setup scripts tested to be worked on Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file.
 if you comment out `SwapfileSize` setting, no swap file will be created.
 More information about `journald` configuration can be found [here](https://www.freedesktop.org/software/systemd/man/journald.conf.html). Look for `MaxRetentionSec` setting.
-Change to `ConfigChanged="y"` to acknowledge that you edited all files in `private` to your satisfaction. Setup scripts will run all `+x` scripts in `private`, 
+Change to `ConfigChanged="y"` to acknowledge that you edited all files in `private` to your satisfaction. Setup scripts will run all `+x` scripts in `private`,
 so review `private/010-custom` and add more scripts if needed.
 
 Below is a general scenario of starting arena setup:
@@ -149,7 +148,6 @@ Note that teh script can reboot the box if needed. Logs can be found in various 
 - `/var/log/runonce` directory - continuation after reboot logs
 - `/var/log/tioupd` directory - logs from individual scripts from `stage1`, `stage2`, and `arena\languages` folders. You can `tail` individual items from here for long-running sub-scripts.
 - `journalctl -t run-scripts` or `tiolog` for overall installation progress. You can tail these commands with `-f`.
-
 
 ## Setting up main server
 
@@ -219,4 +217,3 @@ Monitor execution same as described in previous section.
 Setup scripts for the main server use [`ssh-keyscan`](http://man.openbsd.org/ssh-keyscan) to add arena into the list of know_hosts so that SSH connection is possible. This implies that arena server is already up and running, so it is recommended to run this script *after* arena has been setup.
 
 Digital Ocean and Vultr offer the private IP feature, where all the traffic in the private network is unmetered. You might want to use this feature. If you do, modify your host file on the main server so that your arena DNS resolves to the private IP of your arena.
-
