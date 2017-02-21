@@ -1,334 +1,221 @@
 # Setting up Try it Online
 
-**These instructions are now outdated. I'm working on new ones**
+## What is Try It Online
 
-## What is Try It Online?
-
-<https://tryitonline.net> is a community-maintained web site for hosting solutions to [code golf](https://en.wikipedia.org/wiki/Code_golf) puzzles presented on <http://codegolf.stackexchange.com/>. It can be used by anyone for free to quickly try out and share code snippents in a big number of practical and recreational programming languages.
+<https://tryitonline.net> is a community-maintained web site for hosting solutions to [code golf](https://en.wikipedia.org/wiki/Code_golf) puzzles presented on <http://codegolf.stackexchange.com/>. It can be used by anyone for free to quickly try out and share code snippets in a big number of practical and recreational programming languages.
 
 ## Setup Overview
 
 These instructions are written to help setting up a new instance of <http://tryitonline.net>.
-Since TryItOnline can run on a variaty of linux systems, it is not possible to test
-these on all of them. These instructions were tested on Fedora 24
-and are aimed to simplify most labourious parts of the setup process, however some commands,
-path, etc, might need changing on other linux systems, use your judgement. The setup makes use of [selinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) support of which waries between different distributions of Linux.
 
-The setup consists of the 4 domains:
+TIO currently runs on 4 domains which are hosted on 2 servers:
 
-- [tryitonline.net](https://github.com/TryItOnline/tryitonline.net) (Serves the front page, provides some assets for the rest of the sites)
-- [tio.run](https://github.com/TryItOnline/tio.run) (Tio Nexus and Tio v2 front end, short url for permalinks)
-- [backend.tryitonline.net](https://github.com/TryItOnline/backend.tryitonline.net) (Serves web api calls from tio.run)
-- [arena.tryitonline.net](https://github.com/TryItOnline/arena.tryitonline.net) (Sandbox where the actual code is executed, running on selinux and accessed by the backend.tryitonline.net via SSH)
+- [Main server](https://github.com/TryItOnline/main-server.git) - split across 3 domains:
+  - tryitonline.net - serves the front page, provides some assets for the rest of the sites
+  - tio.run - Tio Nexus and Tio v2 front end, short url for permalinks
+  - backend.tryitonline.net - serves web api calls from tio.run
+- [Arena server](https://github.com/TryItOnline/arena-server.git) - sandbox where the actual code is executed, running on SeLinux and accessed by the backend.tryitonline.net via SSH
 
-Sources for each of these are located in the corresponding github repositiry named after the respective domain.
+The setup makes use of [SeLinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) support of which varies between different distributions of Linux.
 
 [talk.tryitonline.net](http://talk.tryitonline.net) domain is setup to redirect to Stack Exchange chat about the tryitonline service. Setting this domain up is not covered by this guide.
 
-The domain names in the list above are hardcoded in the source code. Before you start, you need
-to decide what domain names are you going to be using for each of the four of them. When this guide
-talks about "your tryitonline.net" domain name or your "tio.run" domain name, these are
-what you should be using.
+This setup runs on **Fedora 25**. It was tested on those two hosting providers:
 
-We are going to use two server setup. One server will host tryitonline.net, tio.run, backend.tryitonline.net
-and the other will host arena.tryitonline.net.
+- <http://vultr.com>
+- <http://digitalocean.com>
 
-All commands below unless specified, are run as root
+It is assumed that you have a freshly provisioned instance on any of the above. All scripts a run as root.
 
-## Setting up tryitonline.net, tio.run and backend.tryitonline.net
+## Vultr vs Digital Ocean
 
-Run the following commands.
+It turns out, there there are enough discrepancies between Vultr and Digital Ocean images for Fedora 25, that it affects our setup scripts.
 
-Make sure you have apache with ssl and git:
+Below outlined the main differences that are useful to be aware of:
 
-```Shell
-dnf install httpd mod_ssl git -y
+Vultr|Digital Ocean|Comment
+-----|-------------|-------
+5$ vm has 768MB of memory|5$ vm has 512MB of memory|As of the moment of writing both main and arena will happily run on the 512MB VM. However, sometimes 512MB or even 768MB is not enough for installing certain languages. Thus a swap file is recommended. The size of the swap file can be reduced, or the swap file can be disabled, after the installation. The provided scripts create a swap file but do not disable it after installation.
+5$ vm has 15GB of SSD|5$ vm has 20GB of SSD| With 1.5GB swapfile there is barely enough space on vultr for all the languages. With log files constantly growing the VM can quickly get out of disk space. Either use a VM with bigger disk, or have a solution in place to watch/free remaining disk space.
+SeLinux is disabled|SeLinux is enabled|Vultr image has SeLinux disabled. In order to enable SeLinux a reboot is required. Because of this the setup scripts, if SeLinux is disabled, install runonce service that continues the setup script after reboot
+Some dnf packages are installed|Minimal dnf packages are installed|Vultr seems to have more up-to-date images with `dnf update` run on them at some point in the past, things like git, nano and wget may be pre-installed. Digital Ocean contains minimal system with no `dnf update` run. If `dnf upfate` is not run on Digital Ocean before running `dnf install` certain package installation may fail. Setup scripts account for this difference.
+No downsizing VM|Can downsize VM|Digital Ocean allows upsizing and downsizing images as long as SSD allocation is not changed. Thus, with Digital Ocean it's advisable to upsize the VM (to the 20$ size) before running the setup scripts and downsize when finished. This will virtually guarantees, that setup won't run out of memory. We've seen during our testing an occasional killing of a process by OOM killer, which prevents setup from succeeding (even with the swap file). It never happened if an instance was upsize first. Vultr installation was not noticed to go out of memory with 768MB VM and 1.5GB of swap. `dnf install` commands were split to several batches because it uses less memory and allows the setup scripts to finish.
+Supports startup scripts|No startup scripts|Vultr allows you to specify a script which is run on the first boot of freshly provisioned VM. This script is also run on the first boot when rebuilding an existing VM. This is convenient when tweaking the setup scripts. Digital Ocean does not provide this facility.
+
+## Domain registration and certificates
+
+In order to setup TIO, you will need the following sub-domains created withing your domains. Note that these are the ones that TIO itself uses, yours, obviously will be different:
+
+- tryitonline.net
+- tio.run
+- backend.tryitonline.net
+- arena.tryitonline.net
+
+You will need to provide yor domain names to the setup scripts.
+
+Our setup scripts use [LetsEncrypt](https://letsencrypt.org/) for SSL certificates, which is free service. You are welcome to use your own certificates, but you will need to update the setup scripts accordingly.
+LetsEncrypt uses [Certbot](https://certbot.eff.org/) for generating SSL certificates and configuring apache to use them. In order for this to work, the domains that you are going to be using in your setup has to point to the the VM IP address that you are running the setup scripts on.
+Thus, a recommended sequence would be following:
+
+- Register one or more domains to use with tio
+- Provision a TIO Main Server machine
+- Point the three domains (your versions of tryitonline.net, tio.run and backend.tryitonline.net) to the VM IP
+
+After that Certbot will be able to validate the fact that it's you who are controlling these domains, and generate the certificates for you.
+Note, that LetsEncrypt limits you to 5 sets of certificates per week for each domain combination you use. Thus, if you are going to run the setup scripts multiple times (for testing), it is advisable to `tar czf letsencrypt.tar.gz /etc/letsencrypt` after the first tun of the setup scripts, so that you can reuse these certificates on the next run, and thus avoid hitting the rate limit.
+
+
+## Generating ssh key
+
+Backend communicates with arena via ssh. Because of this there should be a private ssh key on the Main server and corresponding public key on the arena server.
+use `ssh-keygen` command on Linux to generate `id_rsa` private key and `id_rsa.pub` public key. You will need to provide these to the setup scripts.
+
+## Dyalog APL
+
+TIO has a license to run [Dyalog APL](http://dyalog.com/). Note, that if you do not have a license, and thus Dyalog install archive, the rest of the setup scripts will work fine, and only the Dyalog APL script will show a error which can safely be ignored. It does not affect the rest of languages on TIO. If you do have [a license](http://dyalog.com/prices-and-licences.htm), then you'll need to provide the Linux x64 install archive to the setup scripts.
+
+## Setup scripts structure
+
+Top level folders:
+
+- `arena` - scripts used for setting up arena server
+- `common` - scripts symlinked from both arena and main folders
+- `main` - script used for setting up main server
+- `misc` - miscellaneous scripts *not* used by the setup scripts. Mainly convenience for maintainers
+
+- `arena/files`, `main/files` - those are various files used by setup scripts during setup process.
+- `arena/languages` - scripts for installing individual languages. Note that not all language are installed with these scripts. Some languages come from dnf, pip, npm or other sources.
+- `arena/logsamples` - these are not used by setup scripts, and just a samples of what installation logs should look like. These are not maintained, so yours may look slightly differently.
+- `arena/private`, `main/private` - these are files that contain information that may vary from installation to installation. See below.
+- `arena/stage1`, `main/stage1` - scripts executed before reboot (if reboot required)
+- `arena/stage2`, `main/stage2`- scripts executed after reboot (if reboot required)
+
+In order to enable SeLinux a reboot must be performed. In this case everything before reboot is executed in Stage 1, and everything else is executed in Stage 2. If reboot is not required both Stage 1 and Stage 2 is executed without reboot. `runeonce` service from `common` folder is installed to continue after reboot in case reboot is required.
+
+- `arena/bootstrap`, `main/bootstrap` - this is the script that needs to be run to start the setup process
+- `arena/run-scripts`, `main/run-scripts` - a utility script that executes all scripts for a specified directory, such as `stage1`, `stage2` or `arena\languages`.
+- `arena/setup-main`, `main/setup-main` - script that continues after reboot, if reboot is required
+
+## Setting up arena
+
+Once you cloned the repository you will need to make changes to files in the `arena\private` directory. Here is `setup.conf`:
+
+```Bash
+# This number should be dividable by 1024. This is the size of the swap file
+# on 512MB or ram smaller than 1572864 may lead to some languages failing to compile
+SwapfileSize="1572864"
+#Sets MaxRetentionSec in journald.conf
+JOURNALRETENTION=1week
+# In order for the scripts to work you need to download 64bit Dyalog APL to /opt
+# you need a valid Dyalog license for that. Put the dyalog archive in
+# /opt for differnt versions languages/apl-dyalog
+# will need to be updated accordingly to work. If you do not have the license you
+# can run the script without, but dyalog apl won't be installed and won't be available
+# In order to acknowledge that you configured all required information in
+# the private folder set the following line to
+# ConfigChanged="y"
+ConfigChanged="n"
 ```
 
-Clone the three web sites.
+Setup scripts tested to be worked on Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file.
+if you comment out `SwapfileSize` setting, no swap file will be created.
+More information about `journald` configuration can be found [here](https://www.freedesktop.org/software/systemd/man/journald.conf.html). Look for `MaxRetentionSec` setting.
+Change to `ConfigChanged="y"` to acknowledge that you edited all files in `private` to your satisfaction. Setup scripts will run all `+x` scripts in `private`, 
+so review `private/010-custom` and add more scripts if needed.
 
-```Shell
-cd /var/www
-git clone https://github.com/TryItOnline/tryitonline.net.git
-git clone https://github.com/TryItOnline/tio.run.git
-git clone https://github.com/TryItOnline/backend.tryitonline.net.git
+Below is a general scenario of starting arena setup:
+
+```Bash
+cd /root
+dnf install wget git nano screen -y
+
+#put linux_64_15.0.29007_unicode.zip to /opt (make sure that the version matches the one mentioned in `arena/langauges/apl-dyalog`)
+
+git clone https://github.com/TryItOnline/TioSetup.git
+cd TioSetup/arena
+
+# put your public key you generated earlier for connection to arena in private/id_rsa.pub
+
+# edit private/setup.conf
+
+# edit /private/010-custom script if required, or add more scripts to /private to execute at the end of setup process
+
+./bootstrap
 ```
 
-You might want to delete .git, README.md, etc if you want, or put specific permissions
-so they do not get served by httpd.
+Note that teh script can reboot the box if needed. Logs can be found in various places:
 
-To substitute the domain names in the code base, edit the following script to include your domain
-instead of "your.domain" and run it.
+- `/var/log/runonce` directory - continuation after reboot logs
+- `/var/log/tioupd` directory - logs from individual scripts from `stage1`, `stage2`, and `arena\languages` folders. You can `tail` individual items from here for long-running sub-scripts.
+- `journalctl -t run-scripts` or `tiolog` for overall installation progress. You can tail these commands with `-f`.
 
-```Shell
-cd tryitonline.net
-sed -i 's/tryitonline.net/tryitonline.your.domain/g' manifest.json
-sed -i 's/tio.run/tio.your.domain/g' manifest-nexus.json
-sed -i 's/tryitonline.net/tryitonline.your.domain/g' index.html
-sed -i 's/tio.run/tio.your.domain/g' index.html
-cd ..
-cd tio.run
-sed -i 's/backend.tryitonline.net/backend.tryitonline.your.domain/g' index.html
-sed -i 's/tio.run/tio.your.domain/g' index.html
-sed -i 's/server-costs@tryitonline.net/this-is-a-site-copy/g' index.html
-sed -i 's/feedback@tryitonline.net/this-is-a-site-copy/g' index.html
-sed -i 's/tryitonline.net/tryitonline.your.domain/g' index.html
-sed -i 's/talk.tryitonline.your.domain/talk.tryitonline.net/g' index.html
-sed -i 's/backend.tryitonline.net/backend.tryitonline.your.domain/g' nexus.html
-sed -i 's/tio.run/tio.your.domain/g' nexus.html
-sed -i 's/server-costs@tryitonline.net/this-is-a-site-copy/g' nexus.html
-sed -i 's/feedback@tryitonline.net/this-is-a-site-copy/g' nexus.html
-sed -i 's/tryitonline.net/tryitonline.your.domain/g' nexus.html
-sed -i 's/talk.tryitonline.your.domain/talk.tryitonline.net/g' nexus.html
-cd ..
-cd backend.tryitonline.net
-sed -i 's/tryitonline.net/tryitonline.your.domain/g' run
-sed -i 's/tryitonline.net/tryitonline.your.domain/g' run-legacy
-cd ..
+
+## Setting up main server
+
+Most of the points from previous sections also apply here.
+
+Update `private/setup.conf` as per below.
+
+```Bash
+# The following four settings are for the domain names used in the setup
+# Please read more about them in accompaning documentation.
+# Domain where https://tryitonline.net will be hosted
+TRYITONLINENET=www2.tryitonline.nz
+# Domain where https://tio.run will be hosted
+TIORUN=tio2.tryitonline.nz
+# Domain where https://backend.tryitonline.net will be hosted
+BACKEND=backend2.tryitonline.nz
+# Domain where arena.tryitonline.net will be hosted
+ARENA=arena2.tryitonline.nz
+# This is your email used for LetsEncrypt certificate revocations
+EMAIL=letsencrypt@tryitonline.nz
+#Sets MaxRetentionSec in journald.conf
+JOURNALRETENTION=1week
+# put your backed up let's encrypt certificates from previous TIO installation in
+# private/letsencrypt.tar.gz and leave this setting alone
+# Alternatively if you do not have the certs yet and would like to generate them
+# change the line to
+# UseSavedCerts="n"
+# Note that LetsEncrypt limits you to 5 cert requests per week so you do not want
+# to keep this setting saying n if your first attempt to install the mirror failed
+# see accompaning documentation to find out how to back up generated letsencrypt
+# certifcates in this case
+UseSavedCerts="y"
+# In order for the install to succeed you need to provide a public and private ssh key
+# that will be used for establishing ssh connection between backemd and arena. See
+# accompaning documentation to find out how to generate them.
+# Put the private key to private/id_rsa
+# Put the public key to public/id_rsa.pub
+# letsencrypt.tar.gz
+# In order to acknowledge that you configured all the required information below in
+# the private folder set the following line to
+# ConfigChanged="y"
+ConfigChanged="n"
 ```
 
-Note that commands above modify *feedback* and *donation* emails so that they do not lead to your domain. You might want to do more text editing for your copy of the site.
+```Bash
+cd /root
+dnf install git nano screen openssl wget -y
+git clone https://github.com/TryItOnline/TioSetup.git
+cd TioSetup/main
 
-Create apache Virtual Host for each of the three sites:
+# put your previously saved letsencrypt.tar.gz to private/letsencrypt.tar.gz
+# or make sure to edit private/setup.conf to read `UseSavedCerts="n"`
 
-```Shell
-cat <<EOT >> /etc/httpd/conf.d/tio.conf
-<VirtualHost *:80>
-    <Directory /var/www/tio.run/>
-        Options FollowSymLinks
-        AllowOverride All
-        Order allow,deny
-        allow from all
-    </Directory>
-    ServerName tio.your.domain
-    DocumentRoot /var/www/tio.run
-    ErrorLog /var/log/tio.run.error.log
-    CustomLog /var/log/tio.run.access.log combined
-</VirtualHost>
-EOT
-cat <<EOT >> /etc/httpd/conf.d/tryitonline.net.conf
-<VirtualHost *:80>
-    Header set Access-Control-Allow-Origin "*"
-    <Directory /var/www/tryitonline.net/>
-        Options FollowSymLinks
-        AllowOverride All
-        Order allow,deny
-        allow from all
-    </Directory>
-    ServerName tryitonline.your.domain
-    DocumentRoot /var/www/tryitonline.net
-    ErrorLog /var/log/tryitonline.net.error.log
-    CustomLog /var/log/tryitonline.net.access.log combined
-</VirtualHost>
-EOT
-cat <<EOT >> /etc/httpd/conf.d/backend.tryitonline.net.conf
-<VirtualHost *:80>
-    ScriptAlias "/" "/var/www/backend.tryitonline.net/"
-    <Directory /var/www/backend.tryitonline.net/>
-        Options FollowSymLinks
-        AllowOverride All
-        Order allow,deny
-        allow from all
-    </Directory>
-    ServerName backend.tryitonline.your.domain
-    DocumentRoot /var/www/backend.tryitonline.net
-    ErrorLog /var/log/backend.tryitonline.error.log
-    CustomLog /var/log/backend.tryitonline.access.log combined
-</VirtualHost>
-EOT
+# edit private/setup.conf
+
+# edit /private/010-custom script if required, or add more scripts to /private to execute at the end of setup process
+
+# put your public key you generated earlier for connection to arena in private/id_rsa.pub
+
+# put your private key you generated earlier for connection to arena in private/id_rsa
+
+./bootstrap
 ```
 
-Create .htaccess so that /nexus is rewritten to /nexus.html
+Monitor execution same as described in previous section.
 
-```Shell
-cat <<EOT >> /var/www/tio.run/.htaccess
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^nexus/?(.*)$ nexus.html [L,NE]
-RewriteRule ^index/?(.*)$ index.html [L,NE]
-EOT
-```
+Setup scripts for the main server use [`ssh-keyscan`](http://man.openbsd.org/ssh-keyscan) to add arena into the list of know_hosts so that SSH connection is possible. This implies that arena server is already up and running, so it is recommended to run this script *after* arena has been setup.
 
-Configure default host out of the way:
+Digital Ocean and Vultr offer the private IP feature, where all the traffic in the private network is unmetered. You might want to use this feature. If you do, modify your host file on the main server so that your arena DNS resolves to the private IP of your arena.
 
-```Shell
-sed -i 's/SSLEngine on/SSLEngine off/g' /etc/httpd/conf.d/ssl.conf
-sed -i 's/#ServerName www.example.com:80/ServerName 127.0.0.1:80/g' /etc/httpd/conf/httpd.conf
-
-```
-
-Create a store for the user code snippets.
-
-```Shell
-mkdir /srv/store
-setfacl -m user:apache:rwx /srv/store
-```
-
-Enable http and https on the firewall and recycle apache:
-
-```Shell
-firewall-cmd --permanent --add-port=80/tcp
-firewall-cmd --permanent --add-port=443/tcp
-firewall-cmd --reload
-chkconfig httpd on
-systemctl restart httpd
-```
-
-After this is done you need:
-
-- Install SSL certificate for your web site
-- Configure your web site to only accept https and redirect all http to https
-
-It can be done relatively easy with letsencrypt and certbot:
-
-```Shell
-dnf install python-certbot-apache -y
-certbot --apache
-```
-
-And then follow the propmts. Choose "Secure" option when asked if to enforce HTTPS. Certbot will advise you to backup your keys and certifcates, it would be advisable to do so. 
-For systems other than apache on Fedora 23+ refer to:
-
-- <https://letsencrypt.org>
-- <https://certbot.eff.org>
-
-Certbot checks that the domain name you are getting the cert for resolve to the address of your server, so if you have not sorted this out yet it needs to be done first.
-Letsecrypt certificates are good for three months. Here is how you can set up automatic renewal on Fedora 24:
-
-```Shell
-cat <<EOT >> /etc/systemd/system/renewssl.service
-[Unit]
-Description=Renews letencrypt SSL certificates
-
-[Service]
-Type=simple
-ExecStart=/bin/sh -c 'letsencrypt renew'
-EOT
-
-cat <<EOT >> /etc/systemd/system/renewssl.timer
-[Unit]
-Description=Run renewssl.service twice a day
-
-[Timer]
-OnCalendar=04:14
-OnCalendar=16:14
-
-[Install]
-WantedBy=timers.target
-EOT
-
-systemctl start renewssl.timer
-systemctl enable renewssl.timer
-systemctl list-timers -all
-```
-
-Change hours and minutes above to what suits you best. Letsencrypt advises not to use round minutes value such as 00 or 30, to spread there service load, after all you are not paying them.
-You also might want to run the following to set your time zone if you have not already (change the below to your timezome):
-
-```Shell
-timedatectl set-timezone Pacific/Auckland
-```
-
-Of course you do not have to use letsecrypt and if you wish you can install your SSL certificates the usual way.
-
-Navigate to your tryitonline.net domain, you should see the home page.
-Check that links to TIO Nexus and TIO.run lead to your tio.run domain.
-Open your browser console and make sure that there are no errors displayed there.
-Navigate to your tio.run domain, you should see the "Welcome to Try It Online version 2!" home page.
-Try the nexus and the v2 links, also go back to your tryitonline.net domain (you can do it by clicking
-on the logo in the top left corner) and go to the Nexus and the v2 links from there. Watch the browser
-console for errors. At this stage all the UI should be fully working,
-only the "run" functionality is not setup yet.
-Generating and resoving permalinks should be fully working now.
-
-## Setting up arena.tryitonline.net
-
-On your web server (above) generate ssh key for access to arena:
-
-```Shell
-mkdir -p $(getent passwd apache | cut -d: -f6)/.ssh
-chown apache:apache $(getent passwd apache | cut -d: -f6)/.ssh
-sudo -u apache ssh-keygen -t rsa -f $(getent passwd apache | cut -d: -f6)/.ssh/id_rsa -N ""
-```
-
-On your arena.tryitonline.net server install required packages and enable selinux:
-
-```Shell
-dnf install git psmisc selinux-policy-sandbox policycoreutils-sandbox vim-common setroubleshoot selinux-policy-devel -y
-sed -i 's/SELINUX=disabled/SELINUX=enforcing/g' /etc/selinux/config
-reboot
-```
-
-When system is labeled by selinux and is back online, configure the runner user:
-
-```Shell
-adduser runner
-sudo -u runner -i
-mkdir -p ~/.ssh
-touch ~/.ssh/authorized_keys
-chmod 640 ~/.ssh/<authorized_keys></authorized_keys>
-chmod 700 ~/.ssh
-```
-
-Now append the ssh key that you generateed on the backend server (the whole id_rsa.pub file) to the \~/.ssh/authorized_keys
-for the runner user. Exit the runner user context. Revoke write access for runner from home directory:
-
-```Shell
-exit
-chattr +i  ~runner
-```
-
-Configure selinux to allow access of sandboxed process to proc_t required by J language:
-
-```Shell
-cat <<EOT >> sandbox_extra.te 
-module sandbox_extra 1.0;
-
-require {
-        type sandbox_t;
-        type proc_t;
-        class dir read;
-        class file { open read };
-}
-
-allow sandbox_t proc_t:dir read;
-allow sandbox_t proc_t:file { open read };
-EOT
-make -f /usr/share/selinux/devel/Makefile sandbox_extra.pp
-semodule -i sandbox_extra.pp
-```
-
-Label the arena executables:
-
-```Shell
-semanage fcontext -a -t bin_t '/srv/bin(/.*)?'
-semanage fcontext -a -t bin_t '/srv/wrappers(/.*)?'
-````
-
-Clone arena repository and restore security context:
-
-```Shell
-git clone https://github.com/TryItOnline/arena.tryitonline.net.git /srv
-restorecon -Rv /srv/bin
-restorecon -Rv /srv/wrappers
-```
-
-Update the languages.
-
-(**TODO**: instructions/scripts for the rest of languages are to be provided)
-Here is an example for 05AB1E:
-
-```Shell
-cd /opt
-git clone https://github.com/Adriandmen/05AB1E.git
-```
-
-Now back on the web server test ssh connection:
-
-```Shell
-sudo -u apache ssh runner@arena.tryitonline.your.domain
-```
-
-Confirm that you want to continue connecting, when asked, and make sure that you are connected without being asked for a password.
-
-Now you are up and running. Go to both nexus and your tio.run and run a test program. For 05AB1E it can be `5L`, which should output an array from 1 to 5.
