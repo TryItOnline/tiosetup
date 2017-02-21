@@ -71,7 +71,7 @@ use `ssh-keygen` command on Linux to generate `id_rsa` private key and `id_rsa.p
 
 ## Dyalog APL
 
-To run Dyalog APL you will need a licence and a Dyalog installation image for Linux. TIO has such a licence. If you choose not to get a licence and thus do not have an installation image, the TIO installation script for Dyalog APL will generate errors which can be safely ignored. If you do have a licence and an installation image, you will need to alter arena/languages/apl-dyalog to reflect the full name of the downloaded installation image. Dyalog is free for non-commercial usage; you can apply for a licence at <http://dyalog.com/prices-and-licences.htm>
+To run Dyalog APL you will need a licence and a 64-bit Dyalog installation image for Linux. TIO has such a licence. If you choose not to get a licence and thus do not have an installation image, the TIO installation script for Dyalog APL will generate errors which can be safely ignored. If you do have a licence and an installation image, you will need to alter arena/languages/apl-dyalog to reflect the full name of the downloaded installation image. Dyalog is free for non-commercial usage; you can apply for a licence at <http://dyalog.com/prices-and-licences.htm>
 
 ## Setup scripts structure
 
