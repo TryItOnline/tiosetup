@@ -105,7 +105,7 @@ Once you cloned the repository you will need to make changes to files in the `ar
 # On 512MB of RAM, a size smaller than 1572864 may lead to some languages failing to compile
 SwapfileSize="1572864"
 #Sets MaxRetentionSec in journald.conf
-JOURNALRETENTION=1week
+JOURNALRETENTION="1week"
 # In order for the scripts to work, you need to download 64-bit Dyalog APL to /opt.
 # You need a valid Dyalog license for that.
 # The install script depends on the Dyalog APL archive name, which has a version,
@@ -171,7 +171,7 @@ ARENA=arena2.tryitonline.nz
 # This is your email used for LetsEncrypt certificate revocations
 EMAIL=letsencrypt@tryitonline.nz
 #Sets MaxRetentionSec in journald.conf
-JOURNALRETENTION=1week
+JOURNALRETENTION="1week"
 # put your backed up let's encrypt certificates from previous TIO installation in
 # private/letsencrypt.tar.gz and leave this setting alone
 # Alternatively if you do not have the certs yet and would like to generate them
