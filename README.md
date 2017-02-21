@@ -44,7 +44,7 @@ Supports startup scripts|No startup scripts|Vultr allows you to specify a script
 
 ## Domain registration and certificates
 
-In order to setup TIO, you will need the following sub-domains created withing your domains. Note that these are the ones that TIO itself uses, yours, obviously will be different:
+In order to setup TIO, you will need the following sub-domains created within your domains. Note that these are the ones that TIO itself uses, yours, obviously will be different:
 
 - tryitonline.net
 - tio.run
