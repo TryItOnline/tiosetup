@@ -12,7 +12,7 @@ TIO currently runs on 4 domains which are hosted on 2 servers:
 
 - [Main server](https://github.com/TryItOnline/main-server.git) - split across 3 domains:
   - tryitonline.net - serves the front page, provides some assets for the rest of the sites
-  - tio.run - Tio Nexus and Tio v2 front end, short url for permalinks
+  - tio.run - TIO Nexus and TIO v2 front end, short url for permalinks
   - backend.tryitonline.net - serves web api calls from tio.run
 - [Arena server](https://github.com/TryItOnline/arena-server.git) - sandbox where the actual code is executed, running on SeLinux and accessed by the backend.tryitonline.net via SSH
 
@@ -57,7 +57,7 @@ Our setup scripts use [LetsEncrypt](https://letsencrypt.org/) for SSL certificat
 LetsEncrypt uses [Certbot](https://certbot.eff.org/) for generating SSL certificates and configuring apache to use them. In order for this to work, the domains that you are going to be using in your setup has to point to the the VM IP address that you are running the setup scripts on.
 Thus, a recommended sequence would be following:
 
-- Register one or more domains to use with tio
+- Register one or more domains to use with TIO
 - Provision a TIO Main Server machine
 - Point the three domains (your versions of tryitonline.net, tio.run and backend.tryitonline.net) to the VM IP
 
