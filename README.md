@@ -6,7 +6,7 @@
 
 ## Setup Overview
 
-These instructions are written to help setting up a new instance of <http://tryitonline.net>.
+These instructions are written to help set up a new instance of <http://tryitonline.net>.
 
 TIO currently runs on 4 domains which are hosted on 2 servers:
 
@@ -16,9 +16,9 @@ TIO currently runs on 4 domains which are hosted on 2 servers:
   - backend.tryitonline.net - serves web api calls from tio.run
 - [Arena server](https://github.com/TryItOnline/arena-server.git) - sandbox where the actual code is executed, running on SeLinux and accessed by the backend.tryitonline.net via SSH
 
-The setup makes use of [SeLinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) support of which varies between different distributions of Linux.
+The setup makes use of [SeLinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux), support of which varies between different distributions of Linux.
 
-[talk.tryitonline.net](http://talk.tryitonline.net) domain is setup to redirect to Stack Exchange chat about the tryitonline service. Setting this domain up is not covered by this guide.
+The [talk.tryitonline.net](http://talk.tryitonline.net) domain is set up to redirect to Stack Exchange chat about the tryitonline service. Setting this domain up is not covered by this guide.
 
 This setup runs on **Fedora 25**. It was tested on those two hosting providers:
 
@@ -29,17 +29,17 @@ It is assumed that you have a freshly provisioned instance on any of the above. 
 
 ## Vultr vs Digital Ocean
 
-It turns out, there there are enough discrepancies between Vultr and Digital Ocean images for Fedora 25, that it affects our setup scripts.
+It turns out there there are enough discrepancies between Vultr and Digital Ocean images for Fedora 25, that it affects our setup scripts.
 
 Below outlined the main differences that are useful to be aware of:
 
 Vultr|Digital Ocean|Comment
 -----|-------------|-------
-5$ vm has 768MB of memory|5$ vm has 512MB of memory|As of the moment of writing both main and arena will happily run on the 512MB VM. However, sometimes 512MB or even 768MB is not enough for installing certain languages. Thus a swap file is recommended. The size of the swap file can be reduced, or the swap file can be disabled, after the installation. The provided scripts create a swap file but do not disable it after installation.
+5$ vm has 768MB of memory|5$ vm has 512MB of memory|As of the moment of writing both main and arena will happily run on the 512MB VM. However, sometimes 512MB or even 768MB is not enough for installing certain languages, so a swap file is recommended. The size of the swap file can be reduced, or the swap file can be disabled, after the installation. The provided scripts create a swap file but do not disable it after installation.
 5$ vm has 15GB of SSD|5$ vm has 20GB of SSD| With 1.5GB swapfile there is barely enough space on vultr for all the languages. With log files constantly growing the VM can quickly get out of disk space. Either use a VM with bigger disk, or have a solution in place to watch/free remaining disk space.
 SeLinux is disabled|SeLinux is enabled|Vultr image has SeLinux disabled. In order to enable SeLinux a reboot is required. Because of this the setup scripts, if SeLinux is disabled, install runonce service that continues the setup script after reboot
 Some dnf packages are installed|Minimal dnf packages are installed|Vultr seems to have more up-to-date images with `dnf update` run on them at some point in the past, things like git, nano and wget may be pre-installed. Digital Ocean contains minimal system with no `dnf update` run. If `dnf upfate` is not run on Digital Ocean before running `dnf install` certain package installation may fail. Setup scripts account for this difference.
-No downsizing VM|Can downsize VM|Digital Ocean allows upsizing and downsizing images as long as SSD allocation is not changed. Thus, with Digital Ocean it's advisable to upsize the VM (to the 20$ size) before running the setup scripts and downsize when finished. This will virtually guarantees, that setup won't run out of memory. We've seen during our testing an occasional killing of a process by OOM killer, which prevents setup from succeeding (even with the swap file). It never happened if an instance was upsize first. Vultr installation was not noticed to go out of memory with 768MB VM and 1.5GB of swap. `dnf install` commands were split to several batches because it uses less memory and allows the setup scripts to finish.
+No downsizing VM|Can downsize VM|Digital Ocean allows upsizing and downsizing images as long as SSD allocation is not changed. Thus, with Digital Ocean it's advisable to upsize the VM (to the 20$ size) before running the setup scripts and downsize when finished. This will virtually guarantee that the setup won't run out of memory. We've seen during our testing an occasional killing of a process by OOM killer, which prevents setup from succeeding (even with the swap file). It never happened if an instance was upsize first. Vultr installation does not appear to run out of memory with 768MB VM and 1.5GB of swap. `dnf install` commands were split to several batches because it uses less memory and allows the setup scripts to finish.
 Supports startup scripts|No startup scripts|Vultr allows you to specify a script which is run on the first boot of freshly provisioned VM. This script is also run on the first boot when rebuilding an existing VM. This is convenient when tweaking the setup scripts. Digital Ocean does not provide this facility.
 
 ## Domain registration and certificates
@@ -143,7 +143,7 @@ cd TioSetup/arena
 ./bootstrap
 ```
 
-Note that teh script can reboot the box if needed. Logs can be found in various places:
+Note that the script can reboot the box if needed. Logs can be found in various places:
 
 - `/var/log/runonce` directory - continuation after reboot logs
 - `/var/log/tioupd` directory - logs from individual scripts from `stage1`, `stage2`, and `arena\languages` folders. You can `tail` individual items from here for long-running sub-scripts.
@@ -212,7 +212,7 @@ cd TioSetup/main
 ./bootstrap
 ```
 
-Monitor execution same as described in previous section.
+Monitor execution the same way as described in the previous section.
 
 Setup scripts for the main server use [`ssh-keyscan`](http://man.openbsd.org/ssh-keyscan) to add arena into the list of know_hosts so that SSH connection is possible. This implies that arena server is already up and running, so it is recommended to run this script *after* arena has been setup.
 

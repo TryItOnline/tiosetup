@@ -3,7 +3,7 @@
 This is a temporary list of supported languages to better understand
 how they get built on tio. This table is not intended to be maintained
 but will probably live on in a form of json file somewhere in the source
-repository if/when build system is implemented.
+repository if/when the build system is implemented.
 
 ## Sources
 
