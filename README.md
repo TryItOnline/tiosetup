@@ -29,7 +29,7 @@ It is assumed that you have a freshly provisioned instance on any of the above. 
 
 ## Vultr vs Digital Ocean
 
-It turns out there there are enough discrepancies between Vultr and Digital Ocean images for Fedora 25, that it affects our setup scripts.
+It turns out there are enough discrepancies between Vultr and Digital Ocean images for Fedora 25, that it affects our setup scripts.
 
 Below outlined the main differences that are useful to be aware of:
 
