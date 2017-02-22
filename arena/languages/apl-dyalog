@@ -11,7 +11,7 @@ rm -f $dyalogrpm
 
 if unzip $dyalogzip $dyalogrpm; then
         dnf install -y $dyalogrpm
-        rm -f $dyalogrpm
+        rm -f linux_64_*_unicode.zip $dyalogrpm
 else
         err=1
 fi
