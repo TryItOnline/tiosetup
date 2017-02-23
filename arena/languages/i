@@ -6,7 +6,7 @@ trap 'err=1' ERR
 rm -rf ILanguage
 git clone https://github.com/mlochbaum/ILanguage.git
 cd ILanguage
-gcc *.c -o I
+gcc *.c -o I -std=gnu99
 cd ..
 
 exit "$err"
