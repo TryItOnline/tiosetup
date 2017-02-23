@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf PYKE
+git clone https://github.com/muddyfish/PYKE.git
+
+exit "$err"
