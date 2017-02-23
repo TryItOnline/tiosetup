@@ -7,6 +7,7 @@ python3 -m pip install --upgrade pip
 python2 -m pip install --upgrade pip
 python3 -m pip install exrex python-pcre hbcht sympy mathics
 python3 -m pip install numpy 
+python3 -m pip install pyephem
 python2 -m pip install sympy pyshoco docopt neovim ninja
 restorecon -Rv /usr/lib{,64}/python3.5
 
