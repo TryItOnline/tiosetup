@@ -7,5 +7,6 @@ rm -rf julia-ae26b25d43
 wget https://julialang.s3.amazonaws.com/bin/linux/x64/0.4/julia-0.4.7-linux-x86_64.tar.gz
 tar zxvf julia-0.4.7-linux-x86_64.tar.gz
 rm -f julia-0.4.7-linux-x86_64.tar.gz
+ln -s /opt/julia-ae26b25d43/bin/julia /usr/local/bin/julia
 
 exit "$err"

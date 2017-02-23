@@ -10,7 +10,7 @@ dnf install golang  -y
 
 dnf install gmp-c++ gmp-devel libX11-devel -y
 
-dnf install groovy gtkglext-libs  icu java-1.?.0-openjdk java-9-openjdk-devel julia ksh -y
+dnf install groovy gtkglext-libs  icu java-1.?.0-openjdk java-9-openjdk-devel ksh -y
 
 dnf install libgcc.i686 lldb lldb-devel lttng-tools lttng-ust maxima mercurial mono-basic mono-complete nasm -y
     
