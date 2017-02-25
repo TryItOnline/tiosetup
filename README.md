@@ -84,7 +84,6 @@ Top level folders:
 
 - `arena/files`, `main/files` - those are various files used by setup scripts during setup process.
 - `arena/languages` - scripts for installing individual languages. Note that not all language are installed with these scripts. Some languages come from dnf, pip, npm or other sources.
-- `arena/logsamples` - these are not used by setup scripts, and just a samples of what installation logs should look like. These are not maintained, so yours may look slightly differently.
 - `arena/private`, `main/private` - these are files that contain information that may vary from installation to installation. See below.
 - `arena/stage1`, `main/stage1` - scripts executed before reboot (if reboot required)
 - `arena/stage2`, `main/stage2`- scripts executed after reboot (if reboot required)
