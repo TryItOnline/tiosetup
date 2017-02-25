@@ -1,15 +1,0 @@
-Sun Feb  5 01:57:44 UTC 2017
-Cloning into 'apl'...
-building lib/apl.js
-doctests
-1/82377/823214/823402/823576/823795/823All 823 tests passed in 528 ms.
-examples
-Testing 0-rho-iota.apl
-Testing 1-mult.apl
-Testing 2-sierpinski.apl
-Testing 3-primes.apl
-Testing 4-life.apl
-Testing 5-rule30.apl
-Testing 6-queens.apl
-Testing 7-mandelbrot.apl
-ok

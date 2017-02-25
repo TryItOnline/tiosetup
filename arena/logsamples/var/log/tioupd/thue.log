@@ -1,4 +1,0 @@
-Sun Feb  5 02:11:10 UTC 2017
-Cloning into 'Thue'...
-+ mkdir -p bin
-+ gcc src/thue.c -o bin/thue
