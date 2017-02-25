@@ -216,3 +216,14 @@ Monitor execution the same way as described in the previous section.
 Setup scripts for the main server use [`ssh-keyscan`](http://man.openbsd.org/ssh-keyscan) to add arena into the list of know_hosts so that SSH connection is possible. This implies that arena server is already up and running, so it is recommended to run this script *after* arena has been setup.
 
 Digital Ocean and Vultr offer the private IP feature, where all the traffic in the private network is unmetered. You might want to use this feature. If you do, modify your host file on the main server so that your arena DNS resolves to the private IP of your arena.
+
+## Self test
+
+On the main server execute the following. Make sure to specify the correct arena server.
+
+```Bash
+cd /srv
+time bin/self-test lib/HelloWorldTests backend.tryitonline.net/run runner@arena2.tryitonline.nz
+```
+
+If setup was successful, after a bit of a wait you should see every language name listed in green.
