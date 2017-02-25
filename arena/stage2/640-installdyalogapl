@@ -3,6 +3,7 @@
 err=0
 trap 'err=1' ERR
 
+pushd /opt
 for dyalogzip in linux_64_*_unicode.zip; do
         dyalogrpm=${dyalogzip%.zip}.x86_64.rpm
 done
@@ -15,5 +16,6 @@ if unzip $dyalogzip $dyalogrpm; then
 else
         err=1
 fi
+popd
 
 exit "$err"
