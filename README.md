@@ -219,7 +219,7 @@ Digital Ocean and Vultr offer the private IP feature, where all the traffic in t
 
 ## Self test
 
-On the main server execute the following. Make sure to specify the correct arena server.
+On the main server execute the following code snippet. Make sure to specify the correct arena server.
 
 ```Bash
 cd /srv
