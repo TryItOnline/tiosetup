@@ -219,11 +219,26 @@ Digital Ocean and Vultr offer the private IP feature, where all the traffic in t
 
 ## Self test
 
-On the main server execute the following code snippet. Make sure to specify the correct arena server.
+On the main server, you can execute the following code snippet to test all languages on the arena `/srv/etc/run` points to.
 
-```Bash
+```bash
 cd /srv
-time bin/self-test lib/HelloWorldTests backend.tryitonline.net/run runner@arena2.tryitonline.nz
+bin/self-test lib/HelloWorldTests backend.tryitonline.net/run
 ```
 
-If setup was successful, after a bit of a wait you should see every language name listed in green.
+If setup was successful, you should see the following output after a few minutes.
+
+```text
+Testing X languages...
+Result: X succeeded, 0 failed, 0 not tested
+```
+
+Failed tests will print the language name, the expected output, the actual output, and all pertinent information from STDERR. To see STDERR output (timings, potential warnings, etc.) of successful tests, add the `-v` or `--verbose` flag.
+
+It is also possible to run the test for a single language. To do so, replace `lib/HelloWorldTests` with the path of one of its JSON files.
+
+Finally, you can use the `-t` or `--target` flag to test a different arena server. For example, the following snippet will run the Hello World test for Bash on `arena2.tryitonline.net` and displays verbose output.
+
+```bash
+bin/self-test -v -t runner@arena2.tryitonline.net lib/HelloWorldTests/bash.json backend.tryitonline.net/run
+```
