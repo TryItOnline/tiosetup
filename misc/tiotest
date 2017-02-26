@@ -1,3 +1,3 @@
 #!/bin/bash
 
-dotnet /root/TioTests/bin/Debug/netcoreapp1.0/TioTests.dll "$@"
+dotnet /opt/TioTests/bin/Debug/netcoreapp1.0/TioTests.dll "$@"
