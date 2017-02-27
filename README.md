@@ -51,7 +51,7 @@ In order to setup TIO, you will need the following sub-domains created within yo
 - backend.tryitonline.net
 - arena.tryitonline.net
 
-You will need to provide yor domain names to the setup scripts.
+You will need to provide your domain names to the setup scripts.
 
 Our setup scripts use [LetsEncrypt](https://letsencrypt.org/) for SSL certificates, which is free service. You are welcome to use your own certificates, but you will need to update the setup scripts accordingly.
 LetsEncrypt uses [Certbot](https://certbot.eff.org/) for generating SSL certificates and configuring apache to use them. In order for this to work, the domains that you are going to be using in your setup has to point to the the VM IP address that you are running the setup scripts on.
