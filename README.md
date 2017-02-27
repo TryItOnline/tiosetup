@@ -148,7 +148,7 @@ Note that the script can reboot the box if needed. Logs can be found in various 
 
 ## Setting up main server
 
-Most of the points from previous sections also apply here.
+Most of the points from the previous section also apply here.
 
 Update `private/setup.conf` as per below.
 
