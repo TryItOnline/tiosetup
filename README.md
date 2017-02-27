@@ -189,6 +189,8 @@ UseSavedCerts="y"
 ConfigChanged="n"
 ```
 
+Below is a general scenario of starting main server setup:
+
 ```Bash
 cd /root
 dnf install git nano screen openssl wget -y
