@@ -62,7 +62,7 @@ Thus, a recommended sequence would be following:
 - Point the three domains (your versions of tryitonline.net, tio.run and backend.tryitonline.net) to the VM IP
 
 After that Certbot will be able to validate the fact that it's you who are controlling these domains, and generate the certificates for you.
-Note, that LetsEncrypt limits you to 5 sets of certificates per week for each domain combination you use. Thus, if you are going to run the setup scripts multiple times (for testing), it is advisable to `tar czf letsencrypt.tar.gz /etc/letsencrypt` after the first tun of the setup scripts, so that you can reuse these certificates on the next run, and thus avoid hitting the rate limit.
+Note, that LetsEncrypt limits you to 5 sets of certificates per week for each domain combination you use. Thus, if you are going to run the setup scripts multiple times (for testing), it is advisable to `tar czf letsencrypt.tar.gz /etc/letsencrypt` after the first run of the setup scripts, so that you can reuse these certificates on the next run, and thus avoid hitting the rate limit.
 
 ## Generating ssh key
 
