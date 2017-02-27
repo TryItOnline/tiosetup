@@ -126,7 +126,7 @@ Below is a general scenario of starting arena setup:
 cd /root
 dnf install wget git nano screen -y
 
-#put linux_64_15.0.29007_unicode.zip to /opt (make sure that the version matches the one mentioned in `arena/langauges/apl-dyalog`)
+#put dyalog apl archive such as linux_64_15.0.29007_unicode.zip to /opt
 
 git clone https://github.com/TryItOnline/TioSetup.git
 cd TioSetup/arena
