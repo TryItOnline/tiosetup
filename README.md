@@ -25,7 +25,7 @@ This setup runs on **Fedora 25**. It was tested on those two hosting providers:
 - <http://vultr.com>
 - <http://digitalocean.com>
 
-It is assumed that you have a freshly provisioned instance on any of the above. All scripts a run as root.
+It is assumed that you have a freshly provisioned instance on any of the above. All scripts are run as root.
 
 ## Vultr vs Digital Ocean
 
