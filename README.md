@@ -91,7 +91,7 @@ Top level folders:
 In order to enable SeLinux a reboot must be performed. In this case everything before reboot is executed in Stage 1, and everything else is executed in Stage 2. If reboot is not required both Stage 1 and Stage 2 is executed without reboot. `runeonce` service from `common` folder is installed to continue after reboot in case reboot is required.
 
 - `arena/bootstrap`, `main/bootstrap` - this is the script that needs to be run to start the setup process
-- `arena/run-scripts`, `main/run-scripts` - a utility script that executes all scripts for a specified directory, such as `stage1`, `stage2` or `arena\languages`.
+- `arena/run-scripts`, `main/run-scripts` - a utility script that executes all scripts in a specified directory, such as `stage1`, `stage2` or `arena\languages`.
 - `arena/setup-main`, `main/setup-main` - script that continues after reboot, if reboot is required
 
 ## Setting up arena
