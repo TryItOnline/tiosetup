@@ -58,7 +58,7 @@ LetsEncrypt uses [Certbot](https://certbot.eff.org/) for generating SSL certific
 Thus, a recommended sequence would be following:
 
 - Register one or more domains to use with TIO
-- Provision a TIO Main Server machine
+- Provision a TIO main Server machine
 - Point the three domains (your versions of tryitonline.net, tio.run and backend.tryitonline.net) to the VM IP
 
 After that Certbot will be able to validate the fact that it's you who are controlling these domains, and generate the certificates for you.
@@ -66,12 +66,12 @@ Note, that LetsEncrypt limits you to 5 sets of certificates per week for each do
 
 ## Generating ssh key
 
-Backend communicates with arena via ssh. Because of this there should be a private ssh key on the Main server and corresponding public key on the arena server.
+Backend communicates with arena via ssh. Because of this there should be a private ssh key on the main server and corresponding public key on the arena server.
 use `ssh-keygen` command on Linux to generate `id_rsa` private key and `id_rsa.pub` public key. You will need to provide these to the setup scripts.
 
 ## Dyalog APL
 
-To run Dyalog APL you will need a licence and a 64-bit Dyalog installation image for Linux. TIO has such a licence. If you choose not to get a licence and thus do not have an installation image, the TIO installation script for Dyalog APL will generate errors which can be safely ignored. If you do have a licence and an installation image, you will need to alter arena/languages/apl-dyalog to reflect the full name of the downloaded installation image. Dyalog is free for non-commercial usage; you can apply for a licence at <http://dyalog.com/prices-and-licences.htm>
+To run Dyalog APL you will need a licence and a 64-bit Dyalog installation image for Linux. TIO has such a licence. If you choose not to get a licence and thus do not have an installation image, the TIO installation script for Dyalog APL will generate errors which can be safely ignored. Dyalog is free for non-commercial usage; you can apply for a licence at <http://dyalog.com/prices-and-licences.htm>
 
 ## Setup scripts structure
 
