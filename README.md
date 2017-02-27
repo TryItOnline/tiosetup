@@ -114,7 +114,7 @@ JOURNALRETENTION="1week"
 ConfigChanged="n"
 ```
 
-Setup scripts tested to be worked on Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file.
+Setup scripts were tested to work on both Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file.
 if you comment out `SwapfileSize` setting, no swap file will be created.
 More information about `journald` configuration can be found [here](https://www.freedesktop.org/software/systemd/man/journald.conf.html). Look for `MaxRetentionSec` setting.
 Change to `ConfigChanged="y"` to acknowledge that you edited all files in `private` to your satisfaction. Setup scripts will run all `+x` scripts in `private`,
