@@ -242,3 +242,5 @@ Finally, you can use the `-t` or `--target` flag to test a different arena serve
 ```bash
 bin/self-test -v -t runner@arena2.tryitonline.net lib/HelloWorldTests/bash.json backend.tryitonline.net/run
 ```
+
+Another test utility is available at <https://github.com/TryItOnline/TioTests>. This one allows running the tests remotely from any client, not just from the main server.
