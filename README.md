@@ -25,7 +25,7 @@ This setup runs on **Fedora 25**. It was tested on those two hosting providers:
 - <http://vultr.com>
 - <http://digitalocean.com>
 
-It is assumed that you have a freshly provisioned instance on any of the above. All scripts a run as root.
+It is assumed that you have a freshly provisioned instance on any of the above. All scripts are run as root.
 
 ## Vultr vs Digital Ocean
 
@@ -39,8 +39,8 @@ Vultr|Digital Ocean|Comment
 5$ vm has 15GB of SSD|5$ vm has 20GB of SSD| With 1.5GB swapfile there is barely enough space on vultr for all the languages. With log files constantly growing the VM can quickly get out of disk space. Either use a VM with bigger disk, or have a solution in place to watch/free remaining disk space.
 SeLinux is disabled|SeLinux is enabled|Vultr image has SeLinux disabled. In order to enable SeLinux a reboot is required. Because of this the setup scripts, if SeLinux is disabled, install runonce service that continues the setup script after reboot
 Some dnf packages are installed|Minimal dnf packages are installed|Vultr seems to have more up-to-date images with `dnf update` run on them at some point in the past, things like git, nano and wget may be pre-installed. Digital Ocean contains minimal system with no `dnf update` run. If `dnf upfate` is not run on Digital Ocean before running `dnf install` certain package installation may fail. Setup scripts account for this difference.
-No downsizing VM|Can downsize VM|Digital Ocean allows upsizing and downsizing images as long as SSD allocation is not changed. Thus, with Digital Ocean it's advisable to upsize the VM (to the 20$ size) before running the setup scripts and downsize when finished. This will virtually guarantee that the setup won't run out of memory. We've seen during our testing an occasional killing of a process by OOM killer, which prevents setup from succeeding (even with the swap file). It never happened if an instance was upsize first. Vultr installation does not appear to run out of memory with 768MB VM and 1.5GB of swap. `dnf install` commands were split to several batches because it uses less memory and allows the setup scripts to finish.
-Supports startup scripts|No startup scripts|Vultr allows you to specify a script which is run on the first boot of freshly provisioned VM. This script is also run on the first boot when rebuilding an existing VM. This is convenient when tweaking the setup scripts. Digital Ocean does not provide this facility.
+No downsizing VM|Can downsize VM|Digital Ocean allows upsizing and downsizing images as long as SSD allocation is not changed. Thus, with Digital Ocean it's advisable to upsize the VM (to the 20$ size) before running the setup scripts and downsize when finished. This will virtually guarantee that the setup won't run out of memory. We've seen during our testing an occasional killing of a process by OOM killer, which prevents setup from succeeding (even with the swap file). It never happened if an instance was upsized first. Vultr installation does not appear to run out of memory with 768MB VM and 1.5GB of swap. `dnf install` commands were split to several batches because it uses less memory and allows the setup scripts to finish.
+Persistent startup scripts|Not persistent startup scripts|Vultr allows you to specify a script *that you van save*, which is run on the first boot of freshly provisioned VM. This script is also run on the first boot when rebuilding an existing VM. This is convenient when tweaking the setup scripts. On Digital Ocean the script needs to be entered each time a VM is created.
 
 ## Domain registration and certificates
 
@@ -51,27 +51,27 @@ In order to setup TIO, you will need the following sub-domains created within yo
 - backend.tryitonline.net
 - arena.tryitonline.net
 
-You will need to provide yor domain names to the setup scripts.
+You will need to provide your domain names to the setup scripts.
 
 Our setup scripts use [LetsEncrypt](https://letsencrypt.org/) for SSL certificates, which is free service. You are welcome to use your own certificates, but you will need to update the setup scripts accordingly.
 LetsEncrypt uses [Certbot](https://certbot.eff.org/) for generating SSL certificates and configuring apache to use them. In order for this to work, the domains that you are going to be using in your setup has to point to the the VM IP address that you are running the setup scripts on.
 Thus, a recommended sequence would be following:
 
 - Register one or more domains to use with TIO
-- Provision a TIO Main Server machine
+- Provision a TIO main Server machine
 - Point the three domains (your versions of tryitonline.net, tio.run and backend.tryitonline.net) to the VM IP
 
 After that Certbot will be able to validate the fact that it's you who are controlling these domains, and generate the certificates for you.
-Note, that LetsEncrypt limits you to 5 sets of certificates per week for each domain combination you use. Thus, if you are going to run the setup scripts multiple times (for testing), it is advisable to `tar czf letsencrypt.tar.gz /etc/letsencrypt` after the first tun of the setup scripts, so that you can reuse these certificates on the next run, and thus avoid hitting the rate limit.
+Note, that LetsEncrypt limits you to 5 sets of certificates per week for each domain combination you use. Thus, if you are going to run the setup scripts multiple times (for testing), it is advisable to `tar czf letsencrypt.tar.gz /etc/letsencrypt` after the first run of the setup scripts, so that you can reuse these certificates on the next run, and thus avoid hitting the rate limit.
 
 ## Generating ssh key
 
-Backend communicates with arena via ssh. Because of this there should be a private ssh key on the Main server and corresponding public key on the arena server.
+Backend communicates with arena via ssh. Because of this there should be a private ssh key on the main server and corresponding public key on the arena server.
 use `ssh-keygen` command on Linux to generate `id_rsa` private key and `id_rsa.pub` public key. You will need to provide these to the setup scripts.
 
 ## Dyalog APL
 
-To run Dyalog APL you will need a licence and a 64-bit Dyalog installation image for Linux. TIO has such a licence. If you choose not to get a licence and thus do not have an installation image, the TIO installation script for Dyalog APL will generate errors which can be safely ignored. If you do have a licence and an installation image, you will need to alter arena/languages/apl-dyalog to reflect the full name of the downloaded installation image. Dyalog is free for non-commercial usage; you can apply for a licence at <http://dyalog.com/prices-and-licences.htm>
+To run Dyalog APL you will need a licence and a 64-bit Dyalog installation image for Linux. TIO has such a licence. If you choose not to get a licence and thus do not have an installation image, the TIO installation script for Dyalog APL will generate errors which can be safely ignored. Dyalog is free for non-commercial usage; you can apply for a licence at <http://dyalog.com/prices-and-licences.htm>
 
 ## Setup scripts structure
 
@@ -91,7 +91,7 @@ Top level folders:
 In order to enable SeLinux a reboot must be performed. In this case everything before reboot is executed in Stage 1, and everything else is executed in Stage 2. If reboot is not required both Stage 1 and Stage 2 is executed without reboot. `runeonce` service from `common` folder is installed to continue after reboot in case reboot is required.
 
 - `arena/bootstrap`, `main/bootstrap` - this is the script that needs to be run to start the setup process
-- `arena/run-scripts`, `main/run-scripts` - a utility script that executes all scripts for a specified directory, such as `stage1`, `stage2` or `arena\languages`.
+- `arena/run-scripts`, `main/run-scripts` - a utility script that executes all scripts in a specified directory, such as `stage1`, `stage2` or `arena\languages`.
 - `arena/setup-main`, `main/setup-main` - script that continues after reboot, if reboot is required
 
 ## Setting up arena
@@ -106,17 +106,15 @@ SwapfileSize="1572864"
 JOURNALRETENTION="1week"
 # In order for the scripts to work, you need to download 64-bit Dyalog APL to /opt.
 # You need a valid Dyalog license for that.
-# The install script depends on the Dyalog APL archive name, which has a version,
-# thus, for a different version of the archive to work you will need to modify
-# languages/apl-dyalog script. If you do not have the license you
-# can run the setup script without the Dyalog APL archive, but Dyalog APL won't be installed.
+# If you do not have the license you can run the setup script without the Dyalog APL 
+# archive, but Dyalog APL won't be installed.
 # In order to acknowledge that you configured all required information in
 # the private folder, set the following line to
 # ConfigChanged="y"
 ConfigChanged="n"
 ```
 
-Setup scripts tested to be worked on Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file.
+Setup scripts were tested to work on both Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file.
 if you comment out `SwapfileSize` setting, no swap file will be created.
 More information about `journald` configuration can be found [here](https://www.freedesktop.org/software/systemd/man/journald.conf.html). Look for `MaxRetentionSec` setting.
 Change to `ConfigChanged="y"` to acknowledge that you edited all files in `private` to your satisfaction. Setup scripts will run all `+x` scripts in `private`,
@@ -128,7 +126,7 @@ Below is a general scenario of starting arena setup:
 cd /root
 dnf install wget git nano screen -y
 
-#put linux_64_15.0.29007_unicode.zip to /opt (make sure that the version matches the one mentioned in `arena/langauges/apl-dyalog`)
+#put dyalog apl archive such as linux_64_15.0.29007_unicode.zip to /opt
 
 git clone https://github.com/TryItOnline/TioSetup.git
 cd TioSetup/arena
@@ -150,7 +148,7 @@ Note that the script can reboot the box if needed. Logs can be found in various 
 
 ## Setting up main server
 
-Most of the points from previous sections also apply here.
+Most of the points from the previous section also apply here.
 
 Update `private/setup.conf` as per below.
 
@@ -190,6 +188,8 @@ UseSavedCerts="y"
 # ConfigChanged="y"
 ConfigChanged="n"
 ```
+
+Below is a general scenario of starting main server setup:
 
 ```Bash
 cd /root
