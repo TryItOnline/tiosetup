@@ -1,5 +1,5 @@
 #!/bin/bash 
 
 pushd ~
-/root/TioSetup/arena/stage2/010-clonearena
+/root/TioSetup/arena/stage2/520-clonearena
 popd
