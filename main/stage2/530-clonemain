@@ -6,6 +6,11 @@ trap "err=1" ERR
 source private/setup.conf 
 
 git clone https://github.com/TryItOnline/main-server.git
+if [[ ! -z $ArenaServerCommit ]]; then
+    cd main-server
+    git checkout $ArenaServerCommit
+    cd ..
+fi
 yes | cp -r ./main-server/* /srv
 rm -rf ./main-server
 cd /srv

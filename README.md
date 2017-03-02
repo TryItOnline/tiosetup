@@ -102,8 +102,11 @@ Once you cloned the repository you will need to make changes to files in the `ar
 # This number should be divisible by 1024. This is the size of the swap file.
 # On 512MB of RAM, a size smaller than 1572864 may lead to some languages failing to compile
 SwapfileSize="1572864"
-#Sets MaxRetentionSec in journald.conf
+# Sets MaxRetentionSec in journald.conf
 JOURNALRETENTION="1week"
+# Provide commit number or branch for `git checkout` command performed after cloning arena-server
+# This allows installing a historic version or a feature branch instead of the master latest
+ArenaServerCommit="master"
 # In order for the scripts to work, you need to download 64-bit Dyalog APL to /opt.
 # You need a valid Dyalog license for that.
 # If you do not have the license you can run the setup script without the Dyalog APL 
@@ -114,9 +117,10 @@ JOURNALRETENTION="1week"
 ConfigChanged="n"
 ```
 
-Setup scripts were tested to work on both Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file.
+Setup scripts were tested to work on both Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file. *Note: Vultr stopped providing 786MB boxes now, they now provide 1024MB boxes for the same price or 512MB boxes for lower price.*
 if you comment out `SwapfileSize` setting, no swap file will be created.
 More information about `journald` configuration can be found [here](https://www.freedesktop.org/software/systemd/man/journald.conf.html). Look for `MaxRetentionSec` setting.
+You can comment out `ArenaServerCommit` if you want to work with the default branch. As of the time of writing the default branch is set to master but github allows changing it, so commenting this line at the time of writing has the same effect as leaving it unchanged.
 Change to `ConfigChanged="y"` to acknowledge that you edited all files in `private` to your satisfaction. Setup scripts will run all `+x` scripts in `private`,
 so review `private/010-custom` and add more scripts if needed.
 
@@ -165,9 +169,12 @@ BACKEND=backend2.tryitonline.nz
 ARENA=arena2.tryitonline.nz
 # This is your email used for LetsEncrypt certificate revocations
 EMAIL=letsencrypt@tryitonline.nz
-#Sets MaxRetentionSec in journald.conf
+# Sets MaxRetentionSec in journald.conf
 JOURNALRETENTION="1week"
-# put your backed up let's encrypt certificates from previous TIO installation in
+# Provide commit number or branch for `git checkout` command performed after cloning main-server
+# This allows installing a historic version or a feature branch instead of the master latest
+MainServerCommit="master"
+# Put your backed up let's encrypt certificates from previous TIO installation in
 # private/letsencrypt.tar.gz and leave this setting alone
 # Alternatively if you do not have the certs yet and would like to generate them
 # change the line to
