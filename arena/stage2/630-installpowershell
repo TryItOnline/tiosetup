@@ -8,8 +8,6 @@ cd tmp
 dnf install -y https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-alpha.15/powershell-6.0.0_alpha.15-1.el7.centos.x86_64.rpm
 ln -s /opt/microsoft/ usr
 rpm2cpio http://archives.fedoraproject.org/pub/archive/fedora/linux/releases/19/Everything/x86_64/os/Packages/l/libicu-50.1.2-5.fc19.x86_64.rpm | cpio -dim
-mkdir /opt/microsoft/dotnet
-curl -sSL https://go.microsoft.com/fwlink/?LinkID=835025 | tar xz -C /opt/microsoft/dotnet
 wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 mono nuget.exe install runtime.fedora.24-x64.Microsoft.NETCore.Runtime.CoreCLR
 mv runtime.fedora.24-x64.Microsoft.NETCore.Runtime.CoreCLR.1.1.0 /opt/microsoft/coreclr
