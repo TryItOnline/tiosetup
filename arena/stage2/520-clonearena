@@ -3,6 +3,8 @@
 err=0
 trap 'err=1' ERR
 
+source private/setup.conf 
+
 git clone https://github.com/TryItOnline/arena-server.git
 if [[ ! -z $ArenaServerCommit ]]; then
     cd arena-server
