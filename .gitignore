@@ -1,2 +1,10 @@
 # Visual Studio Code
 .vscode
+
+arena/private/*
+!arena/private/*.default
+!arena/private/010-custom
+
+main/private/*
+!main/private/*.default
+!main/private/010-custom

@@ -3,7 +3,7 @@
 err=0
 trap "err=1" ERR
 
-source private/setup.conf 
+source private/config
 
 if [[ "$UseSavedCerts" != "y" ]]; then
     certbot --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN,$BACKEND --redirect

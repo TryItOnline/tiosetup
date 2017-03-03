@@ -31,7 +31,3 @@ UseSavedCerts="y"
 # Put the private key to private/id_rsa
 # Put the public key to public/id_rsa.pub
 # letsencrypt.tar.gz
-# In order to acknowledge that you configured all the required information below in
-# the private folder set the following line to
-# ConfigChanged="y"
-ConfigChanged="n"

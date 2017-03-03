@@ -1,10 +1,10 @@
 #!/bin/bash
 
-source private/setup.conf 
-if [[ "$ConfigChanged" != "y" ]]; then
-   echo "Please edit private/setup.conf!";
+if [[ ! -f "private/config" ]]; then
+   echo "Please provide private/config!";
    exit;
 fi
+source private/config 
 
 # We run dnf update -y later, if we start logging to journald before that
 # our logs can get screwed up because of different versiond of journald.

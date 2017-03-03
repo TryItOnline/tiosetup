@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-source private/setup.conf 
+source private/config 
 
 if [[ ! -z $SwapfileSize ]]; then
     dd if=/dev/zero of=/swapfile bs=1024 count="$SwapfileSize"

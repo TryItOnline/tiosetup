@@ -3,7 +3,7 @@
 err=0
 trap "err=1" ERR
 
-source private/setup.conf 
+source private/config
 
 sudo -u apache ssh-keyscan $ARENA > $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts
 sudo -u apache ssh-keyscan $(dig +short $ARENA) >> $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts

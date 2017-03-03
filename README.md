@@ -97,7 +97,7 @@ In order to enable SeLinux a reboot must be performed. In this case everything b
 
 ## Setting up arena
 
-Once you cloned the repository you will need to make changes to files in the `arena\private` directory. Here is `setup.conf`:
+Once you cloned the repository you will need to provide content of `private/config` file in the `arena/private` directory. Here is `config.default`, that you can use as a template:
 
 ```Bash
 # This number should be divisible by 1024. This is the size of the swap file.
@@ -112,18 +112,13 @@ ArenaServerCommit="master"
 # You need a valid Dyalog license for that.
 # If you do not have the license you can run the setup script without the Dyalog APL 
 # archive, but Dyalog APL won't be installed.
-# In order to acknowledge that you configured all required information in
-# the private folder, set the following line to
-# ConfigChanged="y"
-ConfigChanged="n"
 ```
 
 Setup scripts were tested to work on both Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file. *Note: Vultr stopped providing 786MB boxes now, they now provide 1024MB boxes for the same price or 512MB boxes for lower price.*
 if you comment out `SwapfileSize` setting, no swap file will be created.
 More information about `journald` configuration can be found [here](https://www.freedesktop.org/software/systemd/man/journald.conf.html). Look for `MaxRetentionSec` setting.
 You can comment out `ArenaServerCommit` if you want to work with the default branch. As of the time of writing the default branch is set to master but github allows changing it, so commenting this line at the time of writing has the same effect as leaving it unchanged.
-Change to `ConfigChanged="y"` to acknowledge that you edited all files in `private` to your satisfaction. Setup scripts will run all `+x` scripts in `private`,
-so review `private/010-custom` and add more scripts if needed.
+Setup scripts will run all `+x` scripts in `private`, so review `private/010-custom` and add more scripts if needed.
 
 Below is a general scenario of starting arena setup:
 
@@ -138,7 +133,7 @@ cd TioSetup/arena
 
 # put your public key you generated earlier for connection to arena in private/id_rsa.pub
 
-# edit private/setup.conf
+# create private/config
 
 # edit /private/010-custom script if required, or add more scripts to /private to execute at the end of setup process
 
@@ -155,7 +150,7 @@ Note that the script can reboot the box if needed. Logs can be found in various 
 
 Most of the points from the previous section also apply here.
 
-Update `private/setup.conf` as per below.
+Create `private/config` using `private/config.default` as per below.
 
 ```Bash
 # The following four settings are for the domain names used in the setup
@@ -191,10 +186,6 @@ UseSavedCerts="y"
 # Put the private key to private/id_rsa
 # Put the public key to public/id_rsa.pub
 # letsencrypt.tar.gz
-# In order to acknowledge that you configured all the required information below in
-# the private folder set the following line to
-# ConfigChanged="y"
-ConfigChanged="n"
 ```
 
 Below is a general scenario of starting main server setup:
@@ -206,9 +197,9 @@ git clone https://github.com/TryItOnline/TioSetup.git
 cd TioSetup/main
 
 # put your previously saved letsencrypt.tar.gz to private/letsencrypt.tar.gz
-# or make sure to edit private/setup.conf to read `UseSavedCerts="n"`
+# or make edit to edit private/config to read `UseSavedCerts="n"`
 
-# edit private/setup.conf
+# create private/config
 
 # edit /private/010-custom script if required, or add more scripts to /private to execute at the end of setup process
 

@@ -3,7 +3,7 @@
 err=0
 trap "err=1" ERR
 
-source private/setup.conf 
+source private/config
 
 git clone https://github.com/TryItOnline/main-server.git
 if [[ ! -z $MainServerCommit ]]; then

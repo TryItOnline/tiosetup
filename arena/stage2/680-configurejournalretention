@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-source private/setup.conf
+source private/config
 
 if [[! -z "$JOURNALRETENTION"]]; then
     sed -i '/^#MaxRetentionSec/s/^#//' /etc/systemd/journald.conf

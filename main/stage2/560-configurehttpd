@@ -3,7 +3,7 @@
 err=0
 trap "err=1" ERR
 
-source private/setup.conf 
+source private/config
 
 yes | cp files/httpd/backend.tryitonline.net.conf /etc/httpd/conf.d/backend.tryitonline.net.conf
 yes | cp files/httpd/nexus.tryitonline.net.conf /etc/httpd/conf.d/znexus.tryitonline.net.conf

@@ -3,7 +3,7 @@
 err=0
 trap "err=1" ERR
 
-source private/setup.conf 
+source private/config
 
 mkdir -p $(getent passwd apache | cut -d: -f6)/.ssh
 chown apache:apache $(getent passwd apache | cut -d: -f6)/.ssh

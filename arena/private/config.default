@@ -12,7 +12,3 @@ ArenaServerCommit="master"
 # thus, for a different version of the archive to work, you will need to modify
 # the languages/apl-dyalog script. If you do not have the license you
 # can run the setup script without the Dyalog APL archive, but Dyalog APL won't be installed.
-# In order to acknowledge that you configured all required information in
-# the private folder, set the following line to
-# ConfigChanged="y"
-ConfigChanged="n"
