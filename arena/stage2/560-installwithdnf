@@ -16,7 +16,7 @@ dnf install libgcc.i686 lldb lldb-devel lttng-tools lttng-ust maxima mercurial m
     
 dnf install ncurses-compat-libs neovim npm ocaml octave octave-devel patch pcre-devel perl-Digest-CRC \
   perl-List-MoreUtils perl-Text-Soundex php-cli pl pyephem pypy python-devel python3-devel R-littler rakudo \
-  ruby rubygem-treetop rust tcsh time vala vim-common wget zsh -y
+  ruby rubygem-treetop rust tcsh time vala vim-common wget words zsh -y
 
 dnf install \
   apache-commons-beanutils \
