@@ -3,9 +3,12 @@
 err=0
 trap 'err=1' ERR
 
-dnf install allegro5-devel ant bison bison-devel bsd-games chicken clang clisp clojure cmake dash emacs-nox \
-  erlang-erts fish flex flex-devel fsharp gc-devel gcc-c++ gforth glib2-devel glibc-devel glibc-devel.i686 -y
-  
+dnf install allegro5-devel ant bison bison-devel bsd-games chicken clang clisp -y 
+
+dnf install clojure cmake dash emacs-nox erlang-erts fish flex flex-devel  -y
+
+dnf install fsharp gc-devel gcc-c++ gforth glib2-devel glibc-devel glibc-devel.i686 -y
+ 
 dnf install golang  -y
 
 dnf install gmp-c++ gmp-devel libX11-devel -y
