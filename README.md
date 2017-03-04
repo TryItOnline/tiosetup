@@ -243,3 +243,20 @@ bin/self-test -v -t runner@arena2.tryitonline.net lib/HelloWorldTests/bash.json 
 ```
 
 Another test utility is available at <https://github.com/TryItOnline/TioTests>. That one allows running the tests remotely from any client, not just from the main server.
+
+## Installing on Linode
+
+In addition to Vultr and Digital Ocean we were able to test TryItOnline on <https://www.linode.com/>
+
+Configuring it on Linode requires a few extra steps. 
+
+Once you created a Linode (we used 1024MB of RAM, 20GB hard drive), and deployed the Fedora 25 images you need to boot your linode, log into it with ssh and run the following commands at the terminal:
+
+```bash
+grub2-mkconfig -o /boot/grub/grub.cfg
+systemctl mask tmp.mount
+```
+
+The first one is required so that your Fedora runs distributes-supplied kernel and not the linode one. Linode kernel does not work for TryItOnline, because it does not support SeLinux. The second command makes sure that `$TMPDIR` is not mounted on tmpfs.
+
+After these commands has run, go to Linode Manager and edit your linode configuration profile. In the "Boot Settings" section select "GRUB 2" from the "Kernel" drop down, and click "Save changes". Reboot your linode. Now you can follow the rest of the installation steps above.
