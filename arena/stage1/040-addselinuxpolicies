@@ -3,9 +3,12 @@
 err=0
 trap 'err=1' ERR
 
-cp files/sandbox_extra.te ./sandbox_extra.te
+mkdir -p tmp
+cd tmp
+cp ../files/sandbox_extra.te .
 make -f /usr/share/selinux/devel/Makefile sandbox_extra.pp
 semodule -i sandbox_extra.pp
-rm -f sandbox_extra.*
+cd ..
+rm -rf tmp
 
 exit "$err"
