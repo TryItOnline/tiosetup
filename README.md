@@ -212,7 +212,7 @@ cd TioSetup/main
 
 Monitor execution the same way as described in the previous section.
 
-Setup scripts for the main server use [`ssh-keyscan`](http://man.openbsd.org/ssh-keyscan) to add arena into the list of know_hosts so that SSH connection is possible. This implies that arena server is already up and running, so it is recommended to run this script *after* arena has been setup. You can use [this script](https://github.com/TryItOnline/TioSetup/blob/master/misc/addarena) to link up arena post factum, or to add additional arenas. Note that as of the time or writing load balancing for arenae is not supported yet, but it is planned.
+Setup scripts for the main server use [`ssh-keyscan`](http://man.openbsd.org/ssh-keyscan) to add arena into the list of know_hosts so that SSH connection is possible. This implies that arena server is already up and running, so it is recommended to run this script *after* arena has been setup. You can use [this script](https://github.com/TryItOnline/TioSetup/blob/master/misc/addarena) to link up arena post factum, or to add additional arenas. Note that as of the time or writing load balancing for arenas is not supported yet, but it is planned.
 
 Digital Ocean and Vultr offer the private IP feature, where all the traffic in the private network is unmetered. You might want to use this feature. If you do, modify your host file on the main server so that your arena DNS resolves to the private IP of your arena.
 
@@ -248,7 +248,7 @@ Another test utility is available at <https://github.com/TryItOnline/TioTests>. 
 
 In addition to Vultr and Digital Ocean we were able to test Try It Online on <https://www.linode.com/>
 
-Configuring it on Linode requires a few extra steps. 
+Configuring it on Linode requires a few extra steps.
 
 Once you created a Linode (we used 1024MB of RAM, 20GB hard drive), and deployed the Fedora 25 images you need to boot your linode, log into it with ssh and run the following commands at the terminal:
 
