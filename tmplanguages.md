@@ -95,6 +95,7 @@ bubblegum|github|no|python|has tio github repo
 cardinal|gist|no|python|
 c-clang|fedora|no||
 c-gcc|fedora|no||
+chain|github|no|ruby|
 changeling|github|no|python|
 charcoal|github|no|python|
 cheddar|npm|no||
@@ -104,9 +105,12 @@ cjam|sourceforge|ant|java|
 clisp|fedora|no||
 clojure|fedora|no||
 coffeescript|npm|no||
+condit|github|no|python|
 convex|github|no|java|binary in repo, no version
 cow|github|gcc|c++|has tio github repo
 cpp-gcc|fedora|no||
+crayon|github|no|javascript |
+cs-core|website|script||url version
 cs-mono|ext-dnf|no||
 c-tcc|git|configure|c|
 cubix|github|no|javascript|
@@ -201,6 +205,7 @@ prelude|github|no|python|has tio github repo
 prolog-swi|fedora|no||
 purple|github|no|python|has tio github repo
 pushy|github|no|python|
+pyke|github|no|python|
 pylons|github|no|python|
 pyramid-scheme|github|no|ruby|
 pyth|github|no|python|
@@ -224,7 +229,7 @@ sed|fedora|no||
 seriously|github|fix|python|
 sesos|github|no|python|
 shapescript|github|no|python|
-shtriped|github|no|python|
+shtriped|github|no|python|has tio github repo
 silos|github|javac|java|
 slashes|github|no|perl|has tio github repo
 smbf|website|gcc|c|no version
@@ -236,6 +241,7 @@ stackcats|github|no|ruby|
 stacked|github|no|javascript|
 starry|github|no|ruby|end of life
 straw|github|no|ruby|
+syms|github|no|python|
 taxi|github|g++|c++|has tio github repo
 tcsh|fedora|no||
 templates|github|no|python|
@@ -258,12 +264,13 @@ vitsy|github|no|java|binary in repo
 whirl|github|g++|c++|has tio github repo
 whitespace|github|make|haskell|has tio github repo
 woefully|github|no|python|
+wsf|github|no|ruby|
 yup|github|no|javascript|
 zsh|fedora|no||
 
 Source|Count
 ------|-----
-github|113
+github|120
 fedora|42
 website|31
 ext-dnf|4
@@ -277,16 +284,16 @@ copr|1
 
 Source|NoBuild|Count
 ------|-------|-----
-github|True|80
+github|True|84
 fedora|True|42
-github|False|33
-website|False|17
-website|True|14
+github|False|36
+website|False|18
+website|True|13
 ext-dnf|True|4
 npm|True|3
 gist|True|2
-pip|True|2
-sourceforge|False|1
+copr|True|1
 git|False|1
 linux|True|1
-copr|True|1
+pip|True|1
+sourceforge|False|1
