@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf roda
+git clone --recursive https://github.com/fergusq/roda.git
+cd roda
+git checkout roda-0.12
+gradle fatJar
+
+exit "$err"
