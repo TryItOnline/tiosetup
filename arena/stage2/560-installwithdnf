@@ -3,12 +3,12 @@
 err=0
 trap 'err=1' ERR
 
-dnf install allegro5-devel ant bison bison-devel bsd-games chicken clang clisp -y 
+dnf install allegro5-devel ant bison bison-devel bsd-games chicken clang clisp -y
 
 dnf install clojure cmake dash emacs-nox erlang-erts fish flex flex-devel  -y
 
-dnf install fsharp gc-devel gcc-c++ gforth glib2-devel glibc-devel glibc-devel.i686 -y
- 
+dnf install fsharp gc-devel gcc-c++ gforth glib2-devel glibc-devel glibc-devel.i686 gradle -y
+
 dnf install golang  -y
 
 dnf install gmp-c++ gmp-devel libX11-devel -y
@@ -16,99 +16,11 @@ dnf install gmp-c++ gmp-devel libX11-devel -y
 dnf install groovy gtkglext-libs  icu java-1.?.0-openjdk java-9-openjdk-devel ksh -y
 
 dnf install libgcc.i686 lldb lldb-devel lttng-tools lttng-ust maxima mercurial mono-basic mono-complete nasm -y
-    
+
 dnf install ncurses-compat-libs neovim npm ocaml octave octave-devel patch pcre-devel perl-Digest-CRC \
   perl-List-MoreUtils perl-Text-Soundex php-cli pl pyephem pypy python-devel python3-devel R-littler rakudo \
   ruby rubygem-treetop rust tcsh time vala vim-common wget words zsh -y
 
-dnf install \
-  apache-commons-beanutils \
-  apache-commons-beanutils-javadoc \
-  apache-commons-chain \
-  apache-commons-chain-javadoc \
-  apache-commons-cli-javadoc \
-  apache-commons-codec \
-  apache-commons-codec-javadoc \
-  apache-commons-collections \
-  apache-commons-collections4 \
-  apache-commons-collections4-javadoc \
-  apache-commons-collections-javadoc \
-  apache-commons-collections-testframework \
-  apache-commons-compress \
-  apache-commons-compress-javadoc \
-  apache-commons-configuration \
-  apache-commons-configuration-javadoc \
-  apache-commons-csv \
-  apache-commons-csv-javadoc \
-  apache-commons-daemon \
-  apache-commons-daemon-javadoc \
-  apache-commons-daemon-jsvc \
-  apache-commons-dbcp \
-  apache-commons-dbcp-javadoc \
-  apache-commons-dbutils \
-  apache-commons-dbutils-javadoc \
-  apache-commons-digester \
-  apache-commons-digester-javadoc \
-  apache-commons-discovery \
-  apache-commons-discovery-javadoc \
-  apache-commons-el \
-  apache-commons-el-javadoc \
-  apache-commons-email \
-  apache-commons-email-javadoc \
-  apache-commons-exec \
-  apache-commons-exec-javadoc \
-  apache-commons-fileupload \
-  apache-commons-fileupload-javadoc \
-  apache-commons-io \
-  apache-commons-io-javadoc \
-  apache-commons-javaflow \
-  apache-commons-javaflow-ant \
-  apache-commons-javaflow-javadoc \
-  apache-commons-jci \
-  apache-commons-jci-core \
-  apache-commons-jci-eclipse \
-  apache-commons-jci-fam \
-  apache-commons-jci-groovy \
-  apache-commons-jci-janino \
-  apache-commons-jci-javadoc \
-  apache-commons-jci-rhino \
-  apache-commons-jcs \
-  apache-commons-jcs-core \
-  apache-commons-jcs-javadoc \
-  apache-commons-jcs-jcache \
-  apache-commons-jcs-jcache-extras \
-  apache-commons-jcs-jcache-openjpa \
-  apache-commons-jexl \
-  apache-commons-jexl-javadoc \
-  apache-commons-jxpath \
-  apache-commons-jxpath-javadoc \
-  apache-commons-lang \
-  apache-commons-lang3 \
-  apache-commons-lang3-javadoc \
-  apache-commons-lang-javadoc \
-  apache-commons-launcher \
-  apache-commons-launcher-javadoc \
-  apache-commons-logging-javadoc \
-  apache-commons-math \
-  apache-commons-math-javadoc \
-  apache-commons-modeler \
-  apache-commons-modeler-javadoc \
-  apache-commons-net \
-  apache-commons-net-javadoc \
-  apache-commons-ognl \
-  apache-commons-ognl-javadoc \
-  apache-commons-parent \
-  apache-commons-pool \
-  apache-commons-pool2 \
-  apache-commons-pool2-javadoc \
-  apache-commons-pool-javadoc \
-  apache-commons-primitives \
-  apache-commons-primitives-javadoc \
-  apache-commons-validator \
-  apache-commons-validator-javadoc \
-  apache-commons-vfs \
-  apache-commons-vfs-ant \
-  apache-commons-vfs-examples \
-  apache-commons-vfs-javadoc -y
+dnf install 'apache-commons-*' -y
 
 exit "$err"
