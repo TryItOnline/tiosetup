@@ -15,8 +15,8 @@ if [[ -z $(sestatus | grep "SELinux status:\s*enabled")  ]]; then
     ./run-scripts stage1 
     reboot
 else
-    rm -f stage1/910-installrunonce
-    rm -f stage1/920-setcontinue
+    rm -f stage1/410-installrunonce
+    rm -f stage1/420-setcontinue
     ./run-scripts stage1 
     ./setup-main
 fi

@@ -5,7 +5,7 @@ trap 'err=1' ERR
 
 source private/config
 
-if [[! -z "$JOURNALRETENTION"]]; then
+if [[ ! -z "$JOURNALRETENTION"]]; then
     sed -i '/^#MaxRetentionSec/s/^#//' /etc/systemd/journald.conf
     awk -i inplace -v var="MaxRetentionSec" -v new_val="$JOURNALRETENTION" 'BEGIN{FS=OFS="="} match($1, "^\\s*" var "\\s*") { $2=new_val }1' /etc/systemd/journald.conf
     systemctl force-reload systemd-journald
