@@ -222,7 +222,7 @@ On the main server, you can execute the following code snippet to test all langu
 
 ```bash
 cd /srv
-bin/self-test lib/HelloWorldTests backend.tryitonline.net/run
+bin/self-test backend.tryitonline.net/run lib/HelloWorldTests/*
 ```
 
 If setup was successful, you should see the following output after a few minutes.
@@ -234,12 +234,12 @@ Result: X succeeded, 0 failed, 0 not tested
 
 Failed tests will print the language name, the expected output, the actual output, and all pertinent information from STDERR. To see STDERR output (timings, potential warnings, etc.) of successful tests, add the `-v` or `--verbose` flag.
 
-It is also possible to run the test for a single language. To do so, replace `lib/HelloWorldTests` with the path of one of its JSON files.
+It is also possible to run the test for select languages. To do so, replace the glob `lib/HelloWorldTests/*` with one or more JSON files or a different glob.
 
-Finally, you can use the `-t` or `--target` flag to test a different arena server. For example, the following snippet will run the Hello World test for Bash on `arena2.tryitonline.net` and displays verbose output.
+Finally, you can use the `-t` or `--target` flag to test a different arena server. For example, the following snippet will run the Hello World tests on `arena2.tryitonline.net` and displays verbose output.
 
 ```bash
-bin/self-test -v -t runner@arena2.tryitonline.net lib/HelloWorldTests/bash.json backend.tryitonline.net/run
+bin/self-test -v -t runner@arena2.tryitonline.net backend.tryitonline.net/run lib/HelloWorldTests/*
 ```
 
 Another test utility is available at <https://github.com/TryItOnline/TioTests>. That one allows running the tests remotely from any client, not just from the main server.
