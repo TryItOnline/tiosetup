@@ -109,9 +109,10 @@ JOURNALRETENTION="1week"
 # This allows installing a historic version or a feature branch instead of the master latest
 ArenaServerCommit="master"
 # In order for the scripts to work, you need to download 64-bit Dyalog APL to /opt.
+# You need both unicode and classic versions.
 # You need a valid Dyalog license for that.
-# If you do not have the license you can run the setup script without the Dyalog APL 
-# archive, but Dyalog APL won't be installed.
+# If you do not have the license you can run the setup script without the Dyalog APL
+# archives, but Dyalog APL won't be installed.
 ```
 
 Setup scripts were tested to work on both Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file. *Note: Vultr stopped providing 786MB boxes now, they now provide 1024MB boxes for the same price or 512MB boxes for lower price.*
@@ -126,7 +127,7 @@ Below is a general scenario of starting arena setup:
 cd /opt
 dnf install wget git nano screen -y
 
-#put dyalog apl archive such as linux_64_15.0.29007_unicode.zip to /opt
+#put dyalog apl archives such as linux_64_15.0.29007_unicode.zip and linux_64_15.0.29007_classic.zip to /opt
 
 git clone https://github.com/TryItOnline/TioSetup.git
 cd TioSetup/arena
