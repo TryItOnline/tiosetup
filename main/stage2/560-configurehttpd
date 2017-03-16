@@ -9,7 +9,7 @@ yes | cp files/httpd/backend.tryitonline.net.conf /etc/httpd/conf.d/backend.tryi
 yes | cp files/httpd/nexus.tryitonline.net.conf /etc/httpd/conf.d/znexus.tryitonline.net.conf
 yes | cp files/httpd/talk.tryitonline.net.conf /etc/httpd/conf.d/talk.tryitonline.net.conf
 yes | cp files/httpd/tio.run.conf /etc/httpd/conf.d/tio.run.conf
-yes | cp files/httpd/tryitonline.net.conf  /etc/httpd/conf.d/tryitonline.net.conf 
+yes | cp files/httpd/tryitonline.net.conf  /etc/httpd/conf.d/tryitonline.net.conf
 
 sed -i "s/ServerName tryitonline.net/ServerName $TRYITONLINENET/g" /etc/httpd/conf.d/tryitonline.net.conf 
 sed -i "s/ServerName tio.run/ServerName $TIORUN/g" /etc/httpd/conf.d/tio.run.conf
@@ -20,5 +20,5 @@ sed -i 's/#ServerName www.example.com:80/ServerName 127.0.0.1:80/g' /etc/httpd/c
 
 chkconfig httpd on
 systemctl restart httpd
-   
+
 exit "$err"
