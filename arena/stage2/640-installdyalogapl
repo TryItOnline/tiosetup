@@ -4,29 +4,17 @@ err=0
 trap 'err=1' ERR
 
 pushd /opt
-for dyalogzip in linux_64_*_unicode.zip; do
-        dyalogrpm=${dyalogzip%.zip}.x86_64.rpm
-done
-for dyalogclassiczip in linux_64_*_classic.zip; do
-        dyalogclassicrpm=${dyalogclassiczip%.zip}.x86_64.rpm
-done
 
-rm -f $dyalogrpm
-rm -f $dyalogclassicrpm
-
-if unzip $dyalogzip $dyalogrpm; then
+for dyalogzip in linux_64_*_*.zip; do
+    dyalogrpm=${dyalogzip%.zip}.x86_64.rpm
+    rm -f $dyalogrpm
+    if unzip $dyalogzip $dyalogrpm; then
         dnf install -y $dyalogrpm
-        rm -f linux_64_*_unicode.zip $dyalogrpm
-else
-        err=1
-fi
-
-if unzip $dyalogclassiczip $dyalogclassicrpm; then
-        dnf install -y $dyalogclassicrpm
-        rm -f linux_64_*_classic.zip $dyalogclassicrpm
-else
-        err=1
-fi
+        rm -f $dyalogzip $dyalogrpm
+    else
+            err=1
+    fi
+done
 
 popd
 
