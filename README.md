@@ -123,7 +123,7 @@ Setup scripts will run all `+x` scripts in `private`, so review `private/010-cus
 Below is a general scenario of starting arena setup:
 
 ```Bash
-cd /root
+cd /opt
 dnf install wget git nano screen -y
 
 #put dyalog apl archive such as linux_64_15.0.29007_unicode.zip to /opt
@@ -191,7 +191,7 @@ UseSavedCerts="y"
 Below is a general scenario of starting main server setup:
 
 ```Bash
-cd /root
+cd /opt
 dnf install git nano screen openssl wget -y
 git clone https://github.com/TryItOnline/TioSetup.git
 cd TioSetup/main

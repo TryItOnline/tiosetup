@@ -3,6 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-ln -st /usr/local/sbin /opt/TioSetup/misc/*
+chmod 700 private
 
 exit "$err"
