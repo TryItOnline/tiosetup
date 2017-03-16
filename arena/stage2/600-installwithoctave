@@ -3,7 +3,11 @@
 err=0
 trap 'err=1' ERR
 
-octave --eval "pkg install -forge symbolic"
-octave --eval "pkg rebuild -auto symbolic"
+octave --eval "
+	pkg install -auto -forge image;
+	pkg install -auto -forge io;
+	pkg install -auto -forge statistics;
+	pkg install -auto -forge symbolic;
+"
 
 exit "$err"
