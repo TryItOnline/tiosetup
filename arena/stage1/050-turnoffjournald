@@ -3,7 +3,9 @@
 err=0
 trap 'err=1' ERR
 
+tmperr=$err
 systemctl stop systemd-journald{,{,-audit,-dev-log}.socket}
+err=$tmperr
 systemctl mask systemd-journald{,{,-audit,-dev-log}.socket}
 
 exit "$err"
