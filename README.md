@@ -103,8 +103,6 @@ Once you cloned the repository you will need to provide content of `private/conf
 # This number should be divisible by 1024. This is the size of the swap file.
 # On 512MB of RAM, a size smaller than 1572864 may lead to some languages failing to compile
 SwapfileSize="1572864"
-# Sets MaxRetentionSec in journald.conf
-JOURNALRETENTION="1week"
 # Provide commit number or branch for `git checkout` command performed after cloning arena-server
 # This allows installing a historic version or a feature branch instead of the master latest
 ArenaServerCommit="master"
@@ -117,7 +115,6 @@ ArenaServerCommit="master"
 
 Setup scripts were tested to work on both Vultr and Digital Ocean with 786 and 512 MB of memory respectively with the swap file of 1.5GB. They also work with 2GB of memory without swap file. *Note: Vultr stopped providing 786MB boxes now, they now provide 1024MB boxes for the same price or 512MB boxes for lower price.*
 if you comment out `SwapfileSize` setting, no swap file will be created.
-More information about `journald` configuration can be found [here](https://www.freedesktop.org/software/systemd/man/journald.conf.html). Look for `MaxRetentionSec` setting.
 You can comment out `ArenaServerCommit` if you want to work with the default branch. As of the time of writing the default branch is set to master but github allows changing it, so commenting this line at the time of writing has the same effect as leaving it unchanged.
 Setup scripts will run all `+x` scripts in `private`, so review `private/010-custom` and add more scripts if needed.
 
@@ -188,6 +185,8 @@ UseSavedCerts="y"
 # Put the public key to public/id_rsa.pub
 # letsencrypt.tar.gz
 ```
+
+More information about `journald` configuration can be found [here](https://www.freedesktop.org/software/systemd/man/journald.conf.html). Look for `MaxRetentionSec` setting.
 
 Below is a general scenario of starting main server setup:
 

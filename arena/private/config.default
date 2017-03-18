@@ -1,8 +1,6 @@
 # This number should be divisible by 1024. This is the size of the swap file.
 # On 512MB of RAM, a size smaller than 1572864 may lead to some languages failing to compile
 SwapfileSize="1572864"
-# Sets MaxRetentionSec in journald.conf
-JOURNALRETENTION="1week"
 # Provide commit number or branch for `git checkout` command performed after cloning arena-server
 # This allows installing a historic version or a feature branch instead of the master latest
 ArenaServerCommit="master"
