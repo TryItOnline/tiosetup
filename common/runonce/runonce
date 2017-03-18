@@ -10,5 +10,5 @@ do
     stamp="$filebase.$(date +%Y%m%dT%H%M%S)"
     "$file" > "/var/log/runonce/$stamp.log" 2>&1
     mv "$file" "/usr/local/etc/runonce.d/ran/$filebase.$(date +%Y%m%dT%H%M%S)"
-    logger -t runonce "$file"
+    #logger -t runonce "$file"
 done
