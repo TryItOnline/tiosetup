@@ -4,6 +4,10 @@ err=0
 trap 'err=1' ERR
 
 rm -rf Fireball
-git clone https://github.com/okx-code/Fireball.git
+mkdir Fireball
+curl --location --silent --output Fireball/Fireball.jar "$(
+	curl --silent https://api.github.com/repos/okx-code/Fireball/releases \
+		| jq --raw-output '.[0].assets[0].browser_download_url'
+)"
 
 exit "$err"
