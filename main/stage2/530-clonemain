@@ -30,14 +30,13 @@ sed -i "s/tio.run/$TIORUN/g" nexus.html
 sed -i "s://tryitonline.net://$TRYITONLINENET:g" nexus.html
 sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" nexus.html
 cd ..
-yes | cp etc/trim-cache.default etc/trim-cache
 yes | cp etc/run.default etc/run
 sed -i "s/\s*ssh_user_host=.*/ssh_user_host=runner@$ARENA/g" etc/run
 
 mkdir -p /srv/tmp
 chown apache:apache /srv/tmp
-mkdir -p /srv/cache
-chown apache:apache /srv/cache
+mkdir -p /srv/cache/{0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f}{0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f}
+chown -R apache:apache /srv/cache
 mkdir -p /srv/store
 chown apache:apache /srv/store
 
