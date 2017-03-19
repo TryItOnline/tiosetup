@@ -7,6 +7,6 @@ cd /srv
 yes | cp etc/trim-cache.default etc/trim-cache
 systemctl link /srv/lib/systemd/tio-trim-cache.timer
 systemctl link /srv/lib/systemd/tio-trim-cache.service
-systemctl start /srv/lib/systemd/tio-trim-cache.timer
+systemctl start tio-trim-cache.timer
 
 exit "$err"
