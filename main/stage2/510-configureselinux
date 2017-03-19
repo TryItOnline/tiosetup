@@ -14,6 +14,4 @@ semanage fcontext -a -s system_u -t etc_t '/srv/etc(/.*)?'
 semanage fcontext -a -s system_u -t lib_t '/srv/lib(/.*)?'
 semanage fcontext -a -s system_u -t systemd_unit_file_t '/srv/lib/systemd(/.*)?'
 
-restorecon -Rv /srv
-
 exit "$err"
