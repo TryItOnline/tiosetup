@@ -259,4 +259,12 @@ systemctl mask tmp.mount
 
 The first one is required so that your Fedora runs distributes-supplied kernel and not the linode one. Linode kernel does not work for Try It Online, because it does not support SeLinux. The second command makes sure that `$TMPDIR` is not mounted on tmpfs.
 
+On arena also run:
+
+```bash
+systemctl mask systemd-journald{,{,-audit,-dev-log}.socket}
+```
+
+This disables journald to leave more memory for useful things.
+
 After these commands has run, go to Linode Manager and edit your linode configuration profile. In the "Boot Settings" section select "GRUB 2" from the "Kernel" drop down, and click "Save changes". Reboot your linode. Now you can follow the rest of the installation steps above.
