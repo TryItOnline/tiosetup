@@ -6,6 +6,6 @@ trap "err=1" ERR
 yes | cp etc/trim-cache.default etc/trim-cache
 systemctl link /srv/lib/systemd/tio-trim-cache.timer
 systemctl link /srv/lib/systemd/tio-trim-cache.service
-systemctl enable /srv/lib/systemd/tio-trim-cache.timer
+systemctl start /srv/lib/systemd/does.timer
 
 exit "$err"
