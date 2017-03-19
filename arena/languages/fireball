@@ -7,7 +7,8 @@ rm -rf Fireball
 mkdir Fireball
 curl --location --silent --show-error --output Fireball/Fireball.jar "$(
     curl --silent --show-error https://api.github.com/repos/okx-code/Fireball/releases \
-        | jq --raw-output '.[0].assets[0].browser_download_url'
+        | jq --raw-output 'sort_by(.published_at)|reverse|.[].assets|.[].browser_download_url' \
+        | head -1
 )"
 
 exit "$err"
