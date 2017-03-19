@@ -5,6 +5,7 @@ trap 'err=1' ERR
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 $DIR/julia
+restorecon -Rv /usr/lib
 rm -rf beeswax
 git clone https://github.com/TryItOnline/beeswax.git
 cd beeswax
