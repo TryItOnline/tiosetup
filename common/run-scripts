@@ -26,10 +26,10 @@ for i in $(LC_ALL=C; echo ${1%/}/*) ; do
 
   if [ -x $i ]; then
     # run executable files
-    echo "run-scripts[$$] ($1) starting $(basename $i)" >> "$LOGS/run-scripts.log"
-    echo "$(date) Executing $(basename $i)..."
+    echo "$(date --rfc-3339=seconds) run-scripts[$$] ($1) starting $(basename $i)" >> "$LOGS/run-scripts.log"
+    echo "$(date --rfc-3339=seconds) Executing $(basename $i)..."
     start=`date +%s`
-    echo "$(date)" >> "$LOGS/$(basename $i).log"
+    echo "$(date --rfc-3339=seconds)" >> "$LOGS/$(basename $i).log"
     $i >> "$LOGS/$(basename $i).log" 2>&1 
     status="$?"
     end=`date +%s`
@@ -38,8 +38,8 @@ for i in $(LC_ALL=C; echo ${1%/}/*) ; do
     else
       status="FAILURE: $status"
     fi
-    echo "$(date) Executed  $(basename $i)... $(formattime $((end-start))) {$status}"
-    echo "run-scripts[$$] ($1) finished $(basename $i) $(formattime $((end-start))) {$status}" >> "$LOGS/run-scripts.log"
+    echo "$(date --rfc-3339=seconds) Executed  $(basename $i)... $(formattime $((end-start))) {$status}"
+    echo "$(date --rfc-3339=seconds) run-scripts[$$] ($1) finished $(basename $i) $(formattime $((end-start))) {$status}" >> "$LOGS/run-scripts.log"
   fi
 done
 
