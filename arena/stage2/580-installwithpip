@@ -8,7 +8,6 @@ python2 -m pip install --upgrade pip
 python3 -m pip install exrex python-pcre hbcht sympy
 python3 -m pip install numpy
 python3 -m pip install pyephem
-python2 -m pip install sympy pyshoco docopt neovim ninja
-
+python2 -m pip install sympy pyshoco docopt neovim ninja django python-dateutil
 
 exit "$err"
