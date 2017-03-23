@@ -18,6 +18,7 @@ repository if/when the build system is implemented.
 - pip - installed with `pip install`
 - sourceforge - `cjam` is cloned from sourceforge with `hg clone`
 - website - downloaded from a web site with wget/curl
+- github-release - form github project releases page
 
 ## Builds
 
@@ -56,6 +57,7 @@ As a rule all of these are installed with a tio-provided script of various compl
 - no version - this is website hosted language, where the language archive does not have a version number as part of the url. In most cases these are going to be never updated. In some case the url may indicate the latest version and might be updated (such as arnoldc).
 - note - various, see inline
 - url version - this is website hosted language, where the language archive has the language version in the url. This means that tio setup scripts will need updating each time version bumps.
+- piggyback - this language gets installed as part of another language installation
 
 language|source|build|implementation|notes
 --------|------|-----|--------------|-----
@@ -66,7 +68,9 @@ language|source|build|implementation|notes
 99|github|no|perl|has tio github repo
 actually|github|no|pyhton|
 a-pear-tree|website|no|perl|url version
+alphuck|github|no|bash, c|piggyback brainfuck
 apl-dyalog|website|no||license required, url version
+apl-dyalog-classic|website|no||license required, url version
 apl-ngn|github|script|javascript|
 arcyou|github|no|python|
 arnoldc|website|no|java|no version
@@ -87,7 +91,7 @@ befunge-98|github|make|с|
 blc|website|cc|c|no version
 brachylog|website|no|perl|end of life
 brachylog2|github|no|perl|
-brainbool|github|no|bash, c|
+brainbool|github|no|bash, c|piggyback brainfuck
 brain-flak|github|no|ruby|
 brainfuck|github|no|bash, c|has tio github repo
 brian-chuck|github|no|ruby|
@@ -134,6 +138,7 @@ fernando|github|no|python|has tio github repo
 feu|github|no|ruby|
 fish|gist|no|python|
 fish-shell|ext-dnf|no||
+fireball|github-release|no|java|
 fission|github|clang|c++|has tio github repo
 fission2|github|clang|c++|has tio github repo
 focal|website|make|c|url version
@@ -143,6 +148,7 @@ forth-gforth|fedora|no||
 fourier|github|no|python|
 fs-mono|ext-dnf|no||
 glypho|github|javac|java|has tio github repo|
+glypho-shorthand|github|javac|java|piggyback glypho
 go|fedora|no||
 golfscript|website|no|ruby|no version
 grass|website|no|ruby|no version
@@ -156,6 +162,7 @@ hexagony|github|no|ruby|
 i|github|gcc|c|
 intercal|website|configure|c|url version
 j|website|no||url version
+j-uby|github|no|ruby|
 japt|github|no|javascript|
 java-openjdk|fedora|no||
 java-openjdk9|copr|no||
@@ -193,7 +200,7 @@ octave|fedora|no||
 parenthetic|github|no|python|
 pari-gp|website|script||url version
 pbrain|github|g++|cpp|has tio github repo
-perl|fedora|no||
+perl5|fedora|no||
 perl6|fedora|no||
 php|fedora|no||
 picolisp|website|make||no version
@@ -217,6 +224,7 @@ racket|website|script||url version
 rail|website|script||url version
 reticular|github|no|ruby|
 retina|github|no|c#|binary in repo
+roda|github-release|no|java|
 rotor|github|no|groovy|
 rprogn|github|no|lua|
 rprogn-2|github|no|java|binary in repo
@@ -242,6 +250,7 @@ stacked|github|no|javascript|
 starry|github|no|ruby|end of life
 straw|github|no|ruby|
 syms|github|no|python|
+taco|github|no|lua|
 taxi|github|g++|c++|has tio github repo
 tcsh|fedora|no||
 templates|github|no|python|
@@ -270,12 +279,13 @@ zsh|fedora|no||
 
 Source|Count
 ------|-----
-github|120
+github|124
 fedora|42
-website|31
+website|32
 ext-dnf|4
 npm|3
 gist|2
+github-release|2
 pip|2
 sourceforge|1
 git|1
@@ -284,16 +294,18 @@ copr|1
 
 Source|NoBuild|Count
 ------|-------|-----
-github|True|84
+github|True|87
 fedora|True|42
-github|False|36
+github|False|37
 website|False|18
-website|True|13
+website|True|14
 ext-dnf|True|4
 npm|True|3
 gist|True|2
+github-release|True|2
 copr|True|1
 git|False|1
 linux|True|1
 pip|True|1
 sourceforge|False|1
+pip|False|1
