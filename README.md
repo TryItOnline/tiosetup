@@ -8,13 +8,12 @@
 
 These instructions are written to help set up a new instance of <http://tryitonline.net>.
 
-TIO currently runs on 4 domains which are hosted on 2 servers:
+TIO currently runs on 3 domains which are hosted on one main server and one or more load balanced arena servers:
 
 - [Main server](https://github.com/TryItOnline/main-server.git) - split across 3 domains:
   - tryitonline.net - serves the front page, provides some assets for the rest of the sites
   - tio.run - TIO Nexus and TIO v2 front end, short url for permalinks
-  - backend.tryitonline.net - serves web api calls from tio.run
-- [Arena server](https://github.com/TryItOnline/arena-server.git) - sandbox where the actual code is executed, running on SeLinux and accessed by the backend.tryitonline.net via SSH
+- [Arena server](https://github.com/TryItOnline/arena-server.git) - sandbox where the actual code is executed, running on SeLinux and accessed by the tio.run via SSH
 
 The setup makes use of [SeLinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux), support of which varies between different distributions of Linux.
 
@@ -49,7 +48,6 @@ In order to setup TIO, you will need the following sub-domains created within yo
 
 - tryitonline.net
 - tio.run
-- backend.tryitonline.net
 - arena.tryitonline.net
 
 You will need to provide your domain names to the setup scripts.
@@ -60,14 +58,14 @@ Thus, a recommended sequence would be following:
 
 - Register one or more domains to use with TIO
 - Provision a TIO main Server machine
-- Point the three domains (your versions of tryitonline.net, tio.run and backend.tryitonline.net) to the VM IP
+- Point the three domains (your versions of tryitonline.net and tio.run and) to the VM IP
 
 After that Certbot will be able to validate the fact that it's you who are controlling these domains, and generate the certificates for you.
 Note, that LetsEncrypt limits you to 5 sets of certificates per week for each domain combination you use. Thus, if you are going to run the setup scripts multiple times (for testing), it is advisable to `tar czf letsencrypt.tar.gz /etc/letsencrypt` after the first run of the setup scripts, so that you can reuse these certificates on the next run, and thus avoid hitting the rate limit.
 
 ## Generating ssh key
 
-Backend communicates with arena via ssh. Because of this there should be a private ssh key on the main server and corresponding public key on the arena server.
+tio.run communicates with arena via ssh. Because of this there should be a private ssh key on the main server and corresponding public key on the arena server.
 use `ssh-keygen` command on Linux to generate `id_rsa` private key and `id_rsa.pub` public key. You will need to provide these to the setup scripts.
 
 ## Dyalog APL
@@ -157,7 +155,7 @@ Create `private/config` using `private/config.default` as per below.
 TRYITONLINENET=www2.tryitonline.nz
 # Domain where https://tio.run will be hosted
 TIORUN=tio2.tryitonline.nz
-# Domain where arena.tryitonline.net will be hosted
+# Comma separate list of domains where arena1.tryitonline.net, etc will be hosted
 ARENA=arena2.tryitonline.nz
 # This is your email used for LetsEncrypt certificate revocations
 EMAIL=letsencrypt@tryitonline.nz
@@ -177,7 +175,7 @@ MainServerCommit="master"
 # certificates in this case
 UseSavedCerts="y"
 # In order for the install to succeed you need to provide a public and private ssh key
-# that will be used for establishing ssh connection between backend and arena. See
+# that will be used for establishing ssh connection between tio.run and arena. See
 # accompanying documentation to find out how to generate them.
 # Put the private key to private/id_rsa
 # Put the public key to public/id_rsa.pub
@@ -220,7 +218,7 @@ On the main server, you can execute the following code snippet to test all langu
 
 ```bash
 cd /srv
-bin/self-test backend.tryitonline.net/run lib/HelloWorldTests/*
+bin/self-test tio.run/cgi-bin/run lib/HelloWorldTests/*
 ```
 
 If setup was successful, you should see the following output after a few minutes.
@@ -237,7 +235,7 @@ It is also possible to run the test for select languages. To do so, replace the 
 Finally, you can use the `-t` or `--target` flag to test a different arena server. For example, the following snippet will run the Hello World tests on `arena2.tryitonline.net` and displays verbose output.
 
 ```bash
-bin/self-test -v -t runner@arena2.tryitonline.net backend.tryitonline.net/run lib/HelloWorldTests/*
+bin/self-test -v -t runner@arena2.tryitonline.net tio.run/dgi-bin/run lib/HelloWorldTests/*
 ```
 
 Another test utility is available at <https://github.com/TryItOnline/TioTests>. That one allows running the tests remotely from any client, not just from the main server.

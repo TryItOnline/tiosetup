@@ -12,6 +12,7 @@ if [[ ! -z $MainServerCommit ]]; then
     cd ..
 fi
 yes | cp -r ./main-server/* /srv
+ln -st /usr/local/sbin /srv/sbin/*
 rm -rf ./main-server
 cd /srv
 cd tryitonline.net
@@ -29,7 +30,11 @@ sed -i "s://tryitonline.net://$TRYITONLINENET:g" nexus.html
 sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" nexus.html
 cd ..
 yes | cp etc/run.default etc/run
-sed -i "s/\s*ssh_user_host=.*/ssh_user_host=runner@$ARENA/g" etc/run
+for i in $(echo $ARENA | sed "s/,/ /g")
+do
+    arenactl add runner@$i
+    arenactl enable runner@$i
+done
 
 mkdir -p /srv/tmp
 chown apache:apache /srv/tmp

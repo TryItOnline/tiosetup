@@ -24,7 +24,7 @@ MainServerCommit="master"
 # certificates in this case
 UseSavedCerts="y"
 # In order for the install to succeed you need to provide a public and private ssh key
-# that will be used for establishing ssh connection between backend and arena. See
+# that will be used for establishing ssh connection between tio.run and arena. See
 # accompanying documentation to find out how to generate them.
 # Put the private key to private/id_rsa
 # Put the public key to public/id_rsa.pub

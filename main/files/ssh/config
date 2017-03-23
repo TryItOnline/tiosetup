@@ -1,4 +1,4 @@
-Host arena1.tryitonline.net
+Host *
 ControlMaster auto
 ControlPersist yes
 ControlPath /tmp/%r@%h
