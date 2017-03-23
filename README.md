@@ -157,8 +157,6 @@ Create `private/config` using `private/config.default` as per below.
 TRYITONLINENET=www2.tryitonline.nz
 # Domain where https://tio.run will be hosted
 TIORUN=tio2.tryitonline.nz
-# Domain where https://backend.tryitonline.net will be hosted
-BACKEND=backend2.tryitonline.nz
 # Domain where arena.tryitonline.net will be hosted
 ARENA=arena2.tryitonline.nz
 # This is your email used for LetsEncrypt certificate revocations
