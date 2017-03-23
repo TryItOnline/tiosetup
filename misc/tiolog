@@ -2,4 +2,4 @@
 
 LOGS=/var/log/tioupd
 
-tail "$LOGS/run-scripts.log" "$@"
+tail "$LOGS/run-scripts.log" -n 1GB "$@"
