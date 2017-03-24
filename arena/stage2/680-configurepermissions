@@ -3,11 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-restorecon -Rv /home/runner/.ssh/authorized_keys
-restorecon -Rv /srv/bin
-restorecon -Rv /srv/wrappers
-restorecon -Rv /usr/lib /usr/lib64
-restorecon -Rv /usr/lib{,64}/python3.5
+restorecon -Rv ~runner /usr /srv
 
 chown -R root: /opt
 
