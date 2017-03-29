@@ -5,6 +5,7 @@ trap 'err=1' ERR
 
 pushd /opt
 
+sync && echo 3 > /proc/sys/vm/drop_caches
 for dyalogzip in linux_64_*_*.zip; do
     dyalogrpm=${dyalogzip%.zip}.x86_64.rpm
     rm -f $dyalogrpm
