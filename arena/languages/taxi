@@ -6,7 +6,7 @@ trap 'err=1' ERR
 rm -rf taxi
 git clone https://github.com/TryItOnline/taxi.git
 cd taxi
-g++ taxi.cpp -o taxi
+g++ taxi.cpp -o taxi -DNO_GREETINGS
 cd ..
 
 exit "$err"
