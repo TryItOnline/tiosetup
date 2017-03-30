@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 rm -rf cow
-git clone https://github.com/TryItOnline/COW.git cow
+git clone https://github.com/BigZaphod/COW.git cow
 cd cow
 gcc source/cow.cpp -lstdc++ -o cow -DNO_GREETINGS
 cd ..
