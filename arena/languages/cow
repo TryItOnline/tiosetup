@@ -3,10 +3,10 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf cow
-git clone https://github.com/TryItOnline/cow.git
-cd cow
-gcc cow.cpp -lstdc++ -o cow
+rm -rf COW
+git clone https://github.com/TryItOnline/COW.git
+cd COW
+gcc source/cow.cpp -lstdc++ -o cow -DNO_GREETINGS
 cd ..
 
 exit "$err"
