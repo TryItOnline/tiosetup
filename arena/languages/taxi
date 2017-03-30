@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Taxi
-git clone https://github.com/TryItOnline/Taxi.git
-cd Taxi
+rm -rf taxi
+git clone https://github.com/TryItOnline/Taxi.git taxi
+cd taxi
 g++ source/taxi.cpp -o taxi -DNO_GREETINGS
 cd ..
 
