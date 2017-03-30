@@ -4,9 +4,9 @@ err=0
 trap 'err=1' ERR
 
 rm -rf whirl
-git clone https://github.com/TryItOnline/whirl.git
+git clone https://github.com/TryItOnline/Whirl.git whirl
 cd whirl
-g++ whirl.cpp -o whirl
+g++ source/whirl.cpp -o whirl -DNO_GREETINGS
 cd ..
 
 exit "$err"
