@@ -3,9 +3,11 @@
 err=0
 trap 'err=1' ERR
 
-wget http://downloads.dlang.org/releases/2.x/2.073.0/dmd-2.073.0-0.fedora.x86_64.rpm
-sync && echo 3 > /proc/sys/vm/drop_caches
-dnf install dmd-2.073.0-0.fedora.x86_64.rpm -y
-rm -f dmd-2.073.0-0.fedora.x86_64.rpm
+\rm -rf d
+version=$(curl --show-error --silent downloads.dlang.org/releases/LATEST)
+curl --location --show-error --silent \
+	"downloads.dlang.org/releases/${version%%.*}.x/$version/dmd.$version.linux.tar.xz" \
+	| tar x --transform='s:^[^/]*:d:' --xz
+ln -fs "$PWD/d/linux/bin64/dmd" /usr/local/bin/
 
 exit "$err"
