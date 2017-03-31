@@ -5,8 +5,5 @@ trap 'err=1' ERR
 
 rm -rf Maverick
 git clone https://github.com/ConorOBrien-Foxx/Maverick.git
-cd Maverick
-npm install -g
-cd ..
 
 exit "$err"
