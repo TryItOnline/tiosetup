@@ -3,11 +3,12 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf focal-1.0.5
+rm -rf focal
 wget ftp://www.cozx.com/pub/langs/focal-1.0.5.tar.gz
 tar xf focal-1.0.5.tar.gz
 rm -f focal-1.0.5.tar.gz
-cd focal-1.0.5
+mv focal-1.0.5 focal
+cd focal
 make
 cd ..
 
