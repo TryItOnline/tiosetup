@@ -8,6 +8,7 @@ Set-Alias man help -Option AllScope -Scope Global
 Set-Alias mount New-PSDrive -Option AllScope -Scope Global
 Set-Alias mv Move-Item -Option AllScope -Scope Global
 Set-Alias ps Get-Process -Option AllScope -Scope Global
+Set-Alias random Get-Random -Option AllScope -Scope Global
 Set-Alias rm Remove-Item -Option AllScope -Scope Global
 Set-Alias rmdir Remove-Item -Option AllScope -Scope Global
 Set-Alias sleep Start-Sleep -Option AllScope -Scope Global
