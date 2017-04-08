@@ -3,15 +3,12 @@
 err=0
 trap 'err=1' ERR
 
-source private/config 
+rm -rf /srv
+git clone https://github.com/TryItOnline/arena-server.git /srv
+source private/config
 
-git clone https://github.com/TryItOnline/arena-server.git
 if [[ ! -z $ArenaServerCommit ]]; then
-    cd arena-server
-    git checkout $ArenaServerCommit
-    cd ..
+    git -C /srv checkout $ArenaServerCommit
 fi
-yes | cp -r ./arena-server/* /srv
-rm -rf ./arena-server
 
 exit "$err"
