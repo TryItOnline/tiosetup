@@ -4,9 +4,12 @@ err=0
 trap 'err=1' ERR
 
 rm -rf roda
-git clone --recursive https://github.com/fergusq/roda.git
-cd roda
-git checkout roda-0.12
-gradle fatJar
+mkdir roda
+curl --location --silent --show-error --output roda/roda.jar "$(
+    curl --silent --show-error https://api.github.com/repos/fergusq/roda/releases \
+        | jq --raw-output 'sort_by(.published_at)|reverse|.[].assets|.[].browser_download_url' \
+        | head -1 \
+        | tee /dev/stderr
+)"
 
 exit "$err"
