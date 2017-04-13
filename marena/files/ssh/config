@@ -1,0 +1,4 @@
+Host *
+ControlMaster auto
+ControlPersist yes
+ControlPath /tmp/%r@%h

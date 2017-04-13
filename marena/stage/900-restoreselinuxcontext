@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap "err=1" ERR
+
+restorecon -Rv ~runner /usr /srv
+chown -R root: /opt
+
+exit "$err"

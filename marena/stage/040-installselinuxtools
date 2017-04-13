@@ -1,0 +1,8 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+dnf install psmisc selinux-policy-sandbox policycoreutils-sandbox selinux-policy-devel -y
+
+exit "$err"

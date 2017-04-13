@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# This and all other scripts in this directory are executed in aplphabetical order 
+# at the end. Add any custom scripts you might want alongside this script in to this directory
+
+err=0
+trap 'err=1' ERR
+
+pip install --upgrade pip
+pip install glances
+HOME=/root git config --global core.editor "nano"
+
+exit "$err"

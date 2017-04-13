@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap "err=1" ERR
+
+source private/config
+
+for i in $(echo $ARENA | sed "s/,/ /g")
+do
+    sudo -u apache ssh-keyscan $i > $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts
+    sudo -u apache ssh-keyscan $(dig +short $i) >> $(getent passwd apache | cut -d: -f6)/.ssh/known_hosts
+done
+
+
+exit "$err"

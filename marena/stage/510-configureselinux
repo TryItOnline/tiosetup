@@ -1,0 +1,33 @@
+#!/bin/bash
+
+err=0
+trap "err=1" ERR
+
+semanage fcontext -a -t httpd_sys_rw_content_t '/srv/cache(/.*)?'
+semanage fcontext -a -t httpd_sys_rw_content_t '/srv/store(/.*)?'
+semanage fcontext -a -t httpd_sys_content_t '/srv/tio.run(/.*)?'
+semanage fcontext -a -t httpd_sys_script_exec_t '/srv/tio.run/cgi-bin(/.*)?'
+semanage fcontext -a -t httpd_sys_rw_content_t '/srv/tmp(/.*)?'
+semanage fcontext -a -t httpd_sys_content_t '/srv/tryitonline.net(/.*)?'
+semanage fcontext -a -t bin_t '/srv/bin(/.*)?'
+semanage fcontext -a -t etc_t '/srv/etc(/.*)?'
+semanage fcontext -a -t lib_t '/srv/lib(/.*)?'
+semanage fcontext -a -t systemd_unit_file_t '/srv/lib/systemd(/.*)?'
+
+semanage fcontext -a -t bin_t '/srv/bin(/.*)?'
+semanage fcontext -a -t bin_t '/srv/wrappers(/.*)?'
+semanage fcontext -a -t bin_t '/usr/lib(64)?/swipl-.*/bin/x86_64-linux(/.*)?'
+semanage fcontext -a -t bin_t '/usr/lib(64)?/node_modules/coffee-script/bin(/.*)?'
+semanage fcontext -a -t bin_t '/usr/lib(64)?/golang/bin(/.*)?'
+semanage fcontext -a -t bin_t '/usr/lib(64)?/node_modules/babel-cli/bin(/.*)?'
+semanage fcontext -a -t bin_t '/usr/lib(64)?/pypy-.*/bin(/.*)?'
+semanage fcontext -a -t bin_t '/usr/lib/node_modules/cheddar-lang/dist/cli(/.*)?'
+semanage fcontext -a -t bin_t '/usr/lib(64)?/clisp-.*/base(/.*)?'
+semanage fcontext -a -t bin_t '/usr/lib(64)?/maxima/.*/binary-sbcl(/.*)?'
+semanage fcontext -a -t bin_t '/usr/lib/golang/pkg/tool/linux_amd64(/.*)?'
+semanage fcontext -a -t bin_t '/usr/lib/ceylon/.*/bin(/ceylon)?'
+semanage fcontext -a -t bin_t '/usr/local/haskell/.*/bin(/.*)?'
+
+
+
+exit "$err"

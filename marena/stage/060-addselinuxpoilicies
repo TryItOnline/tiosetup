@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+cp files/selinux/tryitonline.te ./tryitonline.te
+make -f /usr/share/selinux/devel/Makefile tryitonline.pp
+semodule -i tryitonline.pp
+rm -f tryitonline.*
+
+exit "$err"

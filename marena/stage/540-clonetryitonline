@@ -1,0 +1,47 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf /srv
+git clone https://github.com/TryItOnline/tryitonline.git /srv
+source private/config
+
+if [[ ! -z $TryItOnlineCommit ]]; then
+    git -C /srv checkout $TryItOnlineCommit
+fi
+
+yes | cp -r ./main-server/* /srv
+ln -st /usr/local/sbin /srv/sbin/*
+rm -rf ./main-server
+cd /srv
+cd tryitonline.net
+sed -i "s/tryitonline.net/$TRYITONLINENET/g" manifest.json
+sed -i "s/tio.run/$TIORUN/g" manifest-nexus.json
+sed -i "s/tryitonline.net/$TRYITONLINENET/g" index.html
+sed -i "s/tio.run/$TIORUN/g" index.html
+cd ..
+cd tio.run
+sed -i "s/tio.run/$TIORUN/g" index.html
+sed -i "s://tryitonline.net://$TRYITONLINENET:g" index.html
+sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" index.html
+sed -i "s/tio.run/$TIORUN/g" nexus.html
+sed -i "s://tryitonline.net://$TRYITONLINENET:g" nexus.html
+sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" nexus.html
+cd ..
+yes | cp etc/run.default etc/run
+for i in $(echo $ARENA | sed "s/,/ /g")
+do
+    arenactl add runner@$i
+    arenactl enable runner@$i
+done
+
+mkdir -p /srv/tmp
+chown apache:apache /srv/tmp
+mkdir -p /srv/cache/{0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f}{0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f}
+chown -R apache:apache /srv/cache
+mkdir -p /srv/store
+chown apache:apache /srv/store
+restorecon -Rv /srv
+
+exit "$err"

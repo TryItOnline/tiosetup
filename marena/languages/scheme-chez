@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ChezScheme
+git clone https://github.com/cisco/ChezScheme.git
+cd ChezScheme
+./configure --installprefix=/opt/ChezScheme
+make
+make install
+cd ..
+
+exit "$err"

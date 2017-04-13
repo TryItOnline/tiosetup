@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf Esolangs
+git clone https://github.com/dloscutoff/Esolangs.git
+
+exit "$err"

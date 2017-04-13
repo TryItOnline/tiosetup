@@ -1,0 +1,8 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+ln -st /usr/local/sbin /opt/TioSetup/misc/*
+
+exit "$err"

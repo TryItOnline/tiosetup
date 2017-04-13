@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap "err=1" ERR
+
+source private/config
+
+mkdir -p $(getent passwd apache | cut -d: -f6)/.ssh
+chown apache:apache $(getent passwd apache | cut -d: -f6)/.ssh
+yes | cp private/id_rsa $(getent passwd apache | cut -d: -f6)/.ssh/id_rsa
+yes | cp private/id_rsa.pub $(getent passwd apache | cut -d: -f6)/.ssh/id_rsa.pub
+yes | cp files/ssh/config $(getent passwd apache | cut -d: -f6)/.ssh/config
+
+exit "$err"

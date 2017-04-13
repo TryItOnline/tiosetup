@@ -1,0 +1,24 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+mkdir -p tmp
+cd tmp
+dnf install -y https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-alpha.15/powershell-6.0.0_alpha.15-1.el7.centos.x86_64.rpm
+ln -s /opt/microsoft/ usr
+rpm2cpio http://archives.fedoraproject.org/pub/archive/fedora/linux/releases/19/Everything/x86_64/os/Packages/l/libicu-50.1.2-5.fc19.x86_64.rpm | cpio -dim
+wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+mono nuget.exe install runtime.fedora.24-x64.Microsoft.NETCore.Runtime.CoreCLR -Version 1.1.1
+mv runtime.fedora.24-x64.Microsoft.NETCore.Runtime.CoreCLR.1.1.1 /opt/microsoft/coreclr
+pushd /opt/microsoft
+chmod +x coreclr/tools/crossgen
+tmperr=$err
+for f in powershell/6.0.0-alpha.15/*.dll; do coreclr/tools/crossgen -JITPath dotnet/shared/Microsoft.NETCore.App/1.1.1/libclrjit.so -Platform_Assemblies_Paths coreclr/runtimes/fedora.24-x64/native:powershell/6.0.0-alpha.15 "$f"; done
+err=$tmperr
+popd
+cd ..
+rm -rf tmp ~/.nuget/ ~/.config/NuGet/ ~/.local/share/NuGet/
+cp files/aliases.ps1 /opt/microsoft/lib64/
+
+exit "$err"

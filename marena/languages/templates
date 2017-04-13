@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf tmp-lang
+git clone https://github.com/feresum/tmp-lang.git
+
+exit "$err"

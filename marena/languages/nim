@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm -rf nim-0.16.0
+wget https://nim-lang.org/download/nim-0.16.0.tar.xz
+tar xf nim-0.16.0.tar.xz
+rm -rf nim-0.16.0.tar.xz
+chown -R root: nim-0.16.0/
+cd nim-0.16.0
+sh build.sh
+cd ..

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ ! -f "private/config" ]]; then
+   echo "Please provide private/config!";
+   exit;
+fi
+source private/config 
+
+./setup-main

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf grass
+mkdir -p grass
+cd grass
+wget http://www.blue.sky.or.jp/grass/grass.rb
+cd ..
+
+exit "$err"

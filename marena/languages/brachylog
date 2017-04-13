@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf Brachylog-1.0-ascii
+wget https://github.com/JCumin/Brachylog/archive/v1.0-ascii.tar.gz
+tar zxvf v1.0-ascii.tar.gz
+rm -f v1.0-ascii.tar.gz
+
+exit "$err"

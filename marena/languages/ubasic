@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ubasic
+git clone https://github.com/EtchedPixels/ubasic.git
+cd ubasic
+make
+cd ..
+
+exit "$err"
