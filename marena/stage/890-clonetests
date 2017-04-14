@@ -7,8 +7,8 @@ rm -rf /opt/TioTests
 git clone https://github.com/TryItOnline/TioTests.git /opt/TioTests
 pushd /opt/TioTests
 mkdir -p /opt/microsoft/tmp
-TMPDIR=/opt/microsoft/tmp dotnet restore
-dotnet build
+HOME=/root TMPDIR=/opt/microsoft/tmp dotnet restore
+HOME=/root dotnet build
 rm -rf /opt/microsoft/tmp
 popd
 
