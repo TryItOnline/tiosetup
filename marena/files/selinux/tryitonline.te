@@ -1,14 +1,15 @@
 module tryitonline 1.0;
 
 require {
-	class dir { read search };
-	class file { open read };
-	class tcp_socket name_connect;
-	type NetworkManager_var_run_t;
-	type httpd_sys_script_t;
-	type passwd_file_t;
-	type proc_t;
-	type sandbox_t;
+    class dir { read search };
+    class file { open read };
+    class tcp_socket name_connect;
+    type NetworkManager_var_run_t;
+    type httpd_sys_script_t;
+    type passwd_file_t;
+    type proc_t;
+    type sandbox_t;
+    type ssh_port_t;
 }
 
 allow httpd_sys_script_t ssh_port_t:tcp_socket name_connect;
