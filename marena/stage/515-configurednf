@@ -5,7 +5,7 @@ trap 'err=1' ERR
 
 rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
 dnf config-manager --add-repo http://download.mono-project.com/repo/centos/
-dnf config-manager --add-repo http://download.opensuse.org/repositories/shells:fish:release:2/Fedora_24/shells:fish:release:2.repo
+dnf config-manager --add-repo http://download.opensuse.org/repositories/shells:fish:release:2/Fedora_25/shells:fish:release:2.repo
 dnf copr enable dmoerner/outils -y
 dnf copr enable dperson/neovim -y
 dnf copr enable omajid/openjdk9 -y
