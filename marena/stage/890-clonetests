@@ -6,8 +6,10 @@ trap "err=1" ERR
 rm -rf /opt/TioTests
 git clone https://github.com/TryItOnline/TioTests.git /opt/TioTests
 pushd /opt/TioTests
-dotnet restore
+mkdir -p /opt/microsoft/tmp
+TMPDIR=/opt/microsoft/tmp dotnet restore
 dotnet build
+rm -rf /opt/microsoft/tmp
 popd
 
 exit "$err"
