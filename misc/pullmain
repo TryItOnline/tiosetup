@@ -1,5 +1,0 @@
-#!/bin/bash 
-
-pushd ~
-/opt/TioSetup/arena/stage2/530-clonemain
-popd

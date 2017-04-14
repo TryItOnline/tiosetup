@@ -2,8 +2,8 @@
 
 pushd /opt
 if [[ ! -z $1 ]]; then
-    /opt/TioSetup/arena/languages/$1
+    /opt/TioSetup/marena/languages/$1
 else
-    /opt/TioSetup/arena/run-scripts /opt/TioSetup/arena/languages
+    /opt/TioSetup/marena/run-scripts /opt/TioSetup/marena/languages
 fi
 popd
