@@ -3,4 +3,4 @@ Description=Renews letencrypt SSL certificates
 
 [Service]
 Type=simple
-ExecStart=/bin/sh -c 'letsencrypt renew'
+ExecStart=/bin/sh -c 'certbot renew'
