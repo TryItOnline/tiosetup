@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf DStack
+git clone https://github.com/TryItOnline/DStack.git
+cd DStack
+g++ -O2 -o dstack *.cpp
+
+exit "$err"

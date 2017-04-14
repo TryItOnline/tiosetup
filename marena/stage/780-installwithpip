@@ -9,6 +9,6 @@ python3 -m pip install exrex python-pcre hbcht sympy
 python3 -m pip install numpy
 python3 -m pip install pyephem
 python3 -m pip install python-dateutil
-python2 -m pip install sympy pyshoco docopt neovim ninja django python-dateutil
+python2 -m pip install sympy pyshoco docopt neovim ninja django python-dateutil numpy
 
 exit "$err"
