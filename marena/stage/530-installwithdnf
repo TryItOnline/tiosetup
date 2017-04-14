@@ -3,15 +3,15 @@
 err=0
 trap 'err=1' ERR
 
-dnf install allegro5-devel ant bind-utils bison bison-devel bsd-games ceylon-1.3.2 chicken \
-  clang clisp clojure cmake dash emacs-nox erlang-erts flex flex-devel fsharp gcc-c++ \
+dnf install allegro5-devel ant bind-utils bison bison-devel bsd-games bzip2-devel ceylon-1.3.2 chicken \
+  clang clisp clojure cmake dash emacs-nox erlang-erts file flex flex-devel fsharp gcc-c++ \
   gc-devel gforth glib2-devel glibc-devel glibc-devel.i686 gmp-c++ gmp-devel golang gradle \
   groovy gtkglext-libs httpd icu ImageMagick java-1.?.0-openjdk java-9-openjdk-devel jq \
-  ksh libgcc.i686 libicu libunwind libX11-devel lldb lldb-devel lttng-tools lttng-ust \
+  ksh libcurl-devel libgcc.i686 libicu libunwind libX11-devel lldb lldb-devel lttng-tools lttng-ust \
   maxima mercurial mod_ssl mono-basic mono-complete nasm ncurses-compat-libs neovim npm \
   ocaml octave octave-devel outils patch pcre-devel perl-Digest-CRC perl-List-MoreUtils \
   perl-Text-Soundex php-cli pl pyephem pypy python3-devel python-certbot-apache \
-  python-devel rakudo R-littler ruby rust tcsh time tree vala vim-common vim-common \
-  words zsh 'apache-commons-*' -y
+  python-devel rakudo ruby rust tcsh time tree vala vim-common vim-common \
+  words xz-devel zsh 'apache-commons-*' -y
  
 exit "$err"

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf r
+curl https://cloud.r-project.org/src/base/R-latest.tar.gz | tar x --absolute-names --gzip --transform="s:^[^/]*:r/build:"
+cd r
+build/configure --with-x=no
+make R
+rm -rf build source
+
+exit "$err"
