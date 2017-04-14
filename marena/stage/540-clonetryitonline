@@ -11,9 +11,7 @@ if [[ ! -z $TryItOnlineCommit ]]; then
     git -C /srv checkout $TryItOnlineCommit
 fi
 
-yes | cp -r ./main-server/* /srv
 ln -st /usr/local/sbin /srv/sbin/*
-rm -rf ./main-server
 cd /srv
 cd tryitonline.net
 sed -i "s/tryitonline.net/$TRYITONLINENET/g" manifest.json
