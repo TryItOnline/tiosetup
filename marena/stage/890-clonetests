@@ -5,5 +5,9 @@ trap "err=1" ERR
 
 rm -rf /opt/TioTests
 git clone https://github.com/TryItOnline/TioTests.git /opt/TioTests
+pushd /opt/TioTests
+dotnet restore
+dotnet build
+popd
 
 exit "$err"
