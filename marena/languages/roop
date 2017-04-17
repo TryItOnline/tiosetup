@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ROOP
+git clone https://github.com/alejandrocoria/ROOP.git
+cd ROOP
+g++ -O2 -o roop *.cpp
+
+exit "$err"
