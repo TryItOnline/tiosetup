@@ -5,7 +5,5 @@ trap 'err=1' ERR
 
 rm -rf Ohm
 git clone https://github.com/MiningPotatoes/Ohm.git
-cd Ohm
-rake
 
 exit "$err"
