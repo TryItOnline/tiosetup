@@ -9,9 +9,9 @@ dnf install allegro5-devel ant bind-utils bison bison-devel bsd-games bzip2-deve
   groovy gtkglext-libs httpd icu ImageMagick java-1.?.0-openjdk java-9-openjdk-devel jq \
   ksh libcurl-devel libgcc.i686 libicu libunwind libX11-devel lldb lldb-devel lttng-tools lttng-ust \
   maxima mercurial mod_ssl mono-basic mono-complete nasm ncurses-compat-libs neovim npm \
-  ocaml octave octave-devel outils patch pcre-devel perl-Digest-CRC perl-List-MoreUtils \
+  ocaml octave octave-devel openssl-devel outils patch pcre-devel perl-Digest-CRC perl-List-MoreUtils \
   perl-Text-Soundex php-cli pl pyephem pypy python3-devel python-certbot-apache \
-  python-devel rakudo redhat-rpm-config ruby rust scala tcsh time tree vala vim-common vim-common \
+  python-devel rakudo redhat-rpm-config ruby rust scala tcl-trf tcsh time tree vala vim-common vim-common \
   words xz-devel zsh 'apache-commons-*' -y
 
 exit "$err"
