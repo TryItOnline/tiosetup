@@ -4,16 +4,66 @@ err=0
 trap "err=1" ERR
 
 source private/config
+[[ $LANGDOMAIN ]] || LANGDOMAIN=example.net LD=#
 
-\cp files/httpd/*.conf /etc/httpd/conf.d/
+echo "ServerName $TRYITONLINENET" > /etc/httpd/conf.d/000-global.conf
 
-sed -i "s/ServerName tryitonline.net/ServerName $TRYITONLINENET/g" /etc/httpd/conf.d/tryitonline.net.conf 
-sed -i "s/ServerName tio.run/ServerName $TIORUN/g" /etc/httpd/conf.d/tio.run.conf
+cat > /etc/httpd/conf.d/010-tryitonline.conf << .
+<VirtualHost *:80>
+	RewriteEngine On
+	ServerName $TRYITONLINENET
+	DocumentRoot /srv/tryitonline.net
+	Header always set Access-Control-Allow-Origin "*"
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/json
+	AddOutputFilterByType DEFLATE application/octet-stream
+	AddType application/font-woff2 .woff2
+	ExpiresActive On
+	ExpiresByType application/font-woff "access plus 1 year"
+	ExpiresByType application/font-woff2 "access plus 1 year"
 
-sed -i 's/SSLEngine on/SSLEngine off/g' /etc/httpd/conf.d/ssl.conf
-sed -i 's/#ServerName www.example.com:80/ServerName 127.0.0.1:80/g' /etc/httpd/conf/httpd.conf
+	<Directory /srv/tryitonline.net>
+		Options Indexes FollowSymLinks
+		AllowOverride None
+		Require all granted
+	</Directory>
+</VirtualHost>
+.
 
-chkconfig httpd on
-systemctl restart httpd
+cat > /etc/httpd/conf.d/020-tio.run.conf << .
+<VirtualHost *:80>
+	RewriteEngine On
+	ServerName $TIORUN
+$LD	ServerAlias *.$LANGDOMAIN
+	DocumentRoot /srv/tio.run
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/octet-stream
+$LD	RewriteCond %{HTTP_HOST} ^([^.]*)\\.${LANGDOMAIN//./\\.}\$
+$LD	RewriteRule "" https://$TIORUN/nexus/%1 [R=301]
+	RewriteRule "^/nexus(-[^/]+)?(/|$)" "/nexus\$1.html"
+
+	<Directory /srv/tio.run>
+		Options Indexes FollowSymLinks
+		AllowOverride none
+		Require all granted
+	</Directory>
+
+	ScriptAlias /cgi-bin /srv/tio.run/cgi-bin/
+	TimeOut 70
+
+	<Directory /srv/tio.run/cgi-bin>
+		Header always set Access-Control-Allow-Origin "*"
+		AllowOverride none
+		Options +ExecCGI -MultiViews
+		Require all granted
+	</Directory>
+</VirtualHost>
+.
+
+echo 'http_server=httpd' > /srv/etc/tio-web
+systemctl enable tio-web
+systemctl start tio-web
 
 exit "$err"

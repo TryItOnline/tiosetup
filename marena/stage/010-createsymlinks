@@ -1,0 +1,10 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+ln -fst /usr/local/bin /srv/bin/*
+ln -fst /usr/local/lib/systemd/system /srv/lib/systemd/*
+ln -fst /usr/local/sbin /srv/sbin/* /opt/TioSetup/misc/*
+
+exit "$err"

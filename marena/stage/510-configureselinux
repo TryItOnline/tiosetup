@@ -13,9 +13,9 @@ semanage fcontext -a -t bin_t '/srv/bin(/.*)?'
 semanage fcontext -a -t etc_t '/srv/etc(/.*)?'
 semanage fcontext -a -t lib_t '/srv/lib(/.*)?'
 semanage fcontext -a -t systemd_unit_file_t '/srv/lib/systemd(/.*)?'
-
-semanage fcontext -a -t bin_t '/srv/bin(/.*)?'
+semanage fcontext -a -t bin_t '/srv/sbin(/.*)?'
 semanage fcontext -a -t bin_t '/srv/wrappers(/.*)?'
+
 semanage fcontext -a -t bin_t '/usr/lib(64)?/swipl-.*/bin/x86_64-linux(/.*)?'
 semanage fcontext -a -t bin_t '/usr/lib(64)?/node_modules/coffee-script/bin(/.*)?'
 semanage fcontext -a -t bin_t '/usr/lib(64)?/golang/bin(/.*)?'
@@ -27,7 +27,5 @@ semanage fcontext -a -t bin_t '/usr/lib(64)?/maxima/.*/binary-sbcl(/.*)?'
 semanage fcontext -a -t bin_t '/usr/lib/golang/pkg/tool/linux_amd64(/.*)?'
 semanage fcontext -a -t bin_t '/usr/lib/ceylon/.*/bin(/ceylon)?'
 semanage fcontext -a -t bin_t '/usr/local/haskell/.*/bin(/.*)?'
-
-
 
 exit "$err"
