@@ -2,12 +2,12 @@
 # This allows installing a historic version or a feature branch instead of the master latest
 TryItOnlineCommit="master"
 
-# In order for the scripts to work, you need to download 64-bit Dyalog APL to /opt.
-# You need a valid Dyalog license for that.
-# The install script depends on the Dyalog APL archive name, which has a version,
-# thus, for a different version of the archive to work, you will need to modify
-# the languages/apl-dyalog script. If you do not have the license you
-# can run the setup script without the Dyalog APL archive, but Dyalog APL won't be installed.
+# To be able to use Dyalog APL, you need to download 64-bit Dyalog APL Classic and Unicode
+# to /opt This requires a valid Dyalog license. If you have one, you can save your MyDyalog
+# username in this file and run the misc/dldyalogapl script manually, before the remaining
+# setup scripts. If you do not have a license, you can run the setup script without the
+# Dyalog APL archive, but Dyalog APL won't be installed.
+# DyalogUser=
 
 # The following five settings are for the domain names used in the setup
 # Please read more about them in accompanying documentation.
@@ -39,9 +39,11 @@ EMAIL=letsencrypt@tryitonline.nz
 # certificates in this case
 UseSavedCerts="y"
 
-# In order for the install to succeed you need to provide a public and private ssh key
-# that will be used for establishing ssh connection between tio.run and arena. See
-# accompanying documentation to find out how to generate them.
-# Put the private key to private/id_rsa
-# Put the public key to public/id_rsa.pub
-# letsencrypt.tar.gz
+# You can provide your own SSH key pairs or let them be generated automatically.
+# For the root (resp. apache) user, if either an RSA key pair (id_rsa and id_rsa.pub)
+# or an ED25519 key pair (id_ed25519 and id_ed25519.pub) is found in private/root
+# (resp. private/apache), they will be copied in the user's ssh folder. Otherwise, an
+# ED25519 key pair will be generated automatically.
+# Likewise, if either an RSA key pair (ssh_host_rsa and ssh_host_rsa.pub) or an
+# ED25519 key pair (ssh_host_ed25519 and ssh_host_ed25519.pub) is found in private,
+# they will replace the pre-generated host keys in /etc/ssh.

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+which curl jq &> /dev/null || dnf install --assumeyes curl jq
+version=$(curl https://my.dyalog.com/api/versions.php | jq --raw-output '.released | map(select(.has_linux=="1")) | max_by(.version_name).version_name')
+classic="$(curl "https://my.dyalog.com/lib/callbacks.php?do=CheckFile&o=LINUX&b=64&t=classic&v=$version&c=true" | jq --raw-output '.filename')"
+unicode=${classic/classic/unicode}
+
+cd /opt
+source /opt/TioSetup/marena/private/config
+[[ "$DyalogUser" ]] || read -p 'Username: ' DyalogUser
+stty -echo
+echo -n 'Password: '
+{ printf 'do=login&username=%s&password=' $DyalogUser; head -1; echo >&2; } | curl --data @- --remote-name --remote-name https://my.dyalog.com/lib/download.php\?file=/installs/{$classic,$unicode}
+stty echo

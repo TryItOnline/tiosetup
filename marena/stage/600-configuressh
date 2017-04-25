@@ -5,10 +5,28 @@ trap "err=1" ERR
 
 source private/config
 
-mkdir -p $(getent passwd apache | cut -d: -f6)/.ssh
-chown apache:apache $(getent passwd apache | cut -d: -f6)/.ssh
-yes | cp private/id_rsa $(getent passwd apache | cut -d: -f6)/.ssh/id_rsa
-yes | cp private/id_rsa.pub $(getent passwd apache | cut -d: -f6)/.ssh/id_rsa.pub
-yes | cp files/ssh/config $(getent passwd apache | cut -d: -f6)/.ssh/config
+mkdir -p ~apache/.ssh
+cp files/ssh/config ~apache/.ssh/
+
+for user in apache root; do
+	pushd private/$user
+	home=$(eval echo ~$user)
+	if [[ -e id_rsa && -e id_rsa.pub ]] || [[ -e id_ed25519 && -e id_ed25519.pub ]]; then
+		cp id_* $home/.ssh/
+	else
+		ssh-keygen _C $user@$TRYITONLINENET -f $home/.ssh/id_ed25519 -N '' -t ed25519
+	fi
+	popd
+fi
+
+chown -R apache: ~apache
+cat ~root/.ssh/*.pub >> ~root/.ssh/authorized_keys
+
+if [[ -e ssh_host_rsa && -e ssh_host_rsa.pub ]] || [[ -e ssh_host_ed25519 && -e ssh_host_ed25519.pub ]]; then
+	sed 's/^/* /' ssh_host_*.pub >> /etc/ssh/known_hosts
+	cp ssh_host_* /etc/ssh/
+else
+	sed 's/^/* /' /etc/ssh/ssh_host_ed25519.pub >> /etc/ssh/known_hosts
+fi
 
 exit "$err"

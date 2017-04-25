@@ -6,7 +6,20 @@ trap "err=1" ERR
 source private/config
 [[ $LANGDOMAIN ]] || LANGDOMAIN=example.net LD=#
 
-echo "ServerName $TRYITONLINENET" > /etc/httpd/conf.d/000-global.conf
+for file in /etc/httpd/conf.d/*.conf; do
+	> "$file"
+done
+
+cat > /etc/httpd/conf.d/000-global.conf <<.
+ServerName $TRYITONLINENET
+Listen 443 https
+SSLPassPhraseDialog exec:/usr/libexec/httpd-ssl-pass-dialog
+SSLSessionCache         shmcb:/run/httpd/sslcache(512000)
+SSLSessionCacheTimeout  300
+SSLRandomSeed startup file:/dev/urandom  256
+SSLRandomSeed connect builtin
+SSLCryptoDevice builtin
+.
 
 cat > /etc/httpd/conf.d/010-tryitonline.conf << .
 <VirtualHost *:80>
