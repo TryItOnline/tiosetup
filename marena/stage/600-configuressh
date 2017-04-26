@@ -13,8 +13,11 @@ for user in apache root; do
 	home=$(eval echo ~$user)
 	if [[ -e id_rsa && -e id_rsa.pub ]] || [[ -e id_ed25519 && -e id_ed25519.pub ]]; then
 		cp id_* $home/.ssh/
+	elif cd $home/.ssh
+	[[ -e id_rsa && -e id_rsa.pub ]] || [[ -e id_ed25519 && -e id_ed25519.pub ]]; then
+		true
 	else
-		ssh-keygen _C $user@$TRYITONLINENET -f $home/.ssh/id_ed25519 -N '' -t ed25519
+		ssh-keygen -C $user@$TRYITONLINENET -f id_ed25519 -N '' -t ed25519
 	fi
 	popd
 fi
