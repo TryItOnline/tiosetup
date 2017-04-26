@@ -11,16 +11,16 @@ search_certs()
 source private/config
 
 mkdir -p ~apache/.ssh
-cp files/ssh/config ~apache/.ssh/
 
 for user in apache root; do
-	home=$(eval echo ~$user)
-	if search_certs "$home"; then
+	ssh=$(eval echo ~$user)/.ssh
+	cp files/ssh/config "$ssh"
+	if search_certs "$ssh"; then
 		continue
 	elif search_certs private/$user; then
-		cp private/$user/id_* $home/.ssh/
+		cp private/$user/id_* "$ssh"
 	else
-		ssh-keygen -C $user@$TRYITONLINENET -f "$home/id_ed25519" -N '' -t ed25519
+		ssh-keygen -C $user@$TRYITONLINENET -f "$ssh/id_ed25519" -N '' -t ed25519
 	fi
 done
 
@@ -28,10 +28,10 @@ chown -R apache: ~apache
 cat ~root/.ssh/*.pub >> ~root/.ssh/authorized_keys
 
 if [[ -e ssh_host_rsa_key && -e ssh_host_rsa_key.pub ]] || [[ -e ssh_host_ed25519_key && -e ssh_host_ed25519_key.pub ]]; then
-	sed 's/^/* /' ssh_host_*_key.pub >> /etc/ssh/known_hosts
+	sed 's/^/* /' ssh_host_*_key.pub >> /etc/ssh/ssh_known_hosts
 	cp ssh_host_*_key* /etc/ssh/
 else
-	sed 's/^/* /' /etc/ssh/ssh_host_ed25519_key.pub >> /etc/ssh/known_hosts
+	sed 's/^/* /' /etc/ssh/ssh_host_ed25519_key.pub >> /etc/ssh/ssh_known_hosts
 fi
 
 exit "$err"

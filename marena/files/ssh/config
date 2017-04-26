@@ -1,4 +1,5 @@
 Host *
-ControlMaster auto
-ControlPersist yes
-ControlPath /tmp/%r@%h
+	ControlMaster auto
+	ControlPersist yes
+	ControlPath /tmp/%r@%h
+	HostKeyAlgorithms ssh-ed25519,ssh-rsa

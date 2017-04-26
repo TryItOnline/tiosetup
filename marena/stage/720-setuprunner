@@ -5,7 +5,7 @@ trap 'err=1' ERR
 
 id -u runner &> /dev/null || useradd runner
 mkdir -p ~runner/.ssh
-cat ~apache/id_*.pub >> ~runner/.ssh/authorized_keys
+cat ~apache/.ssh/id_*.pub >> ~runner/.ssh/authorized_keys
 chmod 700 ~runner/.ssh
 chmod 640 ~runner/.ssh/authorized_keys
 chown -R runner: ~runner
