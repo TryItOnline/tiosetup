@@ -16,6 +16,8 @@ semanage fcontext -a -t systemd_unit_file_t '/srv/lib/systemd(/.*)?'
 semanage fcontext -a -t bin_t '/srv/sbin(/.*)?'
 semanage fcontext -a -t bin_t '/srv/wrappers(/.*)?'
 
+restorecon -Rv /srv
+
 semanage fcontext -a -t bin_t '/usr/lib(64)?/swipl-.*/bin/x86_64-linux(/.*)?'
 semanage fcontext -a -t bin_t '/usr/lib(64)?/node_modules/coffee-script/bin(/.*)?'
 semanage fcontext -a -t bin_t '/usr/lib(64)?/golang/bin(/.*)?'

@@ -4,3 +4,5 @@
 private
 !private/[0-9]*
 !private/*.default
+
+tmp
