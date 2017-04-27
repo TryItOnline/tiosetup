@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf MATL
-git clone https://github.com/lmendo/MATL.git
-
-exit "$err"

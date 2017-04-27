@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf reticular
-git clone https://github.com/ConorOBrien-Foxx/reticular.git
-
-exit "$err"

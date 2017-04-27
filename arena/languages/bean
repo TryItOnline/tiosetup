@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf bean
-git clone https://github.com/patrickroberts/bean.git
-
-exit "$err"

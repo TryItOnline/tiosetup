@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf chip
-git clone https://github.com/Phlarx/chip.git
-
-exit "$err"

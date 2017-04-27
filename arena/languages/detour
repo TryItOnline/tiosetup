@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf detour
-git clone https://github.com/cyoce/detour.git
-
-exit "$err"

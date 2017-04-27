@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf japt
-git clone https://github.com/ETHproductions/japt.git
-
-exit "$err"

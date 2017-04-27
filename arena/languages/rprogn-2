@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf RProgN-2
-git clone https://github.com/TehFlaminTaco/RProgN-2.git
-
-exit "$err"

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf stackcats
-git clone https://github.com/m-ender/stackcats.git
-
-exit "$err"

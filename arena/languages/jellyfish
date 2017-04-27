@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf jellyfish
-git clone https://github.com/iatorm/jellyfish.git
-
-exit "$err"

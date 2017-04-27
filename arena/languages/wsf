@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf wsf
-git clone https://github.com/dkudriavtsev/wsf.git
-
-exit "$err"

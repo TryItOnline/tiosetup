@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf sesos
-git clone https://github.com/DennisMitchell/sesos.git
-
-exit "$err"

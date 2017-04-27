@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-systemctl mask systemd-journald{,{,-audit,-dev-log}.socket}
-systemctl stop systemd-journald{,{,-audit,-dev-log}.socket}
-
-exit "$err"

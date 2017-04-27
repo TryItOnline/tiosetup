@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf m
-git clone https://github.com/DennisMitchell/m.git
-
-exit "$err"

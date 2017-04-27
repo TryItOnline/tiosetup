@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf 99
-git clone https://github.com/TryItOnline/99.git
-
-exit "$err"

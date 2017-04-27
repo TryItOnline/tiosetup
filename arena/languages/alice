@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf alice
-git clone https://github.com/m-ender/alice.git
-
-exit "$err"

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf gs2
-git clone https://github.com/nooodl/gs2.git
-
-exit "$err"

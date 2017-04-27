@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf syms
-git clone https://github.com/CatsAreFluffy/syms.git
-
-exit "$err"

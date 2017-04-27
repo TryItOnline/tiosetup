@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf pyth
-git clone https://github.com/isaacg1/pyth.git
-
-exit "$err"

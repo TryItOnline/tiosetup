@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf stacked
-git clone https://github.com/ConorOBrien-Foxx/stacked.git
-
-exit "$err"

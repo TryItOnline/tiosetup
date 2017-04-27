@@ -1,4 +1,0 @@
-#!/bin/bash
-
-./run-scripts stage2
-./run-scripts private

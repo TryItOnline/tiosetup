@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf fish
-git clone https://gist.github.com/6392418.git fish
-
-exit "$err"

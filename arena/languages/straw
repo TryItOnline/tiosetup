@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf straw
-git clone https://github.com/tuxcrafting/straw.git
-
-exit "$err"

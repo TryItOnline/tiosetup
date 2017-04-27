@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf Fourier
-git clone https://github.com/beta-decay/Fourier.git
-
-exit "$err"

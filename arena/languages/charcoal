@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf Charcoal
-git clone https://github.com/somebody1234/Charcoal.git
-
-exit "$err"

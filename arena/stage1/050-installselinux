@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-dnf install psmisc selinux-policy-sandbox policycoreutils-sandbox selinux-policy-devel -y
-sed -i 's/SELINUX=disabled/SELINUX=enforcing/g' /etc/selinux/config
-
-exit "$err"

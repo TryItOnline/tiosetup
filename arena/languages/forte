@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf forter
-git clone https://github.com/judofyr/forter.git
-
-exit "$err"

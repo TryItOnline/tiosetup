@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf haystack
-git clone https://github.com/kade-robertson/haystack.git
-
-exit "$err"

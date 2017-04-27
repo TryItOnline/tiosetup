@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf jelly
-git clone https://github.com/DennisMitchell/jelly.git
-
-exit "$err"

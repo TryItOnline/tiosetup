@@ -1,9 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-rm -rf slashes
-git clone https://github.com/TryItOnline/slashes.git
-
-exit "$err"
