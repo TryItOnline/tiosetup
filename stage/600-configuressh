@@ -19,6 +19,7 @@ for user in apache root; do
 		continue
 	elif search_certs private/$user; then
 		cp private/$user/id_* "$ssh"
+		chmod 600 "$ssh"/!(*.pub)
 	else
 		ssh-keygen -C $user@$TRYITONLINENET -f "$ssh/id_ed25519" -N '' -t ed25519
 	fi
@@ -27,11 +28,16 @@ done
 chown -R apache: ~apache
 cat ~root/.ssh/*.pub >> ~root/.ssh/authorized_keys
 
+cd private
 if [[ -e ssh_host_rsa_key && -e ssh_host_rsa_key.pub ]] || [[ -e ssh_host_ed25519_key && -e ssh_host_ed25519_key.pub ]]; then
 	sed 's/^/* /' ssh_host_*_key.pub >> /etc/ssh/ssh_known_hosts
 	cp ssh_host_*_key* /etc/ssh/
+        chmod 640 /etc/ssh/ssh_host_*_key
+        chmod 644 /etc/ssh/ssh_host_*_key.pub
+		chown root:ssh_keys /etc/ssh/ssh_host_*_key
 else
 	sed 's/^/* /' /etc/ssh/ssh_host_ed25519_key.pub >> /etc/ssh/ssh_known_hosts
 fi
+cd ..
 
 exit "$err"
