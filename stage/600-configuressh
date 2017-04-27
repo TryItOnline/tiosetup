@@ -32,9 +32,9 @@ cd private
 if [[ -e ssh_host_rsa_key && -e ssh_host_rsa_key.pub ]] || [[ -e ssh_host_ed25519_key && -e ssh_host_ed25519_key.pub ]]; then
 	sed 's/^/* /' ssh_host_*_key.pub >> /etc/ssh/ssh_known_hosts
 	cp ssh_host_*_key* /etc/ssh/
-        chmod 640 /etc/ssh/ssh_host_*_key
-        chmod 644 /etc/ssh/ssh_host_*_key.pub
-		chown root:ssh_keys /etc/ssh/ssh_host_*_key
+	chmod 640 /etc/ssh/ssh_host_*_key
+	chmod 644 /etc/ssh/ssh_host_*_key.pub
+	chown root:ssh_keys /etc/ssh/ssh_host_*_key
 else
 	sed 's/^/* /' /etc/ssh/ssh_host_ed25519_key.pub >> /etc/ssh/ssh_known_hosts
 fi
