@@ -6,7 +6,7 @@ classic="$(curl "https://my.dyalog.com/lib/callbacks.php?do=CheckFile&o=LINUX&b=
 unicode=${classic/classic/unicode}
 
 cd /opt
-source /opt/TioSetup/marena/private/config
+source /opt/TioSetup/private/config
 [[ "$DyalogUser" ]] || read -p 'Username: ' DyalogUser
 stty -echo
 echo -n 'Password: '
