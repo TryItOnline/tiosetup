@@ -19,7 +19,8 @@ for user in apache root; do
 		continue
 	elif search_certs private/$user; then
 		cp private/$user/id_* "$ssh"
-		chmod 600 "$ssh"/!(*.pub)
+		chmod 600 "$ssh"/id_*
+		chmod 644 "$ssh"/id_*.pub
 	else
 		ssh-keygen -C $user@$TRYITONLINENET -f "$ssh/id_ed25519" -N '' -t ed25519
 	fi
