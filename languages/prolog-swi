@@ -1,0 +1,19 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf prolog-swi
+mkdir prolog-swi
+cd prolog-swi
+git clone https://github.com/SWI-Prolog/swipl-devel.git build
+cd build
+./prepare --yes
+./configure --prefix=/opt/prolog-swi
+make
+make install
+cd ..
+ln -s /opt/prolog-swi/bin/swipl /usr/local/bin
+rm -r build
+
+exit "$err"
