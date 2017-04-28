@@ -1,0 +1,12 @@
+AuthorizedKeysFile .ssh/authorized_keys
+ChallengeResponseAuthentication no
+Ciphers aes128-gcm@openssh.com
+GSSAPIAuthentication no
+HostKey /etc/ssh/ssh_host_ed25519_key
+HostKey /etc/ssh/ssh_host_rsa_key
+PasswordAuthentication no
+PermitRootLogin yes
+Protocol 2
+Subsystem sftp /usr/libexec/openssh/sftp-server
+SyslogFacility AUTHPRIV
+UsePAM yes
