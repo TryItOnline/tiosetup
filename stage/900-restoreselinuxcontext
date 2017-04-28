@@ -3,7 +3,7 @@
 err=0
 trap "err=1" ERR
 
-restorecon -Rv ~runner /usr /srv
+restorecon -Rv ~runner /opt /srv /usr
 chown -R root: /opt
 
 exit "$err"
