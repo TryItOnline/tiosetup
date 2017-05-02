@@ -1,6 +1,6 @@
 AuthorizedKeysFile .ssh/authorized_keys
 ChallengeResponseAuthentication no
-Ciphers aes128-gcm@openssh.com
+Ciphers aes128-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr
 GSSAPIAuthentication no
 HostKey /etc/ssh/ssh_host_ed25519_key
 HostKey /etc/ssh/ssh_host_rsa_key

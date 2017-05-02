@@ -1,4 +1,5 @@
 Host *
+	Ciphers aes128-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr
 	ControlMaster auto
 	ControlPersist yes
 	ControlPath /tmp/%r@%h
