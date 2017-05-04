@@ -14,6 +14,6 @@ dnf install allegro5-devel ant bind-utils bison bison-devel bsd-games bzip2-deve
   ocaml octave octave-devel openssl-devel outils patch pcre-devel perl-Digest-CRC perl-List-MoreUtils \
   perl-Text-Soundex php-cli pyephem pypy python3-devel python-certbot-apache python-devel rakudo \
   redhat-rpm-config ruby rust scala sudo tcl-trf tcsh time tree unixODBC-devel uuid-devel vala vim-common \
-  words xz-devel zsh 'apache-commons-*' -y
+  words xz xz-devel zsh 'apache-commons-*' -y
 
 exit "$err"
