@@ -3,7 +3,10 @@
 err=0
 trap "err=1" ERR
 
-restorecon -Rv ~runner /opt /srv /usr
+source private/config
+if [[ "$OfflineMode" != "y" ]]; then
+  restorecon -Rv ~runner /opt /srv /usr
+fi
 chown -R root: /opt
 
 exit "$err"

@@ -3,12 +3,14 @@
 err=0
 trap 'err=1' ERR
 
+source private/config
 id -u runner &> /dev/null || useradd runner
 mkdir -p ~runner/.ssh
 cat ~apache/.ssh/id_*.pub >> ~runner/.ssh/authorized_keys
 chmod 700 ~runner/.ssh
 chmod 640 ~runner/.ssh/authorized_keys
-chown -R runner: ~runner
-chattr +i ~runner
+if [[ "$OfflineMode" != "y" ]]; then
+  chown -R runner: ~runner
+fi
 
 exit "$err"

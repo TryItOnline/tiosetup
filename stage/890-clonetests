@@ -3,13 +3,16 @@
 err=0
 trap "err=1" ERR
 
-rm -rf /opt/TioTests
-git clone https://github.com/TryItOnline/TioTests.git /opt/TioTests
-pushd /opt/TioTests
-mkdir -p /opt/microsoft/tmp
-HOME=/root TMPDIR=/opt/microsoft/tmp dotnet restore
-HOME=/root dotnet build
-rm -rf /opt/microsoft/tmp
-popd
+source private/config
+if [[ "$OfflineMode" != "y" ]]; then
+  rm -rf /opt/TioTests
+  git clone https://github.com/TryItOnline/TioTests.git /opt/TioTests
+  pushd /opt/TioTests
+  mkdir -p /opt/microsoft/tmp
+  HOME=/root TMPDIR=/opt/microsoft/tmp dotnet restore
+  HOME=/root dotnet build
+  rm -rf /opt/microsoft/tmp
+  popd
+fi
 
 exit "$err"

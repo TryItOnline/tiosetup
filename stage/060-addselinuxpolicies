@@ -3,9 +3,12 @@
 err=0
 trap 'err=1' ERR
 
-cp files/selinux/tryitonline.te ./tryitonline.te
-make -f /usr/share/selinux/devel/Makefile tryitonline.pp
-semodule -i tryitonline.pp
-rm -f tryitonline.*
+source private/config
+if [[ "$OfflineMode" != "y" ]]; then
+  cp files/selinux/tryitonline.te ./tryitonline.te
+  make -f /usr/share/selinux/devel/Makefile tryitonline.pp
+  semodule -i tryitonline.pp
+  rm -f tryitonline.*
+fi
 
 exit "$err"

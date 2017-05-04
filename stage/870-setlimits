@@ -3,10 +3,13 @@
 err=0
 trap 'err=1' ERR
 
-rm -f /etc/security/limits.d/99-tio.conf
-cp files/system/ulimits.conf /etc/security/limits.d/99-tio.conf
+source private/config
+if [[ "$OfflineMode" != "y" ]]; then
+  rm -f /etc/security/limits.d/99-tio.conf
+  cp files/system/ulimits.conf /etc/security/limits.d/99-tio.conf
 
-rm -f /etc/sysctl.d/99-tio.conf
-cp files/system/sysctl.d.conf /etc/sysctl.d/99-tio.conf
+  rm -f /etc/sysctl.d/99-tio.conf
+  cp files/system/sysctl.d.conf /etc/sysctl.d/99-tio.conf
+fi
 
 exit "$err"

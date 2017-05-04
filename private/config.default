@@ -44,3 +44,10 @@ UseSavedCerts="y"
 # Likewise, if either an RSA key pair (ssh_host_rsa and ssh_host_rsa.pub) or an
 # ED25519 key pair (ssh_host_ed25519 and ssh_host_ed25519.pub) is found in private,
 # they will replace the pre-generated host keys in /etc/ssh.
+
+# This option should be left turned off ("n"). If it's turned on ("y") certificates
+# and selinux configuration will be skipped during setup. This is useful for running
+# an offline copy of TryItOnline in a docker image (which does no support selinux)
+# Exposing an installation in offline mode to internet is a big security risk and should 
+# never be done.
+OfflineMode="n"

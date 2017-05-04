@@ -3,6 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-dnf install psmisc selinux-policy-sandbox policycoreutils-sandbox selinux-policy-devel -y
+source private/config
+if [[ "$OfflineMode" != "y" ]]; then
+  dnf install psmisc selinux-policy-sandbox policycoreutils-sandbox selinux-policy-devel -y
+fi
 
 exit "$err"

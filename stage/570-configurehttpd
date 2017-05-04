@@ -76,7 +76,8 @@ $LD	RewriteRule "" https://$TIORUN/nexus/%1 [R=301]
 .
 
 echo 'http_server=httpd' > /srv/etc/tio-web
-systemctl enable tio-web
-systemctl start tio-web
-
+if [[ "$OfflineMode" != "y" ]]; then
+  systemctl enable tio-web
+  systemctl start tio-web
+fi
 exit "$err"

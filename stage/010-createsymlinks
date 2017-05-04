@@ -2,10 +2,16 @@
 
 err=0
 trap 'err=1' ERR
+source private/config
 
-mkdir -p /usr/local/lib/systemd/system
-ln -fst /usr/local/bin /srv/bin/*
-ln -fst /usr/local/lib/systemd/system /srv/lib/systemd/*
-ln -fst /usr/local/sbin /srv/sbin/* /opt/TioSetup/misc/*
+if [[ "$OfflineMode" != "y" ]]; then
+  mkdir -p /usr/local/lib/systemd/system
+  ln -fst /usr/local/bin /srv/bin/*
+  ln -fst /usr/local/lib/systemd/system /srv/lib/systemd/*
+  ln -fst /usr/local/sbin /srv/sbin/* /opt/TioSetup/misc/*
+else
+  ln -fst /usr/local/bin /srv/bin/*
+  ln -fst /usr/local/sbin /srv/sbin/*
+fi
 
 exit "$err"

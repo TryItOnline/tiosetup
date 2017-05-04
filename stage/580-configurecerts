@@ -4,13 +4,14 @@ err=0
 trap "err=1" ERR
 
 source private/config
-
-if [[ "$UseSavedCerts" != "y" ]]; then
+if [[ "$OfflineMode" != "y" ]]; then
+  if [[ "$UseSavedCerts" != "y" ]]; then
     certbot --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN --redirect
-else
+  else
     certbot --staging --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN --redirect
     tar xvf private/letsencrypt.tar.gz -C /
-    systemctl restart httpd
+    systemctl restart tio-web
+  fi
 fi
 
 exit "$err"

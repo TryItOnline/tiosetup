@@ -3,7 +3,10 @@
 err=0
 trap 'err=1' ERR
 
-systemctl mask systemd-journald{,{,-audit,-dev-log}.socket}
-systemctl stop systemd-journald{,{,-audit,-dev-log}.socket}
+source private/config
+if [[ "$OfflineMode" != "y" ]]; then
+  systemctl mask systemd-journald{,{,-audit,-dev-log}.socket}
+  systemctl stop systemd-journald{,{,-audit,-dev-log}.socket}
+fi
 
 exit "$err"
