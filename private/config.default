@@ -1,4 +1,4 @@
-# Provide commit number or branch for `git checkout` command performed after cloning arena-server
+# Provide commit number or branch for `git checkout` command performed after cloning tryitonline repository
 # This allows installing a historic version or a feature branch instead of the master latest
 TryItOnlineCommit="master"
 
@@ -17,9 +17,6 @@ TRYITONLINENET=www2.tryitonline.nz
 
 # Domain where https://tio.run will be hosted
 TIORUN=tio2.tryitonline.nz
-
-# Domain where arena.tryitonline.net will be hosted
-ARENA=arena2.tryitonline.nz
 
 # Domain for <language>.tryitonline.net -> tio.run/nexus/<language> redirects.
 # This setting is optional and may be left empty or removed entirely.
