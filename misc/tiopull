@@ -1,9 +1,13 @@
 #!/bin/bash 
 
-pushd /opt
-if [[ ! -z $1 ]]; then
-    /opt/TioSetup/languages/$1
+cd /opt
+
+if [[ "$1" == -a ]]; then
+  /opt/TioSetup/run-scripts /opt/TioSetup/languages
 else
-    /opt/TioSetup/run-scripts /opt/TioSetup/languages
+  if [[ "$1 ]]; then
+    /opt/TioSetup/languages/$1
+  else
+    echo "Missing parameter. Usage: tiopull language|-a"
+  fi
 fi
-popd
