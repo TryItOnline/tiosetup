@@ -42,4 +42,8 @@ else
 	sed 's/^/* /' /etc/ssh/ssh_host_ed25519_key.pub >> /etc/ssh/ssh_known_hosts
 fi
 
+if [[ "$OfflineMode" != "y" ]]; then
+  systemctl restart sshd
+fi
+
 exit "$err"
