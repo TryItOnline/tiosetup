@@ -3,10 +3,10 @@
 cd /opt
 
 if [[ "$1" == -a ]]; then
-  /opt/TioSetup/run-scripts /opt/TioSetup/languages
+  /opt/tiosetup/run-scripts /opt/tiosetup/languages
 else
   if [[ "$1" ]]; then
-    /opt/TioSetup/languages/$1
+    /opt/tiosetup/languages/$1
   else
     echo 'Missing parameter. Usage: tiopull language|-a'
   fi
