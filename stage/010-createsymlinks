@@ -11,7 +11,7 @@ if [[ "$OfflineMode" != "y" ]]; then
   ln -fst /usr/local/sbin /srv/sbin/* /opt/tiosetup/misc/*
 else
   ln -fst /usr/local/bin /srv/bin/*
-  ln -fst /usr/local/sbin /srv/sbin/*
+  ln -fst /usr/local/sbin /srv/sbin/* /opt/tiosetup/misc/*
 fi
 
 exit "$err"
