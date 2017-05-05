@@ -6,19 +6,36 @@ trap 'err=1' ERR
 source private/config
 
 cd /srv
+if [[ "$OfflineMode" != "y" ]]; then
 cd tryitonline.net
-sed -i "s/tryitonline.net/$TRYITONLINENET/g" manifest.json
-sed -i "s/tio.run/$TIORUN/g" manifest-nexus.json
-sed -i "s/tryitonline.net/$TRYITONLINENET/g" index.html
-sed -i "s/tio.run/$TIORUN/g" index.html
-cd ..
-cd tio.run
-sed -i "s/tio.run/$TIORUN/g" index.html
-sed -i "s://tryitonline.net://$TRYITONLINENET:g" index.html
-sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" index.html
-sed -i "s/tio.run/$TIORUN/g" nexus.html
-sed -i "s://tryitonline.net://$TRYITONLINENET:g" nexus.html
-sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" nexus.html
+  sed -i "s/tryitonline.net/$TRYITONLINENET/g" manifest.json
+  sed -i "s/tio.run/$TIORUN/g" manifest-nexus.json
+  sed -i "s/tio.run/$TIORUN/g" manifest-tio.json
+  sed -i "s/tryitonline.net/$TRYITONLINENET/g" index.html
+  sed -i "s/tio.run/$TIORUN/g" index.html
+  cd ..
+  cd tio.run
+  sed -i "s/tio.run/$TIORUN/g" index.html
+  sed -i "s://tryitonline.net://$TRYITONLINENET:g" index.html
+  sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" index.html
+  sed -i "s/tio.run/$TIORUN/g" nexus.html
+  sed -i "s://tryitonline.net://$TRYITONLINENET:g" nexus.html
+  sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" nexus.html
+else
+  sed -i "s_https://tryitonline.net_http://$TRYITONLINENET_g" manifest.json
+  sed -i "s_https://tio.run_http://$TIORUN_g" manifest-nexus.json
+  sed -i "s_https://tio.run_http://$TIORUN_g" manifest-tio.json
+  sed -i "s_https://tryitonline.net_http://$TRYITONLINENET_g" index.html
+  sed -i "s_https://tio.run_http://$TIORUN_g" index.html
+  cd ..
+  cd tio.run
+  sed -i "s_https://tio.run_http://$TIORUN_g" index.html
+  sed -i "s_https://tryitonline.net_http://$TRYITONLINENET_g" index.html
+  sed -i "s_http://talk.$TRYITONLINENET_http://talk.tryitonline.net_g" index.html
+  sed -i "s_https://tio.run_http://$TIORUN_g" nexus.html
+  sed -i "s_https://tryitonline.net_http://$TRYITONLINENET_g" nexus.html
+  sed -i "s_http://talk.$TRYITONLINENET_http://talk.tryitonline.net_g" nexus.html
+fi
 cd ..
 
 for f in etc/*.default
