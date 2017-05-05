@@ -8,7 +8,6 @@ source private/config
 cd /srv
 [[ "$OfflineMode" == "y" ]] && protocol=http || protocol=https
 
-cd tryitonline.net
 sed --in-place "
 	s#https://tryitonline\.net#$protocol://$TRYITONLINENET#g
 	s#https://tio\.run#$protocol://$TIORUN#g
