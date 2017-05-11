@@ -6,20 +6,12 @@ trap 'err=1' ERR
 source private/config
 
 cd /srv
-cd tryitonline.net
-sed -i "s/tryitonline.net/$TRYITONLINENET/g" manifest.json
-sed -i "s/tio.run/$TIORUN/g" manifest-nexus.json
-sed -i "s/tryitonline.net/$TRYITONLINENET/g" index.html
-sed -i "s/tio.run/$TIORUN/g" index.html
-cd ..
-cd tio.run
-sed -i "s/tio.run/$TIORUN/g" index.html
-sed -i "s://tryitonline.net://$TRYITONLINENET:g" index.html
-sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" index.html
-sed -i "s/tio.run/$TIORUN/g" nexus.html
-sed -i "s://tryitonline.net://$TRYITONLINENET:g" nexus.html
-sed -i "s/talk.$TRYITONLINENET/talk.tryitonline.net/g" nexus.html
-cd ..
+[[ "$OfflineMode" == "y" ]] && protocol=http || protocol=https
+
+sed --in-place "
+	s#https://tryitonline\.net#$protocol://$TRYITONLINENET#g
+	s#https://tio\.run#$protocol://$TIORUN#g
+" */*.html */manifest*.json
 
 for f in etc/*.default
 do
