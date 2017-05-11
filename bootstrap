@@ -5,4 +5,9 @@ if [[ ! -f "private/config" ]]; then
    exit;
 fi
 
-./setup-main
+./run-scripts stage
+saveddir=$(pwd)
+pushd /opt
+"$saveddir/run-scripts" "$saveddir/languages"
+popd
+./run-scripts private

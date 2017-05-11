@@ -76,7 +76,6 @@ Top level folders:
 
 - `bootstrap` - this is the script that needs to be run to start the setup process
 - `run-scripts` - a utility script that executes all scripts in a specified directory, such as `stage`, `languages`.
-- `setup-main` - script that is called at the end of `bootstrap`. It's a separate script for historical reasons and will be merged into bootstrap script in future.
 
 ## Configuring Linode
 

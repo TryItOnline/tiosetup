@@ -1,8 +1,0 @@
-#!/bin/bash
-
-./run-scripts stage
-saveddir=$(pwd)
-pushd /opt
-"$saveddir/run-scripts" "$saveddir/languages"
-popd
-./run-scripts private
