@@ -22,6 +22,7 @@ if [[ "$OfflineMode" != "y" ]]; then
 
   restorecon -Rv /srv
 
+  semanage fcontext -a -t bin_t '/usr/lib/mlton/(mlton-compile|platform|static-library)'
   semanage fcontext -a -t bin_t '/usr/lib(64)?/swipl-.*/bin/x86_64-linux(/.*)?'
   semanage fcontext -a -t bin_t '/usr/lib(64)?/node_modules/coffee-script/bin(/.*)?'
   semanage fcontext -a -t bin_t '/usr/lib(64)?/golang/bin(/.*)?'
