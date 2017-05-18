@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf scheme-chicken
+mkdir scheme-chicken
+curl --silent --show-error https://code.call-cc.org/releases/current/chicken.tar.gz \
+	| tar xz -C /opt/scheme-chicken --strip-components=1
+cd scheme-chicken
+make PLATFORM=linux
+
+exit "$err"
