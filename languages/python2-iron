@@ -4,14 +4,15 @@ err=0
 trap 'err=1' ERR
 
 rm -rf IronPython
-curl --location --silent --show-error --output IronPython.tar.bz2 "$(
+mkdir IronPython
+curl --location --silent --show-error "$(
     curl --silent --show-error https://api.github.com/repos/IronLanguages/main/releases \
         | jq --raw-output 'sort_by(.published_at)|reverse|.[].assets|.[].browser_download_url|select(test("IronPython(.*)unix.tar.bz2$"))' \
         | head -1 \
         | tee /dev/stderr
-)"
+)" | tar x --bzip2 --directory=IronPython --strip-components=1
 
-tar xf IronPython.tar.bz2
-rm -f IronPython.tar.bz2
-mv IronPython* IronPython
+chown -R root: IronPython
+chmod -R o-w IronPython
+
 exit "$err"
