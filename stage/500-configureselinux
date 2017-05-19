@@ -8,7 +8,6 @@ if [[ "$OfflineMode" != "y" ]]; then
 
   semanage fcontext -a -t bin_t '/opt/(.*/)?bin(/.*)?'
   semanage fcontext -a -t httpd_sys_rw_content_t '/srv/cache(/.*)?'
-  semanage fcontext -a -t httpd_sys_rw_content_t '/srv/store(/.*)?'
   semanage fcontext -a -t httpd_sys_content_t '/srv/tio.run(/.*)?'
   semanage fcontext -a -t httpd_sys_script_exec_t '/srv/tio.run/cgi-bin(/.*)?'
   semanage fcontext -a -t httpd_sys_rw_content_t '/srv/tmp(/.*)?'
