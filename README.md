@@ -196,17 +196,17 @@ Where `arena_name` is an arbitrary name that will be written to `/etc/hosts` fil
 tioinit 192.168.132.37 arena
 ```
 
-When syncing has finished (it will take a few minutes), you might want to remove the main out of rotation:
+When syncing has finished (it will take a few minutes), you might want to put newly create arena in rotation:
 
 ```bash
-arenactl disable runner@127.0.0.1
+tiopool add arena
+tiopool enable arena
 ```
 
-And then put newly create arena in rotation
+And then remove the main out of rotation
 
 ```bash
-arenactl add runner@arena
-arenactl enable runner@arena
+tiopool disable 127.0.0.1
 ```
 
 ## Dry run

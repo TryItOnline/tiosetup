@@ -18,8 +18,8 @@ do
 	cp $f ${f%.default}
 done
 
-arenactl add runner@127.0.0.1
-arenactl enable runner@127.0.0.1
+tiopool add 127.0.0.1
+tiopool enable 127.0.0.1
 
 mkdir -p /srv/tmp
 chown apache:apache /srv/tmp
