@@ -12,7 +12,7 @@ mv runtime.fedora.24-x64.Microsoft.NETCore.Runtime.CoreCLR.* /opt/microsoft/core
 pushd /opt/microsoft
 chmod +x coreclr/tools/crossgen
 tmperr=$err
-for f in powershell/6.0.0-beta.1/*.dll; do coreclr/tools/crossgen -JITPath ../dotnet/shared/Microsoft.NETCore.App/*/libclrjit.so -Platform_Assemblies_Paths coreclr/runtimes/fedora.24-x64/native:powershell/6.0.0-beta.1 "$f"; done
+for f in powershell/6.0.0-beta.1/*.dll; do coreclr/tools/crossgen -JITPath dotnet/shared/Microsoft.NETCore.App/*/libclrjit.so -Platform_Assemblies_Paths coreclr/runtimes/fedora.24-x64/native:powershell/6.0.0-beta.1 "$f"; done
 err=$tmperr
 popd
 cd ..
