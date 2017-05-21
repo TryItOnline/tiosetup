@@ -17,7 +17,5 @@ err=$tmperr
 popd
 cd ..
 rm -rf tmp ~/.nuget/ ~/.config/NuGet/ ~/.local/share/NuGet/
-mkdir -p /opt/microsoft/home/powershell
-cp files/powershell/aliases.ps1 /opt/microsoft/home/powershell
 
 exit "$err"
