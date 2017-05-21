@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf fish-shell/
+git clone https://github.com/fish-shell/fish-shell.git
+cd fish-shell
+autoreconf --no-recursive
+./configure
+make
+cd ..
+
+exit "$err"
