@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf shp
+git clone https://github.com/ConorOBrien-Foxx/shp.git
+cd shp
+gcc -Wall -O2 -o shp shp.c
+
+exit "$err"
