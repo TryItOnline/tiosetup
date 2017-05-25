@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf algol68g
+mkdir algol68g
+curl --silent --show-error https://jmvdveer.home.xs4all.nl/algol68g-2.8.4.tar.gz \
+	| tar xz --directory=algol68g --strip-components=1
+cd algol68g
+./configure
+make
+
+exit "$err"
