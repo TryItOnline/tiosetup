@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf agony
+git clone https://github.com/royvanrijn/JAgony agony
+cd agony
+javac *.java
+
+exit "$err"
