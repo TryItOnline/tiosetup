@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf decimal
+git clone https://github.com/aaronryank/Decimal.git decimal
+cd decimal
+gcc -Wall -O3 -o 09D 09D.c
+
+exit "$err"
