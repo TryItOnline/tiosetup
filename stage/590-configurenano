@@ -1,8 +1,0 @@
-#!/bin/bash
-
-err=0
-trap 'err=1' ERR
-
-HOME=/root git config --global core.editor "nano"
-
-exit "$err"
