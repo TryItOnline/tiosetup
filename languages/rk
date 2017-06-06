@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf rk
+git clone https://github.com/aaronryank/rk-lang.git rk
+cd rk
+make
+
+exit "$err"
