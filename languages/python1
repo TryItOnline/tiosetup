@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf python1
+mkdir python1
+curl --silent --show-error http://legacy.python.org/download/releases/1.6.1/Python-1.6.1.tar.gz \
+	| tar xz --directory=python1 --strip-components=1
+cd python1
+./configure
+make
+
+exit "$err"
