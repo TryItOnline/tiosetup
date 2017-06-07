@@ -6,9 +6,9 @@ trap "err=1" ERR
 source private/config
 if [[ "$OfflineMode" != "y" ]]; then
   if [[ "$UseSavedCerts" != "y" ]]; then
-    certbot --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN --redirect
+    certbot certonly --non-interactive --agree-tos --email $EMAIL --webroot --webroot-path /srv/var/www/$TIORUN --domains $TRYITONLINENET,$TIORUN
   else
-    certbot --staging --non-interactive --agree-tos --email $EMAIL --apache --domains $TRYITONLINENET,$TIORUN --redirect
+    certbot certonly --staging --non-interactive --agree-tos --email $EMAIL --webroot --webroot-path /srv/var/www/$TIORUN --domains $TRYITONLINENET,$TIORUN
     tar xvf private/letsencrypt.tar.gz -C /
     systemctl restart tio-web
   fi

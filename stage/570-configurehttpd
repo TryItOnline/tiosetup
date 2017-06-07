@@ -7,7 +7,7 @@ source private/config
 [[ $LANGDOMAIN ]] || LANGDOMAIN=example.net LD=#
 
 for file in /etc/httpd/conf.d/*.conf; do
-	> "$file"
+    > "$file"
 done
 
 cat > /etc/httpd/conf.d/000-global.conf <<.
@@ -21,53 +21,74 @@ SSLRandomSeed connect builtin
 SSLCryptoDevice builtin
 .
 
-cat > /etc/httpd/conf.d/010-tryitonline.conf << .
+cat > /etc/httpd/conf.d/010-tio.run.conf << .
+RewriteEngine On
+
 <VirtualHost *:80>
-	RewriteEngine On
-	ServerName $TRYITONLINENET
-$LD	ServerAlias *.$LANGDOMAIN
-	Header always set Access-Control-Allow-Origin "*"
-	Header always set Cache-Control max-age=2400000
-	RewriteCond %{HTTP_HOST} ^(www)?tryitonline\.net$
-	RewriteRule ^/(.*)$ https://$TRYITONLINENET/$1 [R=301]
-$LD	RewriteCond %{HTTP_HOST} ^([^.]*)\\.${LANGDOMAIN//./\\.}\$
-$LD	RewriteRule "" https://$TIORUN/nexus/%1 [R=301]
+    ServerName $TIORUN
+
+    RewriteRule ^/(.*)$ https://$TIORUN/$1 [R=301]
 </VirtualHost>
-.
 
-cat > /etc/httpd/conf.d/020-tio.run.conf << .
+<VirtualHost *:443>
+    ServerName $TIORUN
+
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/vnd.microsoft.icon
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/html
+    DocumentRoot /srv/var/www/$TIORUN
+    Header always set Access-Control-Allow-Origin "*"
+    RewriteRule ^/nexus /index.html
+    ScriptAlias /cgi-bin /srv/var/www/$TIORUN/cgi-bin/
+    SSLCertificateFile /etc/letsencrypt/live/$TRYITONLINENET/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/$TRYITONLINENET/privkey.pem
+    TimeOut 70
+
+ <Directory /srv/var/www/$TIORUN>
+    AllowOverride None
+    Options SymLinksIfOwnerMatch
+    Require all granted
+ </Directory>
+
+ <Files index.html>
+    Header set Cache-Control "max-age=60; must-revalidate"
+ </Files>
+
+ <Directory ~ /srv/var/www/$TIORUN/static>
+    Header set Cache-Control max-age=1000000000
+ </Directory>
+
+ <Directory /srv/var/www/$TIORUN/cgi-bin>
+    Options ExecCGI
+ </Directory>
+
+</VirtualHost>
+
 <VirtualHost *:80>
-	RewriteEngine On
-	ServerName $TIORUN
-	AddOutputFilterByType DEFLATE application/javascript
-	AddOutputFilterByType DEFLATE application/json
-	AddOutputFilterByType DEFLATE image/vnd.microsoft.icon
-	AddOutputFilterByType DEFLATE text/css
-	AddOutputFilterByType DEFLATE text/html
-	DocumentRoot /srv/var/www/$TIORUN
-	Header always set Access-Control-Allow-Origin "*"
-	RewriteRule ^/(.*)$ https://$TIORUN/$1 [R=301]
-	RewriteRule ^/nexus /index.html
-	ScriptAlias /cgi-bin /srv/var/www/$TIORUN/cgi-bin/
-	TimeOut 70
+    ServerName $TRYITONLINENET
+$LD ServerAlias *.$LANGDOMAIN
 
-	<Directory /srv/var/www/$TIORUN>
-		AllowOverride None
-		Options SymLinksIfOwnerMatch
-		Require all granted
-	</Directory>
+    Header always set Access-Control-Allow-Origin "*"
 
-	<Files index.html>
-		Header set Cache-Control "max-age=60; must-revalidate"
-	</Files>
+    RewriteCond %{HTTP_HOST} ^(www\.)?${TRYITONLINENET//./\.}$
+    RewriteRule ^/(.*)$ https://$TRYITONLINENET/$1 [R=301]
 
-	<Directory ~ /srv/var/www/$TIORUN/(fonts|static)>
-		Header set Cache-Control max-age=1000000000
-	</Directory>
+$LD RewriteCond %{HTTP_HOST} ^([^.]*)\.tryitonline\.net$
+$LD RewriteRule ^/$ https://$TIORUN/nexus/%1 [R=301]
+</VirtualHost>
 
-	<Directory /srv/var/www/$TIORUN/cgi-bin>
-		Options ExecCGI
-	</Directory>
+<VirtualHost *:443>
+    ServerName $TRYITONLINENET
+
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Cache-Control max-age=2400000
+    SSLCertificateFile /etc/letsencrypt/live/$TRYITONLINENET/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/$TRYITONLINENET/privkey.pem
+
+    RewriteRule ^/$ https://$TIORUN/#home [NE,R=301]
+    RewriteRule ^/(.+)$ https://$TIORUN/$1 [R=301]
 </VirtualHost>
 .
 
