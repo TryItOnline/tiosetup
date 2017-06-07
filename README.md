@@ -1,5 +1,7 @@
 # Setting up Try it Online
 
+**Note: With the recent changes under the hood of TryItOnline, this setup repository has not caught up yet, so it does not work yet with these changes. We are working on it.**
+
 ## What is Try It Online
 
 <https://tryitonline.net> is a web site that started out as a place for hosting solutions to [code golf](https://en.wikipedia.org/wiki/Code_golf) puzzles presented on <http://codegolf.stackexchange.com/>. It can be used by anyone for free to quickly try out and share code snippets, with or without code golf in mind alike, in a big number of practical and recreational programming languages.
