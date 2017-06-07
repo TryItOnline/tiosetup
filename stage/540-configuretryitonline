@@ -4,10 +4,12 @@ err=0
 trap 'err=1' ERR
 
 source private/config
+#[[ "$OfflineMode" == "y" ]] && protocol=http || protocol=https
+
 
 cd /srv
 cp -r /srv/var/www/tio.run /srv/var/www/$TIORUN
-tiobuild tio.run $TIORUN
+tiobuild $TIORUN
 
 for f in etc/*.default
 do
