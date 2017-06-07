@@ -6,7 +6,7 @@ trap 'err=1' ERR
 source private/config
 
 cd /srv
-tiobuild tio.run
+tiobuild $TIORUN
 
 for f in etc/*.default
 do
