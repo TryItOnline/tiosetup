@@ -6,12 +6,7 @@ trap 'err=1' ERR
 source private/config
 
 cd /srv
-[[ "$OfflineMode" == "y" ]] && protocol=http || protocol=https
-
-sed --in-place "
-	s#https://tryitonline\.net#$protocol://$TRYITONLINENET#g
-	s#https://tio\.run#$protocol://$TIORUN#g
-" */*.html */manifest*.json
+tiobuild tio.run
 
 for f in etc/*.default
 do
