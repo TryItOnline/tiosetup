@@ -27,7 +27,7 @@ RewriteEngine On
 <VirtualHost *:80>
 	ServerName $TIORUN
 
-	RewriteRule ^/(.*)$ https://$TIORUN/$1 [R=301]
+	RewriteRule ^/(.*)$ https://$TIORUN/\$1 [R=301]
 </VirtualHost>
 
 <VirtualHost *:443>
@@ -72,8 +72,8 @@ $LD	ServerAlias *.$LANGDOMAIN
 
 	Header always set Access-Control-Allow-Origin "*"
 
-	RewriteCond %{HTTP_HOST} ^(www\.)?${TRYITONLINENET//./\.}$
-	RewriteRule ^/(.*)$ https:// $TIORUN/$1 [R=301]
+	RewriteCond %{HTTP_HOST} ^(www\.)?${TRYITONLINENET//./\\.}$
+	RewriteRule ^/(.*)$ https://$TRYITONLINENET/\$1 [R=301]
 
 $LD	RewriteCond %{HTTP_HOST} ^([^.]*)\.$TRYITONLINENET$
 $LD	RewriteRule ^/$ https://$TIORUN/nexus/%1 [R=301]
@@ -88,7 +88,7 @@ $LD	RewriteRule ^/$ https://$TIORUN/nexus/%1 [R=301]
 	SSLCertificateKeyFile /etc/letsencrypt/live/$TIORUN/privkey.pem
 
 	RewriteRule ^/$ https://$TIORUN/#home [NE,R=301]
-	RewriteRule ^/(.+)$ https://$TIORUN/$1 [R=301]
+	RewriteRule ^/(.+)$ https://$TIORUN/$\1 [R=301]
 </VirtualHost>
 .
 
