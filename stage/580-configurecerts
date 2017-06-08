@@ -16,7 +16,7 @@ if [[ "$OfflineMode" != "y" ]]; then
 [[webroot_map]]
 $TRYITONLINENET = /srv/var/www/$TIORUN
 $TIORUN = /srv/var/www/$TIORUN
-.    
+.
 
     systemctl start tio-web
   else
