@@ -5,27 +5,27 @@ trap "err=1" ERR
 
 source private/config
 if [[ "$OfflineMode" != "y" ]]; then
-  if [[ "$UseSavedCerts" != "y" ]]; then
-    systemctl stop tio-web
-    systemctl stop httpd
-    certbot certonly --non-interactive --agree-tos --email $EMAIL --standalone --domains $TIORUN,$TRYITONLINENET
-    sed -i 's/^\(authenticator = \).*/\1webroot/' /etc/letsencrypt/renewal/$TIORUN
-    sed -i 's/^\(installer = \).*/\1None/' /etc/letsencrypt/renewal/$TIORUN
-    cat >> /etc/letsencrypt/renewal/$TIORUN <<.
+	if [[ "$UseSavedCerts" != "y" ]]; then
+		systemctl stop tio-web
+		systemctl stop httpd
+		certbot certonly --staging --non-interactive --agree-tos --email $EMAIL --standalone --domains $TIORUN,$TRYITONLINENET
+		sed -i 's/^\(authenticator = \).*/\1webroot/' /etc/letsencrypt/renewal/$TIORUN.conf
+		sed -i 's/^\(installer = \).*/\1None/' /etc/letsencrypt/renewal/$TIORUN.conf
+		cat >> /etc/letsencrypt/renewal/$TIORUN.conf <<.
 
-[[webroot_map]]
-$TRYITONLINENET = /srv/var/www/$TIORUN
-$TIORUN = /srv/var/www/$TIORUN
-.
+			[[webroot_map]]
+			$TRYITONLINENET = /srv/var/www/$TIORUN
+			$TIORUN = /srv/var/www/$TIORUN
+		.
 
-    systemctl start tio-web
-  else
-    tar xvf private/letsencrypt.tar.gz -C /
-    systemctl restart tio-web
-  fi
+		systemctl start tio-web
+	else
+		tar xvf private/letsencrypt.tar.gz -C /
+		systemctl restart tio-web
+	fi
 fi
 if [[ "$OfflineMode" != "y" ]]; then
-  systemctl enable tio-web
+	systemctl enable tio-web
 fi
 
 exit "$err"
