@@ -11,11 +11,12 @@ if [[ "$OfflineMode" != "y" ]]; then
     certbot certonly --non-interactive --agree-tos --email $EMAIL --standalone --domains $TIORUN,$TRYITONLINENET
     sed -i 's/^\(authenticator = \).*/\1webroot/' /etc/letsencrypt/renewal/$TIORUN
     sed -i 's/^\(installer = \).*/\1None/' /etc/letsencrypt/renewal/$TIORUN
-    cat >> /etc/httpd/conf.d/010-tio.run.conf << .
+    cat >> /etc/letsencrypt/renewal/$TIORUN << .
 [[webroot_map]]
 $TRYITONLINENET = /srv/var/www/$TIORUN
 $TIORUN = /srv/var/www/$TIORUN
 .    
+
     systemctl start tio-web
   else
     tar xvf private/letsencrypt.tar.gz -C /
