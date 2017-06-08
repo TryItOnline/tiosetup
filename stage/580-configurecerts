@@ -6,12 +6,24 @@ trap "err=1" ERR
 source private/config
 if [[ "$OfflineMode" != "y" ]]; then
   if [[ "$UseSavedCerts" != "y" ]]; then
-    certbot certonly --non-interactive --agree-tos --email $EMAIL --webroot --webroot-path /srv/var/www/$TIORUN --domains $TRYITONLINENET,$TIORUN
+    systemctl stop tio-web
+    systemctl stop httpd
+    certbot certonly --non-interactive --agree-tos --email $EMAIL --standalone --domains $TIORUN,$TRYITONLINENET
+    sed -i 's/^\(authenticator = \).*/\1webroot/' /etc/letsencrypt/renewal/$TIORUN
+    sed -i 's/^\(installer = \).*/\1None/' /etc/letsencrypt/renewal/$TIORUN
+    cat >> /etc/httpd/conf.d/010-tio.run.conf << .
+[[webroot_map]]
+$TRYITONLINENET = /srv/var/www/$TIORUN
+$TIORUN = /srv/var/www/$TIORUN
+.    
+    systemctl start tio-web
   else
-    certbot certonly --staging --non-interactive --agree-tos --email $EMAIL --webroot --webroot-path /srv/var/www/$TIORUN --domains $TRYITONLINENET,$TIORUN
     tar xvf private/letsencrypt.tar.gz -C /
     systemctl restart tio-web
   fi
+fi
+if [[ "$OfflineMode" != "y" ]]; then
+  systemctl enable tio-web
 fi
 
 exit "$err"

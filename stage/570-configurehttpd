@@ -42,8 +42,8 @@ RewriteEngine On
     Header always set Access-Control-Allow-Origin "*"
     RewriteRule ^/nexus /index.html
     ScriptAlias /cgi-bin /srv/var/www/$TIORUN/cgi-bin/
-    SSLCertificateFile /etc/letsencrypt/live/$TRYITONLINENET/fullchain.pem
-    SSLCertificateKeyFile /etc/letsencrypt/live/$TRYITONLINENET/privkey.pem
+    SSLCertificateFile /etc/letsencrypt/live/$TIORUN/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/$TIORUN/privkey.pem
     TimeOut 70
 
  <Directory /srv/var/www/$TIORUN>
@@ -84,8 +84,8 @@ $LD RewriteRule ^/$ https://$TIORUN/nexus/%1 [R=301]
 
     Header always set Access-Control-Allow-Origin "*"
     Header always set Cache-Control max-age=2400000
-    SSLCertificateFile /etc/letsencrypt/live/$TRYITONLINENET/fullchain.pem
-    SSLCertificateKeyFile /etc/letsencrypt/live/$TRYITONLINENET/privkey.pem
+    SSLCertificateFile /etc/letsencrypt/live/$TIORUN/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/$TIORUN/privkey.pem
 
     RewriteRule ^/$ https://$TIORUN/#home [NE,R=301]
     RewriteRule ^/(.+)$ https://$TIORUN/$1 [R=301]
@@ -95,6 +95,5 @@ $LD RewriteRule ^/$ https://$TIORUN/nexus/%1 [R=301]
 echo 'http_server=httpd' > /srv/etc/tio-web
 if [[ "$OfflineMode" != "y" ]]; then
   systemctl enable tio-web
-  systemctl start tio-web
 fi
 exit "$err"
