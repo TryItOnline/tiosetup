@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf triangular
+git clone https://github.com/aaronryank/triangular.git
+cd triangular
+make
+
+exit "$err"
