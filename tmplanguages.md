@@ -89,8 +89,8 @@ beeswax|github|script|julia|has tio github repo
 befunge|github|make|с|
 befunge-98|github|make|с|
 blc|website|cc|c|no version
-brachylog|website|no|perl|end of life
-brachylog2|github|no|perl|
+brachylog|website|no|prolog|end of life
+brachylog2|github|no|prolog|
 brainbool|github|no|bash, c|piggyback brainfuck
 brain-flak|github|no|ruby|
 brainfuck|github|no|bash, c|has tio github repo
