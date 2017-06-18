@@ -6,6 +6,6 @@ trap 'err=1' ERR
 rm -rf cubically
 git clone https://github.com/aaronryank/cubically.git
 cd cubically
-make
+make tio
 
 exit "$err"
