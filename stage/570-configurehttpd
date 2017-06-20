@@ -61,7 +61,7 @@ RewriteEngine On
 	</Directory>
 
 	<Directory /srv/var/www/$TIORUN/cgi-bin>
-		Options ExecCGI
+		Options ExecCGI SymLinksIfOwnerMatch
 	</Directory>
 
 </VirtualHost>
