@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf husk
+git clone https://github.com/barbuz/husk.git
+cd husk
+ghc -O2 Husk.hs
+
+exit "$err"
