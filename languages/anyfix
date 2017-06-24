@@ -5,5 +5,6 @@ trap 'err=1' ERR
 
 rm -rf anyfix
 git clone https://github.com/alexander-liao/anyfix.git
+git -C anyfix checkout 4fa3ff9a970ba4a2ce8ea73bf5da7811385e73ee
 
 exit "$err"
