@@ -4,14 +4,9 @@ err=0
 trap 'err=1' ERR
 
 rm -rf rail
-wget https://web.archive.org/web/20160324120649/https://user.xmission.com/~tyrecius/rail-0.5.tar.gz
-tar xf rail-0.5.tar.gz
-rm -f rail-0.5.tar.gz
-mv rail-0.5 rail
-chmod -R 755 rail
+git clone https://github.com/TryItOnline/rail.git
 cd rail
 ./compile.sh
 cd ..
-
 
 exit "$err"
