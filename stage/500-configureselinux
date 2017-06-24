@@ -20,7 +20,7 @@ if [[ "$OfflineMode" != "y" ]]; then
 
   restorecon -Rv /srv
 
-  semanage fcontext -a -t bin_t '/usr/lib/bin(/.*)?'
+  semanage fcontext -a -t bin_t '/usr/lib/(.*/)?bin(/.*)?'
   semanage fcontext -a -t bin_t '/usr/lib/mlton/(mlton-compile|platform|static-library)'
   semanage fcontext -a -t bin_t '/usr/lib/node_modules/cheddar-lang/dist/cli(/.*)?'
   semanage fcontext -a -t bin_t '/usr/lib/clisp-.*/base(/.*)?'
