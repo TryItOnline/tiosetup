@@ -6,7 +6,8 @@ trap 'err=1' ERR
 rm -rf trigger
 mkdir -p trigger
 cd trigger
-wget http://yiap.nfshost.com/esoteric/trigger/trigger.c
+#wget http://yiap.nfshost.com/esoteric/trigger/trigger.c
+wget https://web.archive.org/web/20161010105536/http://yiap.nfshost.com/esoteric/trigger/trigger.c
 gcc trigger.c -o trigger
 cd ..
 
