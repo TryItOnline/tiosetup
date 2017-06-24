@@ -56,7 +56,7 @@ RewriteEngine On
 		Header set Cache-Control "max-age=60; must-revalidate"
 	</Files>
 
-	<Directory ~ /srv/var/www/$TIORUN/static>
+	<Directory /srv/var/www/$TIORUN/static>
 		Header set Cache-Control max-age=1000000000
 	</Directory>
 
@@ -75,7 +75,7 @@ $LD	ServerAlias *.$LANGDOMAIN
 	RewriteCond %{HTTP_HOST} ^(www\.)?${TRYITONLINENET//./\\.}$
 	RewriteRule ^/(.*)$ https://$TRYITONLINENET/\$1 [R=301]
 
-$LD	RewriteCond %{HTTP_HOST} ^([^.]*)\.$TRYITONLINENET$
+$LD	RewriteCond %{HTTP_HOST} ^([^.]*)\.${TRYITONLINENET//./\\.}$
 $LD	RewriteRule ^/$ https://$TIORUN/nexus/%1 [R=301]
 </VirtualHost>
 
