@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 rm -rf fission
-git clone https://github.com/C0deH4cker/Fission.git fission
+git clone https://github.com/TryItOnline/Fission.git fission
 cd fission
 git checkout v1
 clang *.cpp -std=gnu++11 -lstdc++ -o fission
