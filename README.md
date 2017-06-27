@@ -1,7 +1,5 @@
 # Setting up Try it Online
 
-**Note: With the recent changes under the hood of TryItOnline, this setup repository has not caught up yet, so it does not work yet with these changes. We are working on it.**
-
 ## What is Try It Online
 
 <https://tryitonline.net> is a web site that started out as a place for hosting solutions to [code golf](https://en.wikipedia.org/wiki/Code_golf) puzzles presented on <http://codegolf.stackexchange.com/>. It can be used by anyone for free to quickly try out and share code snippets, with or without code golf in mind alike, in a big number of practical and recreational programming languages.
@@ -13,15 +11,13 @@ These instructions are written to help set up a new instance of Try It Online.
 TIO currently uses 2 domains which are served from its main server. There are also multiple load balanced arena servers, which are accessed from the main server via SSH. The GitHub repositiory for them is <https://github.com/TryItOnline/tryitonline.git>
 
 - Main server split across 2 domains:
-  - tio.run is the web app that enables visitors to test their code online. There are currently two versions: https://tio.run/nexus (stable) and https://tio.run (alpha).
-  - tryitonline.net serves the front page and resources that are not exclusive to the web app (fonts, icons, etc.).
+  - tryitonline.net - serves redirects to tio.run. For backward compatibility and for more recognizable name.
+  - tio.run is the web app that enables visitors to test their code online.
 - Arena servers, i.e., servers where the user-supplied code is executed in a sandboxed environment (SELinux). These are accessed by the main server via SSH over a private network.
 
 The main server setup instructions will set up a single server which can act both as main and arena server. You have an option of running the site with arena and main on the same VPS, splitting main and arena to two different VPS, or having more than one arena nodes. TryItOnline currently has two arenas in addition to the main server, which is not use as a public arena. The arena on the current TIO main server is used to test (dry run) language updates before rsyncing them with the two arenas.
 
 The setup makes use of [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux), support of which varies between different distributions of Linux.
-
-https://talk.tryitonline.net is set up to redirect to Stack Exchange chat about Try It Online. Setting this redirect up is not covered by this guide.
 
 This setup runs on **Fedora 25** and was tested on [Linode](https://www.linode.com/). *Note: at the time of writing, Try It Online is hosted on Digital Ocean and scheduled to migrate to Linode.*
 
