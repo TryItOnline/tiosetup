@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Wise
-git clone https://github.com/Wheatwizard/Wise.git
+rm -rf wise
+git clone https://github.com/Wheatwizard/Wise.git wise
 
 exit "$err"
