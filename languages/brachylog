@@ -5,7 +5,7 @@ trap 'err=1' ERR
 
 rm -rf brachylog
 mkdir brachylog
-curl --silent --show-error https://github.com/JCumin/Brachylog/archive/v1.0-ascii.tar.gz \
+curl --location --silent --show-error https://github.com/JCumin/Brachylog/archive/v1.0-ascii.tar.gz \
 	| tar xz --directory=brachylog --strip-components=1
 
 exit "$err"
