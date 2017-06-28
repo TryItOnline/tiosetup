@@ -6,6 +6,7 @@ trap 'err=1' ERR
 rm -rf husk
 git clone https://github.com/barbuz/husk.git
 cd husk
+git checkout 3a4d459c46150a817d29434bf5b4d1392ad21d86
 ghc -O2 Husk.hs
 
 exit "$err"
