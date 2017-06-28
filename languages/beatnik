@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Beatnik
-git clone https://github.com/catseye/Beatnik.git
+rm -rf beatnik
+git clone https://github.com/catseye/Beatnik.git beatnik
 
 exit "$err"

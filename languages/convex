@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Convex
-git clone https://github.com/GamrCorps/Convex.git
+rm -rf convex
+git clone https://github.com/GamrCorps/Convex.git convex
 
 exit "$err"

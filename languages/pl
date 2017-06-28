@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf pl-lang
-git clone https://github.com/quartata/pl-lang.git
+rm -rf pl
+git clone https://github.com/quartata/pl-lang.git pl
 
 exit "$err"

@@ -3,7 +3,10 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf esolang-book-sources
-git clone https://github.com/yhara/esolang-book-sources.git
+rm -rf starry
+mkdir starry
+cd starry
+wget https://raw.githubusercontent.com/yhara/esolang-book-sources/master/starry/starry.rb
+cd ..
 
 exit "$err"

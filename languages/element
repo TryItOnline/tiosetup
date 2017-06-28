@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Element
-git clone https://github.com/PhiNotPi/Element.git
+rm -rf element
+git clone https://github.com/PhiNotPi/Element.git element
 
 exit "$err"

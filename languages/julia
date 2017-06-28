@@ -3,10 +3,10 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf julia-ae26b25d43
-wget https://julialang.s3.amazonaws.com/bin/linux/x64/0.4/julia-0.4.7-linux-x86_64.tar.gz
-tar zxvf julia-0.4.7-linux-x86_64.tar.gz
-rm -f julia-0.4.7-linux-x86_64.tar.gz
-ln -fs /opt/julia-ae26b25d43/bin/julia /usr/local/bin/julia
+rm -rf julia
+mkdir julia
+curl --silent --show-error https://julialang.s3.amazonaws.com/bin/linux/x64/0.4/julia-0.4.7-linux-x86_64.tar.gz \
+	| tar xz --directory=julia --strip-components=1
+ln -fs /opt/julia/bin/julia /usr/local/bin/julia
 
 exit "$err"

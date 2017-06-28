@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Somme
-git clone https://github.com/ConorOBrien-Foxx/Somme.git
+rm -rf somme
+git clone https://github.com/ConorOBrien-Foxx/Somme.git somme
 
 exit "$err"

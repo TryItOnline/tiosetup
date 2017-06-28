@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Mathics
-git clone https://github.com/mathics/Mathics.git
-cd Mathics
+rm -rf mathics
+git clone https://github.com/mathics/Mathics.git mathics
+cd mathics
 python setup.py build
 sed -i "1a\\\ndel __import__('sys').modules['os'].statvfs\\n" \
 	build/lib/mathics/builtin/pympler/asizeof.py

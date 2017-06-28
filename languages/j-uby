@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf J-uby
-git clone https://github.com/cyoce/J-uby.git
+rm -rf j-uby
+git clone https://github.com/cyoce/J-uby.git j-uby
 
 exit "$err"

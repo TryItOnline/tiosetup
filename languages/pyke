@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf PYKE
-git clone https://github.com/muddyfish/PYKE.git
+rm -rf pyke
+git clone https://github.com/muddyfish/PYKE.git pyke
 
 exit "$err"

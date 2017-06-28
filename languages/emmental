@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Emmental
-git clone https://github.com/catseye/Emmental.git
-cd Emmental
+rm -rf emmental
+git clone https://github.com/catseye/Emmental.git emmental
+cd emmental
 ./build.sh
 cd ..
 

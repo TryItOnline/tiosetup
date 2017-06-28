@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Parenthetic
-git clone https://github.com/cammckinnon/Parenthetic.git
+rm -rf parenthetic
+git clone https://github.com/cammckinnon/Parenthetic.git parenthetic
 
 exit "$err"

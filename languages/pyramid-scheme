@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Pyramid-Scheme
-git clone https://github.com/ConorOBrien-Foxx/Pyramid-Scheme.git
+rm -rf pyramid-scheme
+git clone https://github.com/ConorOBrien-Foxx/Pyramid-Scheme.git pyramid-scheme
 
 exit "$err"

@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Befunge-93
-git clone https://github.com/catseye/Befunge-93.git
-cd Befunge-93
+rm -rf befunge
+git clone https://github.com/catseye/Befunge-93.git befunge
+cd befunge
 make
 cd ..
 

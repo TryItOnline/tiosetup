@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf TacO
-git clone https://github.com/TehFlaminTaco/TacO.git
+rm -rf TacO taco
+git clone https://github.com/TehFlaminTaco/TacO.git taco
 
 exit "$err"

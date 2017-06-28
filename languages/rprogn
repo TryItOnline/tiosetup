@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Reverse-Programmer-Notation
-git clone https://github.com/TehFlaminTaco/Reverse-Programmer-Notation.git
+rm -rf rprogn
+git clone https://github.com/TehFlaminTaco/Reverse-Programmer-Notation.git rprogn
 
 exit "$err"

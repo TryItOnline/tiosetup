@@ -3,10 +3,10 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf tinycc
-git clone git://repo.or.cz/tinycc.git
-cd tinycc
-./configure --prefix=/opt/tinycc && make && make install
+rm -rf c-tcc
+git clone git://repo.or.cz/tinycc.git c-tcc
+cd c-tcc
+./configure --prefix=/opt/c-tcc && make && make install
 cd ..
 
 exit "$err"
