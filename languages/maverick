@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Maverick
-git clone https://github.com/ConorOBrien-Foxx/Maverick.git
+rm -rf maverick
+git clone https://github.com/ConorOBrien-Foxx/Maverick.git maverick
 
 exit "$err"

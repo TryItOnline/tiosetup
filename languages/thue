@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Thue
-git clone https://github.com/catseye/Thue.git
-cd Thue
+rm -rf thue
+git clone https://github.com/catseye/thue.git
+cd thue
 ./build.sh
 cd ..
 

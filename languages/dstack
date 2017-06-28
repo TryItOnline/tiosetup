@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf DStack
-git clone https://github.com/alejandrocoria/DStack.git
-cd DStack
+rm -rf dstack
+git clone https://github.com/alejandrocoria/DStack.git dstack
+cd dstack
 g++ -O2 -o dstack *.cpp
 
 exit "$err"

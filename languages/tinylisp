@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Esolangs
-git clone https://github.com/dloscutoff/Esolangs.git
+rm -rf tinylisp
+git clone https://github.com/dloscutoff/Esolangs.git tinylisp 
 
 exit "$err"

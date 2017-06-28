@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf TrumpScript
-git clone https://github.com/samshadwell/TrumpScript.git
+rm -rf trumpscript
+git clone https://github.com/samshadwell/TrumpScript.git trumpscript
 
 exit "$err"

@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf ILanguage
-git clone https://github.com/mlochbaum/ILanguage.git
-cd ILanguage
+rm -rf i
+git clone https://github.com/mlochbaum/ILanguage.git i
+cd i
 gcc *.c -o I -std=gnu99
 cd ..
 

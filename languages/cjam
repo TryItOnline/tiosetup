@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf cjam-code
-hg clone http://hg.code.sf.net/p/cjam/code cjam-code
-cd cjam-code
+rm -rf cjam
+hg clone http://hg.code.sf.net/p/cjam/code cjam
+cd cjam
 ant
 cd ..
 

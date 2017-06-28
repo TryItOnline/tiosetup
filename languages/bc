@@ -1,0 +1,16 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf bc
+mkdir bc
+curl --silent --show-error http://ftp.gnu.org/gnu/bc/bc-1.06.tar.gz \
+	| tar xz --directory=bc --strip-components=1
+cd bc
+CFLAGS=-O3 ./configure
+make
+make install
+cd ..
+
+exit "$err"

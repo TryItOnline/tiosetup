@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Pylons-lang
-git clone https://github.com/morganthrapp/Pylons-lang.git
+rm -rf pylons
+git clone https://github.com/morganthrapp/Pylons-lang.git pylons
 
 exit "$err"

@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Klein
-git clone https://github.com/Wheatwizard/Klein.git
+rm -rf klein
+git clone https://github.com/Wheatwizard/Klein.git klein
 
 exit "$err"

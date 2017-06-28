@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Funciton
-git clone https://github.com/Timwi/Funciton.git
-cd Funciton
+rm -rf funciton
+git clone https://github.com/Timwi/Funciton.git funciton
+cd funciton
 xbuild /p:Configuration=Release Funciton.sln
 
 exit "$err"

@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf PMA
-git clone https://github.com/feresum/PMA.git
-cd PMA/snails
+rm -rf snails
+git clone https://github.com/feresum/PMA.git snails
+cd snails/snails
 cmake ..
 make
 cd ../..

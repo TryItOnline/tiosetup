@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf S.I.L.O.S
-git clone https://github.com/rjhunjhunwala/S.I.L.O.S.git
-cd S.I.L.O.S
+rm -rf silos
+git clone https://github.com/rjhunjhunwala/S.I.L.O.S.git silos
+cd silos
 javac *.java
 cd ..
 

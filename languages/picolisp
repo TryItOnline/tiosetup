@@ -3,11 +3,11 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf picoLisp
-wget http://software-lab.de/picoLisp.tgz
-tar xf picoLisp.tgz
-rm -f picoLisp.tgz
-cd picoLisp/src64
+rm -rf picolisp
+mkdir picolisp
+curl --silent --show-error http://software-lab.de/picoLisp.tgz \
+	| tar xz --directory=picolisp --strip-components=1
+cd picolisp/src64
 make
 cd ../..
 

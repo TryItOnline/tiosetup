@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf FBBI
-git clone https://github.com/catseye/FBBI.git
-cd FBBI/src
+rm -rf befunge-98
+git clone https://github.com/catseye/FBBI.git befunge-98
+cd befunge-98/src
 make
 cd ../..
 

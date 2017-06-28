@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Oasis
-git clone https://github.com/Adriandmen/Oasis.git
+rm -rf oasis
+git clone https://github.com/Adriandmen/Oasis.git oasis
 
 exit "$err"

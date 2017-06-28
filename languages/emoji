@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf emoji.py
-git clone https://github.com/vpzomtrrfrt/emoji.py.git
+rm -rf emoji
+git clone https://github.com/vpzomtrrfrt/emoji.py.git emoji
 
 exit "$err"

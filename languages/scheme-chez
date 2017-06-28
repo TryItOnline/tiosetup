@@ -3,10 +3,10 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf ChezScheme
-git clone https://github.com/cisco/ChezScheme.git
-cd ChezScheme
-./configure --installprefix=/opt/ChezScheme
+rm -rf scheme-chez
+git clone https://github.com/cisco/ChezScheme.git scheme-chez
+cd scheme-chez
+./configure --installprefix=/opt/scheme-chez
 make
 make install
 cd ..

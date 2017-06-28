@@ -3,11 +3,11 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf intercal-0.30
-wget http://www.catb.org/~esr/intercal/intercal-0.30.tar.gz
-tar zxvf intercal-0.30.tar.gz
-rm -f intercal-0.30.tar.gz
-cd intercal-0.30
+rm -rf intercal
+mkdir intercal
+curl --silent --show-error http://www.catb.org/~esr/intercal/intercal-0.30.tar.gz \
+	| tar xz --directory=intercal --strip-components=1
+cd intercal
 mkdir -p bin
 cd bin
 ../configure
@@ -15,3 +15,4 @@ make
 cd ../..
 
 exit "$err"
+
