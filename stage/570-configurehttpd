@@ -92,7 +92,7 @@ cat >> /etc/httpd/conf.d/010-tio.run.conf <<- .
 		$SL	SSLCertificateKeyFile /etc/letsencrypt/live/$TIORUN/privkey.pem
 
 		RewriteRule ^/$ $TIOPROTOCOL://$TIORUN/#home [NE,R=301]
-		RewriteRule ^/(.+)$ $TIOPROTOCOL://$TIORUN/$\1 [R=301]
+		RewriteRule ^/(.+)$ $TIOPROTOCOL://$TIORUN/\$1 [R=301]
 	</VirtualHost>
 .
 
