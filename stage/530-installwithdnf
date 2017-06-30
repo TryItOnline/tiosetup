@@ -5,7 +5,7 @@ trap 'err=1' ERR
 
 dnf install allegro5-devel ant bind-utils bison bison-devel bsd-games bzip2-devel ceylon-1.3.2 chrpath \
   clang clisp clojure cmake cpio crystal dash emacs-nox erlang-erts file flex flex-devel freetype-devel fsharp gcc-c++ \
-  gc-devel gforth git glib2-devel glibc-devel glibc-devel.i686 gmp-c++ gmp-devel golang gradle \
+  gc-devel gettext-devel gforth git glib2-devel glibc-devel glibc-devel.i686 gmp-c++ gmp-devel golang gradle \
   groovy gtkglext-libs httpd icu ImageMagick java-1.?.0-openjdk java-9-openjdk-devel jq \
   ksh libICE-devel libSM-devel libX11-devel libXaw-devel libXext-devel libXft-devel libXinerama-devel \
   libXmu-devel libXpm-devel libXrender-devel libXt-devel libarchive-devel libcurl-devel libedit-devel \
