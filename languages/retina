@@ -5,5 +5,8 @@ trap 'err=1' ERR
 
 rm -rf retina
 git clone https://github.com/m-ender/retina.git
+cd retina
+git checkout ae02f5e4340e05c359bbecaa98bcd4938f244598
+cd ..
 
 exit "$err"
