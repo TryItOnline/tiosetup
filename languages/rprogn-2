@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf RProgN-2
-git clone https://github.com/TehFlaminTaco/RProgN-2.git
+rm -rf rprogn-2
+git clone https://github.com/TehFlaminTaco/RProgN-2.git rprogn-2
 
 exit "$err"

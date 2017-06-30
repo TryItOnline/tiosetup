@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Chain
-git clone https://github.com/ConorOBrien-Foxx/Chain.git
+rm -rf chain
+git clone https://github.com/ConorOBrien-Foxx/Chain.git chain
 
 exit "$err"

@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf apl
-git clone https://github.com/ngn/apl.git
-cd apl
+rm -rf apl-ngn
+git clone https://github.com/ngn/apl.git apl-ngn
+cd apl-ngn
 PATH=/opt/node-v7.2.0-linux-x64/bin:$PATH ./build
 cd ..
 

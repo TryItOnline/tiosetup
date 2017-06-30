@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Delimit
-git clone https://github.com/MistahFiggins/Delimit.git
-cd Delimit
+rm -rf delimit
+git clone https://github.com/MistahFiggins/Delimit.git delimit
+cd delimit
 javac *.java
 cd ..
 

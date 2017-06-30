@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Brain-Flak
-git clone https://github.com/DJMcMayhem/Brain-Flak.git
+rm -rf brain-flak
+git clone https://github.com/DJMcMayhem/Brain-Flak.git brain-flak
 
 exit "$err"

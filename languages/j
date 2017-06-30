@@ -3,9 +3,11 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf j64_805
-wget http://www.jsoftware.com/download/j805/install/j805_linux64.tar.gz
-tar zxvf j805_linux64.tar.gz
-rm -f j805_linux64.tar.gz
+rm -rf j
+mkdir j
+curl --silent --show-error http://www.jsoftware.com/download/j805/install/j805_linux64.tar.gz \
+	| tar xz --directory=j --strip-components=1
+cd j
 
 exit "$err"
+

@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf forter
-git clone https://github.com/judofyr/forter.git
+rm -rf 
+git clone https://github.com/judofyr/forter.git forte
 
 exit "$err"

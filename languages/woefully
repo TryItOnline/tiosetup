@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Woefully
-git clone https://github.com/Destructible-Watermelon/Woefully.git
+rm -rf woefully
+git clone https://github.com/Destructible-Watermelon/Woefully.git woefully
 
 exit "$err"

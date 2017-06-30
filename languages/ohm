@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Ohm
-git clone https://github.com/MiningPotatoes/Ohm.git
+rm -rf ohm
+git clone https://github.com/MiningPotatoes/Ohm.git ohm
 
 exit "$err"

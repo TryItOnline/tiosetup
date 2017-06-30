@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf ReRegex
-git clone https://github.com/TehFlaminTaco/ReRegex.git
+rm -rf reregex
+git clone https://github.com/TehFlaminTaco/ReRegex.git reregex
 
 exit "$err"

@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf V
-git clone https://github.com/DJMcMayhem/V.git
+rm -rf v
+git clone https://github.com/DJMcMayhem/V.git v
 
 exit "$err"

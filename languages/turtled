@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Turtl-d
-git clone https://github.com/Destructible-Watermelon/Turtl-d.git
+rm -rf turtled
+git clone https://github.com/Destructible-Watermelon/Turtl-d.git turtled
 
 exit "$err"

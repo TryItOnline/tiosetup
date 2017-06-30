@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf Brachylog
-git clone https://github.com/JCumin/Brachylog.git
+rm -rf brachylog2
+git clone https://github.com/JCumin/Brachylog.git brachylog2
 
 exit "$err"

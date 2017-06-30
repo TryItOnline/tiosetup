@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf beam-js
-git clone https://github.com/ETHproductions/beam-js.git
+rm -rf beam
+git clone https://github.com/ETHproductions/beam-js.git beam
 
 exit "$err"
