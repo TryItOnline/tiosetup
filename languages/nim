@@ -3,13 +3,19 @@
 err=0
 trap 'err=1' ERR
 
+version=nim-0.17.0
+
 rm -rf nim
 mkdir nim
-curl --location --silent --show-error https://nim-lang.org/download/nim-0.16.0.tar.xz \
-	| tar xJ --directory=nim --strip-components=1
-chown -R root: nim/
 cd nim
-sh build.sh
+
+curl --location --silent --show-error https://nim-lang.org/download/$version.tar.xz \
+	| tar x --xz
+
+cd $version
+./build.sh
+./install.sh /opt
 cd ..
+rm -rf $version
 
 exit "$err"
