@@ -4,11 +4,14 @@ err=0
 trap 'err=1' ERR
 
 rm -rf scheme-chez
-git clone https://github.com/cisco/ChezScheme.git scheme-chez
+mkdir scheme-chez
 cd scheme-chez
+git clone https://github.com/cisco/ChezScheme.git
+cd ChezScheme
 ./configure --installprefix=/opt/scheme-chez
 make
 make install
 cd ..
+rm -rf ChezScheme
 
 exit "$err"
