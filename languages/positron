@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf positron
+git clone https://github.com/alexander-liao/positron.git
+
+exit "$err"
