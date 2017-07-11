@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf brainhack
+git clone https://github.com/Flakheads/BrainHack.git brainhack
+cd brainhack
+ghc -O2 BrainHack.hs
+
+exit "$err"
