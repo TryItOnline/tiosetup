@@ -1,0 +1,18 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+dir=/opt/chapel
+rm -rf $dir
+mkdir $dir
+cd $dir
+git clone --depth=1 https://github.com/chapel-lang/chapel.git build
+cd build
+./configure --prefix=/opt/chapel
+make
+make install
+cd ..
+rm -rf build
+
+exit "$err"
