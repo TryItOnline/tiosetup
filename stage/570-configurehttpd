@@ -97,7 +97,7 @@ cat >> /etc/httpd/conf.d/010-tio.run.conf <<- .
 	</VirtualHost>
 .
 
-echo 'http_server=httpd' > /srv/etc/tio-web
+echo -e 'http_server=httpd\nmkdir -p /var/log/httpd' > /srv/etc/tio-web
 if [[ "$OfflineMode" != "y" ]]; then
 	systemctl enable tio-web
 fi
