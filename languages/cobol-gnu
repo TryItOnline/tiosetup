@@ -1,0 +1,19 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+dir=/opt/cobol-gnu
+rm -rf $dir
+mkdir -p $dir/build
+cd $dir
+curl --location --silent --show-error https://sourceforge.net/projects/open-cobol/files/gnu-cobol/2.0/gnu-cobol-2.0_rc-2.tar.gz \
+	| tar xz --directory=build --strip-components=1
+cd build
+./configure --prefix=$dir
+make
+make install
+cd ..
+rm -r build
+
+exit "$err"
