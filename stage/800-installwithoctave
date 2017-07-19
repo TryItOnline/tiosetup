@@ -4,10 +4,18 @@ err=0
 trap 'err=1' ERR
 
 octave --eval "
-	pkg install -auto -forge image;
-	pkg install -auto -forge io;
-	pkg install -auto -forge statistics;
-	pkg install -auto -forge symbolic;
+	pkg install -forge image;
+	pkg install -forge io;
+	pkg install -forge statistics;
+	pkg install -forge symbolic;
 "
+
+mkdir -p /opt/octave/home
+cat > /opt/octave/home/.octaverc <<.
+pkg load image;
+pkg load io;
+pkg load statistics;
+pkg load symbolic;
+.
 
 exit "$err"

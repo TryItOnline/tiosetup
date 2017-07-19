@@ -8,7 +8,7 @@ git clone https://github.com/emojicode/emojicode.git
 cd emojicode
 git checkout f74fc4a97778e6589b9bb6ae973769661bf0da81
 make HEAP_SIZE=128000000 DEFAULT_PACKAGES_DIRECTORY=/opt/emojicode/packages
-cd builds/*
+cd builds/Emojicode-*-x86_64-redhat-linux
 ln -s $(pwd) ../../bin
 ln -s $(pwd)/packages ../../packages
 cd ../../..
