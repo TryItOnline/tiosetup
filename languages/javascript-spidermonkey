@@ -8,11 +8,15 @@ rm -rf $dir
 mkdir $dir
 cd $dir
 
-curl --silent --show-error https://people-mozilla.org/~sfink/$(
-	curl --silent --show-error https://people-mozilla.org/~sfink/ \
-		| grep --only-matching --perl-regexp 'mozjs-[\d.]+\.tar\.bz2' \
-		| tail -1
-) | tar x --bzip2
+#curl --silent --show-error https://people-mozilla.org/~sfink/$(
+#	curl --silent --show-error https://people-mozilla.org/~sfink/ \
+#		| grep --only-matching --perl-regexp 'mozjs-[\d.]+\.tar\.bz2' \
+#		| tail -1
+#) | tar x --bzip2
+
+megadl 'https://mega.nz/#!YDRWSbpZ!4_fbtDDLMfqGzewcP2qBpvxpqMFUeqnrmWBItMoY7wY'
+tar xf mozjs-45.0.2.tar.bz2
+\rm mozjs-45.0.2.tar.bz2
 
 mkdir build
 cd build
