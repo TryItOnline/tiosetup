@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf /opt/javascript-spidermonkey
+rm -rf javascript-spidermonkey
 curl --silent --show-error --location https://github.com/TryItOnline/tiosetup-binaries/releases/download/spidermonkey45/spidermonkey.tgz | tar x -z
 
 exit "$err"
