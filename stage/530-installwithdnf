@@ -16,4 +16,7 @@ dnf install allegro5-devel ant bind-utils bison bison-devel bsd-games bzip2-deve
   redhat-rpm-config ruby rust scala sqlite squirrel sudo tcl-trf tcsh time tree unixODBC-devel uuid-devel vala vim-common \
   words xz xz-devel zsh 'apache-commons-*' -y
 
+# For blc
+dnf install glibc-devel.i686 -y
+
 exit "$err"
