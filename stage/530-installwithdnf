@@ -22,7 +22,7 @@ dnf install glibc-devel.i686 -y
 if [[ "$(uname -a)" =~ \.fc25\. ]]; then
   dnf install elixir java-9-openjdk-devel -y
 else
-  dnf install --releasever=25 elixir
+  dnf install --releasever=25 elixir -y
   sed -i 's/$releasever/25/g' /etc/yum.repos.d/_copr_omajid-openjdk9.rep  
   dnf install java-9-openjdk-devel -y
 fi
