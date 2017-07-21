@@ -9,8 +9,11 @@ mkdir $dir
 cd $dir
 git clone --depth=1 https://github.com/chapel-lang/chapel.git build
 cd build
+export CHPL_TARGET_ARCH=native CHPL_COMM=gasnet
 ./configure --prefix=/opt/chapel
 make
+export CHPL_COMM=none
+./configure --prefix=/opt/chapel
 make install
 cd ..
 rm -rf build
