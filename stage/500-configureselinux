@@ -6,7 +6,7 @@ trap "err=1" ERR
 source private/config
 if [[ "$OfflineMode" != "y" ]]; then
 
-  if [[ "$(uname -a)" =~ \.fc25\. ]] then;
+  if [[ "$(uname -a)" =~ \.fc25\. ]]; then
     semanage fcontext -a -t bin_t '/opt/(.*/)?bin(/.*)?'
   else
     semanage fcontext -a -t bin_t '/opt(/.*)?/bin(/.*)?'
