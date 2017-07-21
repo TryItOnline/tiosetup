@@ -23,7 +23,7 @@ if [[ "$(uname -a)" =~ \.fc25\. ]]; then
   dnf install elixir java-9-openjdk-devel -y
 else
   dnf install --releasever=25 elixir -y
-  sed -i 's/$releasever/25/g' /etc/yum.repos.d/_copr_omajid-openjdk9.rep  
+  sed -i 's/$releasever/25/g' /etc/yum.repos.d/_copr_omajid-openjdk9.repo
   dnf install java-9-openjdk-devel -y
 fi
 
