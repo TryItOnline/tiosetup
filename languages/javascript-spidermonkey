@@ -3,24 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-dir=/opt/javascript-spidermonkey
-rm -rf $dir
-mkdir $dir
-cd $dir
-
-curl --silent --show-error https://people-mozilla.org/~sfink/$(
-	curl --silent --show-error https://people-mozilla.org/~sfink/ \
-		| grep --only-matching --perl-regexp 'mozjs-[\d.]+\.tar\.bz2' \
-		| tail -1
-) | tar x --bzip2
-
-mkdir build
-cd build
-../mozjs-*/js/src/configure --disable-shared-js --disable-tests --prefix=$dir
-make
-make install
-cd ..
-rm -rf build mozjs*
-strip bin/js lib/*.ajs
+rm -rf javascript-spidermonkey
+curl --silent --show-error --location https://github.com/TryItOnline/tiosetup-binaries/releases/download/spidermonkey45/spidermonkey.tgz | tar x -z
 
 exit "$err"

@@ -19,7 +19,7 @@ The main server setup instructions will set up a single server which can act bot
 
 The setup makes use of [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux), support of which varies between different distributions of Linux.
 
-This setup runs on **Fedora 25** and was tested on [Linode](https://www.linode.com/). *Note: at the time of writing, Try It Online is hosted on Digital Ocean and scheduled to migrate to Linode.*
+This setup runs on **Fedora 26** and was tested on [Linode](https://www.linode.com/). *Note: at the time of writing, Try It Online is hosted on Digital Ocean and scheduled to migrate to Linode.*
 
 It is assumed that you have a freshly provisioned instance(s) on Linode. All scripts are run as root. It might be possible to run the setup on another hosting provider, such as [Digital Ocean](https://www.digitalocean.com/) or [Vultr](https://www.vultr.com/), however minor image differences may require slightly different prep steps, which are not covered here. You will need minimum of 1 GiB of memory in any case.
 
@@ -78,8 +78,8 @@ Top level folders:
 
 ## Configuring Linode
 
-For both main an arena server you will need to switch to a distribution-supplied kernel, as Linode uses a custom kernel by default. This will enable SELinux the next time your your Fedora 25 image is booted. 
-Once you created a Linode (1024 MiB of RAM, 20 GiB SSD, or better) and deployed the Fedora 25 image you need to boot your linode, and wait until it boots up. Ssh in to make sure it did, or watch the boot progress in Lish.
+For both main an arena server you will need to switch to a distribution-supplied kernel, as Linode uses a custom kernel by default. This will enable SELinux the next time your your Fedora 26 image is booted. 
+Once you created a Linode (1024 MiB of RAM, 20 GiB SSD, or better) and deployed the Fedora 26 image you need to boot your linode, and wait until it boots up. Ssh in to make sure it did, or watch the boot progress in Lish.
 
 Go to Linode Manager and edit your linode configuration profile. In the "Boot Settings" section select "GRUB 2" from the "Kernel" drop down, and click "Save changes". On
 the "Remote Access" tab Click "Add a Private IP". Reboot your linode. Wait for it to back come up. It will take slightly longer than usual, as SeLinux relabeling and another reboot will happen automatically. Now you can follow the rest of the installation steps above.
