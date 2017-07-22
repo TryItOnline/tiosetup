@@ -12,6 +12,8 @@ rm -f /usr/local/bin/dotnet
 rm -rf /opt/microsoft/home
 mkdir -p /opt/microsoft/dotnet
 curl -sSL https://go.microsoft.com/fwlink/?LinkID=848738 | tar xz -C /opt/microsoft/dotnet
+mkdir -p /opt/microsoft/home/{.dotnet,.nuget/packages}
+ln -s ../.nuget/packages /opt/microsoft/home/.dotnet/NuGetFallbackFolder
 ln -s /opt/microsoft/dotnet/dotnet /usr/local/bin
 mkdir -p /opt/microsoft/home/csharp
 pushd /opt/microsoft/home/csharp
@@ -24,6 +26,6 @@ fi
 rm -rf /opt/microsoft/tmp
 popd
 cd ..
-rm -rf tmp 
+rm -rf tmp
 
 exit "$err"
