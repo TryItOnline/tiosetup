@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-dnf install allegro5-devel ant bind-utils bison bison-devel bsd-games bzip2-devel ceylon-1.3.2 chrpath \
+dnf install allegro5-devel ant bind-utils bison bison-devel boo bsd-games bzip2-devel ceylon-1.3.2 chrpath \
   clang clisp clojure cmake cpio crystal dash emacs-nox erlang erlang-erts file flex flex-devel fpc freetype-devel fsharp gambit-c gcc-c++ \
   gc-devel gettext-devel gforth git glib2-devel glibc-devel gmp-c++ gmp-devel golang gradle \
   groovy gtkglext-libs httpd icu ImageMagick java-1.?.0-openjdk jq \
