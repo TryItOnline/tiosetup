@@ -13,6 +13,7 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-ceylon
 dnf config-manager --add-repo https://downloads.ceylon-lang.org/rpm/ceylon.repo
 rpm --import https://dist.crystal-lang.org/rpm/RPM-GPG-KEY
 echo -e '[crystal]\nname=Crystal\nbaseurl=https://dist.crystal-lang.org/rpm/\nenabled=1' > /etc/yum.repos.d/crystal.repo
+wget -O /etc/yum.repos.d/bintray-pony-language-ponyc-rpm.repo https://bintray.com/pony-language/ponyc-rpm/rpm
 echo 'deltarpm=no' >> /etc/dnf/dnf.conf
 
 exit "$err"
