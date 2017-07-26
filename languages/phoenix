@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf phoenix
+git clone https://github.com/senselogic/PHOENIX.git phoenix
+cd phoenix
+dmd phoenix.d
+
+exit "$err"
