@@ -1,0 +1,18 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+dir=/opt/sed
+rm -rf $dir
+mkdir -p $dir
+cd $dir
+curl --silent --show-error https://ftp.gnu.org/gnu/sed/sed-4.2.2.tar.gz | tar xz
+cd sed-4.2.2
+./configure --prefix=$dir
+make
+make install
+cd ..
+rm -rf sed-4.2.2
+
+exit "$err"
