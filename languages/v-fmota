@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf v-fmota
+git clone https://github.com/TryItOnline/v-fmota.git
+cd v-fmota
+ghc -O3 V.hs
+
+exit "$err"
