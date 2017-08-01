@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf 4
+git clone https://github.com/urielieli/py-four.git 4
+
+exit "$err"
