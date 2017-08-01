@@ -1,0 +1,25 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf zkl
+mkdir zkl
+cd zkl
+ln -s . ZKL
+wget http://www.zenkinetic.com/Documents/zkl_{vm,dll_{bignum,GSL,msgHash,zeelib}}_src.zip
+unzip -n '*.zip'
+chmod 755 runzkl
+rm ZKL *.zip
+cd VM
+make lib
+cd ../LibSrc/BigNum
+make gmp
+cd ../GSL
+make
+cd ../MsgHash
+make
+cd ../ZeeLib
+make
+
+exit "$err"
