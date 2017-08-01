@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 dnf install allegro5-devel allegro5-addon-acodec-devel allegro5-addon-image-devel allegro5-addon-ttf-devel ant bind-utils bison bison-devel boo bsd-games bzip2-devel ceylon-1.3.2 chrpath \
-  clang clisp clojure cmake cpio crystal dash emacs-nox erlang erlang-erts file flex flex-devel fpc freetype-devel fsharp gambit-c gcc-c++ \
+  clang clisp clojure cmake cpio crystal dash elixir emacs-nox erlang erlang-erts file flex flex-devel fpc freetype-devel fsharp gambit-c gcc-c++ \
   gc-devel gettext-devel gforth git glib2-devel glibc-devel gmp-c++ gmp-devel golang gradle \
   groovy gsl-devel gtkglext-libs httpd huginn icu ImageMagick java-1.?.0-openjdk jq \
   ksh libICE-devel libSM-devel libX11-devel libXaw-devel libXext-devel libXft-devel libXinerama-devel \
@@ -20,9 +20,8 @@ dnf install allegro5-devel allegro5-addon-acodec-devel allegro5-addon-image-deve
 dnf install glibc-devel.i686 -y
 
 if [[ "$(uname -a)" =~ \.fc25\. ]]; then
-  dnf install elixir java-9-openjdk-devel -y
+  dnf install java-9-openjdk-devel -y
 else
-  dnf install --releasever=25 elixir -y
   sed -i 's/$releasever/25/g' /etc/yum.repos.d/_copr_omajid-openjdk9.repo
   dnf install java-9-openjdk-devel -y
 fi
