@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf explode
+git clone https://github.com/stestoltz/Explode.git explode
+
+exit "$err"
