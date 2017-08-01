@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf cood
+git clone https://github.com/jesobreira/cood.git
+cd cood
+git checkout php-interpreter
+
+exit "$err"
