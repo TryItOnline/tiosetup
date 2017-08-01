@@ -8,6 +8,7 @@ dnf config-manager --add-repo http://download.mono-project.com/repo/centos/
 dnf copr enable dmoerner/outils -y
 dnf copr enable dperson/neovim -y
 dnf copr enable omajid/openjdk9 -y
+sed -i 's/$releasever/25/g' /etc/yum.repos.d/_copr_omajid-openjdk9.repo
 wget -O /etc/pki/rpm-gpg/RPM-GPG-KEY-ceylon https://downloads.ceylon-lang.org/rpm/ceylon-rpm-repo.gpg.key
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-ceylon
 dnf config-manager --add-repo https://downloads.ceylon-lang.org/rpm/ceylon.repo
