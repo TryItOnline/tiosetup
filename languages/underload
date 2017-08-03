@@ -4,12 +4,8 @@ err=0
 trap 'err=1' ERR
 
 rm -rf underload
-git clone https://github.com/catseye/Dipple.git
-mkdir -p underload
-cp Dipple/c/stringie.c underload
-rm -rf Dipple
-cd underload
-gcc stringie.c -o stringie
-cd ..
+git clone https://github.com/catseye/stringie.git underload
+cd underload/src
+make
 
 exit "$err"
