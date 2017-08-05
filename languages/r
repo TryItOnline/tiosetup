@@ -10,4 +10,6 @@ build/configure --with-x=no
 make R
 rm -rf build source
 
+/opt/r/bin/Rscript -e 'install.packages("Rmpfr", repos = "http://cran.r-project.org")'
+
 exit "$err"
