@@ -8,7 +8,7 @@ dnf install allegro5-devel allegro5-addon-acodec-devel allegro5-addon-image-deve
   gc-devel gettext-devel gforth git glib2-devel glibc-devel gmp-c++ gmp-devel golang gradle \
   groovy gsl-devel gtkglext-libs httpd huginn icu ImageMagick java-1.?.0-openjdk java-9-openjdk-devel jq \
   ksh libICE-devel libSM-devel libX11-devel libXaw-devel libXext-devel libXft-devel libXinerama-devel \
-  libXmu-devel libXpm-devel libXrender-devel libXt-devel libarchive-devel libcurl-devel libdb-devel libedit-devel libmpc-devel \
+  libXmu-devel libXpm-devel libXrender-devel libXt-devel libarchive-devel libatomic libcurl-devel libdb-devel libedit-devel libmpc-devel \
   libgcc.i686 libicu libjpeg-turbo-devel libunwind lldb lldb-devel llvm lttng-tools lttng-ust \
   maxima mercurial mlton mod_ssl mono-basic mono-complete mpfr-devel nano nasm ncurses-compat-libs neovim npm \
   ocaml octave octave-devel openssl-devel outils patch pcre-devel perl-Digest-CRC perl-List-MoreUtils \
