@@ -6,7 +6,8 @@ trap 'err=1' ERR
 rm -rf c-tcc
 git clone git://repo.or.cz/tinycc.git c-tcc
 cd c-tcc
-./configure --prefix=/opt/c-tcc && make && make install
-cd ..
+./configure --prefix=/opt/c-tcc --with-selinux
+make
+make install
 
 exit "$err"
