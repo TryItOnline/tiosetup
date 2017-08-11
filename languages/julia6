@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf julia6
+mkdir julia6
+curl --silent --show-error https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.0-linux-x86_64.tar.gz \
+	| tar xz --directory=julia6 --strip-components=1
+
+exit "$err"

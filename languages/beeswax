@@ -3,13 +3,14 @@
 err=0
 trap 'err=1' ERR
 
+# Install Julia first.
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 $DIR/julia
 restorecon -Rv /usr/lib
+
 rm -rf beeswax
 git clone https://github.com/TryItOnline/beeswax.git
 cd beeswax
-HOME=/root ./build
-cd ..
+HOME=/root PATH="/opt/julia/bin:$PATH" ./build
 
 exit "$err"
