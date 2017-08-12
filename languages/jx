@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf jx
+cp -al j jx
+rm jx/bin/libj.so
+wget -O jx/bin/libj.so http://www.2bestsystems.com/foundation/j/jx1/libj.so
+
+exit "$err"
+

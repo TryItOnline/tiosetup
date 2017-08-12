@@ -7,7 +7,8 @@ rm -rf j
 mkdir j
 curl --silent --show-error http://www.jsoftware.com/download/j805/install/j805_linux64.tar.gz \
 	| tar xz --directory=j --strip-components=1
-cd j
+
+/opt/j/bin/jconsole <<< "install 'all'"
 
 exit "$err"
 
