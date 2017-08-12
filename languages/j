@@ -3,12 +3,16 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf j
+rm -rf j jx
 mkdir j
-curl --silent --show-error http://www.jsoftware.com/download/j805/install/j805_linux64.tar.gz \
+curl --silent --show-error http://www.jsoftware.com/download/j806/install/j806_linux64.tar.gz \
 	| tar xz --directory=j --strip-components=1
 
+ln -sf /usr/lib64/libedit.so{,.2}
 /opt/j/bin/jconsole <<< "install 'all'"
+cp -al j jx
+rm jx/bin/libj.so
+wget -O jx/bin/libj.so http://www.2bestsystems.com/foundation/j/jx1/libj.so
 
 exit "$err"
 
