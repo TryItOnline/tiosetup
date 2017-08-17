@@ -1,0 +1,20 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf simula
+mkdir -p simula/build
+cd simula/build
+curl --silent --show-error https://ftp.gnu.org/gnu/cim/cim-5.1.tar.gz \
+	| tar xz --strip-components=1
+sed -i 's:\.\./\.\./lib/:../lib/:' lib/*
+aclocal
+automake
+LDFLAGS=-s ./configure --prefix=/opt/simula
+make
+make install
+cd ..
+rm -r build
+
+exit "$err"
