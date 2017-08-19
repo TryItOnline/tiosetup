@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-dnf install allegro5-devel allegro5-addon-acodec-devel allegro5-addon-image-devel allegro5-addon-ttf-devel ant bind-utils bison bison-devel boo bsd-games bzip2-devel ceylon-1.3.2 chrpath \
+dnf install allegro5-devel allegro5-addon-acodec-devel allegro5-addon-image-devel allegro5-addon-ttf-devel ant blas-devel bind-utils bison bison-devel boo bsd-games bzip2-devel ceylon-1.3.2 chrpath \
   clang clisp clojure cmake cpio crystal dash elixir emacs-nox erlang erlang-erts file flex flex-devel fpc freetype-devel fsharp gambit-c gcc-c++ \
   gc-devel gettext-devel gforth git glib2-devel glibc-devel gmp-c++ gmp-devel golang gradle \
   groovy gsl-devel gtkglext-libs httpd huginn icu ImageMagick java-1.?.0-openjdk java-9-openjdk-devel jq \
@@ -14,7 +14,7 @@ dnf install allegro5-devel allegro5-addon-acodec-devel allegro5-addon-image-deve
   ocaml octave octave-devel openssl-devel outils patch pcre-devel perl-Digest-CRC perl-List-MoreUtils \
   perl-Text-Soundex php-cli ponyc psmisc pyephem pypy python3-devel python-certbot-apache python-devel rakudo \
   redhat-rpm-config ruby rust scala sqlite squirrel sudo tcl-trf tcsh time tree unixODBC-devel uuid-devel vala vim-common \
-  words xz xz-devel zsh 'apache-commons-*' -y
+  words xz xz-devel zeromq-devel zsh 'apache-commons-*' -y
 
 # For blc
 dnf install glibc-devel.i686 -y
