@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf dreaderef
+git clone https://github.com/ScratchMan544/Dreaderef.git dreaderef
+
+exit "$err"
