@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf shnap
+mkdir shnap
+curl --location --silent --show-error --output shnap/Shnap-shadow.jar "$(
+    curl --silent --show-error https://api.github.com/repos/ShnapLang/Shnap/releases \
+        | jq --raw-output 'sort_by(.published_at)|reverse|.[].assets|.[].browser_download_url' \
+        | head -1 \
+        | tee /dev/stderr
+)"
+
+exit "$err"
