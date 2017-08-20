@@ -1,0 +1,17 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf sisal
+mkdir sisal
+cd sisal
+git clone https://github.com/TryItOnline/sisalc.git build
+cd build
+./configure --prefix=/opt/sisal CFLAGS='-s -O2'
+make
+make install
+cd ..
+rm -rf build
+
+exit "$err"
