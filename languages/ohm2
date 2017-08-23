@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ohm2
+git clone https://github.com/MiningPotatoes/Ohm.git ohm2
+
+exit "$err"
