@@ -28,6 +28,7 @@ if [[ "$OfflineMode" != "y" ]]; then
   semanage fcontext -a -t bin_t '/usr/lib/golang/pkg/tool/linux_amd64(/.*)?'
   semanage fcontext -a -t bin_t '/usr/local/haskell/.*/bin(/.*)?'
   semanage fcontext -a -t bin_t '/usr/lib/fpc/.*/ppc.*'
+  semanage fcontext -a -t textrel_shlib_t '/opt/occam-pi/lib/.*\.so'
 fi
 
 exit "$err"

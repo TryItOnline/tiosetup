@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf occam-pi
+mkdir occam-pi
+cd occam-pi
+git clone --depth=1 https://github.com/concurrency/kroc.git build
+cd build
+./build --prefix=/opt/occam-pi
+cd ..
+rm -r build
+
+exit "$err"
