@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf tampio
+git clone https://github.com/fergusq/tampio.git
+mkdir tampio/.voikko
+cd tampio/.voikko
+wget http://www.puimula.org/htp/testing/voikko-snapshot/dict-morpho.zip
+unzip dict-morpho.zip
+rm dict-morpho.zip
+
+exit "$err"
