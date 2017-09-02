@@ -17,6 +17,22 @@ fi
 rm -rf /opt/microsoft/tmp
 popd
 
+mkdir -p /opt/microsoft/home/fsharp
+pushd /opt/microsoft/home/fsharp
+cp "$saveddir/files/dotnet/project.fsproj" ./project.fsproj
+mkdir -p /opt/microsoft/tmp
+HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
+rm -rf /opt/microsoft/tmp
+popd
+
+mkdir -p /opt/microsoft/home/vb
+pushd /opt/microsoft/home/vb
+cp "$saveddir/files/dotnet/project.vbproj" ./project.vbproj
+mkdir -p /opt/microsoft/tmp
+HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
+rm -rf /opt/microsoft/tmp
+popd
+
 find /opt/microsoft/home -type d -exec chmod 755 {} \;
 find /opt/microsoft/home -exec chmod o-w {} \;
 
