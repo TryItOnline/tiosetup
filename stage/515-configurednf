@@ -17,5 +17,7 @@ echo -e '[crystal]\nname=Crystal\nbaseurl=https://dist.crystal-lang.org/rpm/\nen
 echo -e '[codestation]\nname=Codestation packages for Fedora 26 - $basearch\nbaseurl=https://codestation.org/fedora/\nenabled=1\ngpgcheck=0' > /etc/yum.repos.d/codestation.repo
 wget -O /etc/yum.repos.d/bintray-pony-language-ponyc-rpm.repo https://bintray.com/pony-language/ponyc-rpm/rpm
 echo 'deltarpm=no' >> /etc/dnf/dnf.conf
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/dotnetdev.repo'
 
 exit "$err"
