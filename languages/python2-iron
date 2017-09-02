@@ -4,15 +4,14 @@ err=0
 trap 'err=1' ERR
 
 rm -rf python2-iron
-mkdir python2-iron
-curl --location --silent --show-error "$(
-    curl --silent --show-error https://api.github.com/repos/IronLanguages/main/releases \
-        | jq --raw-output 'sort_by(.published_at)|reverse|.[].assets|.[].browser_download_url|select(test("IronPython(.*)unix.tar.bz2$"))' \
-        | head -1 \
-        | tee /dev/stderr
-)" | tar x --bzip2 --directory=python2-iron --strip-components=1
-
-chown -R root: python2-iron
-chmod -R o-w python2-iron
+git clone --recursive https://github.com/IronLanguages/ironpython2.git python2-iron
+cd python2-iron
+sed -i '/IronPythonTest.csproj/,+1d' IronPython.sln
+make
+mv bin/Release/net45 ../python2-iron-bin
+cd ..
+rm -rf python2-iron
+mv python2-iron-bin python2-iron
+rm python2-iron/rowantest.*.dll
 
 exit "$err"
