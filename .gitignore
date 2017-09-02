@@ -6,3 +6,4 @@ private
 !private/*.default
 
 tmp
+obj/
