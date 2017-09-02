@@ -7,6 +7,7 @@ ln -sfT /usr/include/allegro5 /usr/include/allegro
 rm -rf emojicode
 git clone https://github.com/emojicode/emojicode.git
 cd emojicode
+git checkout emojicode-0.5
 mkdir -p build
 cd build
 cmake -DheapSize=128000000 -DdefaultPackagesDirectory=/opt/emojicode/packages .. -GNinja
