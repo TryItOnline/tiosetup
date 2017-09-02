@@ -12,4 +12,10 @@
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="DynamicExpresso">
+      <HintPath>/opt/microsoft/libs/DynamicExpresso/DynamicExpresso.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

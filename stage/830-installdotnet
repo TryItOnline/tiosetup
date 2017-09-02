@@ -33,6 +33,11 @@ HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
 rm -rf /opt/microsoft/tmp
 popd
 
+mkdir -p /opt/microsoft/libs
+wget https://github.com/TryItOnline/DynamicExpresso/releases/download/tio-1/DynamicExpresso.zip
+unzip -d /opt/microsoft/libs/DynamicExpresso DynamicExpresso.zip
+rm -f DynamicExpresso.zip
+
 find /opt/microsoft/home -type d -exec chmod 755 {} \;
 find /opt/microsoft/home -exec chmod o-w {} \;
 
