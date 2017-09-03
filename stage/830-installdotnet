@@ -38,6 +38,8 @@ wget https://github.com/TryItOnline/DynamicExpresso/releases/download/tio-1/Dyna
 unzip -d /opt/microsoft/libs/DynamicExpresso DynamicExpresso.zip
 rm -f DynamicExpresso.zip
 
+touch --date='+100 years' /opt/microsoft/home/.local/share/NuGet/v3-cache/*/{list_FSharp.Core,service_index}.dat
+
 find /opt/microsoft/home -type d -exec chmod 755 {} \;
 find /opt/microsoft/home -exec chmod o-w {} \;
 
