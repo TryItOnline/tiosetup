@@ -61,7 +61,7 @@ Use `ssh-keygen` command on Linux to generate  private and public keys as requir
 
 ## Dyalog APL
 
-To run Dyalog APL you will need a licence and Dyalog CLassic and Unicode RPMs for 64-bit arch. TIO has such a licence. If you choose not to get a licence and thus do not have an installation image, the TIO installation script for Dyalog APL will generate errors which can be safely ignored. Dyalog is free for non-commercial usage; you can apply for a licence at <https://dyalog.com/prices-and-licences.htm>
+To run Dyalog APL you will need a licence and Dyalog Classic and Unicode RPMs for 64-bit arch. TIO has such a licence. If you choose not to get a licence and thus do not have an installation image, the TIO installation script for Dyalog APL will generate errors which can be safely ignored. Dyalog is free for non-commercial usage; you can apply for a licence at <https://dyalog.com/prices-and-licences.htm>.
 
 ## Setup scripts structure
 
