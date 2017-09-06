@@ -10,7 +10,7 @@ mkdir -p /opt/microsoft/home/vb
 cd /opt/microsoft/home/csharp
 cp "$saveddir/files/dotnet/project.csproj" ./project.csproj
 cp "$saveddir/files/dotnet/code.cs" ./code.cs
-cp "$saveddir/files/dotnet/opts.txt" ./opts.txt
+cp "$saveddir/files/dotnet/csopts.txt" ./csopts.txt
 HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet build
 rm -rf /opt/microsoft/home/csharp/obj/Debug
 rm -f /opt/microsoft/home/csharp/bin/Debug/netcoreapp*/project.dll
@@ -19,6 +19,7 @@ rm -f /opt/microsoft/home/csharp/bin/Debug/netcoreapp*/project.pdb
 cd /opt/microsoft/home/vb
 cp "$saveddir/files/dotnet/project.vbproj" ./project.vbproj
 cp "$saveddir/files/dotnet/code.vb" ./code.vb
+cp "$saveddir/files/dotnet/vbopts.txt" ./vbopts.txt
 HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet build
 rm -rf /opt/microsoft/home/vb/obj/Debug
 rm -f /opt/microsoft/home/vb/bin/Debug/netcoreapp*/project.dll
@@ -27,6 +28,7 @@ rm -f /opt/microsoft/home/vb/bin/Debug/netcoreapp*/project.pdb
 cd /opt/microsoft/home/fsharp
 cp "$saveddir/files/dotnet/project.fsproj" ./project.fsproj
 cp "$saveddir/files/dotnet/code.fs" ./Program.fs
+cp "$saveddir/files/dotnet/fsopts.txt" ./fsopts.txt
 HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet build
 rm -rf /opt/microsoft/home/fsharp/obj/Debug
 rm -f /opt/microsoft/home/fsharp/bin/Debug/netcoreapp*/project.dll
