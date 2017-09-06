@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 source private/config
-../misc/netcoredeps
+netcoredeps
 
 if [[ "$OfflineMode" == "y" ]]; then
   ln -fs /opt/microsoft/home/.nuget /home/runner/
