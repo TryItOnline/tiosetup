@@ -10,6 +10,7 @@ cp "$saveddir/files/dotnet/code.cs" ./code.cs
 cp "$saveddir/files/dotnet/opts.txt" ./opts.txt
 HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet build
 rm -rf /opt/microsoft/home/csharp/obj/Debug
+rm -f /opt/microsoft/home/csharp/bin/Debug/netcoreapp*/project.dll
 
 cd /opt/microsoft/home/vb
 cp "$saveddir/files/dotnet/project.vbproj" ./project.vbproj
