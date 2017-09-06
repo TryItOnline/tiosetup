@@ -18,11 +18,19 @@ rm -f /opt/microsoft/home/csharp/bin/Debug/netcoreapp*/project.pdb
 
 cd /opt/microsoft/home/vb
 cp "$saveddir/files/dotnet/project.vbproj" ./project.vbproj
-HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
+cp "$saveddir/files/dotnet/code.vb" ./code.vb
+HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet build
+rm -rf /opt/microsoft/home/vb/obj/Debug
+rm -f /opt/microsoft/home/vb/bin/Debug/netcoreapp*/project.dll
+rm -f /opt/microsoft/home/vb/bin/Debug/netcoreapp*/project.pdb
 
 cd /opt/microsoft/home/fsharp
 cp "$saveddir/files/dotnet/project.fsproj" ./project.fsproj
-HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
+cp "$saveddir/files/dotnet/code.fs" ./Program.fs
+HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet build
+rm -rf /opt/microsoft/home/fsharp/obj/Debug
+rm -f /opt/microsoft/home/fsharp/bin/Debug/netcoreapp*/project.dll
+rm -f /opt/microsoft/home/fsharp/bin/Debug/netcoreapp*/project.pdb
 
 rm -rf /opt/microsoft/tmp
 
