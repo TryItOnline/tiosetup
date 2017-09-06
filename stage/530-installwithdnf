@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 dnf install allegro5-devel allegro5-addon-acodec-devel allegro5-addon-image-devel allegro5-addon-ttf-devel ant blas-devel bind-utils bison bison-devel boo bsd-games bzip2-devel ceylon-1.3.2 chrpath \
-  clang clisp clojure cmake cpio crystal dash dotnet-sdk-2.0.0 elixir emacs-nox erlang erlang-erts file flex flex-devel fpc freetype-devel fsharp gambit-c gcc-c++ \
+  clang clisp clojure cmake cpan cpio crystal dash dotnet-sdk-2.0.0 elixir emacs-nox erlang erlang-erts file flex flex-devel fpc freetype-devel fsharp gambit-c gcc-c++ \
   gc-devel gd-devel gettext-devel gforth giflib-devel git glib2-devel glibc-devel gmp-c++ gmp-devel golang gradle \
   groovy gsl-devel gtkglext-libs httpd huginn icu ImageMagick java-1.?.0-openjdk java-9-openjdk-devel jq \
   ksh libICE-devel libSM-devel libX11-devel libXaw-devel libXext-devel libXft-devel libXinerama-devel \

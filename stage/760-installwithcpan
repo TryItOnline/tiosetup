@@ -1,0 +1,8 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+yes | cpan Acme::Chef
+
+exit "$err"
