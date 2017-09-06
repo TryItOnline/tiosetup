@@ -9,6 +9,7 @@ cp "$saveddir/files/dotnet/project.csproj" ./project.csproj
 cp "$saveddir/files/dotnet/code.cs" ./code.cs
 cp "$saveddir/files/dotnet/opts.txt" ./opts.txt
 HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet build
+rm -rf /opt/microsoft/home/csharp/obj/Debug
 
 cd /opt/microsoft/home/vb
 cp "$saveddir/files/dotnet/project.vbproj" ./project.vbproj
