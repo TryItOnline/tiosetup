@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf simplestack
+git clone https://github.com/aaronryank/simplestack.git
+cd simplestack
+gcc -Wall -Wextra -O2 -o simplestack simplestack.c
+
+exit "$err"
