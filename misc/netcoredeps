@@ -15,7 +15,7 @@ HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet build
 rm -rf /opt/microsoft/home/csharp/obj/Debug
 rm -f /opt/microsoft/home/csharp/bin/Debug/netcoreapp*/project.dll
 rm -f /opt/microsoft/home/csharp/bin/Debug/netcoreapp*/project.pdb
-rm -f /opt/microsoft/home/csharp/bin/Debug/netcoreapp*/project.deps.json
+#rm -f /opt/microsoft/home/csharp/bin/Debug/netcoreapp*/project.deps.json
 
 cd /opt/microsoft/home/vb
 cp "$saveddir/files/dotnet/project.vbproj" ./project.vbproj
