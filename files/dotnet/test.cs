@@ -6,6 +6,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Superpower;
 using Superpower.Parsers;
+using Microsoft.Extensions.CommandLineUtils;
 
 namespace project
 {
@@ -13,6 +14,7 @@ namespace project
     {
         static void Main(string[] args)
         {
+            CommandLineApplication cla = new CommandLineApplication(false);
             string json = @"{'Phrase': 'Hello, World! - json'}";
             var account = JsonConvert.DeserializeObject<dynamic>(json);
             Console.WriteLine(account.Phrase);
