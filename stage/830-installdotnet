@@ -4,41 +4,11 @@ err=0
 trap 'err=1' ERR
 
 source private/config
-saveddir=$(pwd)
+../misc/netcoredeps
 
-mkdir -p /opt/microsoft/home/csharp
-pushd /opt/microsoft/home/csharp
-cp "$saveddir/files/dotnet/project.csproj" ./project.csproj
-mkdir -p /opt/microsoft/tmp
-HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
 if [[ "$OfflineMode" == "y" ]]; then
   ln -fs /opt/microsoft/home/.nuget /home/runner/
 fi
-rm -rf /opt/microsoft/tmp
-popd
-
-mkdir -p /opt/microsoft/home/vb
-pushd /opt/microsoft/home/vb
-cp "$saveddir/files/dotnet/project.vbproj" ./project.vbproj
-mkdir -p /opt/microsoft/tmp
-HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
-rm -rf /opt/microsoft/tmp
-popd
-
-mkdir -p /opt/microsoft/home/fsharp
-pushd /opt/microsoft/home/fsharp
-cp "$saveddir/files/dotnet/project.fsproj" ./project.fsproj
-mkdir -p /opt/microsoft/tmp
-HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
-rm -rf /opt/microsoft/tmp
-popd
-
-mkdir -p /opt/microsoft/libs
-wget https://github.com/TryItOnline/DynamicExpresso/releases/download/tio-1/DynamicExpresso.zip
-unzip -d /opt/microsoft/libs/DynamicExpresso DynamicExpresso.zip
-rm -f DynamicExpresso.zip
-
-touch --date='+100 years' /opt/microsoft/home/.local/share/NuGet/v3-cache/*/{list_FSharp.Core,service_index}.dat
 
 find /opt/microsoft/home -type d -exec chmod 755 {} \;
 find /opt/microsoft/home -exec chmod o-w {} \;
