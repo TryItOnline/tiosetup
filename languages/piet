@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf piet
+git clone https://github.com/gleitz/npiet.git piet
+cd piet
+./configure
+make npiet
+
+exit "$err"
