@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Superpower;
 using Superpower.Parsers;
 using Microsoft.Extensions.CommandLineUtils;
+using DynamicExpresso;
 
 namespace project
 {
@@ -15,6 +16,9 @@ namespace project
         static void Main(string[] args)
         {
             CommandLineApplication cla = new CommandLineApplication(false);
+            var interpreter = new Interpreter();
+            var result = interpreter.Eval("8 / 2 + 2");
+
             string json = @"{'Phrase': 'Hello, World! - json'}";
             var account = JsonConvert.DeserializeObject<dynamic>(json);
             Console.WriteLine(account.Phrase);
@@ -27,7 +31,7 @@ namespace project
             var id = identifier.Parse("'Hello, World! - superpower'");
             Console.WriteLine(id);
 
-			Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             var bytes = Encoding.GetEncoding(1252).GetBytes("Hello, World! - encoding");
             Console.WriteLine(Encoding.GetEncoding(1252).GetString(bytes));
 
