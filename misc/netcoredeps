@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+saveddir=/opt/tiosetup
+
+mkdir -p /opt/microsoft/tmp
+
+cd /opt/microsoft/home/csharp
+cp "$saveddir/files/dotnet/project.csproj" ./project.csproj
+HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
+
+cd /opt/microsoft/home/vb
+cp "$saveddir/files/dotnet/project.vbproj" ./project.vbproj
+HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
+
+cd /opt/microsoft/home/fsharp
+cp "$saveddir/files/dotnet/project.fsproj" ./project.fsproj
+HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
+
+rm -rf /opt/microsoft/tmp
+
+touch --date='+100 years' /opt/microsoft/home/.local/share/NuGet/v3-cache/*/{list_FSharp.Core,service_index}.dat
