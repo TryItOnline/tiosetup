@@ -1,5 +1,6 @@
 /out:project.dll
 /target:library
+/debug+
 /reference:/usr/share/dotnet/sdk/NuGetFallbackFolder/netstandard.library/2.0.0/build/netstandard2.0/ref/netstandard.dll
 /reference:/usr/share/dotnet/sdk/NuGetFallbackFolder/system.text.encoding.codepages/4.4.0/lib/netstandard2.0/System.Text.Encoding.CodePages.dll
 /reference:/usr/share/dotnet/sdk/NuGetFallbackFolder/system.io.compression/4.1.0/runtimes/unix/lib/netstandard1.3/System.IO.Compression.dll
