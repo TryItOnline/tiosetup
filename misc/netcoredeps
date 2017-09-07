@@ -8,6 +8,7 @@ mkdir -p /opt/microsoft/home/csharp
 mkdir -p /opt/microsoft/home/fsharp
 mkdir -p /opt/microsoft/home/vb
 cd /opt/microsoft/home/csharp
+rm -rf bin obj
 cp "$saveddir/files/dotnet/project.csproj" ./project.csproj
 cp "$saveddir/files/dotnet/code.cs" ./code.cs
 cp "$saveddir/files/dotnet/csopts.txt" ./csopts.txt
@@ -17,10 +18,12 @@ rm -f /opt/microsoft/home/csharp/bin/Debug/netcoreapp*/project.dll
 rm -f /opt/microsoft/home/csharp/bin/Debug/netcoreapp*/project.pdb
 
 cd /opt/microsoft/home/vb
+rm -rf bin obj
 cp "$saveddir/files/dotnet/project.vbproj" ./project.vbproj
 HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
 
 cd /opt/microsoft/home/fsharp
+rm -rf bin obj
 cp "$saveddir/files/dotnet/project.fsproj" ./project.fsproj
 HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
 
