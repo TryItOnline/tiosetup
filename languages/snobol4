@@ -8,6 +8,6 @@ mkdir snobol4
 curl --silent --show-error ftp://ftp.ultimate.com/snobol/snobol4-2.0.tar.gz \
 	| tar xz --directory=snobol4 --strip-components=1
 cd snobol4
-make
+make snobol4
 
 exit "$err"
