@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf sbf
+
+git clone https://github.com/KelsonBall/Esolangs.Sbf.git sbf
+cd sbf
+csc /out:sbf.exe SbfCompiler/SbfCompiler/*.cs
+
+exit "$err"
