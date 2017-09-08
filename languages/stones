@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf stones
+git clone https://github.com/cheezgi/stones
+cd stones
+cargo build --release
+
+exit "$err"
