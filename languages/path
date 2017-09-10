@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf path
+mkdir path
+curl --location --silent --show-error https://ufpr.dl.sourceforge.net/project/pathlang/PATH/0.33/path-0.33.tar.gz  \
+	| tar xz --directory=path --strip-components=1
+
+exit "$err"
