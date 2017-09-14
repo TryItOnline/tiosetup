@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf aliceml
+curl --silent --show-error --location \
+	https://github.com/TryItOnline/tiosetup-binaries/releases/download/aliceml/aliceml.tar.gz \
+	| tar xz
+
+exit "$err"
