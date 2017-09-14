@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf braille
+git clone https://gist.github.com/threeifbywhiskey/0e98d42150eb644a3406.git braille
+cd braille
+gcc -Wall -Wextra -ansi -O2 -o braille braille.c
+
+exit "$err"
