@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf javascript-node
+mkdir javascript-node
+curl --silent --show-error https://nodejs.org/dist/v8.5.0/node-v8.5.0-linux-x64.tar.xz \
+	| tar x --xz --directory=javascript-node --strip-components=1
+
+exit "$err"
