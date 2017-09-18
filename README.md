@@ -19,7 +19,7 @@ The main server setup instructions will set up a single server which can act bot
 
 The setup makes use of [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux), support of which varies between different distributions of Linux.
 
-This setup runs on **Fedora 26** and was tested on [Linode](https://www.linode.com/). *Note: at the time of writing, Try It Online is hosted on Digital Ocean and scheduled to migrate to Linode.*
+This setup runs on **Fedora 26** and was tested on [Linode](https://www.linode.com/).
 
 It is assumed that you have a freshly provisioned instance(s) on Linode. All scripts are run as root. It might be possible to run the setup on another hosting provider, such as [Digital Ocean](https://www.digitalocean.com/) or [Vultr](https://www.vultr.com/), however minor image differences may require slightly different prep steps, which are not covered here. You will need minimum of 1 GiB of memory in any case.
 
