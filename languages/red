@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf red
+mkdir red
+cd red
+wget -O red http://static.red-lang.org/dl/auto/linux/red-latest
+chmod +x red
+echo 'Red[]' > tmp.red
+./red -c tmp.red
+rm tmp*
+
+exit "$err"
