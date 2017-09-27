@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf snuspi
+wget https://raw.githubusercontent.com/graue/esofiles/master/snusp/impl/snuspi-0.1.zip
+unzip -d snuspi -j snuspi-0.1.zip
+rm snuspi-0.1.zip
+
+exit "$err"
