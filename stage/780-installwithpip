@@ -5,7 +5,7 @@ trap 'err=1' ERR
 
 python3 -m pip install --upgrade pip
 python2 -m pip install --upgrade pip
-python3 -m pip install exrex python-pcre hbcht sympy numpy pyephem python-dateutil regex gmpy2 brotli asyncssh libnacl pympler websockets scipy numexpr joblib parsimonious modgrammar click docopt
+python3 -m pip install exrex python-pcre hbcht sympy numpy pyephem python-dateutil regex gmpy2 brotli asyncssh libnacl pympler websockets scipy numexpr joblib parsimonious modgrammar click docopt coconut
 python2 -m pip install sympy pyshoco docopt neovim ninja django python-dateutil numpy gmpy2 pyfunge scipy numexpr joblib
 
 exit "$err"
