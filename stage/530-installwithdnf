@@ -6,7 +6,7 @@ trap 'err=1' ERR
 dnf install allegro5-devel allegro5-addon-acodec-devel allegro5-addon-image-devel allegro5-addon-ttf-devel ant blas-devel bind-utils bison bison-devel boo bsd-games bzip2-devel cargo ceylon-1.3.2 chrpath \
   clang clisp clojure cmake cpan cpio crystal dash dotnet-sdk-2.0.0 elixir emacs-nox erlang erlang-erts file flex flex-devel fpc freetype-devel fsharp gambit-c gcc-c++ \
   gc-devel gd-devel gettext-devel gforth giflib-devel git glib2-devel glibc-devel gmp-c++ gmp-devel golang gradle \
-  groovy gsl-devel gtkglext-libs httpd huginn icu ImageMagick java-1.?.0-openjdk java-9-openjdk-devel jq \
+  groovy gsl-devel gtkglext-libs httpd huginn icu idris ImageMagick java-1.?.0-openjdk java-9-openjdk-devel jq \
   ksh libICE-devel libSM-devel libX11-devel libXaw-devel libXext-devel libXft-devel libXinerama-devel \
   libXmu-devel libXpm-devel libXrender-devel libXt-devel libarchive-devel libatomic libcurl-devel libdb-devel libedit-devel libmpc-devel \
   libgcc.i686 libicu libjpeg-turbo-devel libsodium libunwind libvoikko lldb lldb-devel llvm lttng-tools lttng-ust \
