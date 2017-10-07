@@ -1,14 +1,22 @@
 #!/bin/bash
 
-err=0
-trap 'err=1' ERR
+set -o errexit -o pipefail
+
+curl()
+{
+	command curl --location --silent --show-error "$@"
+}
 
 dir=/opt/chapel
 rm -rf $dir
-mkdir $dir
-cd $dir
-git clone --depth=1 https://github.com/chapel-lang/chapel.git build
-cd build
+mkdir -p $dir/build
+
+curl "$(curl https://api.github.com/repos/chapel-lang/chapel/releases \
+	| jq --raw-output 'max_by(.published_at)|.tarball_url' \
+	| tee /dev/stderr
+)" | tar xz --directory=$dir/build --strip-components=1
+
+cd $dir/build
 export CHPL_TARGET_ARCH=native CHPL_COMM=gasnet
 ./configure --prefix=/opt/chapel
 make
@@ -17,5 +25,3 @@ export CHPL_COMM=none
 make install
 cd ..
 rm -rf build
-
-exit "$err"
