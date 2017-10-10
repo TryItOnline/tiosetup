@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf rapira
+git clone https://github.com/freeduke33/rerap2.git rapira
+cd rapira
+make
+
+exit "$err"
