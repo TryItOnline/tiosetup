@@ -12,7 +12,7 @@ dnf install allegro5-devel allegro5-addon-acodec-devel allegro5-addon-image-deve
   libgcc.i686 libicu libjpeg-turbo-devel libsodium libunwind libvoikko lldb lldb-devel llvm lttng-tools lttng-ust \
   maxima mercurial mlton mod_ssl mono-basic mono-complete mpfr-devel msbuild nano nasm ncurses-compat-libs neovim npm \
   ocaml octave octave-devel openssl-devel outils patch pcre-devel perl-Digest-CRC perl-List-MoreUtils \
-  perl-Text-Soundex php-cli ponyc powershell psmisc pyephem pypy python3-devel python-certbot-apache python-devel rakudo \
+  perl-Text-Soundex php-cli php-xml ponyc powershell psmisc pyephem pypy python3-devel python-certbot-apache python-devel rakudo \
   redhat-rpm-config ruby rust scala sqlite squirrel sudo tcl-trf tcsh time tree unixODBC-devel uuid-devel vala vim-common \
   words xz xz-devel zeromq-devel zsh 'apache-commons-*' -y
 
