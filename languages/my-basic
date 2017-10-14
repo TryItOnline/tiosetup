@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf my-basic
+mkdir my-basic
+cd my-basic
+git clone --depth=1 https://github.com/paladin-t/my_basic.git build
+gcc -Wno-multichar -Wno-overflow -Wno-unused-result -O2 -o my-basic -lm build/*/*.[ch]
+rm -r build
+
+exit "$err"
