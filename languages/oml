@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf oml
+git clone https://github.com/ConorOBrien-Foxx/OML.git oml
+cd oml
+
+gcc -Wall -Wextra -O2 -o oml -lm OML.c
+
+exit "$err"
