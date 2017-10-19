@@ -1,19 +1,36 @@
 #!/bin/bash
 
-if (($# == 0)); then
-	printf "$0: missing parameter\nUsage: tiopull {-a | LANGUAGE...}\n"
+usage()
+{
+	printf "$0: Usage: tiopull [-n] {-a | LANGUAGE...}\n" >&2
 	exit 1
-fi
+}
+
+set -- $(getopt an "$@")
+
+while true; do
+	case "$1" in
+		-a) shift; all=1;;
+		-n) shift; nodryrun=1;;
+		--) shift; break;;
+		 *) usage;;
+	esac
+done
 
 cd /opt
 echo -n 'Updating tiosetup... '
 git -C tiosetup pull
 
-if [[ "$*" == -a ]]; then
+if ((all)); then
 	tiosetup/run-scripts tiosetup/languages
-else
-	for language in $*; do
+elif (($#)); then
+	for language in "$@"; do
 		printf "\nInstalling/updating $language.\n"
 		tiosetup/languages/$language
 	done
+	set -- -l "$@"
+else
+	usage
 fi
+
+((nodryrun)) || tiodryrun -v "$@"
