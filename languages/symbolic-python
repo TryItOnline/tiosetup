@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf symbolic-python
+git clone https://github.com/FTcode/Symbolic-Python.git symbolic-python
+
+exit "$err"

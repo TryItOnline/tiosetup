@@ -28,9 +28,9 @@ elif (($#)); then
 		printf "\nInstalling/updating $language.\n"
 		tiosetup/languages/$language
 	done
-	set -- -l "$@"
+	set -- -v -l "$@"
 else
 	usage
 fi
 
-((nodryrun)) || tiodryrun -v "$@"
+((nodryrun)) || tiodryrun "$@"
