@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ecpp-c
+git clone https://github.com/aaronryank/ecpp.git ecpp-c
+cd ecpp-c
+make
+
+exit "$err"
