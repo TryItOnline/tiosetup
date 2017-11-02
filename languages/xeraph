@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf xeraph
+git clone https://github.com/ConorOBrien-Foxx/xeraph.git
+cd xeraph
+gcc -Wall -Wextra -O2 -o xeraph xeraph.c
+
+exit "$err"

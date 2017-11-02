@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf pyon
+git clone https://github.com/alexander-liao/pyon.git
+
+exit "$err"
