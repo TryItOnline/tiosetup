@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf csl
+git clone https://github.com/jammy-dodgers/CSL.git csl
+cd csl
+csc *.cs
+
+exit "$err"
