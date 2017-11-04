@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf deorst
-git clone https://github.com/SatansSon/Deorst.git deorst
+git clone https://github.com/cairdcoinheringaahing/Deorst.git deorst
 
 exit "$err"

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf nqt
+git clone https://github.com/cairdcoinheringaahing/NotQuiteThere.git nqt
+
+exit "$err"
