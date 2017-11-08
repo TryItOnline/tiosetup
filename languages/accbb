@@ -3,9 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf tinylisp
+rm -rf accbb
 git clone https://github.com/dloscutoff/Esolangs.git Temp
-mv Temp/tinylisp .
+mv Temp/Acc!! accbb
 rm -rf Temp
 
 exit "$err"
