@@ -5,5 +5,13 @@ trap 'err=1' ERR
 
 rm -rf ohm2
 git clone https://github.com/MiningPotatoes/Ohm.git ohm2
+cd ohm2
+gcc -fpic -shared -o gsl-dummy.so -x c - <<- .
+	#define DUMMY(F) void F() {}
+
+	DUMMY(gsl_sf_legendre_array_size)
+	DUMMY(gsl_sf_legendre_sphPlm_array)
+	DUMMY(gsl_sf_legendre_Plm_array)
+.
 
 exit "$err"
