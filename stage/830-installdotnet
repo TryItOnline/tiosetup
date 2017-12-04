@@ -10,6 +10,7 @@ wget https://github.com/TryItOnline/DynamicExpresso/releases/download/tio-1/Dyna
 unzip -d /opt/microsoft/libs/DynamicExpresso DynamicExpresso.zip
 rm -f DynamicExpresso.zip
 
+ln -sf /usr/share/dotnet/dotnet /usr/local/bin/
 netcoredeps
 
 if [[ "$OfflineMode" == "y" ]]; then
