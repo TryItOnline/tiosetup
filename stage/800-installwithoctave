@@ -3,19 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-octave --eval "
-	pkg install -forge image;
-	pkg install -forge io;
-	pkg install -forge statistics;
-	pkg install -forge symbolic;
-"
-
 mkdir -p /opt/octave/home
-cat > /opt/octave/home/.octaverc <<.
-pkg load image;
-pkg load io;
-pkg load statistics;
-pkg load symbolic;
-.
+echo 'for pack = pkg("list") pkg("load", pack{1}.name) end' > /opt/octave/home/.octaverc
+
+octave --eval 'pkg install -forge symbolic'
 
 exit "$err"
