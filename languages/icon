@@ -1,0 +1,18 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf icon
+mkdir icon
+cd icon
+git clone --depth 1 https://github.com/gtownsend/icon.git build
+cd build
+make Configure name=linux
+make
+make Install dest=/opt/icon/tmp
+cd ..
+mv tmp/* .
+rm -r build tmp
+
+exit "$err"
