@@ -1,0 +1,16 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+. /etc/os-release
+os=$NAME$VERSION_ID
+
+dnf install -y "$(
+	curl --silent --show-error https://api.github.com/repos/nxadm/rakudo-pkg/releases \
+		| jq --raw-output "
+			.[0].assets[]|select(.name|test(\"$os-.*x86_64\\\\.rpm\$\")).browser_download_url
+		"
+)"
+
+exit "$err"
