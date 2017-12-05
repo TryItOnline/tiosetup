@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf clean
+mkdir -p clean/build
+curl --silent --show-error https://clean.cs.ru.nl/download/Clean24/linux/clean2.4_64.tar.gz \
+	| tar xz --directory=clean/build --strip-components=1
+cd clean/build
+make INSTALL_DIR=/opt/clean
+cd ..
+rm -r build
+
+exit "$err"
