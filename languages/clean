@@ -4,11 +4,33 @@ err=0
 trap 'err=1' ERR
 
 rm -rf clean
+
 mkdir -p clean/build
 curl --silent --show-error https://clean.cs.ru.nl/download/Clean24/linux/clean2.4_64.tar.gz \
 	| tar xz --directory=clean/build --strip-components=1
+
 cd clean/build
 make INSTALL_DIR=/opt/clean
+
+for n in {1..3}; do
+	printf 'Building library modules: pass %d' $n
+
+	for d in ../lib/[[:upper:]]*; do
+		printf 'Building all modules in %s\n' $d
+
+		(
+			cd $d
+			printf 'module main\nStart = ""\n\n'
+
+			for f in [a-Z]*.dcl; do
+				printf 'import %s\n' ${f%.*}
+			done
+		) > main.icl
+
+		../bin/clm -dynamics $(printf -- '-I %s ' ../lib/[[:upper:]]*) main
+	done
+done
+
 cd ..
 rm -r build
 
