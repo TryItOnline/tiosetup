@@ -18,7 +18,8 @@ shopt -s nullglob
 for d in [[:upper:]]*; do
 	cd $d
 
-	for f in [a-Z]*.dcl */*.dcl; do
+	find -name '*.dcl' | sort | while read -N2; do
+		read f
 		f=${f%.*}
 		f=${f//\//.}
 		printf 'module main\nimport %s\nStart = ""\n' $f > main.icl
@@ -26,7 +27,7 @@ for d in [[:upper:]]*; do
 		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out &> /dev/null
 		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out &> /dev/null
 		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out > /dev/null
-		rm main.*
+		rm {.,Clean\ System\ Files}/main.*
 	done
 
 	cd ..
