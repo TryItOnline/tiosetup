@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf dobela
+mkdir dobela
+curl --silent --show-error https://deewiant.iki.fi/files/projects/dobelx64/dobelx64-elf.txz \
+	| tar x --xz --directory=dobela --strip-components=1
+
+exit "$err"
