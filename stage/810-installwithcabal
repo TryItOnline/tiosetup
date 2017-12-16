@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+cabal update
+cabal install --global data-ordlist numbertheory polynomial
+
+rm -r ~/.cabal
+
+exit "$err"
