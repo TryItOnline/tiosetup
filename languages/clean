@@ -26,6 +26,8 @@ for d in [[:upper:]]*; do
 		printf '%s: %s\n' $d $f
 		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out &> /dev/null
 		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out &> /dev/null
+		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out &> /dev/null
+		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out &> /dev/null
 		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out > /dev/null
 		rm {.,Clean\ System\ Files}/main.*
 	done
