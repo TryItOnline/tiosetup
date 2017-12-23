@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -r /opt/agda
+mkdir /opt/agda
+cd /opt/agda
+
+echo -e 'open import IO\nmain = run(putStr "")' > code.agda
+agda -c -i /usr/share/Agda-stdlib code.agda
+rm {code,MAlonzo/{RTE,Code/Qcode}}*
+
+exit "$err"
