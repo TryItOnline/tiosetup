@@ -6,6 +6,6 @@ trap 'err=1' ERR
 rm -rf shortc
 git clone https://github.com/aaronryank/shortC shortc
 cd shortc
-gcc -Wall -O2 -o shortc shortC.c
+make
 
 exit "$err"
