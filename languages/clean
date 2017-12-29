@@ -4,6 +4,7 @@ err=0
 trap 'err=1' ERR
 
 export CLEAN_HOME=/opt/clean
+PATH=$CLEAN_HOME/bin:$PATH
 
 rm -rf clean
 mkdir clean
@@ -12,27 +13,37 @@ curl --silent --show-error https://ftp.cs.ru.nl/Clean/builds/linux-x64/clean-bun
 	| tar xz --directory=clean --strip-components=1
 
 cd clean/lib
+rm -r Platform/Deprecated
 libs=$(printf -- '-IL %s ' [[:upper:]]*)
-shopt -s nullglob
+shopt -s nullglob globstar
+after=0
+printf 'Compiling Clean modules'
 
-for d in [[:upper:]]*; do
-	cd $d
+while
+	printf .
+	before=$after
+	after=($(
+		for d in [[:upper:]]*; do
+			cd $d
 
-	find -name '*.dcl' | sort | while read -N2; do
-		read f
-		f=${f%.*}
-		f=${f//\//.}
-		printf 'module main\nimport %s\nStart = ""\n' $f > main.icl
-		printf '%s: %s\n' $d $f
-		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out &> /dev/null
-		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out &> /dev/null
-		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out &> /dev/null
-		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out &> /dev/null
-		$CLEAN_HOME/bin/clm -dynamics $libs main -o main.out > /dev/null
-		rm {.,Clean\ System\ Files}/main.*
-	done
+			for f in **/*.dcl; do
+				f=${f%.*}
+				f=${f//\//.}
+				printf 'module main\nimport %s\nStart = ""\n' $f > main.icl
+				clm -dynamics $libs main -o main.out
+			done
 
-	cd ..
+			rm {.,Clean\ System\ Files}/main.*
+			cd ..
+		done 2> .stderr | sha512sum
+	))
+	[[ $before != $after ]]
+do
+	:
 done
+
+printf ' done.\nThe following errors occurred during the last pass:\n'
+grep -Po 'Error((?!Error).)*' .stderr | cat -n
+rm .stderr
 
 exit "$err"
