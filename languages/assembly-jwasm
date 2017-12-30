@@ -1,0 +1,16 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf assembly-jwasm
+mkdir assembly-jwasm
+cd assembly-jwasm
+git clone https://github.com/JWasm/JWasm.git build
+cd build
+make -f GccUnix.mak
+mv GccUnixR/jwasm ..
+cd ..
+rm -r build
+
+exit "$err"
