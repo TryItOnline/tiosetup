@@ -1,0 +1,16 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf clips
+mkdir -p clips/build
+curl --location --silent --show-error https://ufpr.dl.sourceforge.net/project/clipsrules/CLIPS/6.40_Beta_1/clips_core_source_640.tar.gz \
+	| tar xz --directory=clips/build --strip-components=1
+cd clips/build/core
+make
+mv clips ../..
+cd ../..
+rm -r build
+
+exit "$err"
