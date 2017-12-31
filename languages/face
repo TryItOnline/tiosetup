@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf face
+git clone https://github.com/KeyboardFire/face.git
+cd face
+make release
+
+exit "$err"
