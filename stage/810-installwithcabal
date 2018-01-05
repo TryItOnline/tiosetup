@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 cabal update
-cabal install --global data-ordlist numbertheory polynomial
+cabal install --global data-ordlist dates numbertheory polynomial
 
 rm -r ~/.cabal
 
