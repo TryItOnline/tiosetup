@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf attache
+git clone https://github.com/ConorOBrien-Foxx/attache.git
+
+exit "$err"
