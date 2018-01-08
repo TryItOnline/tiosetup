@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf functoid
+git clone https://github.com/bforte/Functoid.git functoid
+cd functoid
+ghc -O2 -XLambdaCase -o functoid src/*.hs
+
+exit "$err"
