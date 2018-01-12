@@ -1,0 +1,25 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf felix
+mkdir felix
+cd felix
+git clone --depth=1 https://github.com/felix-lang/felix.git build
+cd build
+PATH=$PATH:build/release/host/bin make -f GNUmakefile build
+find -type f -exec strip --strip-debug {} + 2> /dev/null
+make -f GNUmakefile install PREFIX=/opt/felix
+cd ..
+rm -r build
+
+export FLX_INSTALL_DIR=/opt/felix/lib/felix/felix-latest
+touch dummy.flx
+bin/flx --cache-dir=/opt/felix/cache dummy.flx
+rm -r ~/.felix dummy.flx cache/opt/felix/dummy.* flxg_stats.txt
+mkdir cache/home
+ln -s /home/runner cache/home/runner
+find cache -exec touch --date='+100 years' {} +
+
+exit "$err"
