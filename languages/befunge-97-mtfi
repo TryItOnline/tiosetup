@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf befunge-97-mtfi
+git clone https://github.com/TryItOnline/befunge-97-mtfi.git
+cd befunge-97-mtfi
+make
+
+exit "$err"
