@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf python2-jython
+curl --silent --show-error https://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.0/jython-installer-2.7.0.jar > jython-installer.jar
+java -jar jython-installer.jar --directory=/opt/python2-jython --silent
+rm jython-installer.jar
+
+exit "$err"
