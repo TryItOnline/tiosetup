@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf retina1
+mkdir retina1
+curl --location --silent --show-error "$(
+    curl --silent --show-error https://api.github.com/repos/m-ender/retina/tags \
+		| jq --raw-output '.[0].tarball_url' \
+        | tee /dev/stderr
+)" | tar xz --directory=retina1 --strip-components=1
+
+exit "$err"
