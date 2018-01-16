@@ -5,17 +5,19 @@ trap 'err=1' ERR
 
 ln -sfT /usr/include/allegro5 /usr/include/allegro
 rm -rf emojicode
-git clone https://github.com/emojicode/emojicode.git
+mkdir -p emojicode/bin
 cd emojicode
+git clone https://github.com/emojicode/emojicode.git build
+cd build
 git checkout emojicode-0.5
-mkdir -p build
+mkdir build
 cd build
 cmake -DheapSize=128000000 -DdefaultPackagesDirectory=/opt/emojicode/packages .. -GNinja
 ninja
-ninja tests
+ninja dist
 cd Emojicode-*
-ln -s $(pwd) ../../bin
-ln -s $(pwd)/packages ../../packages
-cd ../../..
+mv emojicode* ../../../bin
+mv packages ../../..
+rm -r build
 
 exit "$err"
