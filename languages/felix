@@ -19,7 +19,7 @@ touch dummy.flx
 bin/flx --cache-dir=/opt/felix/cache dummy.flx
 rm -r ~/.felix dummy.flx cache/opt/felix/dummy.* flxg_stats.txt
 mkdir cache/home
-ln -s /home/runner cache/home/runner
 find cache -exec touch --date='+100 years' {} +
+ln -s /home/runner cache/home/runner
 
 exit "$err"
