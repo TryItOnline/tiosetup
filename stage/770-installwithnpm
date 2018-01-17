@@ -3,6 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-npm install -g cheddar-lang coffee-script coffeescript babel-cli babel-preset-env babel-plugin-transform-do-expressions babel-plugin-transform-function-bind babel-plugin-transform-object-rest-spread mathjs escape-string-regexp clear readline-sync decimal.js minimist shunt.js bignumber.js opn request typescript readwrite colors commander pkginfo bs-platform
+npm install -g cheddar-lang coffee-script coffeescript babel-cli babel-preset-env babel-plugin-transform-do-expressions babel-plugin-transform-function-bind babel-plugin-transform-object-rest-spread mathjs escape-string-regexp clear readline-sync decimal.js minimist shunt.js bignumber.js opn request typescript readwrite colors commander pkginfo
+
+cd /usr/lib
+npm install bs-platform
 
 exit "$err"
