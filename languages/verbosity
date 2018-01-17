@@ -5,6 +5,7 @@ trap 'err=1' ERR
 
 rm -rf verbosity
 git clone https://github.com/cairdcoinheringaahing/Verbosity.git verbosity
+cd verbosity
 git checkout 153597e6ce8237589e55ca95d3f233d67fcd5b51
 
 exit "$err"

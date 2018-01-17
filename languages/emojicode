@@ -18,6 +18,7 @@ ninja dist
 cd Emojicode-*
 mv emojicode* ../../../bin
 mv packages ../../..
+cd ../../..
 rm -r build
 
 exit "$err"
