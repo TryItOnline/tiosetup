@@ -3,7 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -r /opt/agda
+rm -rf /opt/agda
 mkdir /opt/agda
 cd /opt/agda
 
