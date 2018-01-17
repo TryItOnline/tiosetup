@@ -13,8 +13,8 @@ do
     cp $f ${f%.default}
 done
 
-tiopool add 127.0.0.1
-tiopool enable 127.0.0.1
+tiopool add "$ARENA"
+tiopool enable "$ARENA"
 
 mkdir -p /srv/tmp
 chown apache:apache /srv/tmp
