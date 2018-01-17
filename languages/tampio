@@ -5,8 +5,10 @@ trap 'err=1' ERR
 
 rm -rf tampio
 git clone https://github.com/fergusq/tampio.git
-mkdir tampio/.voikko
-cd tampio/.voikko
+cd tampio
+git checkout 735951c28f9b628d3c9d7b06e7e3b37c9ca95acf
+mkdir .voikko
+cd .voikko
 wget http://www.puimula.org/htp/testing/voikko-snapshot/dict-morpho.zip
 unzip dict-morpho.zip
 rm dict-morpho.zip
