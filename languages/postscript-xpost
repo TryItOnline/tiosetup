@@ -9,6 +9,7 @@ mkdir -p $dir
 cd $dir
 git clone https://github.com/luser-dr00g/xpost.git build
 cd build
+git checkout 96d0e2874213d8baad0fb6e9eb4e176a12f71a37
 ./autogen.sh --prefix=$dir
 make
 make install
