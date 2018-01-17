@@ -13,7 +13,7 @@ cd build
 make
 make install
 cd ..
-ln -s /opt/prolog-swi/bin/swipl /usr/local/bin
+ln -sf /opt/prolog-swi/bin/swipl /usr/local/bin
 rm -r build
 
 exit "$err"
