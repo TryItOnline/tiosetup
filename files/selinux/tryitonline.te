@@ -4,9 +4,11 @@ require {
 	class chr_file map;
 	class dir { read search };
 	class file { open read };
-	class tcp_socket name_connect;
+	class tcp_socket { accept bind connect create getattr getopt listen name_connect node_bind setopt };
 	type NetworkManager_var_run_t;
+	type ephemeral_port_t;
 	type httpd_sys_script_t;
+	type node_t;
 	type passwd_file_t;
 	type proc_t;
 	type sandbox_t;
@@ -15,7 +17,10 @@ require {
 }
 
 allow httpd_sys_script_t ssh_port_t:tcp_socket name_connect;
+allow sandbox_t self:tcp_socket { accept bind connect create getattr getopt listen setopt };
 allow sandbox_t NetworkManager_var_run_t:dir search;
+allow sandbox_t ephemeral_port_t:tcp_socket name_connect;
+allow sandbox_t node_t:tcp_socket node_bind;
 allow sandbox_t passwd_file_t:file { open read };
 allow sandbox_t proc_t:dir read;
 allow sandbox_t proc_t:file { open read };
