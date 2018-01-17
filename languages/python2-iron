@@ -4,14 +4,19 @@ err=0
 trap 'err=1' ERR
 
 rm -rf python2-iron
-git clone --recursive https://github.com/IronLanguages/ironpython2.git python2-iron
+mkdir python2-iron
 cd python2-iron
+git clone --depth 1 --recursive https://github.com/IronLanguages/ironpython2.git build
+cd build
 sed -i '/IronPythonTest.csproj/,+1d' IronPython.sln
+# hotfix for Mono/MSBuild regression
+cd /usr/lib/mono/msbuild/15.0/bin/Roslyn
+ln -sft . ../../../../4.5/csc.*
+cd -
+# end hotfix
 make
-mv bin/Release/net45 ../python2-iron-bin
+mv bin/Release/net45/* ..
 cd ..
-rm -rf python2-iron
-mv python2-iron-bin python2-iron
-rm python2-iron/rowantest.*.dll
+rm -r build rowantest.*.dll
 
 exit "$err"
