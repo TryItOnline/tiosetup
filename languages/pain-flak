@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf pain-flak
+git clone https://github.com/Cis112233/Pain-Flak.git pain-flak
+
+exit "$err"
