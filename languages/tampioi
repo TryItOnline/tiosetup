@@ -3,10 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf tampio
-git clone https://github.com/fergusq/tampio.git
-cd tampio
-git checkout functional
+rm -rf tampioi
+git clone https://github.com/fergusq/tampio.git tampioi
+cd tampioi
 mkdir voikko
 cd voikko
 wget http://www.puimula.org/htp/testing/voikko-snapshot/dict-morpho.zip
