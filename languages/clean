@@ -13,8 +13,8 @@ curl --silent --show-error https://ftp.cs.ru.nl/Clean/builds/linux-x64/clean-bun
 	| tar xz --directory=clean --strip-components=1
 
 cd clean/lib
-rm -r Platform/Deprecated
-libs=$(printf -- '-IL %s ' [[:upper:]]*)
+rm -r Generics
+mv Platform/Deprecated/Generics .
 shopt -s nullglob globstar
 after=0
 printf 'Compiling Clean modules'
@@ -26,11 +26,18 @@ while
 		for d in [[:upper:]]*; do
 			cd $d
 
-			for f in **/*.dcl; do
+			for f in **/[[:alpha:]]*.dcl; do
+				if [[ $f =~ ^Deprecated|^ESMVizTool ]]; then
+					continue
+				elif [[ $f =~ ^Data/Generics|^Internet/ ]]; then
+					stdlib=Platform/Deprecated/StdLib
+				else
+					stdlib=StdLib
+				fi
 				f=${f%.*}
 				f=${f//\//.}
 				printf 'module main\nimport %s\nStart = ""\n' $f > main.icl
-				clm -dynamics $libs main -o main.out
+				clm -dynamics -IL Dynamics -IL Gast -IL GraphCopy -IL Generics -IL Platform -IL Sapl -IL TCPIP -IL ArgEnv -IL $stdlib -IL Directory main -o main.out
 			done
 
 			rm {.,Clean\ System\ Files}/main.*
