@@ -1,0 +1,21 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf gap
+mkdir gap
+cd gap
+
+curl --silent --show-error $(
+	curl --silent --show-error https://www.gap-system.org/Releases/index.html \
+		| grep -Po 'https://www\.gap-system\.org/pub/gap/.*?\.tar\.gz' \
+		| head -1
+) | tar xz --strip-components=1
+
+./configure --prefix=/opt/gap --with-gmp=system
+make
+cd pkg
+../bin/BuildPackages.sh
+
+exit "$err"
