@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf cixl
+git clone https://github.com/basic-gongfu/cixl.git
+mkdir cixl/build
+cd cixl/build
+cmake ..
+make
+
+exit "$err"
