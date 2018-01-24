@@ -1,0 +1,22 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf osh
+mkdir -p osh/{bin,build}
+cd osh/build
+
+curl --silent --show-error https://www.oilshell.org/$(
+	curl --silent --show-error https://www.oilshell.org/releases.html \
+		| grep -Po 'download/oil-.*?\.tar\.gz' \
+		| head -1
+) | tar xz --strip-components=1
+
+./configure --prefix=/opt/osh
+make
+./install
+cd ..
+rm -r build
+
+exit "$err"
