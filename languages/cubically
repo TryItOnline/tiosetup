@@ -8,4 +8,9 @@ git clone https://github.com/aaronryank/cubically.git
 cd cubically
 make
 
+rm -rf /tmp/cubically-cache
+./cubically fu examples/solve-1.cb <<< RLLUB
+mv /tmp/cubically-cache cache
+restorecon -R cache
+
 exit "$err"
