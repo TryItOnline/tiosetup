@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+dnf install -y http://www.yabasic.de/$(
+	curl --silent --show-error http://www.yabasic.de/content_download.html \
+		| grep -Po 'download/yabasic-.*?\.rpm' \
+		| head -1
+)
+
+exit "$err"
