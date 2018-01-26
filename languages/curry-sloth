@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf curry-sloth
+mkdir -p curry-sloth/build
+cd curry-sloth/build
+curl --silent --show-error http://babel.ls.fi.upm.es/software/Sloth/sloth-770.tar.gz \
+	| tar xz --strip-components=1
+make install PREFIX=/opt/curry-sloth
+cd ..
+rm -r build
+
+exit "$err"
