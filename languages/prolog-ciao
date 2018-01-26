@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+dnf install -y http://ciao-lang.org/packages/1.14/13646/CiaoDE-1.14.2-13646.i386.rpm
+restorecon -Rv /usr/lib/ciao/ciao-*/
+
+exit "$err"
