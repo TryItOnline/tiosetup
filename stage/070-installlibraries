@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+curl \
+	--location \
+	--silent \
+	--show-error \
+	--output /usr/local/lib/libstdbuf.so \
+	--url https://github.com/TryItOnline/tiosetup-binaries/releases/download/libstdbuf-x86/libstdbuf.so
+
+ln -fst /usr/local/lib64 /usr/libexec/coreutils/libstdbuf.so
+
+exit "$err"
