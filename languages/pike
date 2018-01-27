@@ -1,0 +1,22 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf pike
+mkdir -p pike/build
+cd pike/build
+
+curl --silent --show-error "https://pike.lysator.liu.se/$(
+	curl --silent --show-error https://pike.lysator.liu.se/download/pub/pike/latest-stable/ \
+		| grep -Po 'pub/pike/latest-stable/Pike-v[0-9.]+\.tar\.gz' \
+		| head -1
+)" | tar xz --strip-components=1
+
+src/configure --prefix=/opt/pike
+make
+make install
+cd ..
+rm -r build
+
+exit "$err"
