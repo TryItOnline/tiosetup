@@ -1,0 +1,20 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf es
+mkdir es
+cd es
+git clone https://github.com/wryun/es-shell.git build
+cd build
+aclocal
+autoconf
+libtoolize -qi
+./configure --prefix=/opt/es
+make
+make install
+cd ..
+rm -r build
+
+exit "$err"
