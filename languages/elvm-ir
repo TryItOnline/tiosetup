@@ -6,16 +6,15 @@ trap 'err=1' ERR
 rm -rf elvm-ir
 mkdir -p elvm-ir/bin
 cd elvm-ir
-ln -s `which node` bin/nodejs
-ln -s `which clisp` bin/sbcl
-ln -s `which g++` bin/g++-6
-ln -s /opt/intercal/bin/ick bin/
-export PATH="/opt/elvm-ir/bin:$PATH"
-
 git clone https://github.com/shinh/elvm.git build
 cd build
-make out/{elc,eli} CFLAGS='-std=gnu99 $(COMMONFLAGS) -Wno-implicit-fallthrough'
-mv out/{elc,eli} ../bin/
+bins=(out/{8cc,bfopt,elc,eli})
+make \
+	${bins[@]} \
+	CFLAGS='-std=gnu99 $(COMMONFLAGS) -Wno-implicit-fallthrough' \
+	CXXFLAGS='-std=c++11 $(COMMONFLAGS) -Wno-implicit-fallthrough'
+mv ${bins[@]} ../bin/
+mv libc ../include
 cd ..
 rm -r build
 
