@@ -4,9 +4,15 @@ err=0
 trap 'err=1' ERR
 
 rm -rf kotlin
-wget https://github.com/JetBrains/kotlin/releases/download/v1.0.6/kotlin-compiler-1.0.6.zip
-unzip kotlin-compiler-1.0.6.zip
-rm -f kotlin-compiler-1.0.6.zip
+
+wget $(
+	curl --silent --show-error https://api.github.com/repos/JetBrains/kotlin/releases \
+		| jq --raw-output 'map(select(.prerelease==false))|max_by(.created_at).assets[0].browser_download_url' \
+		| tee /dev/stderr
+)
+
+unzip kotlin-compiler-*.zip
 mv kotlinc kotlin
+rm kotlin-compiler-*.zip
 
 exit "$err"
