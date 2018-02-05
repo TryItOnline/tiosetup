@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf locksmith
+git clone https://github.com/ConorOBrien-Foxx/Locksmith.git locksmith
+cd locksmith
+g++ -Wall -Wextra -O3 -o locksmith *.cpp
+
+exit "$err"
