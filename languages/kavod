@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf kavod
+git clone https://github.com/ConorOBrien-Foxx/kavod.git
+cd kavod
+g++ -Wall -Wextra -O3 -o kavod *.cpp
+
+exit "$err"
