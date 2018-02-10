@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf qqq
+git clone https://github.com/ararslan/qqq-lang.git qqq
+cd qqq
+g++ -Wall -Wextra -O2 -o bin/qqq */*.cpp
+
+exit "$err"
