@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf momema
+git clone https://github.com/ScratchMan544/momema.git
+cd momema
+ghc -O2 -o Momema src/*.hs
+
+exit "$err"
