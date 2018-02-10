@@ -14,6 +14,6 @@ dnf install Agda Agda-stdlib allegro5-devel allegro5-addon-acodec-devel allegro5
   ocaml octave-communications octave-devel octave-statistics openssl-devel outils patch pcre-devel perl-Digest-CRC perl-List-MoreUtils \
   perl-Text-Soundex php-cli php-xml ponyc powershell psmisc pyephem pypy python2-Cython python2-devel python3-Cython python3-devel python-certbot-apache rakudo \
   redhat-rpm-config ruby-devel rust scala sqlite squirrel sudo swift-language tcl-trf tcsh texlive-tex-bin time tree unixODBC-devel uuid-devel vala vim \
-  words xz xz-devel zeromq-devel zsh 'apache-commons-*' -y
+  words xz xz-devel yash zeromq-devel zsh 'apache-commons-*' -y
 
 exit "$err"
