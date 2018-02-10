@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf forked
+git clone https://github.com/aaronryank/Forked.git forked
+cd forked
+make
+
+exit "$err"
