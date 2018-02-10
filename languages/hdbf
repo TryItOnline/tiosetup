@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf hdbf
+git clone https://github.com/Property404/hdbf.git
+cd hdbf
+make
+
+exit "$err"
