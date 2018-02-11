@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -f *.rpm
+wget http://iobin.suspended-chord.info/linux/iobin-linux-x64-rpm-current.zip
+unzip iobin-linux-x64-rpm-current.zip '*.rpm'
+dnf install -y *.rpm
+rm *.rpm
+
+exit "$err"
