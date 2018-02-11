@@ -1,0 +1,17 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf brat
+mkdir -p /opt/brat/{bin,lib}
+cd brat
+git clone https://github.com/presidentbeef/brat.git build
+cd build
+truncate -s 0 test/*
+CPPFLAGS=-Wno-implicit-fallthrough ./build.sh
+./install.sh /opt/brat
+cd ..
+rm -r build
+
+exit "$err"
