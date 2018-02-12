@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf proton2
+git clone https://github.com/alexander-liao/proton-2.0.git proton2
+
+exit "$err"
