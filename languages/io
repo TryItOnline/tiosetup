@@ -7,6 +7,6 @@ rm -f *.rpm
 wget http://iobin.suspended-chord.info/linux/iobin-linux-x64-rpm-current.zip
 unzip iobin-linux-x64-rpm-current.zip '*.rpm'
 dnf install -y *.rpm
-rm *.rpm
+rm iobin-linux-x64-rpm-current.zip *.rpm
 
 exit "$err"
