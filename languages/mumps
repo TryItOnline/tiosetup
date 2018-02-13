@@ -1,0 +1,18 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf mumps
+mkdir -p mumps/build
+cd mumps/build
+root=http://www.cs.uni.edu/~okane/source/MUMPS-MDH/
+curl -sS "$root/$(curl -sS $root | grep -Po 'mumps-\d\d\.\d\d\.src\.tar\.gz' | tail -1)" \
+	| tar xz --strip-components=1
+./configure --prefix=/opt/mumps
+make
+make install
+cd ..
+rm -r build
+
+exit "$err"
