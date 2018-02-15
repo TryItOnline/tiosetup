@@ -1,0 +1,19 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf sidef
+mkdir sidef
+cd sidef
+wget "$(
+	curl --silent --show-error https://api.github.com/repos/trizen/sidef/releases \
+		| jq --raw-output '
+			.[0].assets[]|select(.name|test("\\.elf64\\.zip$")).browser_download_url
+		'
+)"
+unzip *.zip
+rm *.zip
+ln -s * sidef
+
+exit "$err"
