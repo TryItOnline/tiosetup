@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ork
+git clone https://github.com/TryItOnline/ork.git
+cd ork
+make
+
+exit "$err"
