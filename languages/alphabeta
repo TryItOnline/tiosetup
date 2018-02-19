@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf alphabeta
+git clone https://github.com/TryItOnline/alphabeta.git
+cd alphabeta
+make
+
+exit "$err"
