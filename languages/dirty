@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf dirty
+git clone https://github.com/Ourous/dirty.git
+cd dirty
+CLEAN_HOME=/opt/clean /opt/clean/bin/cpm dirty.prj
+ln -s dirty.exe dirty
+
+exit "$err"
