@@ -1,0 +1,22 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf pure
+mkdir -p pure/build
+cd pure/build
+curl -sSL https://github.com/TryItOnline/tiosetup-binaries/releases/download/llvm-3.5.2/llvm-3.5.2.tar.gz \
+	| tar xz
+curl -sSL "$(
+	curl -sSL https://api.github.com/repos/agraef/pure-lang/releases \
+		| jq -r '.[]|select(.name|test("^Pure [0-9.]+$")).assets[]|select(.name|test("pure-[0-9.]+\\.tar\\.gz$")).browser_download_url')" \
+		| tar xz --strip-components=1
+llvm=/opt/pure/build/llvm-3.5.2
+./configure --enable-release --prefix=/opt/pure CPPFLAGS=-I$llvm/include LDFLAGS=-L$llvm/lib -with-tool-prefix=$llvm/bin
+make
+make install
+cd ..
+rm -r build
+
+exit "$err"
