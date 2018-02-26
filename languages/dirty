@@ -6,6 +6,8 @@ trap 'err=1' ERR
 rm -rf dirty
 git clone https://github.com/Ourous/dirty.git
 cd dirty
-CLEAN_HOME=/opt/clean /opt/clean/bin/cpm dirty.prj
+cp -r /opt/clean .
+CLEAN_HOME=clean clean/bin/cpm dirty_linux.prj
+rm -r clean
 
 exit "$err"
