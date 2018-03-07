@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf asperix
+git clone https://github.com/TryItOnline/asperix.git
+cd asperix/SRC
+make
+
+exit "$err"
