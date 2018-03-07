@@ -58,7 +58,7 @@ cat >> /etc/httpd/conf.d/010-tio.run.conf <<- .
 		AddOutputFilterByType DEFLATE text/html
 		DocumentRoot /srv/var/www/$TIORUN
 		Header always set Access-Control-Allow-Origin "*"
-		RewriteRule ^/#(.*)$ /#$1 [NE,R]
+		RewriteRule ^/#(.*)$ /#\$1 [NE,R]
 		RewriteRule ^/nexus /index.html
 		ScriptAlias /cgi-bin /srv/var/www/$TIORUN/cgi-bin/
 		$SL	SSLCertificateFile /etc/letsencrypt/live/$TIORUN/fullchain.pem
