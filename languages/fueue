@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf fueue
+git clone https://github.com/TryItOnline/fueue.git
+cd fueue
+make
+
+exit "$err"
