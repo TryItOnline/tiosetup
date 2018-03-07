@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf stax
+git clone https://github.com/tomtheisen/stax.git
+cd stax
+nuget restore
+msbuild StaxLang.sln
+
+exit "$err"
