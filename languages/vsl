@@ -4,16 +4,9 @@ err=0
 trap 'err=1' ERR
 
 rm -rf vsl
-git clone https://github.com/vsl-lang/VSL.git vsl
+git clone --recursive https://github.com/vsl-lang/VSL.git vsl
 cd vsl
-git checkout add-backend
-git submodule update --init --recursive
-CMAKE_LIBRARY_PATH=node_modules/nan npm install
+npm install
 npm run build
-cat > vsl <<- '.'
-	#!/usr/bin/env sh
-
-	node "$(cd "$(dirname -- "$(readlink -e -- "$0")")"; pwd)/lib/cli/vsl.js" "$@"
-.
 
 exit "$err"
