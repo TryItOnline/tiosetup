@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf tis
+git clone https://github.com/Phlarx/tis.git
+cd tis
+make
+
+exit "$err"
