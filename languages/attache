@@ -5,5 +5,7 @@ trap 'err=1' ERR
 
 rm -rf attache
 git clone https://github.com/ConorOBrien-Foxx/attache.git
+cd attache
+rake
 
 exit "$err"
