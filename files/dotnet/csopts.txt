@@ -11,3 +11,5 @@
 /reference:/opt/microsoft/home/.nuget/packages/microsoft.extensions.commandlineutils/1.1.1/lib/netstandard1.3/Microsoft.Extensions.CommandLineUtils.dll
 
 /reference:/opt/microsoft/libs/DynamicExpresso/DynamicExpresso.dll
+/reference:/opt/microsoft/home/.nuget/packages/system.dynamic.runtime/4.0.10/lib/netcore50/System.Dynamic.Runtime.dll
+/reference:/opt/microsoft/home/.nuget/packages/system.objectmodel/4.0.10/lib/dotnet/System.ObjectModel.dll
