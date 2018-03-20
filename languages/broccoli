@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf broccoli
+git clone https://github.com/broccoli-lang/broccoli
+cd broccoli/Broccoli
+dotnet publish -c Release -r linux-x64 --self-contained
+chmod -R o-w bin/
+chmod o+x bin/*/*/*/publish/Broccoli
+
+exit "$err"
