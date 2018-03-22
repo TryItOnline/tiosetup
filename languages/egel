@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf egel
+git clone https://github.com/egel-lang/egel.git
+cd egel
+./build.sh
+
+exit "$err"
