@@ -50,6 +50,7 @@ cat >> /etc/httpd/conf.d/010-tio.run.conf <<- .
 	RewriteEngine On
 	<VirtualHost *:$TIOPORT>
 		ServerName $TIORUN
+		Protocols h2 http/1.1
 
 		AddOutputFilterByType DEFLATE application/javascript
 		AddOutputFilterByType DEFLATE application/json
