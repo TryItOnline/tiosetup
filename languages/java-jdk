@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf java-jdk
+mkdir java-jdk
+cd java-jdk
+curl -sSL https://download.java.net/java/GA/jdk10/10/binaries/openjdk-10_linux-x64_bin.tar.gz \
+	| tar xz --strip-components=1
+
+exit "$err"
