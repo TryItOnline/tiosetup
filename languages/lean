@@ -1,0 +1,18 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf lean
+mkdir lean
+curl -sSL "$(
+	curl -sSL https://api.github.com/repos/leanprover/lean/releases \
+		| jq -r '
+			.[0].assets[]
+			|select(.name|test("lean-[0-9.]+-linux\\.tar\\.gz$")).browser_download_url
+		' \
+		| tee /dev/stderr
+)" \
+	| tar xz --directory=/opt/lean --strip-components=1
+
+exit "$err"
