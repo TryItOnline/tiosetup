@@ -5,14 +5,20 @@ trap 'err=1' ERR
 
 rm -rf lean
 mkdir lean
-curl -sSL "$(
-	curl -sSL https://api.github.com/repos/leanprover/lean/releases \
-		| jq -r '
-			.[0].assets[]
-			|select(.name|test("lean-[0-9.]+-linux\\.tar\\.gz$")).browser_download_url
-		' \
-		| tee /dev/stderr
-)" \
-	| tar xz --directory=/opt/lean --strip-components=1
+cd lean
+curl -sSL https://leanprover.github.io/lean-nightly/build/lean-nightly-linux.tar.gz \
+	| tar xz --strip-components=1
+cd lib/lean
+git clone https://github.com/leanprover/mathlib.git
+cd mathlib
+
+while
+	curl -sSL "https://api.github.com/repos/leanprover/mathlib/commits/$(git rev-parse HEAD)/status" \
+		| jq -e '.statuses[0].state!="success"'
+do
+	git checkout HEAD^
+done
+
+../../../bin/leanpkg build
 
 exit "$err"
