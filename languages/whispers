@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf whispers
-git clone https://github.com/cairdcoinheringaahing/Whispers.git whispers
+git clone https://github.com/cairdcoinheringaahing/Whispers.git whispers -b v1
 
 exit "$err"
