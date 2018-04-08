@@ -6,8 +6,17 @@ trap 'err=1' ERR
 rm -rf lean
 mkdir lean
 cd lean
-curl -sSL https://leanprover.github.io/lean-nightly/build/lean-nightly-linux.tar.gz \
+
+curl -sSL "$(
+	curl -sSL https://api.github.com/repos/leanprover/lean-nightly/releases \
+		| jq -r '
+			.[0].assets[]
+			|select(.name|test("-linux\\.tar\\.gz$")).browser_download_url
+		' \
+		| tee /dev/stderr
+)" \
 	| tar xz --strip-components=1
+
 cd lib/lean
 git clone https://github.com/leanprover/mathlib.git
 cd mathlib
