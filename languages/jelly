@@ -3,9 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf jelly
-git clone https://github.com/DennisMitchell/jellylanguage.git jelly
-cd jelly
-pip3 install --upgrade .
+pip3 install --upgrade https://github.com/DennisMitchell/jellylanguage/archive/master.tar.gz
 
 exit "$err"
