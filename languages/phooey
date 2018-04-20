@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf phooey
+git clone https://github.com/ConorOBrien-Foxx/Phooey.git phooey
+cd phooey
+bash compile.bat
+
+exit "$err"
