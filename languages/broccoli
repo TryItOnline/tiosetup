@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 rm -rf broccoli
-git clone https://github.com/broccoli-lang/broccoli
+git clone https://github.com/broccoli-lang/broccoli -b feature-classes
 cd broccoli/Broccoli
 dotnet publish -c Release -r linux-x64 --self-contained
 chmod -R o-w bin/
