@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf charm
+git clone https://github.com/Aearnus/charm.git
+cd charm
+make
+
+exit "$err"
