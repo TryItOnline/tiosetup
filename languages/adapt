@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf adapt
+git clone https://github.com/cairdcoinheringaahing/adapt.git
+
+exit "$err"
