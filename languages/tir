@@ -5,6 +5,7 @@ trap 'err=1' ERR
 
 rm -rf tir
 git clone https://github.com/ConorOBrien-Foxx/Tir.git tir
+cd tir
 dmd -O tir.d
 
 exit "$err"
