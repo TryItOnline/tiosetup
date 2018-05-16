@@ -4,6 +4,8 @@ err=0
 trap 'err=1' ERR
 
 rm -rf zig
+mkdir zig
+cd zig
 curl -sSL https://ziglang.org/builds/zig-linux-x86_64-master.tar.xz \
 	| tar x --xz --strip-components=1
 

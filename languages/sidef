@@ -6,14 +6,12 @@ trap 'err=1' ERR
 rm -rf sidef
 mkdir sidef
 cd sidef
-wget "$(
-	curl --silent --show-error https://api.github.com/repos/trizen/sidef/releases \
+curl -ssL "$(
+	curl -sSL https://api.github.com/repos/trizen/sidef/releases \
 		| jq --raw-output '
-			.[0].assets[]|select(.name|test("\\.elf64\\.zip$")).browser_download_url
+			.[0].assets[]|select(.name|test("\\.tar\\.gz$")).browser_download_url
 		'
-)"
-unzip *.zip
-rm *.zip
-ln -s * sidef
+)" | tar xz --strip-components=1
+perl Build installdeps
 
 exit "$err"

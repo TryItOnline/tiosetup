@@ -4,13 +4,15 @@ err=0
 trap 'err=1' ERR
 
 rm -rf prolog-swi
-mkdir prolog-swi
-cd prolog-swi
-git clone https://github.com/SWI-Prolog/swipl-devel.git build
-cd build
-./prepare --yes
-./configure --prefix=/opt/prolog-swi
-make
+mkdir -p prolog-swi/build
+cd prolog-swi/build
+chown runner: .
+sudo -u runner bash -c '
+	git clone https://github.com/SWI-Prolog/swipl-devel.git .
+	./prepare --yes
+	./configure --prefix=/opt/prolog-swi
+	make
+'
 make install
 cd ..
 ln -sf /opt/prolog-swi/bin/swipl /usr/local/bin
