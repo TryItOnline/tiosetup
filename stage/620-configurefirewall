@@ -1,0 +1,18 @@
+#!/bin/bash
+
+err=0
+trap "err=1" ERR
+
+systemctl enable firewalld
+systemctl start firewalld
+
+for ipv in ipv4 ipv6; do
+	firewall-cmd --permanent --direct --add-rule $ipv filter OUTPUT 0 -d localhost -j ACCEPT
+	firewall-cmd --permanent --direct --add-rule $ipv filter OUTPUT 1 -m owner --uid-owner $(id -u runner) -m state --state NEW -j REJECT
+done
+
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --reload
+
+exit "$err"
