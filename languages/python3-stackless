@@ -7,10 +7,12 @@ dir=/opt/python3-stackless
 rm -rf $dir
 mkdir -p $dir/build
 cd $dir/build
+rtag="^v$(python3 -V | grep -Po '\d+\.\d+\.' | sed 's/\./\\\\./g')[0-9]+-slp"
 
-printf -v ver '%.0sv%s-slp\n' $(python3 -V)
-curl -sSL https://api.github.com/repos/stackless-dev/stackless/tarball/$ver \
-	| tar xz --strip-components=1
+curl -sSL "$(
+	curl -sSL https://api.github.com/repos/stackless-dev/stackless/tags \
+		| jq -r ".[] | select(.name | test(\"$rtag\")).tarball_url"
+)" | tar xz --strip-components=1
 
 ./configure --prefix=$dir
 make

@@ -17,6 +17,6 @@ curl --silent --show-error https://www.oilshell.org/$(
 make
 ./install
 cd ..
-rm -r build
+#rm -r build
 
 exit "$err"

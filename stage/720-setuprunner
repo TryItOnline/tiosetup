@@ -10,8 +10,5 @@ cat ~apache/.ssh/id_*.pub >> ~runner/.ssh/authorized_keys
 chmod 700 ~runner/.ssh
 chmod 640 ~runner/.ssh/authorized_keys
 chown -R runner: ~runner
-if [[ "$OfflineMode" != "y" ]]; then
-  chattr +i ~runner
-fi
 
 exit "$err"

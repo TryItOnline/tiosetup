@@ -7,6 +7,7 @@ rm -rf dirty
 git clone https://github.com/Ourous/dirty.git
 cd dirty
 cp -r /opt/clean .
+mkdir clean/Temp
 CLEAN_HOME=clean clean/bin/cpm dirty_linux.prj
 rm -r clean
 
