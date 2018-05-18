@@ -1,0 +1,19 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+home=/opt/microsoft/home
+cd $home
+rm -r qsharp
+HOME=$home dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2-*"
+HOME=$home dotnet new console -lang Q# -o qsharp
+cd qsharp
+git clone https://gitlab.com/pavelb/qdk-libs.git tmp
+unzip tmp/*.zip -d tmp
+
+for pkg in microsoft.quantum.{development.kit,canon}; do
+	HOME=$home dotnet add package $pkg -s $home/qsharp/tmp -v 0.2.1804.2701-preview
+done
+
+exit "$err"
