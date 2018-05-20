@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap "err=1" ERR
+
+source private/config
+
+cat > /etc/hosts <<- .
+::1 localhost localhost6
+127.0.0.1 localhost localhost4
+
+$(hostname -I | grep -Pom1 '\b10(?!\.10\.)(\.\d+){3}|\b192\.168(\.\d+){2}') $HOSTNAME
+.
+
+exit "$err"

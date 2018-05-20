@@ -8,18 +8,20 @@ source private/config
 cd /srv
 tiobuild $TIORUN
 
-for f in etc/*.default
-do
+for f in etc/*.default; do
     cp $f ${f%.default}
 done
 
-tiopool add "$ARENA"
-tiopool enable "$ARENA"
+tiopool add "$HOSTNAME"
+tiopool enable "$HOSTNAME"
+systemctl enable tio-reap
+systemctl start tio-reap
 
 mkdir -p /srv/tmp
 chown apache:apache /srv/tmp
 mkdir -p /srv/cache/{0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f}{0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f}
 chown -R apache:apache /srv/cache
+
 if [[ "$OfflineMode" != "y" ]]; then
   restorecon -Rv /srv
 else
