@@ -1,6 +1,0 @@
-[Unit]
-Description=Renews letencrypt SSL certificates
-
-[Service]
-Type=simple
-ExecStart=/bin/sh -c 'letsencrypt renew'
