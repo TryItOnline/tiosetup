@@ -4,104 +4,45 @@ err=0
 trap "err=1" ERR
 
 source private/config
-[[ $LANGDOMAIN ]] || LANGDOMAIN=example.net LD=#
-[[ "$OfflineMode" != "y" ]] && TIOPORT=443 || TIOPORT=80
-[[ "$OfflineMode" != "y" ]] && TIOPROTOCOL=https || TIOPROTOCOL=http
-[[ "$OfflineMode" != "y" ]] && SL= || SL=#
+
+if [[ "$OfflineMode" != "y" ]]; then
+	TIO_PORT=443
+	TIO_PROTOCOL=https
+else
+	TIO_PORT=80
+	TIO_PROTOCOL=http
+	rm files/httpd/*-ssl.conf
+fi
+
+if [[ "$TALKDOMAIN" && "$TALKURL" ]]; then
+	TALK_REGEX=${TALKDOMAIN//./\\.}
+else
+	TALK_IF=#
+fi
+
+if [[ "$LANGDOMAIN" ]]; then
+	LANG_REGEX=${TALK_DOMAIN//./\\.}
+else
+	LANG_IF=#
+fi
+
+export TIO_PORT TIO_PROTOCOL TALK_IF TALK_REGEX LANG_IF LANG_REGEX
 
 for file in /etc/httpd/conf.d/*.conf; do
 	> "$file"
 done
 
-cat > /etc/httpd/conf.d/000-global.conf <<.
-ServerName $TRYITONLINENET
-$SL	Listen 443 https
-$SL	SSLPassPhraseDialog exec:/usr/libexec/httpd-ssl-pass-dialog
-$SL	SSLSessionCache shmcb:/run/httpd/sslcache(512000)
-$SL	SSLSessionCacheTimeout 300
-$SL	SSLRandomSeed startup file:/dev/urandom  256
-$SL	SSLRandomSeed connect builtin
-$SL	SSLCryptoDevice builtin
-.
+cd files/httpd
 
-if [[ "$OfflineMode" != "y" ]]; then
-	cat > /etc/httpd/conf.d/010-tio.run.conf <<- .
-		<VirtualHost *:80>
-			ServerName $TIORUN
-
-			RewriteRule ^/(.*)$ https://$TIORUN/\$1 [R=301]
-		</VirtualHost>
-		<VirtualHost *:80>
-			ServerName $TRYITONLINENET
-		$LD	ServerAlias *.$LANGDOMAIN
-
-			Header always set Access-Control-Allow-Origin "*"
-
-			RewriteCond %{HTTP_HOST} ^(www\.)?${TRYITONLINENET//./\\.}$
-			RewriteRule ^/(.*)$ https://$TRYITONLINENET/\$1 [R=301]
-
-		$LD	RewriteCond %{HTTP_HOST} ^([^.]*)\.${TRYITONLINENET//./\\.}$
-		$LD	RewriteRule ^/$ https://$TIORUN/nexus/%1 [R=301]
-		</VirtualHost>
-	.
-fi
-
-cat >> /etc/httpd/conf.d/010-tio.run.conf <<- .
-	RewriteEngine On
-	<VirtualHost *:$TIOPORT>
-		ServerName $TIORUN
-		Protocols h2 http/1.1
-
-		AddOutputFilterByType DEFLATE application/javascript
-		AddOutputFilterByType DEFLATE application/json
-		AddOutputFilterByType DEFLATE image/vnd.microsoft.icon
-		AddOutputFilterByType DEFLATE text/css
-		AddOutputFilterByType DEFLATE text/html
-		DocumentRoot /srv/var/www/$TIORUN
-		Header always set Access-Control-Allow-Origin "*"
-		RewriteRule ^/#(.*)$ /#\$1 [NE,R]
-		RewriteRule ^/nexus /index.html
-		ScriptAlias /cgi-bin /srv/var/www/$TIORUN/cgi-bin/
-		$SL	SSLCertificateFile /etc/letsencrypt/live/$TIORUN/fullchain.pem
-		$SL	SSLCertificateKeyFile /etc/letsencrypt/live/$TIORUN/privkey.pem
-		TimeOut 70
-
-		<Directory /srv/var/www/$TIORUN>
-			AllowOverride None
-			Options SymLinksIfOwnerMatch
-			Require all granted
-		</Directory>
-
-		<Files index.html>
-			Header set Cache-Control "max-age=60; must-revalidate"
-		</Files>
-
-		<Directory /srv/var/www/$TIORUN/static>
-			Header set Cache-Control max-age=1000000000
-		</Directory>
-
-		<Directory /srv/var/www/$TIORUN/cgi-bin>
-			Options ExecCGI SymLinksIfOwnerMatch
-		</Directory>
-
-	</VirtualHost>
-	<VirtualHost *:$TIOPORT>
-		ServerName $TRYITONLINENET
-
-		Header always set Access-Control-Allow-Origin "*"
-		Header always set Cache-Control max-age=2400000
-		$SL	SSLCertificateFile /etc/letsencrypt/live/$TIORUN/fullchain.pem
-		$SL	SSLCertificateKeyFile /etc/letsencrypt/live/$TIORUN/privkey.pem
-
-		RewriteRule ^/$ $TIOPROTOCOL://$TIORUN/#home [NE,R=301]
-		RewriteRule ^/(.+)$ $TIOPROTOCOL://$TIORUN/\$1 [R=301]
-	</VirtualHost>
-.
+for file in *.conf; do
+	envsubst < $file > /etc/httpd/conf.d/$file
+done
 
 echo -e 'http_server=httpd\nmkdir -p /var/log/httpd' > /srv/etc/tio-web
 
 if [[ "$OfflineMode" != "y" ]]; then
 	systemctl enable tio-web
+	systemctl restart tio-web
 fi
 
 exit "$err"
