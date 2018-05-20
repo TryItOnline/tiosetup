@@ -6,6 +6,7 @@ trap 'err=1' ERR
 rm -rf egel
 git clone https://github.com/egel-lang/egel.git
 cd egel
+sed -i 's/-Werror/-Werror -Wno-error=catch-value/' conf.mk
 ./build.sh
 
 exit "$err"

@@ -6,9 +6,9 @@ trap 'err=1' ERR
 rm -rf scheme-chez
 mkdir scheme-chez
 cd scheme-chez
-git clone https://github.com/cisco/ChezScheme.git
+git clone --depth=1 https://github.com/cisco/ChezScheme.git
 cd ChezScheme
-./configure --installprefix=/opt/scheme-chez
+./configure --installprefix=/opt/scheme-chez CFLAGS=-Wno-error=format-truncation=
 make
 make install
 cd ..
