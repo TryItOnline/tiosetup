@@ -6,8 +6,14 @@ trap 'err=1' ERR
 rm -rf purescript
 mkdir -p purescript/project
 cd purescript/project
-chown runner: .
-sudo -u runner bash -c 'pulp init; pulp build'
+chown keeper: .
+sudo -u keeper bash -c '
+	mkdir home
+	export HOME=home
+	pulp init
+	pulp build
+	rm -r home
+'
 chown root: .
 
 exit "$err"

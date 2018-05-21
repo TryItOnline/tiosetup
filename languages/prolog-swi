@@ -6,8 +6,8 @@ trap 'err=1' ERR
 rm -rf prolog-swi
 mkdir -p prolog-swi/build
 cd prolog-swi/build
-chown runner: .
-sudo -u runner bash -c '
+chown keeper: .
+sudo -u keeper bash -c '
 	git clone https://github.com/SWI-Prolog/swipl-devel.git .
 	./prepare --yes
 	./configure --prefix=/opt/prolog-swi
