@@ -16,7 +16,4 @@ dnf install Agda Agda-stdlib allegro5-devel allegro5-addon-acodec-devel allegro5
   redhat-rpm-config ruby-devel rubygem-rake rust scala sqlite squirrel sudo swift-language tcl-trf tcsh texlive-tex-bin time tree unixODBC-devel uuid-devel vala vim \
   words xz xz-devel yash zeromq-devel zsh 'apache-commons-*' -y
 
-dnf install -y http://ciao-lang.org/packages/1.14/13646/CiaoDE-1.14.2-13646.i386.rpm
-restorecon -Rv /usr/lib/ciao/ciao-*/
-
 exit "$err"

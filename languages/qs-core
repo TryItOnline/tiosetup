@@ -5,7 +5,7 @@ trap 'err=1' ERR
 
 home=/opt/microsoft/home
 cd $home
-rm -r qsharp
+rm -rf qsharp
 HOME=$home dotnet new -i "Microsoft.Quantum.ProjectTemplates::0.2-*"
 HOME=$home dotnet new console -lang Q# -o qsharp
 cd qsharp

@@ -14,8 +14,9 @@ curl -ssL "$(
 		'
 )" | tar xz --strip-components=1
 
+export PERL_MM_USE_DEFAULT=1
 perl Makefile.PL
 perl Build.PL
-yes | ./Build installdeps
+./Build installdeps
 
 exit "$err"
