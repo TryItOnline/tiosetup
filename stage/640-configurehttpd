@@ -21,12 +21,15 @@ else
 fi
 
 if [[ "$LANGDOMAIN" ]]; then
-	LANG_REGEX=${TALK_DOMAIN//./\\.}
+	LANG_REGEX=${LANGDOMAIN//./\\.}
 else
 	LANG_IF=#
 fi
 
-export TIO_PORT TIO_PROTOCOL TALK_IF TALK_REGEX LANG_IF LANG_REGEX
+export \
+	TRYITONLINENET TIORUN TIO_PORT TIO_PROTOCOL \
+	TALKDOMAIN TALK_IF TALK_REGEX TALKURL \
+	LANGDOMAIN LANG_IF LANG_REGEX
 
 for file in /etc/httpd/conf.d/*.conf; do
 	> "$file"
