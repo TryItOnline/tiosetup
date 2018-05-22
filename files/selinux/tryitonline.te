@@ -7,16 +7,13 @@ require {
 	class tcp_socket { accept bind connect create getattr getopt listen name_connect node_bind setopt };
 	type NetworkManager_var_run_t;
 	type ephemeral_port_t;
-	type httpd_sys_script_t;
 	type node_t;
 	type passwd_file_t;
 	type proc_t;
 	type sandbox_t;
-	type ssh_port_t;
 	type zero_device_t;
 }
 
-allow httpd_sys_script_t ssh_port_t:tcp_socket name_connect;
 allow sandbox_t self:tcp_socket { accept bind connect create getattr getopt listen setopt };
 allow sandbox_t NetworkManager_var_run_t:dir search;
 allow sandbox_t ephemeral_port_t:tcp_socket name_connect;
