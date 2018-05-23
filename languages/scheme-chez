@@ -8,7 +8,7 @@ mkdir scheme-chez
 cd scheme-chez
 git clone --depth=1 https://github.com/cisco/ChezScheme.git
 cd ChezScheme
-./configure --installprefix=/opt/scheme-chez CFLAGS=-Wno-error=format-truncation=
+./configure --installprefix=/opt/scheme-chez
 make
 make install
 cd ..
