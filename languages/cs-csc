@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf cs-csc
+git clone https://github.com/TryItOnline/cs-csc.git
+cd cs-csc
+nuget restore
+
+exit "$err"
