@@ -6,6 +6,6 @@ trap 'err=1' ERR
 rm -rf face
 git clone https://github.com/KeyboardFire/face.git
 cd face
-make release CC='cc -Wno-error=cast-function-type'
+make release
 
 exit "$err"
