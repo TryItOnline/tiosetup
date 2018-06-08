@@ -1,0 +1,10 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf nial
+git clone https://github.com/danlm/QNial7.git nial
+ln -sf /usr/lib64/libreadline.so /usr/local/lib64/libreadline.so.6
+
+exit "$err"
