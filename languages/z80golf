@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf z80golf
+git clone https://github.com/lynn/z80golf.git
+cd z80golf/src
+make
+
+exit "$err"
