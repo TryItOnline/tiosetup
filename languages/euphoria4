@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf euphoria4
+mkdir euphoria4
+cd euphoria4
+
+git clone https://github.com/EuphoriaLanguages/Friendly_Flexible_Fast -b OpenEuphoria tmp
+tar xf tmp/euphoria*Linux* --strip-components=1
+sed -i 's:/usr/local/euphoria[^/]*:/opt/euphoria4:g' bin/eu.cfg
+rm -r tmp
+
+exit "$err"

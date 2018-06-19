@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf euphoria3
+mkdir euphoria3
+cd euphoria3
+
+git clone https://github.com/EuphoriaLanguages/Friendly_Flexible_Fast -b OpenEuphoria tmp
+tar xf tmp/euphor31.tar --strip-components=1
+rm -r tmp
+
+exit "$err"
