@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ahead
+git clone https://github.com/ajc2/ahead.git
+cd ahead
+mvn kotlin:compile package
+
+exit "$err"
