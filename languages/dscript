@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf dscript
+git clone https://github.com/ConorOBrien-Foxx/DScript.git dscript
+cd dscript
+dub build --build=release
+
+exit "$err"
