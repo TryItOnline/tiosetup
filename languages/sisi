@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf sisi
+git clone https://github.com/dloscutoff/Esolangs.git Temp
+mv Temp/Sisi sisi
+rm -rf Temp
+
+exit "$err"
