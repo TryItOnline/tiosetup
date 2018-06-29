@@ -7,7 +7,6 @@ dnf install wget -y
 rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
 dnf config-manager --add-repo http://download.mono-project.com/repo/centos/
 dnf copr enable dmoerner/outils -y
-dnf copr enable dperson/neovim -y
 dnf copr enable petersen/idris -y
 dnf copr enable tcg/devel -y
 sed -i 's/$releasever/26/g' /etc/yum.repos.d/_copr_dmoerner-outils.repo
