@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf wren
+git clone https://github.com/munificent/wren.git
+cd wren
+make C_WARNINGS+=-Wno-error=format-overflow
+
+exit "$err"
