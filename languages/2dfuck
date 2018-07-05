@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf 2dfuck
-git clone https://github.com/TheWastl/2DFuck.git 2dfuck
+git clone https://gitlab.com/TheWastl/2DFuck.git 2dfuck
 
 exit "$err"
