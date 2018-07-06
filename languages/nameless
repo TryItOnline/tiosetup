@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf nameless
+git clone https://github.com/bforte/nameless-lang.git nameless
+cd nameless
+cabal build
+
+exit "$err"
