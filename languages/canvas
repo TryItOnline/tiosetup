@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf canvas
+git clone https://github.com/dzaima/Canvas.git canvas
+cd canvas
+npm install
+
+exit "$err"
