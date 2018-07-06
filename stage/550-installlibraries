@@ -12,4 +12,7 @@ curl \
 
 ln -fst /usr/local/lib64 /usr/libexec/coreutils/libstdbuf.so
 
+g++ -fPIC files/system/tiopreload.cpp -shared -o /usr/local/lib64/tiopreload.so
+g++ -fPIC files/system/tiopreload.cpp -shared -m32 -o /usr/local/lib/tiopreload.so
+
 exit "$err"
