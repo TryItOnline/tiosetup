@@ -6,7 +6,8 @@ trap 'err=1' ERR
 home=/opt/microsoft/home
 cd $home
 rm -rf qsharp
-HOME=$home dotnet new -i Microsoft.Quantum.ProjectTemplates::0.2.1806.1503-preview
+version=$(curl -sSL https://api.nuget.org/v3-flatcontainer/Microsoft.Quantum.ProjectTemplates/index.json | jq -r '.versions|.[-1]')
+HOME=$home dotnet new -i "Microsoft.Quantum.ProjectTemplates::$version"
 HOME=$home dotnet new console -lang Q# -o qsharp
 cd qsharp
 HOME=$home dotnet restore
