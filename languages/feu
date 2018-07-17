@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf feu
-git clone https://github.com/tuxcrafting/feu.git
+git clone https://github.com/TryItOnline/feu.git
 
 exit "$err"
