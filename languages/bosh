@@ -1,0 +1,17 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf bosh
+mkdir bosh
+cd bosh
+
+curl -sSL "$(
+	curl -sSL https://sourceforge.net/projects/schilytools/files/ \
+		| grep -Pom 1 'https://sourceforge\.net/projects/schilytools/files/schily-[\d-]+\.tar\.bz2/download'
+)" | tar x -j --strip-components=1
+
+make
+
+exit "$err"
