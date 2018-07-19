@@ -10,10 +10,10 @@ dnf install Agda Agda-stdlib allegro5-devel allegro5-addon-acodec-devel allegro5
   ksh libICE-devel libSM-devel libX11-devel libXaw-devel libXext-devel libXft-devel libXinerama-devel \
   libXmu-devel libXpm-devel libXrender-devel libXt-devel libarchive-devel libatomic libcurl.i686 libcurl-devel libstdc++-devel.i686 libdb-devel libedit-devel libmpc-devel \
   libgcc.i686 libhugetlbfs-devel libicu libjpeg-turbo-devel libsodium libunwind libvoikko libxml2-devel lldb lldb-devel llvm-devel llvm-static lttng-tools lttng-ust lua-devel luarocks \
-  maven maxima mercurial mlton mod_ssl mono-basic mono-complete mpfr-devel mpir-devel moreutils moreutils-parallel msbuild nano nasm ncurses-compat-libs nettle-devel neovim nim ninja-build npm nuget \
+  maven maxima mercurial mesa-libGL-devel mlton mod_ssl mono-basic mono-complete mpfr-devel mpir-devel moreutils moreutils-parallel msbuild nano nasm ncurses-compat-libs nettle-devel neovim nim ninja-build npm nuget \
   ocaml ocl-icd octave-communications octave-devel octave-statistics openssl-devel outils patch pcre-devel perl-Digest-CRC perl-List-MoreUtils \
   perl-Text-Soundex php-cli php-xml ponyc powershell psmisc pyephem pypy python2-Cython python2-devel python3-Cython python3-devel python-certbot-apache rakudo \
-  redhat-rpm-config ruby-devel rubygem-rake rust scala sqlite squirrel sudo swift-language tcl-trf tcsh texlive-tex-bin time tree unixODBC-devel uuid-devel vala vim \
+  redhat-rpm-config ruby-devel rubygem-rake rust scala sqlite-devel squirrel sudo swift-language tcl-trf tcsh texlive-tex-bin time tree unixODBC-devel uuid-devel vala vim \
   words xz xz-devel yash zeromq-devel zsh 'apache-commons-*' -y
 
 exit "$err"

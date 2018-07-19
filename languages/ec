@@ -1,0 +1,54 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ec
+mkdir ec
+git clone --depth=1 https://github.com/ecere/ecere-sdk.git ec/build
+cd ec/build
+ECERE_AUDIO=n make all install prefix=/opt/ec
+cd ..
+rm -r build
+cat <<- '.' > TIO.epj
+	{
+	   "Version" : 0.2,
+	   "ModuleName" : "TIO",
+	   "Options" : {
+	      "Warnings" : "All",
+	      "Debug" : true,
+	      "Optimization" : "None",
+	      "TargetType" : "Executable",
+	      "TargetFileName" : "TIO",
+	      "Libraries" : [
+	         "ecere",
+	         "ecereCOM"
+	      ],
+	      "Console" : true
+	   },
+	   "Configurations" : [
+	      {
+	         "Name" : "Debug"
+	      },
+	      {
+	         "Name" : "MemoryGuard",
+	         "Options" : {
+	            "MemoryGuard" : true,
+	            "Libraries" : [
+	               "ecere"
+	            ],
+	            "FastMath" : false
+	         }
+	      }
+	   ],
+	   "Files" : [
+	      ".code.tio.ec"
+	   ],
+	   "ResourcesPath" : "",
+	   "Resources" : [
+
+	   ]
+	}
+.
+
+exit "$err"
