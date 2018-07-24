@@ -1,0 +1,20 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf cryptol
+mkdir cryptol
+cd cryptol
+
+curl -sSL "$(
+	curl -sSL https://api.github.com/repos/GaloisInc/cryptol/releases \
+		| jq -r '
+			.[0].assets[]
+			|select(.name|test("CentOS7-64\\.tar\\.gz$")).browser_download_url
+		' \
+		| tee /dev/stderr
+)" \
+	| tar xz --strip-components=1
+
+exit "$err"
