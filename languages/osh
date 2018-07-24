@@ -14,8 +14,9 @@ curl --silent --show-error https://www.oilshell.org/$(
 ) | tar xz --strip-components=1
 
 ./configure --prefix=/opt/osh
-CC=clang make
+make
 ./install
 cd ..
+rm -r build
 
 exit "$err"
