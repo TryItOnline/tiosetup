@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf rad
+git clone https://bitbucket.org/zacharyjtaylor/rad.git
+cd rad
+make
+
+exit "$err"
