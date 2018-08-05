@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf mu6
+git clone https://github.com/bforte/mu6.git
+cd mu6
+cabal update
+cabal install
+
+exit "$err"

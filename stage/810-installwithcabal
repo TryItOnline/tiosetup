@@ -6,6 +6,4 @@ trap 'err=1' ERR
 cabal update
 cabal install --global data-ordlist dates heredoc numbertheory microlens-mtl microlens-th polynomial
 
-rm -r ~/.cabal
-
 exit "$err"
