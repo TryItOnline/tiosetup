@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf alice-bob
+git clone https://github.com/bforte/alice-bob.git
+cd alice-bob
+cabal update
+cabal install
+
+exit "$err"

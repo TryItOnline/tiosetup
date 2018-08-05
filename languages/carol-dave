@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf carol-dave
+git clone https://github.com/bforte/carol-dave.git
+cd carol-dave
+cabal update
+cabal install
+
+exit "$err"
