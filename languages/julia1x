@@ -1,0 +1,22 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf julia1x
+mkdir julia1x
+cd julia1x
+curl --silent --show-error https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.0-linux-x86_64.tar.gz \
+	| tar xz --strip-components=1
+
+JULIA_DEPOT_PATH=/opt/julia1x/pkg bin/julia --eval '
+	using Pkg
+	Pkg.add("Polynomials")
+	using Polynomials
+'
+
+rm -r pkg/registries
+restorecon -R pkg
+chmod -R +r pkg
+
+exit "$err"
