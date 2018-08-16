@@ -5,5 +5,7 @@ trap 'err=1' ERR
 
 rm -rf 05ab1e
 git clone https://github.com/Adriandmen/05AB1E.git 05ab1e
+cd 05ab1e
+git checkout fb4a2ce2bce6660e1a680a74dd61b72c945e6c3b
 
 exit "$err"
