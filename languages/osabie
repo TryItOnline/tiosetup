@@ -6,8 +6,8 @@ trap 'err=1' ERR
 rm -rf osabie
 git clone https://github.com/Adriandmen/05AB1E.git osabie
 cd osabie
-yes | mix local.hex
-mix deps.get
-MIX_ENV=prod mix escript.build
+mix local.hex --force
+mix deps.get --force
+MIX_ENV=prod mix escript.build --force
 
 exit "$err"
