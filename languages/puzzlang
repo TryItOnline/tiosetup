@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf puzzlang
+mkdir puzzlang
+cd puzzlang
+wget https://raw.githubusercontent.com/AndoDaan/EsotericLanguages/master/Puzzlang/InPuzzlang.lua
+
+exit "$err"
