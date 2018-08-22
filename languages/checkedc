@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf checkedc
+mkdir checkedc
+cd checkedc
+
+curl -sSL "$(
+	curl -sSL https://api.github.com/repos/TryItOnline/tiosetup-binaries/releases/tags/checkedc \
+		| jq -r '.assets[0].browser_download_url'
+)" | tar xz --strip-components=1
+
+exit "$err"
