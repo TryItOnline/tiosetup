@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf orst
-git clone https://github.com/cairdcoinheringaahing/Orst.git orst
+git clone https://github.com/cairdcoinheringaahing/Orst-Geo.git orst
 
 exit "$err"
