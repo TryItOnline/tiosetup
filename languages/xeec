@@ -5,7 +5,8 @@ trap 'err=1' ERR
 
 rm -rf xeec
 mkdir xeec
-curl --silent --show-error http://paulo-jorente.de/poncho/esolang/xEec/interpreter/xEec.cpp \
-	| g++ -x c++ -Wall -Wextra -O3 -o xeec/xEec -
+cd xeec
+wget http://paulo-jorente.de/poncho/esolang/xEec/interpreter/xEec.cpp
+g++ -Wall -Wextra -O2 -o xEec xEec.cpp
 
 exit "$err"
