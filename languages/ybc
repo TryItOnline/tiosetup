@@ -1,0 +1,16 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ybc ybc.zip
+
+wget "$(
+	curl -sSL https://api.github.com/repos/Leushenko/ybc/releases \
+		| jq -r '.[]|select(.name|test("linux")).assets[0].browser_download_url' \
+		| tee /dev/stderr
+)"
+unzip ybc.zip
+rm ybc.zip
+
+exit "$err"
