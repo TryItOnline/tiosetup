@@ -1,0 +1,10 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf moorhens
+# Deliberately not using --single-branch because polyglot challenge needs both v2.0-dev and master branches.
+git clone --branch v2.0-dev https://github.com/Wheatwizard/Moorhen moorhens
+
+exit "$err"
