@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf emotifuck
+git clone https://github.com/Romulus10/emotif___ emotifuck
+cd emotifuck
+cargo build --release
+mv target/release/emotif___ emotifuck
+rm -r target
+
+exit "$err"
