@@ -3,6 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-yes | cpan Acme::Chef
+yes | cpan Acme::Chef Modern::Perl
 
 exit "$err"
