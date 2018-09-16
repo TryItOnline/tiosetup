@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf curry-pakcs
+mkdir curry-pakcs
+curl --silent --show-error https://www.informatik.uni-kiel.de/~pakcs/download/pakcs-2.0.1-amd64-Linux.tar.gz \
+	| tar xz --directory=curry-pakcs --strip-components=1
+cd curry-pakcs
+make
+
+exit "$err"
