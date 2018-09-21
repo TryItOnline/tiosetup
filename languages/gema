@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf gema
+curl -sSL https://sourceforge.net/projects/gema/files/gema/gema-1.4-RC/gema-1.4RC-src.tgz/download \
+	| tar xz
+cd gema/src
+sh gbuild
+
+exit "$err"
