@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf runic
+git clone https://github.com/Draco18s/RunicEnchantments -b Console runic
+cd runic
+msbuild RunicInterpreter.sln /p:Configuration=Release
+
+exit "$err"
