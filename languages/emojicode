@@ -3,22 +3,13 @@
 err=0
 trap 'err=1' ERR
 
-ln -sfT /usr/include/allegro5 /usr/include/allegro
 rm -rf emojicode
-mkdir -p emojicode/bin
+mkdir emojicode
 cd emojicode
-git clone https://github.com/emojicode/emojicode.git build
-cd build
-git checkout emojicode-0.5
-mkdir build
-cd build
-cmake -DheapSize=128000000 -DdefaultPackagesDirectory=/opt/emojicode/packages .. -GNinja
-ninja
-ninja dist
-cd Emojicode-*
-mv emojicode* ../../../bin
-mv packages ../../..
-cd ../../..
-rm -r build
+
+curl -sSL https://github.com/emojicode/emojicode/releases/download/v0.5.4/Emojicode-0.5.4-Linux-x86_64.tar.gz \
+	| tar xz --strip-components=1
+
+sed -i 's:/usr/local/EmojicodePackages:/opt/emojicode//////packages:g' emojicode*
 
 exit "$err"
