@@ -1,0 +1,19 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf dafny
+
+wget "$(
+	curl -sSL https://api.github.com/repos/Microsoft/dafny/releases \
+		| jq --raw-output '
+			.[0].assets[]|select(.name|test("-x64-debian-.*\\.zip$")).browser_download_url
+		'
+)"
+
+unzip dafny*.zip
+rm dafny*.zip
+chmod -R +r dafny/
+
+exit "$err"
