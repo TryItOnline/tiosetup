@@ -7,11 +7,13 @@ rm -rf java-jdk
 mkdir java-jdk
 cd java-jdk
 
-curl -sSL "$(
-	curl -sSL http://jdk.java.net/10/ \
-		| grep -Pom 1 'https://download.java.net/[^"]+_linux-x64_bin\.tar\.gz' \
-		| tee /dev/stderr
-)" \
-	| tar xz --strip-components=1
+host=https://jdk.java.net
+re_ver='(?<=<a href="/)\d+(?=/)'
+ver="$(curl -sS $host | grep -Pom 1 "$re_ver")"
+echo "Java JDK $ver"
+re_url='https://download.java.net/[^"]+_linux-x64_bin\.tar\.gz'
+url="$(curl -sS $host/$ver/ | grep -Pom 1 "$re_url")"
+echo "$url"
+curl -sSL "$url" | tar xz --strip-components=1
 
 exit "$err"
