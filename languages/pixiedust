@@ -1,0 +1,10 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf pixiedust
+git clone https://github.com/The-Snide-Sniper/pixiedust
+find pixiedust/ -name '*.java' -exec javac {} +
+
+exit "$err"
