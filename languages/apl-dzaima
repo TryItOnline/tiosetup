@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf apl-dzaima
+git clone https://github.com/dzaima/APL.git apl-dzaima
+cd apl-dzaima
+PATH="/opt/java-jdk/bin:$PATH" ./build
+
+exit "$err"
