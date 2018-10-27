@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf jael
+git clone https://github.com/eduardoHoefel/JAEL.git jael
+
+exit "$err"
