@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf gwion
+git clone --recursive https://github.com/fennecdjay/gwion.git
+cd gwion
+make
+
+exit "$err"
