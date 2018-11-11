@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf mamba
+git clone https://github.com/Gelbpunkt/mamba-lang.git mamba
+
+exit "$err"
