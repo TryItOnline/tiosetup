@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf fimpp
+git clone https://github.com/avian2/fimpp.git
+cd fimpp
+cp /usr/share/scala/lib/scala-library.jar bin/
+sed -i 's/println/System.err.println/g' src/stasiak/karol/fimpp/Main.scala
+make
+
+exit "$err"
