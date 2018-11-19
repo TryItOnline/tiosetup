@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf burlesque
+git clone https://github.com/FMNSSun/Burlesque.git burlesque
+cd burlesque
+ghc --make main.hs -o burlesque -O3 -fforce-recomp -fno-warn-tabs
+
+exit "$err"
