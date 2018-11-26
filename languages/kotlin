@@ -4,6 +4,8 @@ err=0
 trap 'err=1' ERR
 
 rm -rf kotlin
+mkdir kotlin
+cd kotlin
 
 wget $(
 	curl --silent --show-error https://api.github.com/repos/JetBrains/kotlin/releases \
@@ -11,8 +13,9 @@ wget $(
 		| tee /dev/stderr
 )
 
-unzip kotlin-compiler-*.zip
-mv kotlinc kotlin
-rm kotlin-compiler-*.zip
+unzip *kotlin-compiler-*.zip
+mv kotlinc/* .
+rmdir kotlinc
+rm *kotlin-compiler-*.zip
 
 exit "$err"
