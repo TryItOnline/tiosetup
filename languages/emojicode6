@@ -10,8 +10,9 @@ cd emojicode6
 curl -ssL "$(
 	curl -sSL https://api.github.com/repos/emojicode/emojicode/releases \
 		| jq --raw-output '
-			.[0].assets[]|select(.name|test("-Linux-x86_64\\.tar\\.gz$")).browser_download_url
-		'
+			max_by(.published_at).assets[]|select(.name|test("-Linux-x86_64\\.tar\\.gz$")).browser_download_url
+		' \
+		| tee /dev/stderr
 )" | tar xz --strip-components=1
 
 sed -i 's:/usr/local/EmojicodePackages:/opt/emojicode6/////packages:g' emojicodec
