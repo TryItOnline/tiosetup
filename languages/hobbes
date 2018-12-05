@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf hobbes
+git clone https://github.com/Morgan-Stanley/hobbes.git
+curl -sSL https://github.com/TryItOnline/tiosetup-binaries/releases/download/llvm-3.5.2/llvm-3.5.2.tar.gz | tar xz
+cd hobbes
+export LLVM_DIR=/opt/llvm-3.5.2/share/llvm/cmake
+cmake .
+make CXX_FLAGS+=-Wno-error=class-memaccess
+rm -r /opt/llvm-3.5.2/
+
+exit "$err"
