@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf koberi-c
+git clone https://github.com/fpeterek/Koberi-C.git koberi-c
+cd koberi-c/koberi-c
+g++ -Wall -Wextra *.cpp -O2 -o koberi-c
+
+exit "$err"
