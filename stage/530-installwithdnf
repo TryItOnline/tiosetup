@@ -13,7 +13,7 @@ dnf install Agda Agda-stdlib ack allegro5-devel allegro5-addon-acodec-devel alle
   man-pages maven maxima mercurial mesa-libGL-devel mlton mod_ssl mono-basic mono-complete mpfr-devel mpir-devel moreutils moreutils-parallel msbuild nano nasm ncurses-compat-libs nettle-devel neovim nim ninja-build npm nuget \
   ocaml ocl-icd octave-communications octave-devel octave-statistics openssl-devel outils patch pcre-devel perl-App-s2p perl-Digest-CRC perl-List-MoreUtils perl-Sentinel perl-Switch \
   perl-Text-Soundex php-cli php-xml ponyc powershell psmisc pyephem pypy python2-Cython python2-devel python3-Cython python3-devel python-certbot-apache rakudo \
-  redhat-rpm-config ruby-devel rubygem-rake rust scala sqlite-devel squirrel sudo swift-lang tcl-trf tcsh texlive-tex-bin time tree unixODBC-devel uuid-devel vala vim \
+  redhat-rpm-config ruby-devel rubygem-rake rust scala snappy-devel sqlite-devel squirrel sudo swift-lang tcl-trf tcsh texlive-tex-bin time tree unixODBC-devel uuid-devel vala vim \
   words xz xz-devel yash z3 zeromq-devel zsh 'apache-commons-*' -y
 
 exit "$err"
