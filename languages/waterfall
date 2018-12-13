@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf waterfall
+mkdir waterfall
+cd waterfall
+curl -sSL http://nethack4.org/esolangs/waterfall/ratiofall.tar.gz | tar xz --strip-components=1
+cargo build --release
+
+exit "$err"
