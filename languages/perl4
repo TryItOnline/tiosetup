@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf perl4
+mkdir perl4
+cd perl4
+curl -sSL https://github.com/TryItOnline/tiosetup-binaries/releases/download/Perl4/perl4.tar.gz \
+	| tar xz --strip-components=1
+chown -R root: *
+ln -sf /usr/lib64/libnsl.so.2 /usr/local/lib64/libnsl.so.1
+
+exit "$err"
