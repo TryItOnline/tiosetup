@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf calc2
+mkdir calc2
+cd calc2
+curl -sSL http://ciar.org/ttk/codecloset/calc/calc.2.5.tar.gz \
+	| tar xz --strip-components=1
+
+exit "$err"
