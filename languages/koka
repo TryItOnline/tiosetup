@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf koka
+git clone https://github.com/koka-lang/koka.git
+cd koka
+npm install --unsafe-perm
+jake variant=release <<< :q
+
+exit "$err"
