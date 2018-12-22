@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+dir=/opt/starfish
+rm -rf $dir
+mkdir $dir
+
+HOME=$dir go get -u github.com/redstarcoder/go-starfish/cmd/starfish
+restorecon -R $dir
+
+exit "$err"
