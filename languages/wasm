@@ -1,0 +1,19 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf wasm
+mkdir wasm
+cd wasm
+git clone https://github.com/TryItOnline/wawrapper.git
+git clone https://github.com/WAVM/WAVM.git build
+cd build
+mkdir wavm_build
+cd wavm_build
+cmake -DCMAKE_INSTALL_PREFIX=/opt/wasm/prefix ..
+make install
+cd ../..
+rm -r build
+
+exit "$err"
