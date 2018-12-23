@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf re-direction
+mkdir re-direction
+cd re-direction
+wget http://nethack4.org/esolangs/redirection.pl
+
+exit "$err"
