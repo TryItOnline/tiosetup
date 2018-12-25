@@ -1,0 +1,16 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf abc
+mkdir abc
+cd abc
+
+curl -sSL https://homepages.cwi.nl/~steven/abc/implementations/abc.tar.gz \
+	| tar xz --strip-components=1
+
+chmod 644 -- *
+chmod 755 abc abckeys
+
+exit "$err"
