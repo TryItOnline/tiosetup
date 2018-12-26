@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf parenthesis-hell
+mkdir parenthesis-hell
+cd parenthesis-hell
+
+git clone https://github.com/qpliu/esolang.git build
+ghc -O2 build/ph/hs/interp/*.hs -o ph
+rm -r build
+
+exit "$err"
