@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ecndpcaalrlp
+git clone https://github.com/ConorOBrien-Foxx/ecndpcaalrlp.git
+cd ecndpcaalrlp
+dmd -O -of=ecndpcaalrlp *.d
+
+exit "$err"
