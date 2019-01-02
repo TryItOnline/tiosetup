@@ -1,6 +1,7 @@
 # Visual Studio Code
 .vscode
 
+.ssh
 private
 !private/[0-9]*
 !private/*.default
