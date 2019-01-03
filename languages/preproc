@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf preproc
-git clone https://gitlab.com/pavelb/Preproc.git preproc
+git clone https://gitlab.com/PavelBraginskiy/preproc.git
 
 exit "$err"
