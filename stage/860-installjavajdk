@@ -3,9 +3,10 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf java-jdk
-mkdir java-jdk
-cd java-jdk
+dir=/opt/java-jdk
+rm -rf $dir
+mkdir $dir
+cd $dir
 
 host=https://jdk.java.net
 re_ver='(?<=<a href="/)\d+(?=/)'
