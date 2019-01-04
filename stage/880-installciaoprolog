@@ -3,9 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-wget -O prolog-ciao.rpm http://ciao-lang.org/packages/1.14/13646/CiaoDE-1.14.2-13646.i386.rpm
-rpm -i prolog-ciao.rpm
-rm prolog-ciao.rpm
+dnf install -y https://ciao-lang.org/legacy/files/ciao/ciao-1.14/13646/CiaoDE-1.14.2-13646.i386.rpm
 restorecon -Rv /usr/lib/ciao/ciao-*/
 
 exit "$err"

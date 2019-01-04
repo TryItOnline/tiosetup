@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf prolog-ciao
+mkdir prolog-ciao
+chown keeper: prolog-ciao
+
+curl https://ciao-lang.org/boot -sSfL \
+	| sudo -u keeper HOME=/opt/prolog-ciao sh -s -- local-install
+
+chown -R root: prolog-ciao
+
+exit "$err"
