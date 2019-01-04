@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -- $(getopt F:I:O:sSgdK:N:wxR:o:DUvV "$@")
+
+while true; do
+	case "$1" in
+		-o)
+			out="$2"
+			shift 2
+			;;
+		--)
+			in="$2"
+			break
+			;;
+		*)
+			shift
+			;;
+	esac
+done
+
+mkdir -p "$(dirname "$out")"
+
+[[ "$in" = "$out" ]] || cp $in $out

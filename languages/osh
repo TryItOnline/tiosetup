@@ -14,6 +14,9 @@ curl --silent --show-error https://www.oilshell.org/$(
 ) | tar xz --strip-components=1
 
 ./configure --prefix=/opt/osh
+#hotfix
+export PATH="/opt/tiosetup/files/dummy/dsymutil:$PATH"
+#end hotfix
 make
 ./install
 cd ..

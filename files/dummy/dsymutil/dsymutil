@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -- $(getopt fzj:o:suvy "$@")
+
+while true; do
+	case "$1" in
+		-o)
+			out="$2"
+			shift 2
+			;;
+		--)
+			in="$2"
+			break
+			;;
+		*)
+			shift
+			;;
+	esac
+done
+
+mkdir -p "$(dirname "$out")"
+
+if [[ -n "$out" && "$in" != "$out" ]]; then
+	cp -- "$in" "$out"
+fi
