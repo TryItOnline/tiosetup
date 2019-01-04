@@ -6,17 +6,8 @@ trap 'err=1' ERR
 rm -rf python2-iron
 mkdir python2-iron
 cd python2-iron
-git clone --depth 1 --recursive https://github.com/IronLanguages/ironpython2.git build
-cd build
-sed -i '/IronPythonTest.csproj/,+1d' IronPython.sln
-# hotfix for Mono/MSBuild regression
-cd /usr/lib/mono/msbuild/15.0/bin/Roslyn
-ln -sft . ../../../../4.5/csc.*
-cd -
-# end hotfix
-make
-mv bin/Release/net45/* ..
-cd ..
-rm -r build rowantest.*.dll
+wget https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.9/IronPython.2.7.9.zip
+unzip *.zip
+rm *.zip
 
 exit "$err"
