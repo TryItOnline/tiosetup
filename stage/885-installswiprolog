@@ -3,6 +3,7 @@
 err=0
 trap 'err=1' ERR
 
+cd /opt
 rm -rf prolog-swi
 mkdir -p prolog-swi/build
 cd prolog-swi/build
