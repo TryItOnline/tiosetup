@@ -3,7 +3,6 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf mamba
-git clone https://github.com/Gelbpunkt/mamba-lang.git mamba
+pip3 install --upgrade git+https://github.com/Gelbpunkt/mamba-lang
 
 exit "$err"
