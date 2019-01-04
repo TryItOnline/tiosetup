@@ -5,15 +5,10 @@ trap 'err=1' ERR
 
 dir=/opt/python3-stackless
 rm -rf $dir
-mkdir -p $dir/build
-cd $dir/build
-rtag="^v$(python3 -V | grep -Po '\d+\.\d+\.' | sed 's/\./\\\\./g')[0-9]+-slp"
-
-curl -sSL "$(
-	curl -sSL https://api.github.com/repos/stackless-dev/stackless/tags \
-		| jq -r ".[] | select(.name | test(\"$rtag\")).tarball_url"
-)" | tar xz --strip-components=1
-
+mkdir $dir
+cd $dir
+git clone --depth=1 https://github.com/stackless-dev/stackless.git -b master-slp build
+cd build
 ./configure --prefix=$dir
 make
 make install
