@@ -4,8 +4,8 @@ err=0
 trap 'err=1' ERR
 
 rm -rf pike
-mkdir -p pike/build
-cd pike/build
+mkdir -p pike
+cd pike
 
 curl --silent --show-error "https://pike.lysator.liu.se/$(
 	curl --silent --show-error https://pike.lysator.liu.se/download/pub/pike/latest-stable/ \
@@ -13,10 +13,11 @@ curl --silent --show-error "https://pike.lysator.liu.se/$(
 		| head -1
 )" | tar xz --strip-components=1
 
-src/configure --prefix=/opt/pike
-make
-make install
-cd ..
-rm -r build
+make pike CONFIGUREARGS="--prefix=/opt/pike"
+#src/configure --prefix=/opt/pike
+#make
+#make install
+#cd ..
+#rm -r build
 
 exit "$err"
