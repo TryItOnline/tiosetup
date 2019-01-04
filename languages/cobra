@@ -3,15 +3,7 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf cobra
-mkdir cobra
-cd cobra
-curl -sSL http://cobra-language.com/downloads/Cobra-0.9.6.tar.gz \
-	| tar xz --strip-components=1
-cd Source
-mono Snapshot/cobra.exe -compile -turbo -ert:yes cobra.cobra -files:files-to-compile.text
-mono cobra.exe -build-standard-library -debug -turbo -out:Cobra.Core.dll -key-file:Cobra.Core/Cobra.Core.snk  Cobra.Core/AssemblyAttrs.cobra
-mono cobra.exe -c -t:lib -embed-version -ert:yes -namespace:Cobra.Compiler -files:files-to-compile.text -debug -turbo -out:Cobra.Compiler.dll -key-file:Cobra.Core/Cobra.Core.snk  cobra.cobra
-mono cobra.exe -c -t:lib -embed-version -debug -turbo -out:Cobra.MSBuild.dll -key-file:Cobra.Core/Cobra.Core.snk  Cobra.MSBuild/CobraCompiler.cobra
+curl -sSL https://github.com/TryItOnline/tiosetup-binaries/releases/download/cobra/cobra.tar.gz \
+	| tar xz
 
 exit "$err"
