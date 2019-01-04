@@ -10,9 +10,6 @@ cd prolog-swi/build
 chown keeper: .
 sudo -u keeper bash -c '
 	git clone --depth=1 --recursive https://github.com/SWI-Prolog/swipl-devel.git .
-	#hotfix
-	mkdir -p packages/http/figs
-	touch packages/http/figs/httpserver.{pdf,png}
 	mkdir build
 	cd build
 	cmake -DCMAKE_INSTALL_PREFIX=/opt/prolog-swi ..
