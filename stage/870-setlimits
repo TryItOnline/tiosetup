@@ -4,6 +4,7 @@ err=0
 trap 'err=1' ERR
 
 source private/config
+
 if [[ "$OfflineMode" != "y" ]]; then
   rm -f /etc/security/limits.d/99-tio.conf
   cp files/system/ulimits.conf /etc/security/limits.d/99-tio.conf
@@ -11,5 +12,8 @@ if [[ "$OfflineMode" != "y" ]]; then
   rm -f /etc/sysctl.d/99-tio.conf
   cp files/system/sysctl.d.conf /etc/sysctl.d/99-tio.conf
 fi
+
+mkdir -p ~/.gradle
+echo org.gradle.daemon=false > ~/.gradle/gradle.properties
 
 exit "$err"
