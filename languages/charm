@@ -6,6 +6,8 @@ trap 'err=1' ERR
 rm -rf charm
 git clone https://github.com/Aearnus/charm.git
 cd charm
+#freeze
+git checkout db7e2ae8138fd8ae2b5878e27eb71add6c7f1e0f
 make
 
 exit "$err"
