@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf cpy
+git clone https://github.com/vrsperanza/CPY.git cpy
+cd cpy/Source
+make
+
+exit "$err"
