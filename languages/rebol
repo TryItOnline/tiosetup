@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf rebol
+mkdir rebol
+cd rebol
+curl -fsSL http://www.rebol.com/downloads/v278/rebol-core-278-4-10.tar.gz \
+	| tar xz --strip-components=1
+
+exit "$err"
