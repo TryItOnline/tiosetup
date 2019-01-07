@@ -6,6 +6,6 @@ trap 'err=1' ERR
 mkdir -p /opt/octave/home
 echo 'for pack = pkg("list") pkg("load", pack{1}.name) end' > /opt/octave/home/.octaverc
 
-octave --eval 'pkg install -forge symbolic'
+octave --eval 'pkg install -forge io statistics symbolic'
 
 exit "$err"
