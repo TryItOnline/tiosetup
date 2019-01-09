@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf bitch
+git clone https://github.com/Helen0903/bitch.git
+cd bitch
+javac *.java
+
+exit "$err"
