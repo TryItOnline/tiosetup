@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf 2l
+git clone https://github.com/TryItOnline/2L 2l
+cd 2l/impl
+gcc -o 2l_graue 2l_graue.c
+
+exit "$err"
