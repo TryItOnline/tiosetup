@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf 1l_a
+git clone https://github.com/TryItOnline/1L_a 1l_a
+cd 1l_a/impl
+gcc -o 1l_a_mmi 1l_a_mmi.c -lpng16
+
+exit "$err"
