@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf l33t
+git clone https://github.com/TryItOnline/l33t
+cd l33t
+gcc -o l33t l33t.c
+
+exit "$err"
