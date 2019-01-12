@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf 1l-aoi
+git clone https://github.com/stasoid/1L_AOI 1l-aoi
+cd 1l-aoi
+gcc 1l_aoi.c -o 1l_aoi
+
+exit "$err"
