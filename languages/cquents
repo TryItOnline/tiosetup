@@ -5,6 +5,5 @@ trap 'err=1' ERR
 
 rm -rf cquents
 git clone https://github.com/stestoltz/cQuents.git cquents
-git -C cquents checkout cquents-0
 
 exit "$err"
