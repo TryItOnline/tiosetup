@@ -30,3 +30,7 @@ HOME=/opt/microsoft/home TMPDIR=/opt/microsoft/tmp dotnet restore
 rm -rf /opt/microsoft/tmp
 
 touch --date='+100 years' /opt/microsoft/home/.local/share/NuGet/v3-cache/*/{list_FSharp.Core,service_index}.dat
+
+find /opt/microsoft/home -type d -exec chmod 755 {} \;
+chmod -R +r /opt/microsoft/home
+find /opt/microsoft/home -exec chmod o-w {} \;

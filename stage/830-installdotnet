@@ -17,9 +17,4 @@ if [[ "$OfflineMode" == "y" ]]; then
   ln -fs /opt/microsoft/home/.nuget /home/runner/
 fi
 
-
-find /opt/microsoft/home -type d -exec chmod 755 {} \;
-chmod -R +r /opt/microsoft/home
-find /opt/microsoft/home -exec chmod o-w {} \;
-
 exit "$err"
