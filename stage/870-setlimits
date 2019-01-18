@@ -13,6 +13,11 @@ if [[ "$OfflineMode" != "y" ]]; then
   cp files/system/sysctl.d.conf /etc/sysctl.d/99-tio.conf
 fi
 
+cp files/system/cgconfig.conf /etc
+
+systemctl enable cgconfig
+systemctl restart cgconfig
+
 mkdir -p ~/.gradle
 echo org.gradle.daemon=false > ~/.gradle/gradle.properties
 

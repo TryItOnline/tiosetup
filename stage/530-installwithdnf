@@ -9,7 +9,7 @@ dnf install -y \
   gc-devel gd-devel gettext-devel gforth ghc-parsec-devel ghc-random-devel giflib-devel git glib2-devel glibc-devel glibc-devel.i686 gmp-c++ gmp-devel gnustep-base-devel gnustep-make golang gperf gradle \
   groovy gsl-devel gtkglext-libs haskell-platform haxe httpd huginn hugs98 icu idris ImageMagick java-1.?.0-openjdk jq \
   ksh libICE-devel libSM-devel libX11-devel libXaw-devel libXext-devel libXft-devel libXinerama-devel \
-  libXmu-devel libXpm-devel libXrender-devel libXt-devel libarchive-devel libatomic libcurl.i686 libcurl-devel libstdc++-devel.i686 libdb-devel libedit-devel libmpc-devel \
+  libXmu-devel libXpm-devel libXrender-devel libXt-devel libarchive-devel libatomic libcgroup-tools libcurl.i686 libcurl-devel libstdc++-devel.i686 libdb-devel libedit-devel libmpc-devel \
   libgcc.i686 libhugetlbfs-devel libicu libjpeg-turbo-devel libsodium libunwind libvoikko libxml2-devel lldb lldb-devel llvm-devel llvm-static lttng-tools lttng-ust lua-devel luarocks \
   man-pages maven maxima mercurial mesa-libGL-devel mlton mod_ssl mono-basic mono-complete mpfr-devel mpir-devel moreutils moreutils-parallel msbuild nano nasm ncurses-compat-libs ncurses-compat-libs.i686 nettle-devel neovim nim ninja-build npm nuget \
   ocaml ocl-icd octave-communications octave-devel openssl-devel outils pari-gp patch pcre-devel perl-App-cpanminus perl-App-s2p perl-Digest-CRC perl-List-MoreUtils perl-Sentinel perl-Switch \

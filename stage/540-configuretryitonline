@@ -14,8 +14,6 @@ done
 
 tiopool add "$HOSTNAME"
 tiopool enable "$HOSTNAME"
-systemctl enable tio-reap
-systemctl start tio-reap
 
 mkdir -p /srv/tmp
 chown apache:apache /srv/tmp
@@ -24,8 +22,6 @@ chown -R apache:apache /srv/cache
 
 if [[ "$OfflineMode" != "y" ]]; then
   restorecon -Rv /srv
-else
-  sed -i 's/^\(no_selinux=\).*/\1true/' etc/run
 fi
 
 exit "$err"
