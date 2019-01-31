@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+dir=/opt/perl5-cperl
+rm -rf $dir
+mkdir -p $dir/build/dists
+cd $dir
+export PERLBREW_ROOT=$dir/build
+perlbrew install -Dprefix=$dir -j 2 -n $(perlbrew available | tac | grep -m 1 cperl)
+rm -r build
+
+exit "$err"
