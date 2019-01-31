@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf catholicon
+
+git clone https://github.com/okx-code/Catholicon.git catholicon
+cd catholicon
+MIX_ENV=prod mix escript.build
+
+exit "$err"
