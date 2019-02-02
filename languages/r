@@ -9,7 +9,7 @@ cd r
 build/configure --with-x=no
 make R
 
-/opt/r/bin/Rscript -e 'install.packages(c("Rmpfr", "gtools", "numbers", "pryr", "vegan"), repos = "http://cran.r-project.org")'
+/opt/r/bin/Rscript -e 'install.packages(c("lpSolve", "Rmpfr", "Rsymphony", "gtools", "numbers", "pryr", "vegan"), repos = "http://cran.r-project.org")'
 rm -rf build source src
 
 exit "$err"
