@@ -1,0 +1,19 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+home=/opt/microsoft/home
+cd $home
+rm -rf psharp
+mkdir psharp
+cd psharp
+
+version=$(curl -sSL https://api.nuget.org/v3-flatcontainer/Microsoft.PSharp/index.json | jq -r '.versions|.[-1]') \
+	envsubst < /opt/tiosetup/files/dotnet/psharp.csproj > psharp.csproj
+HOME=$home dotnet restore
+
+find $home -type d -exec chmod 755 {} \;
+find $home -exec chmod o-w {} \;
+
+exit "$err"
