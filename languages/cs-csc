@@ -7,5 +7,6 @@ rm -rf cs-csc
 git clone https://github.com/TryItOnline/cs-csc.git
 cd cs-csc
 nuget restore
+./update-packages
 
 exit "$err"
