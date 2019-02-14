@@ -3,45 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-export CLEAN_HOME=/opt/clean
-PATH=$CLEAN_HOME/bin:$PATH
-
 rm -rf clean
 git clone https://github.com/Ourous/curated-clean-linux.git clean
-
-cd clean/lib
-shopt -s nullglob globstar
-after=0
-printf 'Compiling Clean modules'
-
-while
-	printf .
-	before=$after
-	after=($(
-		for d in [[:upper:]]*; do
-			cd $d
-
-			for f in **/[[:alpha:]]*.dcl; do
-				if [[ $f =~ ^Deprecated|^ESMVizTool|^Internet ]]; then
-					continue
-				fi
-				f=${f%.*}
-				f=${f//\//.}
-				printf 'module main\nimport %s\nStart = ""\n' $f > main.icl
-				clm -dynamics -IL Dynamics -IL Gast -IL GraphCopy -IL Generics -IL Platform -IL Sapl -IL TCPIP -IL ArgEnv -IL StdLib -IL Directory main -o main.out
-			done
-
-			rm {.,Clean\ System\ Files}/main.*
-			cd ..
-		done 2> .stderr | sha512sum
-	))
-	[[ $before != $after ]]
-do
-	:
-done
-
-printf ' done.\nThe following errors occurred during the last pass:\n'
-grep -Po 'Error((?!Error).)*' .stderr | cat -n
-rm .stderr
+cd clean
+./install.sh
 
 exit "$err"
