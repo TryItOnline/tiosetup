@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 rm -rf clean
-git clone https://github.com/Ourous/curated-clean-linux.git clean
+git clone --recurse-submodules https://github.com/Ourous/curated-clean-linux.git clean
 cd clean
 ./install.sh
 
