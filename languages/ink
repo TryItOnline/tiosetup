@@ -1,0 +1,16 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ink
+mkdir ink
+cd ink
+wget "$(
+	curl -sSL https://api.github.com/repos/inkle/ink/releases \
+		| jq -r '.[0].assets[]|select(.name|test("linux")).browser_download_url'
+)"
+unzip *.zip
+rm *.zip
+
+exit "$err"
