@@ -9,7 +9,7 @@ cd kotlin
 
 wget $(
 	curl --silent --show-error https://api.github.com/repos/JetBrains/kotlin/releases \
-		| jq --raw-output 'map(select(.prerelease==false))|max_by(.created_at).assets[0].browser_download_url' \
+		| jq --raw-output 'map(select(.prerelease==false))|max_by(.created_at).assets[]|select(.name|test("^kotlin-compiler-")).browser_download_url' \
 		| tee /dev/stderr
 )
 
