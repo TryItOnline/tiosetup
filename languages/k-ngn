@@ -8,7 +8,7 @@ trap 'err=1' ERR
 rm -rf k-ngn
 mkdir k-ngn
 cd k-ngn
-git clone https://bitbucket.org/ngn/k.git build
+GIT_TERMINAL_PROMPT=0 git clone https://bitbucket.org/ngn/k.git build || exit 1
 cd build
 make
 cd ..
