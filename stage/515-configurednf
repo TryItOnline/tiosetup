@@ -21,5 +21,7 @@ wget -O /etc/yum.repos.d/bintray-pony-language-ponyc-rpm.repo https://bintray.co
 echo 'deltarpm=no' >> /etc/dnf/dnf.conf
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/dotnetdev.repo'
+source /etc/os-release
+dnf config-manager --add-repo https://download.opensuse.org/repositories/shells:fish:release:3/Fedora_$VERSION_ID/shells:fish:release:3.repo
 
 exit "$err"
