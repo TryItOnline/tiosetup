@@ -6,11 +6,12 @@ trap 'err=1' ERR
 source private/config
 
 cd /srv
-tiobuild $TIORUN
 
 for f in etc/*.default; do
     cp $f ${f%.default}
 done
+
+tiobuild $TIORUN
 
 tiopool add "$HOSTNAME"
 tiopool enable "$HOSTNAME"

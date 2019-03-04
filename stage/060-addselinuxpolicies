@@ -7,10 +7,10 @@ source private/config
 
 if [[ "$OfflineMode" != "y" ]]; then
   setsebool -P httpd_can_network_connect 1
-  cp files/selinux/tryitonline.te ./tryitonline.te
+  cp files/selinux/tryitonline.te .
   make -f /usr/share/selinux/devel/Makefile tryitonline.pp
   semodule -i tryitonline.pp
-  rm -f tryitonline.*
+  rm -rf tryitonline.* tmp/
 fi
 
 exit "$err"
