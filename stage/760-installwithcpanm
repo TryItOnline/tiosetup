@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 cpanm -M https://cpan.metacpan.org \
-	Acme::Chef Inline Inline::C Inline::Python Language::Farnsworth Lingua::EN::Inflect Math::Prime::Util::GMP Modern::Perl Quote::Code Perl6::Slurp Perl6::Take Zoidberg
+	Acme::Chef Array::Utils Inline Inline::C Inline::Python Language::Farnsworth Lingua::EN::Inflect Math::Prime::Util::GMP Modern::Perl Quote::Code Perl6::Slurp Perl6::Take Statistics::Basic Zoidberg
 
 exit "$err"
