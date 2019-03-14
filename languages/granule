@@ -1,0 +1,15 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf granule
+mkdir granule
+cd granule
+git clone https://github.com/granule-project/granule.git build
+cd build
+stack install --system-ghc --local-bin-path=/opt/granule
+cd ..
+rm -r build
+
+exit "$err"
