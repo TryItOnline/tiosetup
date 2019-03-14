@@ -4,12 +4,8 @@ err=0
 trap 'err=1' ERR
 
 rm -rf granule
-mkdir granule
+git clone https://github.com/granule-project/granule.git
 cd granule
-git clone https://github.com/granule-project/granule.git build
-cd build
-stack install --system-ghc --local-bin-path=/opt/granule
-cd ..
-rm -r build
+stack install -j 1 --local-bin-path=/opt/granule/bin
 
 exit "$err"
