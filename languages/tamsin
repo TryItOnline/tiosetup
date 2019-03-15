@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf tamsin
+git clone https://github.com/catseye/Tamsin.git tamsin
+cd tamsin
+make
+
+exit "$err"
