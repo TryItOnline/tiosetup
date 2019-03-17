@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf ats2
+git clone --depth=1 git://git.code.sf.net/p/ats2-lang/code ats2
+cd ats2
+./configure
+make
+
+exit "$err"
