@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf bracmat
+mkdir bracmat
+cd bracmat
+wget https://github.com/BartJongejan/Bracmat/raw/master/Linux/bracmat
+chmod +x bracmat
+
+exit "$err"
