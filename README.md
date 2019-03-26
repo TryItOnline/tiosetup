@@ -1,3 +1,7 @@
+# If you're running TIO on your own server, please [read this](https://github.com/TryItOnline/tryitonline/issues/56) and update to the latest version.
+
+---
+
 # Setting up Try it Online
 
 ## What is Try It Online
