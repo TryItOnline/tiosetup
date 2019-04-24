@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf krrp
+git clone https://github.com/jfrech/krrp.git
+cd krrp
+make
+
+exit "$err"
