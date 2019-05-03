@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf lmbm
-git clone https://github.com/gunnerwolf/lmbm.git
+git clone https://github.com/dylanrenwick/lmbm.git
 
 exit "$err"

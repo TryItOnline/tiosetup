@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf braingolf
-git clone https://github.com/gunnerwolf/braingolf.git
+git clone https://github.com/dylanrenwick/braingolf.git
 
 exit "$err"
