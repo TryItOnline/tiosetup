@@ -8,5 +8,6 @@ git clone --recursive https://github.com/vsl-lang/VSL.git vsl
 cd vsl
 npm install
 npm run build
+./vsl build -ir /dev/null
 
 exit "$err"
