@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+dir=javascript-v8
+rm -rf "$dir"
+mkdir "$dir"
+cd "$dir"
+
+curl -sSL https://rpmfind.net/linux/fedora/linux/releases/29/Everything/x86_64/os/Packages/v/v8-6.7.17-7.fc29.x86_64.rpm | rpm2cpio | cpio -dim
+restorecon -R .
+
+exit "$err"
