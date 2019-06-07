@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf cakeml
+mkdir cakeml
+cd cakeml
+curl -sSL https://cakeml.org/cake-x64-64.tar.gz | tar xz --strip-components=1
+make
+
+exit "$err"
