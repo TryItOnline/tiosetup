@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf dobela-dobcon
+git clone https://github.com/stasoid/DOBELA dobela-dobcon
+cd dobela-dobcon/dobcon
+gcc -O2 -o dobcon dobcon.c
+
+exit "$err"
