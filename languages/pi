@@ -3,8 +3,9 @@
 err=0
 trap 'err=1' ERR
 
-rm -rf 05ab1e
+rm -rf pi
 git clone https://github.com/thisIsTheFoxe/Pi.git pi
 cd pi
 
 exit "$err"
+
