@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf bitch-bith
+git clone https://github.com/int-e/bits.git bitch-bith
+cd bitch-bith/hs
+ghc --make bit-h
+
+exit "$err"
