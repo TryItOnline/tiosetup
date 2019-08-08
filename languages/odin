@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf odin
+git clone https://github.com/odin-lang/Odin.git odin
+cd odin
+make
+
+exit "$err"
