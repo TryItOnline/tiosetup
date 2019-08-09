@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf 33
+git clone https://github.com/TheOnlyMrCat/33.git
+cd 33
+g++ -o 33 main.cpp
+
+exit "$err"
