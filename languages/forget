@@ -1,0 +1,16 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf forget
+mkdir forget
+cd forget
+
+curl -ssLO "$(
+	curl -sSL https://api.github.com/repos/BenjaminUrquhart/Forget/releases \
+		| jq --raw-output '.[0].assets[0].browser_download_url' \
+		| tee /dev/stderr
+)"
+
+exit "$err"
