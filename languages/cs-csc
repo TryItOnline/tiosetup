@@ -8,5 +8,6 @@ git clone https://github.com/TryItOnline/cs-csc.git
 cd cs-csc
 nuget restore
 ./update-packages
+ln -sf /usr/lib64/libz3.so.0 /usr/local/lib64/libz3.so
 
 exit "$err"
