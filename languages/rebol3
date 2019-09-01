@@ -7,6 +7,6 @@ rm -rf rebol3
 mkdir rebol3
 cd rebol3
 curl -fsSL http://www.rebol.com/r3/downloads/r3-a111-4-4.tar.gz \
-	| tar xz --strip-components=1
+	| tar xz
 
 exit "$err"
