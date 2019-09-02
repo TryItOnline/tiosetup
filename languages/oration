@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 rm -rf oration
-mfdir oration
+mkdir oration
 cd oration
 git clone https://github.com/ConorOBrien-Foxx/Assorted-Programming-Languages
 
