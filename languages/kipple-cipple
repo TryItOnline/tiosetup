@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf kipple-cipple
+mkdir kipple-cipple
+cd kipple-cipple
+wget https://raw.githubusercontent.com/graue/esofiles/master/kipple/impl/cipple-0.2.1.c
+gcc -DNOINLINE cipple-0.2.1.c -o cipple
+
+exit "$err"

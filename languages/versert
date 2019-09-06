@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf versert
+hg clone https://bitbucket.org/lifthrasiir/versert
+cd versert
+make
+
+exit "$err"
