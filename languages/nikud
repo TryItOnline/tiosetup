@@ -8,21 +8,6 @@ git clone https://github.com/bary12/Nikud nikud
 cd nikud
 npm install --save @types/lodash
 npm install --save @types/node
-
-cat <<- '.' > nikud.ts
-import { interpreter } from "./src";
-
-if (process.argv.length <= 3) {
-    console.log("specify codefile and inputfile");
-    process.exit(-1);
-}
-let fs = require('fs')
-let code = fs.readFileSync(process.argv[2], 'utf8');
-let input = fs.readFileSync(process.argv[3], 'utf8');
-
-let result = interpreter(code, input);
-process.stdout.write(result.stdout);
-.
-tsc nikud.ts
+tsc src/*.ts
 
 exit "$err"
