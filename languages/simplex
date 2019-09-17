@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf simplex
+git clone https://github.com/ConorOBrien-Foxx/Simplex.git simplex
+cd simplex
+npm install
+
+exit "$err"
