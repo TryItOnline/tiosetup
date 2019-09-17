@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf verbosity2
+git clone https://github.com/cairdcoinheringaahing/Verbosity-v2.git verbosity2
+
+exit "$err"
