@@ -10,7 +10,7 @@ dnf install -y \
   groovy gsl-devel gtkglext-libs haskell-platform haxe httpd huginn hugs98 icu idris ImageMagick java-1.?.0-openjdk jq \
   ksh libICE-devel libSM-devel libX11-devel libXaw-devel libXext-devel libXft-devel libXinerama-devel \
   libXmu-devel libXpm-devel libXrender-devel libXt-devel libarchive-devel libatomic libcgroup-tools libcurl.i686 libcurl-devel libstdc++-devel.i686 libdb-devel libedit-devel libmpc-devel \
-  libgcc.i686 libhugetlbfs-devel libicu libjpeg-turbo-devel libsodium libunwind libvoikko libxml2-devel lldb lldb-devel llvm-devel llvm-static lttng-tools lttng-ust lua-devel lua-jit luarocks \
+  libgcc.i686 libhugetlbfs-devel libicu libjpeg-turbo-devel libsodium libunwind libvoikko libxml2-devel lldb lldb-devel llvm-devel llvm-static lttng-tools lttng-ust lua-devel luajit luarocks \
   man-pages maven maxima mercurial mesa-libGL-devel mlton mod_ssl mono-basic mono-complete mpfr-devel mpir-devel moreutils moreutils-parallel msbuild nano nasm ncurses-compat-libs ncurses-compat-libs.i686 nettle-devel neovim-0.3.1 nim ninja-build npm nuget \
   ocaml ocl-icd octave-communications octave-devel openresty-resty openssl-devel outils pari-gp patch pcre-devel perl-App-cpanminus perl-App-s2p perl-Digest-CRC perl-Dir-Self perl-List-MoreUtils perl-Math-Pari perl-Sentinel perl-Switch \
   perl-Text-Soundex perl-indirect php-cli php-json php-xml ponyc powershell psmisc pyephem pypy pypy3 python2-Cython python2-devel python38 python3-Cython python3-devel python3-dnf-plugin-versionlock python-certbot-apache rakudo \
