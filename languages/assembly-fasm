@@ -5,7 +5,13 @@ trap 'err=1' ERR
 
 rm -rf assembly-fasm
 mkdir assembly-fasm
-curl --silent --show-error https://flatassembler.net/fasm-1.71.63.tgz \
-	| tar xz --directory=assembly-fasm --strip-components=1
+cd assembly-fasm
+
+curl --silent --show-error "https://flatassembler.net/$(
+	curl --silent --show-error https://flatassembler.net/download.php \
+		| grep -Pom 1 'fasm-[\d.]+tgz' \
+		| tee /dev/stderr
+)" \
+	| tar xz --strip-components=1
 
 exit "$err"
