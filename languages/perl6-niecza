@@ -4,9 +4,8 @@ err=0
 trap 'err=1' ERR
 
 rm -rf perl6-niecza
-git clone https://github.com/sorear/niecza perl6-niecza
-cd perl6-niecza
-sed -i 's/gmcs/mcs/' Makefile
-make
+
+curl --silent --show-error --location https://github.com/TryItOnline/tiosetup-binaries/releases/download/perl6-niecza/perl6-niecza.tar.gz \
+	| tar xz
 
 exit "$err"

@@ -17,8 +17,7 @@ dnf install -y \
   redhat-rpm-config ruby-devel rubygem-rake rust SDL-devel scala snappy-devel sqlite-devel squirrel stack sudo swift-lang tcl-trf tcsh texlive-tex-bin time tree unixODBC-devel uuid-devel v8 vala vim \
   words xz xz-devel yash z3 zeromq-devel zsh \
   'apache-commons-*' \
-  'perl-Task-Kensho-*' \
-  https://rpmfind.net/linux/fedora/linux/releases/28/Everything/x86_64/os/Packages/c/compat-giflib-4.1.6-1.fc28.x86_64.rpm
+  'perl-Task-Kensho-*'
 
 dnf versionlock neovim
 
