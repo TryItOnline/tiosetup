@@ -4,17 +4,8 @@ err=0
 trap 'err=1' ERR
 
 rm -rf flobnar
-mkdir flobnar
-git clone https://github.com/Reconcyl/flobnar.git flobnar/build
-cd flobnar/build
-
-curl -sSf https://sh.rustup.rs \
-	| CARGO_HOME=. RUSTUP_HOME=. sh -s -- \
-		-y --no-modify-path --default-toolchain nightly
-
-CARGO_HOME=. RUSTUP_HOME=. PATH=bin:$PATH cargo build --release
-cd ..
-mv build/target/release/flobnar .
-rm -r build
+git clone https://github.com/TryItOnline/flobnar.git
+cd flobnar
+cargo build --release
 
 exit "$err"
