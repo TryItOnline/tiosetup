@@ -4,11 +4,17 @@ err=0
 trap 'err=1' ERR
 
 rm -rf retina1
-mkdir retina1
+mkdir -p retina1
+cd retina1
+
 curl --location --silent --show-error "$(
-    curl --silent --show-error https://api.github.com/repos/m-ender/retina/tags \
-		| jq --raw-output '.[0].tarball_url' \
+    curl --silent --show-error https://api.github.com/repos/m-ender/retina/releases \
+		| jq --raw-output '
+			.[0].assets[]|select(.name|test("linux-x64\\.tar\\.gz$")).browser_download_url
+		' \
         | tee /dev/stderr
-)" | tar xz --directory=retina1 --strip-components=1
+)" | tar xz
+
+chmod 755 linux-x64/Retina
 
 exit "$err"
