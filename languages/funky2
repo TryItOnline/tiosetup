@@ -7,6 +7,6 @@ rm -rf funky2
 git clone https://github.com/TehFlaminTaco/Funky2.git funky2
 cd funky2
 dotnet publish Funky2.csproj -c Release -r linux-x64 -o bin
-find -perm -a+w -exec chmod 755 {} \;
+find -executable -exec chmod 755 {} \;
 
 exit "$err"

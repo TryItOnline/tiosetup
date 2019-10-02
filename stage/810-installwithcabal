@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 cabal update
-cabal install --global HaskellForMaths data-ordlist dates digits heredoc monadlist numbertheory microlens-mtl microlens-th polynomial regex-compat statistics
+cabal install --global HaskellForMaths data-ordlist dates digits heredoc monadlist numbertheory microlens-mtl microlens-th polynomial regex-compat statistics modular-arithmetic
 
 exit "$err"
