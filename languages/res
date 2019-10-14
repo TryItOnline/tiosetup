@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf res
+git clone https://github.com/A-ee/res.git
+
+exit "$err"

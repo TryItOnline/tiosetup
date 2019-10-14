@@ -6,7 +6,11 @@ trap 'err=1' ERR
 rm -rf zig
 mkdir zig
 cd zig
-curl -sSL https://ziglang.org/builds/zig-linux-x86_64-master.tar.xz \
+
+curl -sSL "$(
+	curl -sSL https://ziglang.org/download/index.json \
+		| jq -r '.master|.["x86_64-linux"].tarball'
+)" \
 	| tar x --xz --strip-components=1
 
 exit "$err"

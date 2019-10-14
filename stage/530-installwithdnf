@@ -5,7 +5,7 @@ trap 'err=1' ERR
 
 dnf install -y \
   Agda Agda-stdlib ack allegro5-devel allegro5-addon-acodec-devel allegro5-addon-image-devel allegro5-addon-ttf-devel ant blas-devel bind-utils bison bison-devel boo boost-devel bsd-games byacc bzip2-devel cargo ceylon-1.3.2 chrpath \
-  clang clisp clojure cmake coin-or-SYMPHONY-devel cpan cpio crystal dart-bin dash dmd dotnet-sdk-3.0 dub ed elixir emacs-nox erlang erlang-erts file firewalld fish flex flex-devel fpc freetype-devel fsharp gambit-c gcc-c++ gcc-gnat gcc-objc gcc-objc++ \
+  clang clisp clojure cmake coin-or-SYMPHONY-devel cpan cpio crystal dart-bin dash dmd dotnet-sdk-3.0 dub ed elfutils-libelf-devel.i686 elixir emacs-nox erlang erlang-erts file firewalld fish flex flex-devel fpc freetype-devel fsharp gambit-c gcc-c++ gcc-gnat gcc-objc gcc-objc++ \
   gc-devel gd-devel gettext-devel gforth ghc-haskell-src-exts-devel ghc-parsec-devel ghc-random-devel giflib-devel git glib2-devel glibc-devel glibc-devel.i686 gmp-c++ gmp-devel gnustep-base-devel gnustep-make golang gperf gradle \
   groovy gsl-devel gtkglext-libs haskell-platform haxe httpd huginn hugs98 icu idris ImageMagick java-1.?.0-openjdk jq \
   ksh libICE-devel libSM-devel libX11-devel libXaw-devel libXext-devel libXft-devel libXinerama-devel \
@@ -14,11 +14,9 @@ dnf install -y \
   man-pages maven maxima mercurial mesa-libGL-devel mlton mod_ssl mono-basic mono-complete mpfr-devel mpir-devel moreutils moreutils-parallel msbuild nano nasm ncurses-compat-libs ncurses-compat-libs.i686 nettle-devel neovim-0.3.1 nim ninja-build npm nuget \
   ocaml ocl-icd octave-communications octave-devel openresty-resty openssl-devel outils pari-gp patch pcre-devel perl-App-cpanminus perl-App-s2p perl-Digest-CRC perl-Dir-Self perl-List-MoreUtils perl-Math-Pari perl-Sentinel perl-Switch \
   perl-Text-Soundex perl-indirect php-cli php-json php-xml ponyc powershell psmisc pyephem pypy pypy3 python2-Cython python2-devel python38 python3-Cython python3-devel python3-dnf-plugin-versionlock python-certbot-apache rakudo \
-  redhat-rpm-config ruby-devel rubygem-rake rust SDL-devel scala snappy-devel sqlite-devel squirrel stack sudo swift-lang tcl-trf tcsh texlive-tex-bin time tree unixODBC-devel uuid-devel v8 vala vim \
+  re2c redhat-rpm-config ruby-devel rubygem-rake rust SDL-devel scala snappy-devel sqlite-devel squirrel stack sudo swift-lang tcl-trf tcsh texlive-tex-bin time tree unixODBC-devel uuid-devel v8 vala vim \
   words xz xz-devel yash z3 zeromq-devel zsh \
   'apache-commons-*' \
   'perl-Task-Kensho-*'
-
-dnf versionlock neovim
 
 exit "$err"

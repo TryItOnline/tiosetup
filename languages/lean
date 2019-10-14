@@ -8,7 +8,7 @@ mkdir lean
 cd lean
 
 curl -sSL "$(
-	curl -sSL https://api.github.com/repos/leanprover/lean-nightly/releases \
+	curl -sSL https://api.github.com/repos/leanprover/lean/releases \
 		| jq -r '
 			.[0].assets[]
 			|select(.name|test("-linux\\.tar\\.gz$")).browser_download_url
@@ -17,17 +17,16 @@ curl -sSL "$(
 )" \
 	| tar xz --strip-components=1
 
-cd lib/lean
-git clone https://github.com/leanprover/mathlib.git
-cd mathlib
+cd lib/lean/library
 
-while
-	curl -sSL "https://api.github.com/repos/leanprover/mathlib/commits/$(git rev-parse HEAD)/status" \
-		| jq -e '.statuses[0].state!="success"'
-do
-	git checkout HEAD^
-done
-
-../../../bin/leanpkg build
+curl -sSL "$(
+	curl -sSL https://api.github.com/repos/leanprover-community/mathlib-nightly/releases \
+		| jq -r '
+			.[0].assets[]
+			|select(.name|test("^mathlib-olean")).browser_download_url
+		' \
+		| tee /dev/stderr
+)" \
+	| tar xz --strip-components=1
 
 exit "$err"

@@ -13,6 +13,7 @@ wget "$(
 )"
 
 unzip *.zip ring/{bin,include,lib}'/*' -d ../
+chmod 755 /opt/ring/bin/ring
 rm *.zip
 
 exit "$err"

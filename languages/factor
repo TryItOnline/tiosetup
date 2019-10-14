@@ -4,7 +4,7 @@ err=0
 trap 'err=1' ERR
 
 rm -rf factor
-curl -s http://downloads.factorcode.org/releases/0.97/factor-linux-x86-64-0.97.tar.gz | tar xz
+curl -sSL https://downloads.factorcode.org/releases/0.98/factor-linux-x86-64-0.98.tar.gz | tar xz
 sed -i 's:/dev/random:/srv/random:g' factor/{factor.image,basis/random/unix/unix.factor}
 
 exit "$err"
