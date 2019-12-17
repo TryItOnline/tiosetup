@@ -5,5 +5,8 @@ trap 'err=1' ERR
 
 rm -rf k-ngn
 git clone https://bitbucket.org/ngn/k.git k-ngn
+cd k-ngn
+make
+cd ..
 
 exit "$err"
