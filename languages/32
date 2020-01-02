@@ -4,6 +4,6 @@ err=0
 trap 'err=1' ERR
 
 rm -rf 32
-git clone https://github.com/stasoid/32
+git clone https://github.com/wooden-utensil/32
 
 exit "$err"
