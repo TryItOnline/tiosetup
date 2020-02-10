@@ -1,0 +1,13 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf nikud
+git clone https://github.com/bary12/Nikud nikud
+cd nikud
+npm install --save @types/lodash
+npm install --save @types/node
+tsc src/*.ts
+
+exit "$err"

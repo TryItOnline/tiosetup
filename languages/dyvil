@@ -4,12 +4,8 @@ err=0
 trap 'err=1' ERR
 
 rm -rf dyvil
-mkdir dyvil
+git clone https://github.com/Dyvil/Dyvil.git dyvil
 cd dyvil
-
-wget "$(
-	curl -sSL https://api.github.com/repos/Dyvil/Dyvil/releases \
-		| jq -r '.[0].assets[0].browser_download_url'
-)"
+sh gradlew installDist
 
 exit "$err"

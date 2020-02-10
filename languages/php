@@ -1,0 +1,18 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf php
+mkdir php
+cd php
+git clone --depth=1 -b PHP-7.4 https://github.com/php/php-src.git build
+cd build
+./buildconf
+./configure --prefix=/opt/php
+make -j$(nproc)
+make install
+cd ..
+rm -r build
+
+exit "$err"

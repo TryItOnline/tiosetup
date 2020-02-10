@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf bitch-shifty
+git clone https://github.com/int-e/bits.git bitch-shifty
+cd bitch-shifty/cc
+make
+
+exit "$err"

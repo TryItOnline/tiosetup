@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf oration
+mkdir oration
+cd oration
+git clone https://github.com/ConorOBrien-Foxx/Assorted-Programming-Languages
+
+exit "$err"

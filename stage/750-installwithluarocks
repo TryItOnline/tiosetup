@@ -3,6 +3,13 @@
 err=0
 trap 'err=1' ERR
 
+luarocks install date
+luarocks install fun
+luarocks install inspect
+luarocks install lua-cjson
+luarocks install luasec
+luarocks install md5
 luarocks install moonscript
+luarocks install net-url
 
 exit "$err"

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf floater
+git clone https://github.com/Zom-B/Floater floater
+cd floater/src
+javac org/zomb/floater/*.java org/zomb/utilities/*.java
+
+exit "$err"

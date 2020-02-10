@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf brainspace
+mkdir brainspace
+cd brainspace
+curl https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/brainspace/dist.zip > dist.zip
+unzip dist.zip
+
+exit "$err"

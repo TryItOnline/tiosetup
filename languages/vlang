@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf vlang
+git clone https://github.com/vlang/v.git vlang
+cd vlang
+make
+
+exit "$err"

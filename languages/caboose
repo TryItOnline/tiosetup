@@ -1,0 +1,14 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf caboose
+git clone https://github.com/CabooseLang/Caboose.git caboose
+cd caboose
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=/opt/caboose ..
+make install
+
+exit "$err"

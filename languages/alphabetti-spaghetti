@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf alphabetti-spaghetti
+git clone https://github.com/stasoid/Alphabetti-spaghetti alphabetti-spaghetti
+cd alphabetti-spaghetti
+gcc main.c file.c -o as
+
+exit "$err"

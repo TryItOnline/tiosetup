@@ -1,0 +1,11 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf perl6-niecza
+
+curl --silent --show-error --location https://github.com/TryItOnline/tiosetup-binaries/releases/download/perl6-niecza/perl6-niecza.tar.gz \
+	| tar xz
+
+exit "$err"

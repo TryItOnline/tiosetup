@@ -1,0 +1,12 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf supermariolang
+git clone https://github.com/charliealejo/SuperMarioLang.git supermariolang
+cd supermariolang
+nuget restore
+msbuild SuperMarioLang.sln /p:Configuration=Release
+
+exit "$err"

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf oberon-07
+mkdir oberon-07
+cd oberon-07
+curl -sSL https://miasap.se/obnc/downloads/obnc_0.15.2.tar.gz | tar xz
+cd obnc-0.15.2
+./build --prefix=/opt/oberon-07
+./install
+cd ..
+curl -sSL https://miasap.se/obnc/downloads/obnc-libext_0.6.1.tar.gz | tar xz
+cd obnc-libext-0.6.1/
+PATH="/opt/oberon-07/bin:$PATH" ./build
+./install --prefix=/opt/oberon-07
+
+exit "$err"

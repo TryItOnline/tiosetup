@@ -4,9 +4,10 @@ err=0
 trap 'err=1' ERR
 
 rm -rf hades
-git clone https://github.com/Azer0s/HadesLang.git -b master hades
+git clone https://github.com/Azer0s/HadesLang.git hades
 cd hades
+git checkout 317ce8552bb07b68d1fc4163afe51f0aae985b3c
 dotnet publish HadesLang/HadesLang.csproj -c Release -r linux-x64 -o bin
-find -perm -a+w -exec chmod 755 {} \;
+find -executable -exec chmod 755 {} \;
 
 exit "$err"

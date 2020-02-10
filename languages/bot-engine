@@ -1,0 +1,9 @@
+#!/bin/bash
+
+err=0
+trap 'err=1' ERR
+
+rm -rf bot-engine
+git clone https://github.com/SuperJedi224/Bot-Engine.git bot-engine
+
+exit "$err"

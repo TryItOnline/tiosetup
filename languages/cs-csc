@@ -6,7 +6,8 @@ trap 'err=1' ERR
 rm -rf cs-csc
 git clone https://github.com/TryItOnline/cs-csc.git
 cd cs-csc
-nuget restore
 ./update-packages
+nuget restore
+ln -sf /usr/lib64/libz3.so.0 /usr/local/lib64/libz3.so
 
 exit "$err"
